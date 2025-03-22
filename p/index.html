@@ -192,10 +192,10 @@ Every vector (and hence ket) can be reduced to the axes components (in a 2D case
 The equation above "breaks down" the 2D vector into two smaller vectors that are perpendicular to each other. The two vectors here form the <b>standard basis</b>, which are also normalized and form a "unit" in our vector space.
 
 In most cases, we want an <b>orthonormal basis</b> which is:
-\begin{itemize}
-    \item Orthogonal: each basis vector is at right angles to all others. We can test it by making sure any pairing of basis vectors has a dot product a·b = 0.
-    \item Normalized: each basis vector has a length of 1
-\end{itemize}
+<ul>
+    <li>Orthogonal: each basis vector is at right angles to all others. We can test it by making sure any pairing of basis vectors has a dot product a·b = 0.</li>
+    <li>Normalized: each basis vector has a length of 1</li>
+</ul>
 
 <i>To check if two vectors are orthogonal to each other</i>, we check their inner product to see if they have a dot product of zero. With the intuition from the operations section, we can see that light from right overhead cannot cast a shadow (as if it is the sun at noon). Here is an example calculated from the basis vector of the example above:
 \[
@@ -519,10 +519,10 @@ We have Luka who is having a hard time deciding between the coffee shop and the 
 
 <b>Multiple qubits</b>: we have Luke represented by $|E\rangle$, who is also indecisive between the two shops. We now need to describe the fact that there are four possibilities:
 \begin{enumerate}
-    \item Both of them go to the coffee shop
-    \item Luka goes to the coffee shop, Luke goes to the tea shop
-    \item Luka goes to the tea shop, Luke goes to the coffee shop
-    \item Both of them go to the tea shop
+    <li>Both of them go to the coffee shop</li>
+    <li>Luka goes to the coffee shop, Luke goes to the tea shop</li>
+    <li>Luka goes to the tea shop, Luke goes to the coffee shop</li>
+    <li>Both of them go to the tea shop</li>
 \end{enumerate}
 Assign each of these events into a vector. If we see both of them in the coffee shop, the first row will be $1$ and the other rows will be $0$, since at that <i>state</i>, it is certain that there is 1 possibility. That is the nature of quantum mechanics: you can only observe one possible state at a time. The combinations of these two introverts can be represented with a tensor product:
 \[
@@ -548,6 +548,6 @@ Assign each of these events into a vector. If we see both of them in the coffee 
 From that equation, you know there is no way these two will go to separate shops. Another way to read this is: "If Luka is in the coffee shop, there is NO WAY Luke is in the tea shop" and so on.
 
 <h3>Additional reading materials</h3>
-\begin{itemize}
-    \item Tensor product: \url{https://www.math3ma.com/blog/the-tensor-product-demystified}
-\end{itemize}
+<ul>
+    <li>Tensor product: \url{https://www.math3ma.com/blog/the-tensor-product-demystified}</li>
+</ul>

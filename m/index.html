@@ -19,12 +19,12 @@ It is similar to $(p \lor q)\land\neg(p \land q)$.
 <b>Implication</b> expresses that one thing will result in another ("if $p$ then $q$"):
 \begin{equation} p \rightarrow q \end{equation}
 $p$ is called the antecedent, premise, or hypothesis; $q$ is called the conclusion or consequence because it is the result of $p$. Moreover, noted that the whole statement itself can still generate $T$ or $F$ values. If we have a statement "If the store is open today ($p$), then Luka will go ($q$)". Consider the truth table, we have:
-\begin{itemize}
-    \item If the store opens, then Luka will go, making $p \rightarrow q$ true.
-    \item If the store opens but Luka does not go, then apparently Luka's action does not depend on the store being opened.
-    \item If the stores do not open but Luka still goes, the statement $p \rightarrow q$ is still true because it does not say anything about the store being closed.
-    \item If the store closes and Luka stays at home, the statement is still true for a similar reason.
-\end{itemize}
+<ul>
+    <li>If the store opens, then Luka will go, making $p \rightarrow q$ true.</li>
+    <li>If the store opens but Luka does not go, then apparently Luka's action does not depend on the store being opened.</li>
+    <li>If the stores do not open but Luka still goes, the statement $p \rightarrow q$ is still true because it does not say anything about the store being closed.</li>
+    <li>If the store closes and Luka stays at home, the statement is still true for a similar reason.</li>
+</ul>
 
 A <b>bi-conditional statement</b> is similar to the statement "if and only if", that is when both propositions support each other. This is similar to the equal sign, so even if both propositions are false, the bi-conditional statements still hold (because $F=F$)
 \begin{equation} p \leftrightarrow q \end{equation}
@@ -70,14 +70,14 @@ At the end of a proof, <b>Q.E.D.</b> is used to show that the proof is completed
 If $p$ leads to $q$ and $p$ is true, then it will lead to $q$ is true.
 
 A few logic terms:
-\begin{itemize}
-    \item <b>Proof</b>: a valid argument based on theorems and what is known to be true.
-    \item <b>Conjecture</b>: a statement that you think is true and will be proven with your proof
-    \item <b>Theorem</b>: a statement that has been shown to be true
-    \item <b>Premise</b>: a condition or a requirement for something to be true
-    \item <b>Lemma</b>: a small theorem that we need to get to the proof we are interested in
-    \item <b>Corollary</b>: a small theorem that is the result of the more important theorem
-\end{itemize}
+<ul>
+    <li><b>Proof</b>: a valid argument based on theorems and what is known to be true.</li>
+    <li><b>Conjecture</b>: a statement that you think is true and will be proven with your proof</li>
+    <li><b>Theorem</b>: a statement that has been shown to be true</li>
+    <li><b>Premise</b>: a condition or a requirement for something to be true</li>
+    <li><b>Lemma</b>: a small theorem that we need to get to the proof we are interested in</li>
+    <li><b>Corollary</b>: a small theorem that is the result of the more important theorem</li>
+</ul>
 
 <b>Disproving conjecture</b> is a proving method that applies to theorems with $\forall xP(x)$, where you can simply find a single $x$ that dissatisfies $P(x)$.
 
@@ -223,12 +223,12 @@ $F(x)$ <i>depends</i> on the value of $x$ and the equation describes how those t
 
 <h2>[Science] Significant Figures, Rounding, and Scientific Notation</h2>
 <b>Significant figures (digits)</b>, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the accuracy of your number. The rules are very easy to follow:
-\begin{itemize}
-    \item All <b>leading</b> zeros are not significant
-    \item If there is a decimal point, all <b>trailing</b> zeros are significant
-    \item Digits between the first and the last <b>non-zero digit</b> are significant
-    \item If a digit is significant but the rules above do not cover, you can underline it
-\end{itemize}
+<ul>
+    <li>All <b>leading</b> zeros are not significant</li>
+    <li>If there is a decimal point, all <b>trailing</b> zeros are significant</li>
+    <li>Digits between the first and the last <b>non-zero digit</b> are significant</li>
+    <li>If a digit is significant but the rules above do not cover, you can underline it</li>
+</ul>
 Remember, the second point only counts trailing zeros, which are zeros after a non-zero digit, regardless of where the decimal point is.
 
 We can add "<b>plus/minus</b>" ($\pm$) to further show our level of accuracy.
@@ -408,10 +408,10 @@ The most common version you will need is combinations without repetition, so tre
 
 <h4>Combinations without repetition (regular combination)</h4>
 We want to pick two people from four people. We do not care about the order we pick but rather how many people we pick. Say if we picked Luke and Luna:
-\begin{itemize}
-    \item <i>If the order does matter</i>: there are two possibilities: Luke first or Luna first.
-    \item <i>If the order does not matter</i>: only one possibility: Luke and Luna.
-\end{itemize}
+<ul>
+    <li><i>If the order does matter</i>: there are two possibilities: Luke first or Luna first.</li>
+    <li><i>If the order does not matter</i>: only one possibility: Luke and Luna.</li>
+</ul>
 So as you can see, permutations have twice the possibilities. You can calculate how many possibilities permutation has <i>more</i> than combination by using permutation on the subset itself (in this case, the set contains Luke and Luna):
 \[ P(r, r) = r! \]
 Now we simply divide our permutation formula with this spare part to get our <b>combination formula</b>:
@@ -427,10 +427,10 @@ You still need to keep in mind the fact that if an item was selected, it cannot 
 This is a combination without repetition, but we plug in a different number to achieve our goal. Unfortunately, it is quite difficult to explain the algebraic proof so instead, this section will based on the visual intuition of one particular example.
 
 We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (B) black tea, or (C) chai tea. In this case, there are two important factors:
-\begin{itemize}
-    \item Repetition is allowed: we can pick a tea flavour more than once
-    \item The order does not matter: we only care about how many we have picked
-\end{itemize}
+<ul>
+    <li>Repetition is allowed: we can pick a tea flavour more than once</li>
+    <li>The order does not matter: we only care about how many we have picked</li>
+</ul>
 
 Because order does not matter, we will list our teas in the same order: A then B then C. Next, we will add a separator between the teas. Here is what our diagram will look like:
 \[\begin{bmatrix}
