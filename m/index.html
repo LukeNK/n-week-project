@@ -45,7 +45,7 @@ Predicate is the founding block of functions — that is why the function notati
 \begin{equation} \forall xP(x) \end{equation}
 Essentially that statement allowed us to plug every possible $x$ into our predicate $P(x)$.
 
-<b>The existential quantifier</b> is used to denote sentences with words like "some". It implies the fact that there are at least \textit{some} variables that make the predicate $P$ hold.
+<b>The existential quantifier</b> is used to denote sentences with words like "some". It implies the fact that there are at least <i>some</i> variables that make the predicate $P$ hold.
 \begin{equation} \exists xP(x) \end{equation}
 Informally, $\forall$ is just a bunch of  $\land$s and $\exists$ is just a bunch of $\lor$s.
 
@@ -55,7 +55,7 @@ Noted that for <b>nested quantifiers</b>, the order does matter:
     \qquad
     \exists x \forall y (x+y=0)
 \]
-The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select \textit{any} $y$, the value $x+y=0$".
+The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select <i>any</i> $y$, the value $x+y=0$".
 
 <b>Therefore</b> symbol is:
 \begin{equation} \therefore \end{equation}
@@ -81,7 +81,7 @@ A few logic terms:
 
 <b>Disproving conjecture</b> is a proving method that applies to theorems with $\forall xP(x)$, where you can simply find a single $x$ that dissatisfies $P(x)$.
 
-<b>Direct proof} assumes that $p$ is true, then follows implications to show that $q$ is true. This is \textit{similar} to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of \textbf{hypothetical syllogism</b>:
+<b>Direct proof} assumes that $p$ is true, then follows implications to show that $q$ is true. This is <i>similar</i> to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of \textbf{hypothetical syllogism</b>:
 \begin{equation}
     [(p \rightarrow r)\land(r \rightarrow q)
     \rightarrow (p \rightarrow q)]
@@ -219,7 +219,7 @@ In this case, we use $x$ as a variable, which means it assumes that we can plug 
 
 <b>Defining a function</b> is similar to defining a "procedure" to work on the input. In relationship terms, it is how the input is greater (addition), smaller (subtraction), many times bigger (multiplication), etc... Once again putting $x$ as the input, we can define $F(x)$ as an operation on our input:
 \[ F(x) = 2x+1 \]
-$F(x)$ \textit{depends} on the value of $x$ and the equation describes how those two relate.
+$F(x)$ <i>depends</i> on the value of $x$ and the equation describes how those two relate.
 
 <h2>[Science] Significant Figures, Rounding, and Scientific Notation</h2>
 <b>Significant figures (digits)</b>, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the accuracy of your number. The rules are very easy to follow:
@@ -240,12 +240,12 @@ Scientific notation is a way to deal with very big or very small numbers. There 
 \begin{equation} m \times 10^n \end{equation}
 A good way to think of the exponent $n$ is in terms of how you move the decimal point in the mantissa $m$. If $n$ is positive, move the decimal point to the right $n$ times (which is $\times10^n$), and vice versa for a negative power.
 
-A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 \leq m < 10$). If you have $0.6$, simply move the decimal to the right and \textit{subtract} the exponent by $1$, which gives you $6\times10^{-1}$. A bit of simplification there because the whole number can also be negative, making the mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with <b>negative scientific notation</b>, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.
+A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 \leq m < 10$). If you have $0.6$, simply move the decimal to the right and <i>subtract} the exponent by $1$, which gives you $6\times10^{-1</i>$. A bit of simplification there because the whole number can also be negative, making the mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with <b>negative scientific notation</b>, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.
 
 <b>Ten raised by zero</b> equals 1, useful to represent numbers with the right mantissa but does not hint at the fact that it is in scientific notation:
 \begin{equation} 10^0=1 \end{equation}
 
-<b>To convert a number to scientific notation}, simply move the decimal point until it satisfies the mantissa's requirement. To remember which sign to put for the exponent: if you moved the decimal point to the left (making the mantissa smaller), then you need to multiply it by a factor of $10$ to make it the same as the original number. Ask yourself: do I need the exponent to be \textit{bigger} or \textit{smaller</b> to make the mantissa equal the original number?
+<b>To convert a number to scientific notation}, simply move the decimal point until it satisfies the mantissa's requirement. To remember which sign to put for the exponent: if you moved the decimal point to the left (making the mantissa smaller), then you need to multiply it by a factor of $10$ to make it the same as the original number. Ask yourself: do I need the exponent to be <i>bigger</i> or \textit{smaller</b> to make the mantissa equal the original number?
 
 Scientific notation is helpful when counting significant figures because now all of the digits that appear in the mantissa are significant.
 
@@ -372,20 +372,20 @@ From equation (\ref{eq:m2}), we can yield the general formula when raising  a co
 \[ \Rightarrow r_{result} = r^n \qquad \theta_{result} = n \times \theta \]
 
 <h2>Permutation and Combination</h2>
-The difference between <b>permutation} and \textbf{combination} is in the order. \textbf{Permutation is an ordered combination</b> or in other words, a combination does not concern the order.
+The difference between <b>permutation} and <b>combination</b> is in the order. \textbf{Permutation is an ordered combination</b> or in other words, a combination does not concern the order.
 
 <b>Order does not matter</b> here means that a 123 string is the same as a 213 string.
 
 When approaching statistical problems relating to permutation or combination, the basic approach should be calculating every individual part that you can count, then dividing to remove the over-count or multiplying to compensate for the under-count.
 
 <h3>Permutation</h3>
-\subsection{Permutations with repetition}
+<h4>Permutations with repetition</h4>
 When $n$ is the number of elements and $r$ is how many times we can select the elements, the number of possible permutations we can have is:
 \begin{equation} n^r \end{equation}
 
 For example, every time we roll a dice, there are 6 possible results (faces). If we roll it once again, now there are 6 results for every previous roll's result $6\times6$. If we ask how many permutations there are after 3 rolls of dice, the result is $6^3=216$ permutations. Every time we roll the dice, there is the possibility that a face will repeat (hence repetition is allowed).
 
-\subsection{Permutations without repetition}
+<h4>Permutations without repetition</h4>
 Four people were tasked to line up in a straight line, how many possible line arrangements can we get? There are four possible people to stand at the first position; for every selection, there will now be three possible candidates to stand at the second position, and so on... A person cannot appear twice in a line (not a quantum physics topic) so our choice gets reduced each time.
 
 The formula is:
@@ -406,13 +406,13 @@ $n \ge r$ as you cannot have a collection longer than the number of elements you
 <h3>Combination</h3>
 The most common version you will need is combinations without repetition, so treat the combination with repetition as some extra reading.
 
-\subsection{Combinations without repetition (regular combination)}
+<h4>Combinations without repetition (regular combination)</h4>
 We want to pick two people from four people. We do not care about the order we pick but rather how many people we pick. Say if we picked Luke and Luna:
 \begin{itemize}
-    \item \textit{If the order does matter}: there are two possibilities: Luke first or Luna first.
-    \item \textit{If the order does not matter}: only one possibility: Luke and Luna.
+    \item <i>If the order does matter</i>: there are two possibilities: Luke first or Luna first.
+    \item <i>If the order does not matter</i>: only one possibility: Luke and Luna.
 \end{itemize}
-So as you can see, permutations have twice the possibilities. You can calculate how many possibilities permutation has \textit{more} than combination by using permutation on the subset itself (in this case, the set contains Luke and Luna):
+So as you can see, permutations have twice the possibilities. You can calculate how many possibilities permutation has <i>more</i> than combination by using permutation on the subset itself (in this case, the set contains Luke and Luna):
 \[ P(r, r) = r! \]
 Now we simply divide our permutation formula with this spare part to get our <b>combination formula</b>:
 \begin{equation}
@@ -423,7 +423,7 @@ Now we simply divide our permutation formula with this spare part to get our <b>
 
 You still need to keep in mind the fact that if an item was selected, it cannot be selected again in this non-repetition version (our example selection cannot have two Lukes or Luke will have to do a job twice).
 
-\subsection{Combination with repetition}
+<h4>Combination with repetition</h4>
 This is a combination without repetition, but we plug in a different number to achieve our goal. Unfortunately, it is quite difficult to explain the algebraic proof so instead, this section will based on the visual intuition of one particular example.
 
 We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (B) black tea, or (C) chai tea. In this case, there are two important factors:
@@ -462,7 +462,7 @@ The first hint to realize that you are dealing with combinations without repetit
 
 Most of the time when solving statistical problems, it is about you determining how much you have over-counted, then removing that spare part by dividing.
 
-<b>From 1,2, 3, and 4, how many 3-digit numbers (with non-repeating digits) can we get that are smaller than 320?} The first digit of our number will need to be either 1 or 2 to be \textit{certain} that any number selected after it will be smaller than $320$. Because this is non-repeating, after we select either 1 or 2, we only have $3$ options left for the second digit, and $2$ options for the last digit; the number of possibilities is: $2\times3\times2$. \textit{If the first digit is 3</b>, there is only one possibility for the second digit: 1 because otherwise, the number would be larger than $320$. The final result for this route can be calculated with $1\times1\times2$ or can be counted by listing $312$ and $314$.
+<b>From 1,2, 3, and 4, how many 3-digit numbers (with non-repeating digits) can we get that are smaller than 320?} The first digit of our number will need to be either 1 or 2 to be <i>certain</i> that any number selected after it will be smaller than $320$. Because this is non-repeating, after we select either 1 or 2, we only have $3$ options left for the second digit, and $2$ options for the last digit; the number of possibilities is: $2\times3\times2$. \textit{If the first digit is 3</b>, there is only one possibility for the second digit: 1 because otherwise, the number would be larger than $320$. The final result for this route can be calculated with $1\times1\times2$ or can be counted by listing $312$ and $314$.
 \[ (2\times3\times2) + (1\times1\times2) = 14 \]
 
 For this problem, an addition was used because we counted by part instead of under-counting every possibility. One thing to highlight this type of problem is when your logic route has conditional statements "if".
