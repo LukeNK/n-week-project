@@ -3,26 +3,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luke's n-week-project</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", Helvetica, Arial, sans-serif;
+            font-size: large;
+        }
+
+        p { 
+            text-indent: 2rem;
+            text-align: justify;
+        }
+
+        /* Footnotes */
+        note {
+            position: relative;
+            vertical-align: super;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+            font-size: 0.75em;
+        }
+
+        /* Tooltip text */
+        note span {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 50%;
+            left: 0;
+            right: 0;
+            background-color: black;
+            color: #fff;
+            padding: 5px;
+            font-size: 1rem;
+        }
+
+        note:hover span {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <h2>About This Note</h2>
-    This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.
-    <br>
-    When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.
-    <br>
-    This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.
-    <br>
-    A lot of times, the topics are cross-disciplined and are useful in multiple fields, making sorting them into one particular part difficult. If that is the case, the topic will be put in a Part that is the most popular to be associated with that topic, then other cross-disciplined fields will be indicated in a bracket on the title of that topic. Therefore, if you did not find a topic you want to see in a part, maybe other parts will contain the concept you want to understand.
-    <br>
-    An explanation of the reason why the parts were ordered the way it is: the author believed that math is the foundation of sciences, so it was put in the beginning. Biology will be followed after it because it is the science that is (mostly) visible to human application — it is the first machine being built based on the other science. At a lower level, chemistry will explain the interaction between substances that make up the organs and show how to build those living machines. Physics was put last but not least because physics itself describes the rules that others must follow. The order itself is less of something academic but more of the personal belief of the author.
-    <br>
-    The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.
-    <br>
+    <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
+
+    <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.</p>
+
+    <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
+
+    <p>A lot of times, the topics are cross-disciplined and are useful in multiple fields, making sorting them into one particular part difficult. If that is the case, the topic will be put in a Part that is the most popular to be associated with that topic, then other cross-disciplined fields will be indicated in a bracket on the title of that topic. Therefore, if you did not find a topic you want to see in a part, maybe other parts will contain the concept you want to understand.</p>
+
+    <p>An explanation of the reason why the parts were ordered the way it is: the author believed that math is the foundation of sciences, so it was put in the beginning. Biology will be followed after it because it is the science that is (mostly) visible to human application — it is the first machine being built based on the other science. At a lower level, chemistry will explain the interaction between substances that make up the organs and show how to build those living machines. Physics was put last but not least because physics itself describes the rules that others must follow. The order itself is less of something academic but more of the personal belief of the author.</p>
+
+    <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
+
     <h1>Math</h1>
     <!-- <div subject="m"></div> -->
 
     <h1>Chemistry</h1>
-    <div subject="c"></div>
+    <div subject="c"></p>
 
     <h1>Physics</h1>
     <!-- <div subject="p"></div> -->
@@ -46,8 +90,10 @@ let subjects = document.querySelectorAll('div[subject]'), subjectLoaded = 0;
 subjects.forEach(async (subject) => {
     let response = await fetch(`./${subject.getAttribute('subject')}/index.html`);
     response = await response.text();
-    response = response.replaceAll('\n\n', '<br>');
-    subject.outerHTML = response;
+
+    response = response.replaceAll('src="', `src="${subject.getAttribute('subject')}/`);
+
+    subject.innerHTML = response;
     subjectLoad();
 })
 
@@ -56,12 +102,17 @@ function subjectLoad() {
     if (subjectLoaded < subjects.length) return;
 
     document.querySelectorAll('a').forEach(a => {
-        a.innerText = a.href.slice(1);
+        a.innerText = a.innerText || a.href.slice(1);
+    });
+    document.querySelectorAll('note').forEach((note, id) => {
+        note.innerHTML = `[${id}]<span>${note.innerHTML}</span>`;
     })
+
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
+    script.async = true;
+    document.head.appendChild(script);
 }
 
-</script>
-<script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 </html>
