@@ -1,32 +1,71 @@
 <h2>Useful Figures and Formulas in Chemistry</h2>
 <b>The periodic table of the elements</b> is arguably one, if not, the most important thing to have when learning chemistry. For the high school level, the most useful periodic table is the one that has ion charges of the elements.
 
-<b>A table of common symbols used in formulas} can be found in table \ref{tab:c0</b>
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|c|} \hline
-         Symbol&  Name&  Unit& Explanation\\ \hline
-         n& Number of moles& mol& \ref{sec:c-mole}\\ \hline
-         m& Mass& g& \\ \hline
-         M& Molarity& g/mol& \ref{sec:c-mole}\\ \hline
-         V& Volume& L& \\ \hline
-         \%A& Percentage composition of element \ch{A}& \%& \ref{sec:c-composition}\\ \hline
-         D& Density& g/l& \\ \hline
-    \end{tabular}
-    \caption{A table of common symbols used in formulas}
-    \label{tab:c0}
-\end{table}
+<b>A table of common symbols used in formulas</b> can be found in table <a href="#tab-c0"></a>
+<table>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+</table>
+<table border="1">
+    <caption>A table of common symbols used in formulas</caption>
+    <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+        <th>Unit</th>
+        <th>Explanation</th>
+    </tr>
+    <tr>
+        <td>n</td>
+        <td>Number of moles</td>
+        <td>mol</td>
+        <td><a href="#sec:c-mole">See section</a></td>
+    </tr>
+    <tr>
+        <td>m</td>
+        <td>Mass</td>
+        <td>g</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>M</td>
+        <td>Molarity</td>
+        <td>g/mol</td>
+        <td><a href="#sec:c-mole">See section</a></td>
+    </tr>
+    <tr>
+        <td>V</td>
+        <td>Volume</td>
+        <td>L</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>%A</td>
+        <td>Percentage composition of element A</td>
+        <td>%</td>
+        <td><a href="#sec:c-composition">See section</a></td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Density</td>
+        <td>g/l</td>
+        <td></td>
+    </tr>
+</table>
 
 <h3>Formulas</h3>
 In this section, each name will followed by a reference to the equation (or the section) that explains the formula. There are no units included for the sake of memorization but you should always keep the unit in the back of your head, or better yet, remember the conversion factor procedure.
 
-<b>Number of moles} when given mass and molar mass (\ref{eq:c-mol</b>):
+<b>Number of moles</b> when given mass and molar mass (<a href="#eq-c-mol"></a>):
 \begin{equation} n = \frac{m}{M} \end{equation}
 
-<b>Number of moles of a gas in standard condition} (\ref{eq:c-mol-in-gas</b>):
+<b>Number of moles of a gas in standard condition</b> (<a href="#eq-c-mol-in-gas"></a>):
 \begin{equation} n = \frac{V}{22.4} \end{equation}
 
-<b>Percentage composition} (\ref{eq:c-percentage-composition</b>):
+<b>Percentage composition</b> (<a href="#eq-c-percentage-composition"></a>):
 \begin{equation}
     A\% = \frac{m_A}{m_{AB}}\times100\%
 \end{equation}
@@ -34,7 +73,7 @@ In this section, each name will followed by a reference to the equation (or the 
 <h2>Stoichiometry</h2>
 Stoichiometry simply means that we are dealing with chemical reactions and the quantitative data from such reactions (like weight, volume, number of atoms, etc...).
 
-<h3>The mole — the central number of chemistry}\label{sec:c-mole</h3>
+<h3 id="sec-c-mole">The mole — the central number of chemistry</h3>
 How many items are there in a triplet? $3$. How much is a dozen? $12$. Now we have a new definition:
 \begin{equation}
     \text{A mole} = 6.02\times10^{23}
@@ -46,26 +85,26 @@ Similar to how half a dozen is $0.5\times12=6$, you can tell other scientists th
 
 A mole of atoms of an element acts as the central unit to convert between different units or elements in a reaction.
 
-<b>Molar mass} is the mass of $1$ mole of an element while the \textbf{formula mass</b> of a compound is the sum of all atoms in that compound. They are both similar in value but different in the unit: molar mass's unit is usually in grams per mole while formula mass is in the atomic unit, which is $1/12$ the weight of a carbon atom (or about $1$ hydrogen atom). The atomic unit will be abbreviated as "u" throughout this note.
+<b>Molar mass</b> is the mass of $1$ mole of an element while the <b>formula mass</b> of a compound is the sum of all atoms in that compound. They are both similar in value but different in the unit: molar mass's unit is usually in grams per mole while formula mass is in the atomic unit, which is $1/12$ the weight of a carbon atom (or about $1$ hydrogen atom). The atomic unit will be abbreviated as "u" throughout this note.
 
-<b>To calculate the number of moles}, you can see how many times the molar mass you have of the element \ch{A</b>:
+<b>To calculate the number of moles</b>, you can see how many times the molar mass you have of the element A:
 \begin{equation}
     \label{eq:c-mol}
     n = \frac{m\text{ g}}{M\text{ g/mol}}
 \end{equation}
 
-$1$ mole of any gas at <b>standard temperature and pressure} or \textbf{STP} occupies exactly $22.4$ litres. That property only appears for gasses but not liquids or solids. If you want to calculate \textbf{the number of moles in a volume of gas</b>:
+$1$ mole of any gas at <b>standard temperature and pressure</b> or <b>STP</b> occupies exactly $22.4$ litres. That property only appears for gasses but not liquids or solids. If you want to calculate <b>the number of moles in a volume of gas</b>:
 \begin{equation}
     \label{eq:c-mol-in-gas}
     n = V\text{ L} \times \frac{1\text{mol}}{22.4\text{L}}
 \end{equation}
 
-<b>Molarity} is the number of moles of the chemical per litre of a solution. It indicates how many moles of the chemical are presented in a litre of a solution — similar to density but in this case, it is the number of atoms over 1 litre of the solutions. Because a solution will include both the chemical and the water, the actual amount of water present in the solution is not $1$ litre — you add water <i>up to</i> $1$L, NOT $1$L \textit{of water</b>.
+<b>Molarity</b> is the number of moles of the chemical per litre of a solution. It indicates how many moles of the chemical are presented in a litre of a solution — similar to density but in this case, it is the number of atoms over 1 litre of the solutions. Because a solution will include both the chemical and the water, the actual amount of water present in the solution is not $1$ litre — you add water <i>up to</i> $1$L, NOT $1$L <i>of water</i>.
 
-<b>The relationship between a mole and the chemical formula} is in the proportion. For example, the element dihydrogen monoxide\footnote{Normal people usually called it "water"} has the formula \ch{H2O</b>, which states that for every oxygen atom, there are two hydrogen atoms. If you now have a mole of oxygen, you need to double that amount to have two moles of hydrogen in your compound.
+<b>The relationship between a mole and the chemical formula</b> is in the proportion. For example, the element dihydrogen monoxide<note>Normal people usually called it "water"</note> has the formula H₂O, which states that for every oxygen atom, there are two hydrogen atoms. If you now have a mole of oxygen, you need to double that amount to have two moles of hydrogen in your compound.
 
-<h3>Composition analysis}\label{sec:c-composition</h3>
-Before calculating anything, it is usually appropriate to know the chemicals you are using. The first thing to realize is that not all atoms are similar in weight; consider a composition of \ch{H2} and \ch{O}, the \ch{O} will make up most of the mass in a molecule — this happened because one \ch{O} elements weight $16$u while a hydrogen atom weights at about $1$u.
+<h3 id="sec-c-composition">Composition analysis</h3>
+Before calculating anything, it is usually appropriate to know the chemicals you are using. The first thing to realize is that not all atoms are similar in weight; consider a composition of H₂ and O, the O will make up most of the mass in a molecule — this happened because one O elements weight $16$u while a hydrogen atom weights at about $1$u.
 
 An example to determine the <b>percentage composition</b> or how much each element takes up the total mass in a water molecule: first calculate how much each element weights in the entire compound:
 \[
@@ -84,7 +123,7 @@ In this stage, we calculate the weight of individual items that make up our comp
 \]
 Despite you need two atoms of hydrogen to build a single molecule, clearly that single hydrogen atom takes up more weight.
 
-The general formula to calculate the <b>percentage composition} with the mass of an element $m_A$ and the compound's mass $m_{AB</b>=m_A+m_B$ is:
+The general formula to calculate the <b>percentage composition</b> with the mass of an element $m_A$ and the compound's mass $m_{AB</b>=m_A+m_B$ is:
 \begin{equation}
     \label{eq:c-percentage-composition}
     \%A = \frac{m_A}{m_{AB}}\times100\%
@@ -102,9 +141,9 @@ To calculate an <b>empirical formula</b>, we start by pretending we have $100$g 
 \]
 Then divide them by the smallest factor (in this case $5.5625$) to get the ratio between elements:
 \[ 11/5.5625=1.977 \]
-Because of the estimations in our equation, it is appropriate to assume that it is 2 moles of hydrogen for every oxygen atom or \ch{H2O}.
+Because of the estimations in our equation, it is appropriate to assume that it is 2 moles of hydrogen for every oxygen atom or H₂0.
 
-If you were to simplify the process of calculating <b>empirical formula} into an equation, define the formula \ch{A_xB_y} and $n_A$ is the molar mass of \ch{A</b>, we have the ratio:
+If you were to simplify the process of calculating <b>empirical formula</b> into an equation, define the formula A<sub>x</sub>B<sub>y</sub> and $n_A$ is the molar mass of A, we have the ratio:
 \begin{equation}
     x:y
     = \frac{\%A}{n_A} : \frac{\%B}{n_B}
@@ -118,7 +157,7 @@ A chemical equation usually indicates the proportion of the chemicals that parti
 <h3>Introduction: The modern model of atoms</h3>
 This section is for a simplified explanation of what is going on. It is not required if you are in a hurry but is highly recommended to grasp the deeper understanding of the explanations in the latter sections.
 
-Most of us are used to the fact that an electron flies around the nucleus in a fixed orbit. This is unfortunately an oversimplification of what happened but for a good reason. Throughout this chapter's model, an electron can move freely around a region rather than flying in a predetermined orbit. Every time you "observe" an electron, you take a picture of it which shows its position in space. As you take more pictures, you will eventually see where it is most likely to appear, and that is how you establish the orbit\footnote{In this case, we still call it an "orbit" but understand that it is a "region" in space where the electron has 90\% chance of appearing in it.} of the electron.
+Most of us are used to the fact that an electron flies around the nucleus in a fixed orbit. This is unfortunately an oversimplification of what happened but for a good reason. Throughout this chapter's model, an electron can move freely around a region rather than flying in a predetermined orbit. Every time you "observe" an electron, you take a picture of it which shows its position in space. As you take more pictures, you will eventually see where it is most likely to appear, and that is how you establish the orbit<note>In this case, we still call it an "orbit" but understand that it is a "region" in space where the electron has 90\% chance of appearing in it.</note> of the electron.
 
 The first four atomic orbital shapes that you will see are s, p, d, and f. For larger atoms, there will be more electrons which require more space to be in, which will create more diverse region's shape (likewise, the outer shell in the classic atom model has more electrons than the inner shell). Each atomic orbital can store up to 2 electrons and will be filled from the smallest orbital to the biggest orbital (which will be called a "shell"). Lastly, the electrons are shy and they would love to occupy an orbital to themselves if possible using Hund's rule.
 
@@ -127,27 +166,27 @@ Of course, what is being said is still a simplification but it is enough for you
 <h3>Quantum numbers</h3>
 There are three unique quantum numbers to describe an atomic orbital; this can be extended to describe an electron using the orbital it is in and its spin (the fourth quantum number). <b>The Pauli exclusion principle</b> says that each orbital only has 2 electrons with a different spin, which means that the four quantum numbers are essentially the ID of an electron.
 
-<b>The principal quantum number ($n$)} indicates the relative size of the atomic orbital. This is relative to the "shell" of the electron in the classic atom model, so as the number of shells increases, there will be more electrons which leads to more atomic orbital. \textit{Most of the time</b>, a higher $n$ means that the orbital has higher energy and the electron will spend more time farther from the nucleus.
+<b>The principal quantum number ($n$)</b> indicates the relative size of the atomic orbital. This is relative to the "shell" of the electron in the classic atom model, so as the number of shells increases, there will be more electrons which leads to more atomic orbital. <i>Most of the time</i>, a higher $n$ means that the orbital has higher energy and the electron will spend more time farther from the nucleus.
 \begin{equation}
     n\in\mathbb{N}\setminus\{0\}
     \qquad 0 \leq n
 \end{equation}
 
-<b>The azimuthal quantum number\footnote{Also known as the angular momentum quantum number.} ($l$)</b> is the second quantum number, indicating the shape of the atomic orbital. This usually goes by the name of "subshell", making one shell $n$ can have multiple subshells $l$. As the shell number increases, so does the number of subshells it has; for example: the shell $n=2$ will have two subshells: s and p. The s orbital (2s) is larger than the s orbital in the first shell (1s).
+<b>The azimuthal quantum number<note>Also known as the angular momentum quantum number.</note> ($l$)</b> is the second quantum number, indicating the shape of the atomic orbital. This usually goes by the name of "subshell", making one shell $n$ can have multiple subshells $l$. As the shell number increases, so does the number of subshells it has; for example: the shell $n=2$ will have two subshells: s and p. The s orbital (2s) is larger than the s orbital in the first shell (1s).
 \begin{equation}
     l\in\mathbb{Z}
     \qquad  0 \leq l \leq n-1
 \end{equation}
 As far as this chapter is concerned, you will mostly refer to this number using letters instead. Starting from $l=0$ and going up, we will refer to the subshell as s, p, d, f, g, h, and i; the letters after the g sub-shell follow in alphabetical order—excepting letter j and those already used. At the introductory level, the subshell f will likely be the highest $l$ you will ever see.
 
-<b>The magnetic quantum number ($m_i$)} tells us the orientation in space of a given atomic orbital. This number is \textit{fortunately</b> unimportant for our electron configuration topic, but keep in mind that an orbital shape can have multiple different orientations, usually based on the three 3D axes: $x$, $y$, and $z$.
+<b>The magnetic quantum number ($m_i$)</b> tells us the orientation in space of a given atomic orbital. This number is <i>fortunately</i> unimportant for our electron configuration topic, but keep in mind that an orbital shape can have multiple different orientations, usually based on the three 3D axes: $x$, $y$, and $z$.
 \begin{equation}
     m_l\in\mathbb{Z}
     \qquad -l \leq m_l \leq +l
 \end{equation}
 As you can see from the formula, the number of possible $m_l$ (hence the number of electrons) grows pretty quickly.
 
-Those there quantum numbers are enough to indicate which orbit you are talking about. It is suitable to remember that there are many possible orientations of an atomic orbital and many orbits with relatively the same size; similarly, <i>in classical words}, there are many orbitals in a subshell and many subshells in a shell. At this introductory level, many terminologies from the classical model are often used interchangeably with the vocabularies from the quantum mechanics model, so do not worry about using the correct word... \textit{yet</i>.
+Those there quantum numbers are enough to indicate which orbit you are talking about. It is suitable to remember that there are many possible orientations of an atomic orbital and many orbits with relatively the same size; similarly, <i>in classical words</i>, there are many orbitals in a subshell and many subshells in a shell. At this introductory level, many terminologies from the classical model are often used interchangeably with the vocabularies from the quantum mechanics model, so do not worry about using the correct word... <i>yet</i>.
 
 <b>The spin quantum number ($m_s$)</b> as the fourth quantum number indicates the quantum spin of a particle or in this case, an electron. Because an atomic orbit can have two electrons with a different spin, this number is necessary to indicate which electron you are referring to.
 \begin{equation}
@@ -158,25 +197,21 @@ Those there quantum numbers are enough to indicate which orbit you are talking a
 \end{equation}
 
 <h3>Orbital diagram</h3>
-An orbital diagram is used to represent how many electrons are there, and what orbit they are in. Each box here represents an orbit, which can store two electrons drawn by two arrows; if there is only one electron, that electron will have up spin. Figure \ref{fig:c1} represents how electrons slowly fill from the smallest to the biggest orbit (from 1s to 2s). It is once again important to remember the <b>Pauil's exclusion principle</b> and the fact that the two electrons that share the same orbit should have a different spin.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{chemistry/1.png}
-    \caption{Orbital diagram and electron configuration of Helium and lithium}
-    \label{fig:c1}
-\end{figure}
+An orbital diagram is used to represent how many electrons are there, and what orbit they are in. Each box here represents an orbit, which can store two electrons drawn by two arrows; if there is only one electron, that electron will have up spin. Figure <a href="#fig-c1"></a> represents how electrons slowly fill from the smallest to the biggest orbit (from 1s to 2s). It is once again important to remember the <b>Pauil's exclusion principle</b> and the fact that the two electrons that share the same orbit should <figure>
+    <img src="chemistry/1.png" style="width: 50%;" alt="Orbital diagram and electron configuration of Helium and Lithium">
+    <figcaption>Orbital diagram and electron configuration of Helium and Lithium</figcaption>
+</figure>
+
 
 We group orbitals from the same subshell by connecting the sides of the orbital boxes. <b>The Hund's rule</b> dictates how we should fill the atomic orbitals from the same subshell:
 <quote>
     Every orbital in a sublevel is singly occupied before any orbital is doubly occupied.
 </quote>
-In simple terms demonstrated by figure \ref{fig:c2}, you should fill all the orbitals in the same subshell with electrons of the same spin (<i>in most cases</i>, up spin) before putting in the opposite spin.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{chemistry/2.png}
-    \caption{How electrons fill the orbits from the 2p subshell}
-    \label{fig:c2}
-\end{figure}
+In simple terms demonstrated by figure <a href="#fig-c2"></a>, you should fill all the orbitals in the same subshell with electrons of the same spin (<i>in most cases</i>, up spin) before putting in the opposite spin.
+<figure>
+    <img src="chemistry/2.png" style="width: 50%;" alt="How electrons fill the orbits from the 2p subshell">
+    <figcaption>How electrons fill the orbits from the 2p subshell</figcaption>
+</figure>
 
 The number of orbitals per subshell is based on the third quantum number mentioned above: it is the number of possible values for $m_i$. The general formula for the number of atomic orbitals based on the second quantum number $l$ is:
 \begin{equation} 1 + 2(l-1) \end{equation}
@@ -186,52 +221,50 @@ Another thing you need to keep in mind is the <b>Aufbau principle</b> ("Aufbau" 
 <quote>
     When filling orbitals, the lowest energy orbitals available are always filled first.
 </quote>
-This principle is here to warn you of the fact that the subshell's energy level is not in order. Yes, the order <i>inside a shell} follows the basic order based on $l$; however, an example would be the subshell 4s has a lower energy level compared to the 3d subshell. This is a reminder that $n$ is simply to show you the \textit{relative size} of the orbit (compared to a similarly shaped orbit) while $l$ is the shape — this is why the terminology "shell" is confusing in this case, as we tend to think they are orderly stacked but in fact, they are not (figure \ref{fig:c3}). Luckily, there is a trick to remember the energy level, presented in figure \ref{fig:c4</i>; the Aufbau principle starts to kick as we reach scandium, the first transition metal in the periodic table.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{chemistry/3.png}
-    \caption{Energy diagram for each subshell, courtesy of BYJUS}
-    \label{fig:c3}
-\end{figure}
-\begin{figure}
-    \centering
-    \includegraphics[height=0.7\linewidth]{chemistry/4.png}
-    \caption{Aufbau principle's trick diagram, courtesy of BYJUS}
-    \label{fig:c4}
-\end{figure}
+This principle is here to warn you of the fact that the subshell's energy level is not in order. Yes, the order <i>inside a shell</i> follows the basic order based on $l$; however, an example would be the subshell 4s has a lower energy level compared to the 3d subshell. This is a reminder that $n$ is simply to show you the <i>relative size</i> of the orbit (compared to a similarly shaped orbit) while $l$ is the shape — this is why the terminology "shell" is confusing in this case, as we tend to think they are orderly stacked but in fact, they are not (figure <a href="#fig-c3"></a>). Luckily, there is a trick to remember the energy level, presented in figure <a href="#fig-c4"></a>; the Aufbau principle starts to kick as we reach scandium, the first transition metal in the periodic table.
+<figure>
+    <img src="chemistry/3.png" style="width: 75%;" alt="Energy diagram for each subshell">
+    <figcaption>Energy diagram for each subshell, courtesy of BYJUS</figcaption>
+</figure>
+
+<figure>
+    <img src="chemistry/4.png" style="height: 70vh;" alt="Aufbau principle's trick diagram">
+    <figcaption>Aufbau principle's trick diagram, courtesy of BYJUS</figcaption>
+</figure>
+
 
 And just like any principle in chemistry, there are exceptions to the Aufbau principle. These exceptions are not very related to chemistry but it should not come as a surprise when encountering them.
 
 To summarize this section, here is the list of things to think about when drawing an orbital diagram:
-\begin{enumerate}
+<ul>
     <li>Count how many electrons you need, then divide by 2 to have the number of boxes you will need to have</li>
     <li>Draw out the boxes with the correct shell subshell configuration. A simple tip to remember is 1, 3, 5, 7 for the s, p, d, and f subshell</li>
     <li>Fill the subshell: fill the entire subshell with up-spin electrons before filling it with down-spin (or vice versa for special cases)</li>
     <li>Stop when you already put down enough electrons, check if your element has a special case (usually question-dependent special cases)</li>
-\end{enumerate}
+</ul>
 
 <h3>Electron configuration</h3>
-Taking from figure \ref{fig:c1}, lithium's electron configuration has 3 electrons on two separate subshells — we write the number of electrons per subshell as a superscript after the subshell's notation. If we have $x$ as the number of electrons in a subshell, the general format for a subshell's electron configuration is:
+Taking from figure <a href="fig-c1"></a>, lithium's electron configuration has 3 electrons on two separate subshells — we write the number of electrons per subshell as a superscript after the subshell's notation. If we have $x$ as the number of electrons in a subshell, the general format for a subshell's electron configuration is:
 \begin{equation}
     n\,l\,^x
 \end{equation}
-This makes the electron configuration for \ch{Li} which has 3 electrons as:
+This makes the electron configuration for Li which has 3 electrons as:
 \begin{equation*}
     1s^2\;2s^1
 \end{equation*}
 
 Regarding the Aufbau principle, there are conflicting sources regarding whether you should sort according to the energy level or the shell's number order. This is up to you but consult your instructor for their preference. However, sorting by shell order is especially useful for writing the electron configuration of ions (which will be discussed later).
 
-<b>The core notation} allows us to condense the electron configuration of elements based on the last noble gas before the element in the periodic table. This is because of the property where noble gas has a full valence shell. For example, sodium follows immediately after neon, so we can simplify to the core notation with warping \ch{Ne</b> in a square bracket:
+<b>The core notation</b> allows us to condense the electron configuration of elements based on the last noble gas before the element in the periodic table. This is because of the property where noble gas has a full valence shell. For example, sodium follows immediately after neon, so we can simplify to the core notation with warping Ne in a square bracket:
 \begin{equation*}
     1s^2 \; 2s^2 \; 2p^6 \; 3s^1
     \rightarrow
     [\text{Ne}] \; 3s^1
 \end{equation*}
 
-The valence shell (the outermost shell) is also how chemists name the blocks from the periodic table. From the example above, \ch{Na} is clearly from the s block, as its outermost subshell is s. Once again, keep in mind the Aufbau principle and the outermost shell is not necessarily the shell with the highest $n$ quantum number.
+The valence shell (the outermost shell) is also how chemists name the blocks from the periodic table. From the example above, Na is clearly from the s block, as its outermost subshell is s. Once again, keep in mind the Aufbau principle and the outermost shell is not necessarily the shell with the highest $n$ quantum number.
 
-Recall that a cation has fewer electrons (positively charged) and an anion has more, which will in turn remove some electrons from the electron configuration. For <i>only} cations, sort the neutral atom's electron configuration from the smallest to the largest, disregarding the Aufbau principle. After that, simply add or remove the electron according to your sorted order. Because of that, $\text{Sn}^{4+}$ should not be written as $\text{[Kr]</i> \; 5s^2 \; 4d^8$ but instead as:
+Recall that a cation has fewer electrons (positively charged) and an anion has more, which will in turn remove some electrons from the electron configuration. For <i>only</i> cations, sort the neutral atom's electron configuration from the smallest to the largest, disregarding the Aufbau principle. After that, simply add or remove the electron according to your sorted order. Because of that, Sn<sup>4+</sup> should not be written as [Kr] 5s<sup>2</sup> 4d<sup>8</sup> but instead as:
 \begin{equation*}
     \text{[Kr]} \; 4d^{10}
 \end{equation*}
