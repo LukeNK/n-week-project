@@ -15,6 +15,36 @@
             font-family: "Inter", Helvetica, Arial, sans-serif;
             font-size: large;
             overflow-x: hidden; /* prevent weird bug with MathJax (issue 3348) */
+            counter-reset: part chapter section;
+        }
+
+        h1 {
+            break-before: page;
+            text-align: center;
+        }
+        h1:not([noNumber])::before {
+            display: block;
+            font-weight: normal;
+            border-bottom: 1px solid black;
+            counter-increment: part;
+            content: "Part " counter(part, upper-roman);
+        }
+
+        h2 {
+            break-before: page;
+        }
+        h2:not([noNumber])::before {
+            display: block;
+            font-weight: normal;
+            border-bottom: 1px dotted black;
+            counter-increment: chapter;
+            content: "Chapter " counter(chapter) " ";
+            counter-set: section 0;
+        }
+
+        h3::before {
+            counter-increment: section;
+            content: counter(chapter) "." counter(section) " ";
         }
 
         p {
@@ -27,6 +57,7 @@
             vertical-align: super;
             border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
             font-size: 0.75em;
+            cursor: pointer;
         }
 
         /* Tooltip text */
@@ -44,7 +75,7 @@
     </style>
 </head>
 <body>
-    <h2>About This Note</h2>
+    <h2 noNumber>About This Note</h2>
     <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
 
     <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.</p>
@@ -61,7 +92,7 @@
     <!-- <div subject="m"></div> -->
 
     <h1>Chemistry</h1>
-    <div subject="c"></p>
+    <div subject="c"></div>
 
     <h1>Physics</h1>
     <!-- <div subject="p"></div> -->
