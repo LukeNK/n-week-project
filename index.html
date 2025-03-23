@@ -14,16 +14,16 @@
         body {
             font-family: "Inter", Helvetica, Arial, sans-serif;
             font-size: large;
+            overflow-x: hidden; /* prevent weird bug with MathJax (issue 3348) */
         }
 
-        p { 
+        p {
             text-indent: 2rem;
             text-align: justify;
         }
 
         /* Footnotes */
         note {
-            position: relative;
             vertical-align: super;
             border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
             font-size: 0.75em;
@@ -32,11 +32,6 @@
         /* Tooltip text */
         note span {
             display: none;
-            position: fixed;
-            z-index: 1;
-            top: 50%;
-            left: 0;
-            right: 0;
             background-color: black;
             color: #fff;
             padding: 5px;
