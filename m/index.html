@@ -1,22 +1,22 @@
 <h2>Logic and Proofs</h2>
-Logic is very easy to understand. If it is hard for you, you have a bigger problem that this chapter cannot solve. However, to save time, mathematicians created multiple notations to make their lives easier (and our lives a bit harder). This chapter is an attempt to quickly summarize those notations and acts as a reference sheet whenever you see strange logic notations.
+<p>Logic is very easy to understand. If it is hard for you, you have a bigger problem that this chapter cannot solve. However, to save time, mathematicians created multiple notations to make their lives easier (and our lives a bit harder). This chapter is an attempt to quickly summarize those notations and acts as a reference sheet whenever you see strange logic notations.</p>
 
 <h3>Symbols and notations</h3>
-<b>Propositions</b> are statements that could be either true or false. We use $T$ or $F$ to indicate true or false.
+<p><b>Propositions</b> are statements that could be either true or false. We use $T$ or $F$ to indicate true or false.</p>
 
-A proposition can be <b>negated</b>, which gives the opposite of the proposition. The negation of $p$ is:
+<p>A proposition can be <b>negated</b>, which gives the opposite of the proposition. The negation of $p$ is:
 \begin{equation} \neg p \end{equation}
 <b>The conjunction operator</b> will return true if both propositions $p$  and $q$ are true; it is similar to an "and" statement.
-\begin{equation} p \land q \end{equation}
+\begin{equation} p \land q \end{equation}</p>
 
-<b>Disjunction</b> is similar to an "or" statement where it only requires either one statement to be true.
-\begin{equation} p \lor q \end{equation}
+<p><b>Disjunction</b> is similar to an "or" statement where it only requires either one statement to be true.
+\begin{equation} p \lor q \end{equation}</p>
 
-<b>Exclusive or</b> (XOR) will return true if either statement is true, but not both.
+<p><b>Exclusive or</b> (XOR) will return true if either statement is true, but not both.
 \begin{equation} p \oplus q \end{equation}
-It is similar to $(p \lor q)\land\neg(p \land q)$.
+It is similar to $(p \lor q)\land\neg(p \land q)$.</p>
 
-<b>Implication</b> expresses that one thing will result in another ("if $p$ then $q$"):
+<p><b>Implication</b> expresses that one thing will result in another ("if $p$ then $q$"):
 \begin{equation} p \rightarrow q \end{equation}
 $p$ is called the antecedent, premise, or hypothesis; $q$ is called the conclusion or consequence because it is the result of $p$. Moreover, noted that the whole statement itself can still generate $T$ or $F$ values. If we have a statement "If the store is open today ($p$), then Luka will go ($q$)". Consider the truth table, we have:
 <ul>
@@ -24,52 +24,52 @@ $p$ is called the antecedent, premise, or hypothesis; $q$ is called the conclusi
     <li>If the store opens but Luka does not go, then apparently Luka's action does not depend on the store being opened.</li>
     <li>If the stores do not open but Luka still goes, the statement $p \rightarrow q$ is still true because it does not say anything about the store being closed.</li>
     <li>If the store closes and Luka stays at home, the statement is still true for a similar reason.</li>
-</ul>
+</ul></p>
 
-A <b>bi-conditional statement</b> is similar to the statement "if and only if", that is when both propositions support each other. This is similar to the equal sign, so even if both propositions are false, the bi-conditional statements still hold (because $F=F$)
+<p>A <b>bi-conditional statement</b> is similar to the statement "if and only if", that is when both propositions support each other. This is similar to the equal sign, so even if both propositions are false, the bi-conditional statements still hold (because $F=F$)
 \begin{equation} p \leftrightarrow q \end{equation}
-The difference is that bi-conditional implies that both $p$ and $q$ are similar to each other; that is, they are either both true or both false for $p \leftrightarrow q$ is true.
+The difference is that bi-conditional implies that both $p$ and $q$ are similar to each other; that is, they are either both true or both false for $p \leftrightarrow q$ is true.</p>
 
-<b>Equivalent</b> are propositions that are the same. There are two ways to write it and you will usually see the latter in algebra:
+<p><b>Equivalent</b> are propositions that are the same. There are two ways to write it and you will usually see the latter in algebra:
 \begin{equation}
     p \equiv q
     \qquad
     p \Leftrightarrow q
-\end{equation}
+\end{equation}</p>
 
-<b>A predicate</b> is a statement with variables, written with a capital letter and a variable listed as arguments:
+<p><b>A predicate</b> is a statement with variables, written with a capital letter and a variable listed as arguments:
 \begin{equation} P(x,y,z) \end{equation}
-Predicate is the founding block of functions — that is why the function notation is similar to this. Once the variables have values, it is a proposition with a determined true or false result.
+Predicate is the founding block of functions — that is why the function notation is similar to this. Once the variables have values, it is a proposition with a determined true or false result.</p>
 
-<b>The universal quantifier</b> is used to denote sentences with words like "all" or "every":
+<p><b>The universal quantifier</b> is used to denote sentences with words like "all" or "every":
 \begin{equation} \forall xP(x) \end{equation}
-Essentially that statement allowed us to plug every possible $x$ into our predicate $P(x)$.
+Essentially that statement allowed us to plug every possible $x$ into our predicate $P(x)$.</p>
 
-<b>The existential quantifier</b> is used to denote sentences with words like "some". It implies the fact that there are at least <i>some</i> variables that make the predicate $P$ hold.
+<p><b>The existential quantifier</b> is used to denote sentences with words like "some". It implies the fact that there are at least <i>some</i> variables that make the predicate $P$ hold.
 \begin{equation} \exists xP(x) \end{equation}
-Informally, $\forall$ is just a bunch of  $\land$s and $\exists$ is just a bunch of $\lor$s.
+Informally, $\forall$ is just a bunch of  $\land$s and $\exists$ is just a bunch of $\lor$s.</p>
 
-Noted that for <b>nested quantifiers</b>, the order does matter:
+<p>Noted that for <b>nested quantifiers</b>, the order does matter:
 \[
     \forall x \exists y (x+y=0)
     \qquad
     \exists x \forall y (x+y=0)
 \]
-The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select <i>any</i> $y$, the value $x+y=0$".
+The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select <i>any</i> $y$, the value $x+y=0$".</p>
 
-<b>Therefore</b> symbol is:
-\begin{equation} \therefore \end{equation}
+<p><b>Therefore</b> symbol is:
+\begin{equation} \therefore \end{equation}</p>
 
-At the end of a proof, <b>Q.E.D.</b> is used to show that the proof is completed.
+<p>At the end of a proof, <b>Q.E.D.</b> is used to show that the proof is completed.</p>
 
 <h3>Logic proof</h3>
-<b>Inference</b> is when you prove something is true by proving that everything we know is true is equivalent to $q$, therefore $q$ must be true.
+<p><b>Inference</b> is when you prove something is true by proving that everything we know is true is equivalent to $q$, therefore $q$ must be true.
 \begin{equation}
     ((p \rightarrow q) \land p) \rightarrow q
 \end{equation}
-If $p$ leads to $q$ and $p$ is true, then it will lead to $q$ is true.
+If $p$ leads to $q$ and $p$ is true, then it will lead to $q$ is true.</p>
 
-A few logic terms:
+<p>A few logic terms:
 <ul>
     <li><b>Proof</b>: a valid argument based on theorems and what is known to be true.</li>
     <li><b>Conjecture</b>: a statement that you think is true and will be proven with your proof</li>
@@ -77,92 +77,92 @@ A few logic terms:
     <li><b>Premise</b>: a condition or a requirement for something to be true</li>
     <li><b>Lemma</b>: a small theorem that we need to get to the proof we are interested in</li>
     <li><b>Corollary</b>: a small theorem that is the result of the more important theorem</li>
-</ul>
+</ul></p>
 
-<b>Disproving conjecture</b> is a proving method that applies to theorems with $\forall xP(x)$, where you can simply find a single $x$ that dissatisfies $P(x)$.
+<p><b>Disproving conjecture</b> is a proving method that applies to theorems with $\forall xP(x)$, where you can simply find a single $x$ that dissatisfies $P(x)$.</p>
 
-<b>Direct proof</b> assumes that $p$ is true, then follows implications to show that $q$ is true. This is <i>similar</i> to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of <b>hypothetical syllogism</b>:
+<p><b>Direct proof</b> assumes that $p$ is true, then follows implications to show that $q$ is true. This is <i>similar</i> to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of <b>hypothetical syllogism</b>:
 \begin{equation}
     [(p \rightarrow r)\land(r \rightarrow q)
     \rightarrow (p \rightarrow q)]
-\end{equation}
+\end{equation}</p>
 
-<b>Proof by induction</b> is simply proving that $P(n)$ is true for $1$, then proving that $\forall n=k\leq1$, it is still true with $n=k+1$.
+<p><b>Proof by induction</b> is simply proving that $P(n)$ is true for $1$, then proving that $\forall n=k\leq1$, it is still true with $n=k+1$.</p>
 
-<b>Proof by contraposition</b> utilizes this rule:
+<p><b>Proof by contraposition</b> utilizes this rule:
 \begin{equation}
     p \rightarrow q
     \equiv \neg q \rightarrow \neg p
 \end{equation}
-In simple terms, <b>proof by contraposition</b> simply proves that if $q$ is wrong then $p$ must be wrong too, and then we prove that because $p$ is right then $q$ is right.
+In simple terms, <b>proof by contraposition</b> simply proves that if $q$ is wrong then $p$ must be wrong too, and then we prove that because $p$ is right then $q$ is right.</p>
 
-<b>The existence proof</b> is useful for statements like $\exists xP(x)$. Just simply find one $x$ that satisfies $x$ and you are done. Disproving such a statement is harder because then you must prove that $\forall x$, $P(x)$ is false.
+<p><b>The existence proof</b> is useful for statements like $\exists xP(x)$. Just simply find one $x$ that satisfies $x$ and you are done. Disproving such a statement is harder because then you must prove that $\forall x$, $P(x)$ is false.</p>
 
 <h2>Sets</h2>
-Because sets are fairly simple to understand, this chapter will act more as a quick reference sheet.
+<p>Because sets are fairly simple to understand, this chapter will act more as a quick reference sheet.</p>
 
 <h3>Basic</h3>
-Sets are written with curly braces with its elements separated by a comma:
+<p>Sets are written with curly braces with its elements separated by a comma:
 \begin{equation} A = \{0,1,2,3\} \end{equation}
-Order does not matter and duplicates do not count. If there are two similar elements then they are treated as one.
+Order does not matter and duplicates do not count. If there are two similar elements then they are treated as one.</p>
 
-<b>Element-of symbol</b> is written as:
+<p><b>Element-of symbol</b> is written as:
 \begin{equation}
     2 \in \{1,2,3\}
     \qquad
     4 \notin \{1,2,3\}
-\end{equation}
+\end{equation}</p>
 
-<b>Two sets are equal</b> if they contain the same elements.
+<p><b>Two sets are equal</b> if they contain the same elements.
 \begin{equation}
     A = B
     \text{ if and only if }
     \forall x (x \in A  \leftrightarrow x \in B)
 \end{equation}
-"$A=B$ if and only if for all $x$ in $A$, there exists a similar $x$ in $B$".
+"$A=B$ if and only if for all $x$ in $A$, there exists a similar $x$ in $B$".</p>
 
-A set can contain another set:
+<p>A set can contain another set:
 \begin{equation}
     C = \{A, \{5,6,7\}\} = \{\{0,1,2,3\}, \{5,6,7\}\}
-\end{equation}
+\end{equation}</p>
 
-A set's <b>cardinality</b> is the number of distinct elements. We only count the number of objects in the set we are evaluating (only counting the number of elements at the top level).
+<p>A set's <b>cardinality</b> is the number of distinct elements. We only count the number of objects in the set we are evaluating (only counting the number of elements at the top level).
 \begin{equation}
     |\{1,2,3\}| = 3
     \qquad
     |C| = 2
-\end{equation}
+\end{equation}</p>
 
-Instead of listing everything (maybe even with dots $\dots$), you can describe the elements of a set with <b>set builder notation</b>:
+<p>Instead of listing everything (maybe even with dots $\dots$), you can describe the elements of a set with <b>set builder notation</b>:
 \begin{equation}
     \{n \mid n \in N \text{ and } n < 100\}
 \end{equation}
-In that notation, $n$ was defined as a variable that will go in the set; the condition for $n$ was put after the vertical line.
+In that notation, $n$ was defined as a variable that will go in the set; the condition for $n$ was put after the vertical line.</p>
 
-<b>An empty set</b> has a special notation:
+<p><b>An empty set</b> has a special notation:
 \begin{equation}
     \emptyset = \{\}
     \qquad
     |\emptyset| = 0
-\end{equation}
+\end{equation}</p>
 
-Any non-empty set will have $\emptyset$ as its subset:
-\begin{equation} \emptyset \subset A \end{equation}
+<p>Any non-empty set will have $\emptyset$ as its subset:
+\begin{equation} \emptyset \subset A \end{equation}</p>
 
-<b>A subset</b> can be noted like this:
+<p><b>A subset</b> can be noted like this:
 \begin{equation} \{1,2\} \subseteq A \end{equation}
 Note that there is a difference between a subset and being an element. <b>A proper subset</b> is a subset that is not identical. The underline below the subset symbol is similar to the equal sign in $\leq$ sign.
 \begin{equation}
     \{1,2\} \subset A
     \qquad
     A=B \Rightarrow A \subseteq B \text{ but } A \not\subset B
-\end{equation}
+\end{equation}</p>
 
-<b>A power set</b> is a set containing all of a set's subsets:
+<p><b>A power set</b> is a set containing all of a set's subsets:
 \begin{equation} P(S) = \{A \mid A \subseteq S\} \end{equation}
-Notice that the power set contains the set $S$ itself (as the definition is not a proper subset) and an empty set $\emptyset$. The cardinality of a power set is $|P(S)| = 2^{|S|}$.
+Notice that the power set contains the set $S$ itself (as the definition is not a proper subset) and an empty set $\emptyset$. The cardinality of a power set is $|P(S)| = 2^{|S|}$.</p>
 
-<b>Cartesian product</b> is all possible ways to take things from two sets. The Cartesian product of sets $A$ and $B$ is the set of all ordered pairs of values from $A$ and $B$.
+<p><b>Cartesian product</b> is all possible ways to take things from two sets. The Cartesian product of sets $A$ and $B$ is the set of all ordered pairs of values from $A$ and $B$.
 \begin{equation}
     A \times B
     = \{(a,b) \mid a \in A, b \in B\}
@@ -170,105 +170,103 @@ Notice that the power set contains the set $S$ itself (as the definition is not 
 Cartesian product is not commutative:
 \begin{equation}
     A \times B \neq B \times A
-\end{equation}
+\end{equation}</p>
 
 <h3>Set operation</h3>
-<b>The union</b> of two sets contains all elements from both of those sets. It is the set of all elements from both sets:
+<p><b>The union</b> of two sets contains all elements from both of those sets. It is the set of all elements from both sets:
 \begin{equation}
     A \cup B
     = \{ x \mid x \in A \text{ or } x \in B \}
-\end{equation}
+\end{equation}</p>
 
-<b>The intersection</b> of two sets is the set containing elements that appear on both sets:
+<p><b>The intersection</b> of two sets is the set containing elements that appear on both sets:
 \begin{equation}
     A \cap B
     = \{ x \mid x \in A \text{ and } x \in B \}
 \end{equation}
-Note that the symbols are similar to the "and" logic operator ($\land$).
+Note that the symbols are similar to the "and" logic operator ($\land$).</p>
 
-<b>The difference</b> between two sets is the set of values in one but not the other, similar to subtraction:
+<p><b>The difference</b> between two sets is the set of values in one but not the other, similar to subtraction:
 \begin{equation}
     A-B = A \setminus B
     = \{ x \mid x \in A \text{ and } x \not\in B \}
 \end{equation}
-The difference does not have commutative property.
+The difference does not have commutative property.</p>
 
-Similar to sigma notation, we can describe a large number of sets with:
+<p>Similar to sigma notation, we can describe a large number of sets with:
 \begin{equation}
     \bigcup^n_{i=1} S_i
     \qquad
     \bigcap^n_{i=1} S_i
-\end{equation}
+\end{equation}</p>
 
 <h2>Functions and Graphing</h2>
 <h3>Functions</h3>
-Functions describe the relationship between input and output — they are like factories with inputs and produce one output (figure \ref{fig:m19}). If we define $x$ as an input and the function that will manipulate our input as $F$, then the output can be defined as:
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/19.png}
-    \caption{Function as a black box}
-    \label{fig:m19}
-\end{figure}
+<p>Functions describe the relationship between input and output — they are like factories with inputs and produce one output (<a href="fig-m19"></a>). If we define $x$ as an input and the function that will manipulate our input as $F$, then the output can be defined as:
+<figure>
+    <img src="19.png" style="width: 50%;" alt="Function as a black box">
+    <figcaption>Function as a black box</figcaption>
+</figure>
 \begin{equation}
     \text{For every } x \text{ there is one and only one }
     F(x)
 \end{equation}
-In this case, we use $x$ as a variable, which means it assumes that we can plug anything into the function and it shapes into a "product". As the above definition stated, a function can only give one output for every input, so if you plug $1$ into $F(x)$, we will only get one output $F(1)$.
+In this case, we use $x$ as a variable, which means it assumes that we can plug anything into the function and it shapes into a "product". As the above definition stated, a function can only give one output for every input, so if you plug $1$ into $F(x)$, we will only get one output $F(1)$.</p>
 
-<b>Domain} is the limit of what the functions can take ($x$). \textbf{Range</b> is the limit of what the function can give out as output (defined over $F(x)$). Both of them usually being defined with inequalities.
+<p><b>Domain</b> is the limit of what the functions can take ($x$). <b>Range</b> is the limit of what the function can give out as output (defined over $F(x)$). Both of them usually being defined with inequalities.</p>
 
-<b>Defining a function</b> is similar to defining a "procedure" to work on the input. In relationship terms, it is how the input is greater (addition), smaller (subtraction), many times bigger (multiplication), etc... Once again putting $x$ as the input, we can define $F(x)$ as an operation on our input:
+<p><b>Defining a function</b> is similar to defining a "procedure" to work on the input. In relationship terms, it is how the input is greater (addition), smaller (subtraction), many times bigger (multiplication), etc... Once again putting $x$ as the input, we can define $F(x)$ as an operation on our input:
 \[ F(x) = 2x+1 \]
-$F(x)$ <i>depends</i> on the value of $x$ and the equation describes how those two relate.
+$F(x)$ <i>depends</i> on the value of $x$ and the equation describes how those two relate.</p>
 
 <h2>[Science] Significant Figures, Rounding, and Scientific Notation</h2>
-<b>Significant figures (digits)</b>, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the accuracy of your number. The rules are very easy to follow:
+<p><b>Significant figures (digits)</b>, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the accuracy of your number. The rules are very easy to follow:
 <ul>
     <li>All <b>leading</b> zeros are not significant</li>
     <li>If there is a decimal point, all <b>trailing</b> zeros are significant</li>
     <li>Digits between the first and the last <b>non-zero digit</b> are significant</li>
     <li>If a digit is significant but the rules above do not cover, you can underline it</li>
 </ul>
-Remember, the second point only counts trailing zeros, which are zeros after a non-zero digit, regardless of where the decimal point is.
+Remember, the second point only counts trailing zeros, which are zeros after a non-zero digit, regardless of where the decimal point is.</p>
 
-We can add "<b>plus/minus</b>" ($\pm$) to further show our level of accuracy.
+<p>We can add "<b>plus/minus</b>" ($\pm$) to further show our level of accuracy.</p>
 
-<b>Rounding} is simply reducing the number of significant figures. Here is an additional rule you might not know about rounding 5: you should round it to make the last digit \textit{even</b>. This ensures that the ups and downs will cancel out each other over a long chain of calculations.
+<p><b>Rounding</b> is simply reducing the number of significant figures. Here is an additional rule you might not know about rounding 5: you should round it to make the last digit <i>even</i>. This ensures that the ups and downs will cancel out each other over a long chain of calculations.</p>
 
 <h3>Scientific notation</h3>
-Scientific notation is a way to deal with very big or very small numbers. There are two parts in a scientific notation: the <b>mantissa} $m$ (decimal portion) and the \textbf{exponent</b> $n$ (ordinate):
+<p>Scientific notation is a way to deal with very big or very small numbers. There are two parts in a scientific notation: the <b>mantissa</b> $m$ (decimal portion) and the <b>exponent</b> $n$ (ordinate):
 \begin{equation} m \times 10^n \end{equation}
-A good way to think of the exponent $n$ is in terms of how you move the decimal point in the mantissa $m$. If $n$ is positive, move the decimal point to the right $n$ times (which is $\times10^n$), and vice versa for a negative power.
+A good way to think of the exponent $n$ is in terms of how you move the decimal point in the mantissa $m$. If $n$ is positive, move the decimal point to the right $n$ times (which is $\times10^n$), and vice versa for a negative power.</p>
 
-A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 \leq m < 10$). If you have $0.6$, simply move the decimal to the right and <i>subtract} the exponent by $1$, which gives you $6\times10^{-1</i>$. A bit of simplification there because the whole number can also be negative, making the mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with <b>negative scientific notation</b>, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.
+<p>A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 &leq; |m| &lt; 10$). If you have $0.6$, simply move the decimal to the right and <i>subtract</i> the exponent by $1$, which gives you $6\times10^{-1}$. The mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with <b>negative scientific notation</b>, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.</p>
 
-<b>Ten raised by zero</b> equals 1, useful to represent numbers with the right mantissa but does not hint at the fact that it is in scientific notation:
-\begin{equation} 10^0=1 \end{equation}
+<p><b>Ten raised by zero</b> equals 1, useful to represent numbers with the right mantissa but does not hint at the fact that it is in scientific notation:
+\begin{equation} 10^0=1 \end{equation}</p>
 
-<b>To convert a number to scientific notation}, simply move the decimal point until it satisfies the mantissa's requirement. To remember which sign to put for the exponent: if you moved the decimal point to the left (making the mantissa smaller), then you need to multiply it by a factor of $10$ to make it the same as the original number. Ask yourself: do I need the exponent to be <i>bigger</i> or \textit{smaller</b> to make the mantissa equal the original number?
+<p><b>To convert a number to scientific notation</b>, simply move the decimal point until it satisfies the mantissa's requirement. To remember which sign to put for the exponent: if you moved the decimal point to the left (making the mantissa smaller), then you need to multiply it by a factor of $10$ to make it the same as the original number. Ask yourself: do I need the exponent to be <i>bigger</i> or <i>smaller</i> to make the mantissa equal the original number?</p>
 
-Scientific notation is helpful when counting significant figures because now all of the digits that appear in the mantissa are significant.
+<p>Scientific notation is helpful when counting significant figures because now all of the digits that appear in the mantissa are significant.</p>
 
-<b>To add/subtract</b> numbers in scientific notation, make the exponent the same and simply deal with the mantissa, then readjust the result to proper scientific notation by moving the decimal. The answer should be rounded to the least number of decimal places.
+<p><b>To add/subtract</b> numbers in scientific notation, make the exponent the same and simply deal with the mantissa, then readjust the result to proper scientific notation by moving the decimal. The answer should be rounded to the least number of decimal places.
 \[\begin{aligned}
     & 3.0 \times 10^2 + 6.4 \times 10^3 \qquad 300 + 6400 \\
     =& 3.0 \times 10^2 + 64 \times 10^2 \qquad \text{least number of decimal places is }0 \\
     =& (3.0 + 64) \times 10^2 \\
     =& 67.0 \times 10^2 \qquad \text{round the number, return the mantissa to scientific notation} \\
     =& 6.7 \times 10^3
-\end{aligned}\]
+\end{aligned}\]</p>
 
-<b>To multiply/divide}, you also multiply/divide the mantissa by themselves first, then multiply/divide the exponents by using an exponent rule $10^n\cdot10^m=10^{n+m</b>$. This was hidden behind the fact that multiplication is commutative. The answer should have the same significant figures as the number with the least significant figures.
+<p><b>To multiply/divide</b>, you also multiply/divide the mantissa by themselves first, then multiply/divide the exponents by using an exponent rule $10^n\cdot10^m=10^{n+m}$. This was hidden behind the fact that multiplication is commutative. The answer should have the same significant figures as the number with the least significant figures.
 \[\begin{aligned}
     & (4.1\times10^6)\times(3.110\times10^8) \qquad\text{2SF} \times\text{4SF} \\
     =& (4.1\times3.110)\times10^{6+8} \\
     =& 12.751\times10^{14} \qquad \text{round to 2SF and shift decimal point} \\
     =& 1.2\times10^{15}
-\end{aligned}\]
+\end{aligned}\]</p>
 
 <h2>Complex Numbers</h2>
-<h3>Introduction</h3>
-The definition of a <b>complex number</b>:
+<p><h3>Introduction</h3>
+<p>The definition of a <b>complex number</b>:
 \begin{equation} i = \sqrt{-1} \end{equation}
 \begin{equation}
     \label{eq:m1}
@@ -277,21 +275,20 @@ The definition of a <b>complex number</b>:
 \end{equation}
 We define the real part of $z$ as $Re(z)=a$ and the imagined part $Im(z)=b$. Furthermore, we define the conjugate of a complex number as $z^*$ (z star):
 \begin{equation} z^*=a-ib \end{equation}
-Because $b=0$ for real numbers, the conjugate of a real number is itself.
+Because $b=0$ for real numbers, the conjugate of a real number is itself.</p>
 
 <h3>Visual intuition</h3>
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/9.png}
-    \caption{Complex number intuition}
-    \label{fig:m9}
-\end{figure}
-As a way to draw it on a standard two-axis graph similar to figure \ref{fig:m9}, you can put the horizontal axis (x-axis) as $a$ and the vertical axis as $b$ to represent the imaginary part of a complex number. This works better if you also recall that we were taught real numbers on a left-right number line.
+<p>
+<figure>
+    <img src="9.png" style="width: 50%;" alt="Complex number intuition">
+    <figcaption>Complex number intuition</figcaption>
+</figure>
+As a way to draw it on a standard two-axis graph similar to <a href="fig-m9"></a>}, you can put the horizontal axis (x-axis) as $a$ and the vertical axis as $b$ to represent the imaginary part of a complex number. This works better if you also recall that we were taught real numbers on a left-right number line.</p>
 
-With this intuition, a number will have a certain "distance" away from the origin. When finding the conjugate of a complex number, you are essentially flipping the vertical axis. If you pay close attention to equation (\ref{eq:m1}), you can see that it closely resembles the standard graph form $y=mx+b$.
+<p>With this intuition, a number will have a certain "distance" away from the origin. When finding the conjugate of a complex number, you are essentially flipping the vertical axis. If you pay close attention to equation (<a href="eq-m1"></a>), you can see that it closely resembles the standard graph form $y=mx+b$.</p>
 
 <h3>Identities</h3>
-The <b>norm</b> of a complex number, which visually is the length of the vector from the origin to $z$ on a plane, is denoted as $\mid z \mid$:
+<p>The <b>norm</b> of a complex number, which visually is the length of the vector from the origin to $z$ on a plane, is denoted as $\mid z \mid$:
 \begin{equation}
     \mid z \mid
     = \sqrt{a^2 + b^2}
@@ -303,29 +300,29 @@ Another fundamental equation is <b>the norm squared</b> which is the direct resu
     = (a + bi)(a - bi)
     = z \cdot z^*
 \end{equation}
-The proof for these identities can be worked backward. Furthermore, the norm squared is used to calculate the probability of a state in quantum physics, something you should keep at the back of your mind if you want to pursue that field.
+The proof for these identities can be worked backward. Furthermore, the norm squared is used to calculate the probability of a state in quantum physics, something you should keep at the back of your mind if you want to pursue that field.</p>
 
-From the visual intuition we established above, a complex number represented on a unit circle (the norm is equal to 1) can also be written with trigonometric functions:
+<p>From the visual intuition we established above, a complex number represented on a unit circle (the norm is equal to 1) can also be written with trigonometric functions:
 \begin{equation}
     z
     = \cos{\theta} + i \sin{\theta}
     = e^{i\theta}
-\end{equation}
+\end{equation}</p>
 
 <h3>Complex number calculations</h3>
-<b>Adding and subtracting</b> two complex numbers is just simply doing every part individually:
+<p><b>Adding and subtracting</b> two complex numbers is just simply doing every part individually:
 \begin{equation} (a + bi) + (c + di) = (a + c) + (b + d)i \end{equation}
-Remember to pay close attention to the negative sign at the beginning of the second term when subtracting.
+Remember to pay close attention to the negative sign at the beginning of the second term when subtracting.</p>
 
-<b>Multiplying</b> two complex numbers is simply using FOIL (multiplying terms together). Another extended version of FOIL that requires a bit of memorization is:
+<p><b>Multiplying</b> two complex numbers is simply using FOIL (multiplying terms together). Another extended version of FOIL that requires a bit of memorization is:
 \begin{equation}
     (a+bi)(c+di)
     = ac + adi + bci + bdi^2
     = (ac - bd) + (ad + bc)i
 \end{equation}
-A fascinating fact is when you multiply a complex number by $i$, the result is another complex number vector that is $90^\circ$ (or $\pi/2$) counterclockwise.
+A fascinating fact is when you multiply a complex number by $i$, the result is another complex number vector that is $90^\circ$ (or $\pi/2$) counterclockwise.</p>
 
-<b>Dividing</b> is a bit of work. You start with a fraction, then multiply the first fraction by another fraction with both the numerator and the denominator as the conjugate of the first fraction's denominator (making the second fraction equal to 1). Here is an example:
+<p><b>Dividing</b> is a bit of work. You start with a fraction, then multiply the first fraction by another fraction with both the numerator and the denominator as the conjugate of the first fraction's denominator (making the second fraction equal to 1). Here is an example:
 \[\begin{aligned}
     &\frac{2 + 3i}{4 - 5i} \\
     =& \frac{2+3i}{4-5i} \cdot \frac{4+5i}{4+5i} \\
@@ -333,10 +330,10 @@ A fascinating fact is when you multiply a complex number by $i$, the result is a
     =& \frac{8 + 10i + 12i - 15}{41} \\
     =& \frac{-7 + 22i}{41}
     = -\frac{7}{41} + \frac{22}{41}i
-\end{aligned}\]
+\end{aligned}\]</p>
 
 <h3>Polar form</h3>
-The polar form provides you with another "description" of the very same point on the plane. Instead of identifying a point on the plane using the axes, we use the distance from the origin and the angle from the positive x-axis instead. Notation-wise, $r$ is the radius from the origin (the distance) and $\theta$ is the angle from the positive x-axis. We can do a conversion from <b>Cartesian to Polar</b>:
+<p>The polar form provides you with another "description" of the very same point on the plane. Instead of identifying a point on the plane using the axes, we use the distance from the origin and the angle from the positive x-axis instead. Notation-wise, $r$ is the radius from the origin (the distance) and $\theta$ is the angle from the positive x-axis. We can do a conversion from <b>Cartesian to Polar</b>:
 \begin{equation}
     r = \sqrt{x^2 + y^2}
     \qquad
@@ -347,67 +344,67 @@ From <b>Polar to Cartesian</b>, we can calculate the $x$ and $y$ separately usin
     x = r \times \cos\theta
     \qquad
     y = r \times \sin\theta
-\end{equation}
+\end{equation}</p>
 
-A common way to write a complex number in Polar form from equation (6) is by getting the unit vector multiplied by the radius:
-\begin{equation} x + iy = r(\cos\theta + i\sin\theta) \end{equation}
+<p>A common way to write a complex number in Polar form from equation (6) is by getting the unit vector multiplied by the radius:
+\begin{equation} x + iy = r(\cos\theta + i\sin\theta) \end{equation}</p>
 
 <h3>Multiplying in Polar form</h3>
-The polar form provides intuition to complex multiplication problems. When multiplying two complex numbers together, the magnitudes get multiplied and the angles get added.
+<p>The polar form provides intuition to complex multiplication problems. When multiplying two complex numbers together, the magnitudes get multiplied and the angles get added.
 \begin{equation}
     \label{eq:m2}
     r = r_1 \times r_2
     \qquad
     \theta = \theta_1 + \theta_2
-\end{equation}
+\end{equation}</p>
 
-This also explains why multiplying with $i$ with get a complex number that is perpendicular to the start vector. $i$ simply added $90^\circ$ to the angle and kept the radius the same.
-\begin{equation} 0 + 1i \Rightarrow r = 1 \qquad \theta = 90^\circ \end{equation}
+<p>This also explains why multiplying with $i$ with get a complex number that is perpendicular to the start vector. $i$ simply added $90^\circ$ to the angle and kept the radius the same.
+\begin{equation} 0 + 1i \Rightarrow r = 1 \qquad \theta = 90^\circ \end{equation}</p>
 
-From equation (\ref{eq:m2}), we can yield the general formula when raising  a complex number by an exponent, called <b>De Moivre's formula</b>:
+<p>From equation (<a href="eq-m2"></a>), we can yield the general formula when raising  a complex number by an exponent, called <b>De Moivre's formula</b>:
 \begin{equation}
     (r(\cos\theta + i\sin\theta))^n
     = r^n(\cos{n\theta} + i\sin{n\theta})
 \end{equation}
-\[ \Rightarrow r_{result} = r^n \qquad \theta_{result} = n \times \theta \]
+\[ \Rightarrow r_{result} = r^n \qquad \theta_{result} = n \times \theta \]</p>
 
 <h2>Permutation and Combination</h2>
-The difference between <b>permutation} and <b>combination</b> is in the order. \textbf{Permutation is an ordered combination</b> or in other words, a combination does not concern the order.
+<p>The difference between <b>permutation</b> and <b>combination</b> is in the order. <b>Permutation is an ordered combination</b> or in other words, a combination does not concern the order.</p>
 
-<b>Order does not matter</b> here means that a 123 string is the same as a 213 string.
+<p><b>Order does not matter</b> here means that a 123 string is the same as a 213 string.</p>
 
-When approaching statistical problems relating to permutation or combination, the basic approach should be calculating every individual part that you can count, then dividing to remove the over-count or multiplying to compensate for the under-count.
+<p>When approaching statistical problems relating to permutation or combination, the basic approach should be calculating every individual part that you can count, then dividing to remove the over-count or multiplying to compensate for the under-count.</p>
 
 <h3>Permutation</h3>
 <h4>Permutations with repetition</h4>
-When $n$ is the number of elements and $r$ is how many times we can select the elements, the number of possible permutations we can have is:
-\begin{equation} n^r \end{equation}
+<p>When $n$ is the number of elements and $r$ is how many times we can select the elements, the number of possible permutations we can have is:
+\begin{equation} n^r \end{equation}</p>
 
-For example, every time we roll a dice, there are 6 possible results (faces). If we roll it once again, now there are 6 results for every previous roll's result $6\times6$. If we ask how many permutations there are after 3 rolls of dice, the result is $6^3=216$ permutations. Every time we roll the dice, there is the possibility that a face will repeat (hence repetition is allowed).
+<p>For example, every time we roll a dice, there are 6 possible results (faces). If we roll it once again, now there are 6 results for every previous roll's result $6\times6$. If we ask how many permutations there are after 3 rolls of dice, the result is $6^3=216$ permutations. Every time we roll the dice, there is the possibility that a face will repeat (hence repetition is allowed).</p>
 
 <h4>Permutations without repetition</h4>
-Four people were tasked to line up in a straight line, how many possible line arrangements can we get? There are four possible people to stand at the first position; for every selection, there will now be three possible candidates to stand at the second position, and so on... A person cannot appear twice in a line (not a quantum physics topic) so our choice gets reduced each time.
+<p>Four people were tasked to line up in a straight line, how many possible line arrangements can we get? There are four possible people to stand at the first position; for every selection, there will now be three possible candidates to stand at the second position, and so on... A person cannot appear twice in a line (not a quantum physics topic) so our choice gets reduced each time.</p>
 
-The formula is:
+<p>The formula is:
 \begin{equation}
     n!
     = n \times (n-1) \times \dots \times 2 \times 1
 \end{equation}
 and despite being unrelated to statistics, this is a property of factorial:
-\begin{equation} 0! = 1 \end{equation}
+\begin{equation} 0! = 1 \end{equation}</p>
 
-Continuing with the example above, what if we want to find how many possible line arrangements with only two people? In this question, we are "cutting short" our factorial formula because there are no more selections after the second person. To do that, we cancel the spare part by dividing it by itself:
+<p>Continuing with the example above, what if we want to find how many possible line arrangements with only two people? In this question, we are "cutting short" our factorial formula because there are no more selections after the second person. To do that, we cancel the spare part by dividing it by itself:
 \begin{equation}
     P(n,r) = nPr = P^r_n
     = \frac{n!}{(n-r)!} = n(n-1)\dots(n-r+1)
 \end{equation}
-$n \ge r$ as you cannot have a collection longer than the number of elements you have. In this formula, the second notation was commonly seen on calculators, while the third notation is common in Vietnam (with $P$ being replaced with $A$).
+$n \ge r$ as you cannot have a collection longer than the number of elements you have. In this formula, the second notation was commonly seen on calculators, while the third notation is common in Vietnam (with $P$ being replaced with $A$).</p>
 
 <h3>Combination</h3>
-The most common version you will need is combinations without repetition, so treat the combination with repetition as some extra reading.
+<p>The most common version you will need is combinations without repetition, so treat the combination with repetition as some extra reading.</p>
 
 <h4>Combinations without repetition (regular combination)</h4>
-We want to pick two people from four people. We do not care about the order we pick but rather how many people we pick. Say if we picked Luke and Luna:
+<p>We want to pick two people from four people. We do not care about the order we pick but rather how many people we pick. Say if we picked Luke and Luna:
 <ul>
     <li><i>If the order does matter</i>: there are two possibilities: Luke first or Luna first.</li>
     <li><i>If the order does not matter</i>: only one possibility: Luke and Luna.</li>
@@ -419,54 +416,52 @@ Now we simply divide our permutation formula with this spare part to get our <b>
     C(n,r)= nCr = C^r_n
     = \begin{pmatrix} n \\ r \end{pmatrix}
     = \frac{n!}{r!(n-r)!}
-\end{equation}
+\end{equation}</p>
 
-You still need to keep in mind the fact that if an item was selected, it cannot be selected again in this non-repetition version (our example selection cannot have two Lukes or Luke will have to do a job twice).
+<p>You still need to keep in mind the fact that if an item was selected, it cannot be selected again in this non-repetition version (our example selection cannot have two Lukes or Luke will have to do a job twice).</p>
 
 <h4>Combination with repetition</h4>
-This is a combination without repetition, but we plug in a different number to achieve our goal. Unfortunately, it is quite difficult to explain the algebraic proof so instead, this section will based on the visual intuition of one particular example.
+<p>This is a combination without repetition, but we plug in a different number to achieve our goal. Unfortunately, it is quite difficult to explain the algebraic proof so instead, this section will based on the visual intuition of one particular example.</p>
 
-We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (B) black tea, or (C) chai tea. In this case, there are two important factors:
+<p>We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (B) black tea, or (C) chai tea. In this case, there are two important factors:
 <ul>
     <li>Repetition is allowed: we can pick a tea flavour more than once</li>
     <li>The order does not matter: we only care about how many we have picked</li>
-</ul>
+</ul></p>
 
-Because order does not matter, we will list our teas in the same order: A then B then C. Next, we will add a separator between the teas. Here is what our diagram will look like:
+<p>Because order does not matter, we will list our teas in the same order: A then B then C. Next, we will add a separator between the teas. Here is what our diagram will look like:
 \[\begin{bmatrix}
     -&-&-&|&-&-&|&- \\
     |&-&-&-&|&-&-&- \\
     |&-&-&-&-&-&-&| \\
     |&|&-&-&-&-&-&-
 \end{bmatrix}\]
-There are still six dashes representing our six allowed selections, while the two separators simply indicate that we are moving between the types of tea. In the second example, you can see that we did not select A but only B and C. The third example only shows that there was only B that was selected; similar to C in the fourth example
+There are still six dashes representing our six allowed selections, while the two separators simply indicate that we are moving between the types of tea. In the second example, you can see that we did not select A but only B and C. The third example only shows that there was only B that was selected; similar to C in the fourth example</p>
 
-With that diagram, the answer broke down to how many ways we can put down these two dividers. We have $n=3$ teas which means we have $n-1$ separators; There are $r+n-1$ spaces including the items and the separators to insert the divisors:
+<p>With that diagram, the answer broke down to how many ways we can put down these two dividers. We have $n=3$ teas which means we have $n-1$ separators; There are $r+n-1$ spaces including the items and the separators to insert the divisors:
 \begin{equation}
     C(n+r-1,n-1)
     = \frac{(n+r-1)!}{r!(n-1)!}
 \end{equation}
 This calls: select space to insert $n-1$ separators. Now you may ask why it is not simply $r-1$ (the space between the items only). It is because we always have the possibility that two separators are standing next to each other — such a case would
- not be covered by the $r-1$ where there is no "space" for the separators to stand next to each other.
+ not be covered by the $r-1$ where there is no "space" for the separators to stand next to each other.</p>
 
-The $n-1$ on the denominator gets from $n+r-1-r$ being cancelled, therefore we have the official <b>combination with repetition</b> formula:
+<p>The $n-1$ on the denominator gets from $n+r-1-r$ being cancelled, therefore we have the official <b>combination with repetition</b> formula:
 \begin{equation}
     C(n+r-1,r) = C(n+r-1,n-1)
-\end{equation}
+\end{equation}</p>
 
-The first hint to realize that you are dealing with combinations without repetition is in the fact that $n < r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.
+<p>The first hint to realize that you are dealing with combinations without repetition is in the fact that $n < r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.</p>
 
 <h3>Solving problems</h3>
-<b>How many ways we can rearrange the word "Canada"?</b> This question cares about the order, so the first step is to get the basic permutation with the factorial formula $6!=720$. However, notice that there are three different "a" inside that word, so we need to "remove" that over-count. We do that by dividing our over-count by the number of possible arrangements of the three "a" characters:
-\[ \frac{6!}{3!} = 240 \]
+<p><b>How many ways we can rearrange the word "Canada"?</b> This question cares about the order, so the first step is to get the basic permutation with the factorial formula $6!=720$. However, notice that there are three different "a" inside that word, so we need to "remove" that over-count. We do that by dividing our over-count by the number of possible arrangements of the three "a" characters:
+\[ \frac{6!}{3!} = 240 \]</p>
 
-Most of the time when solving statistical problems, it is about you determining how much you have over-counted, then removing that spare part by dividing.
+<p>Most of the time when solving statistical problems, it is about you determining how much you have over-counted, then removing that spare part by dividing.</p>
 
-<b>From 1,2, 3, and 4, how many 3-digit numbers (with non-repeating digits) can we get that are smaller than 320?} The first digit of our number will need to be either 1 or 2 to be <i>certain</i> that any number selected after it will be smaller than $320$. Because this is non-repeating, after we select either 1 or 2, we only have $3$ options left for the second digit, and $2$ options for the last digit; the number of possibilities is: $2\times3\times2$. \textit{If the first digit is 3</b>, there is only one possibility for the second digit: 1 because otherwise, the number would be larger than $320$. The final result for this route can be calculated with $1\times1\times2$ or can be counted by listing $312$ and $314$.
-\[ (2\times3\times2) + (1\times1\times2) = 14 \]
+<p><b>From 1, 2, 3, and 4, how many 3-digit numbers (with non-repeating digits) can we get that are smaller than 320?</b> The first digit of our number will need to be either 1 or 2 to be <i>certain</i> that any number selected after it will be smaller than $320$. Because this is non-repeating, after we select either 1 or 2, we only have $3$ options left for the second digit, and $2$ options for the last digit; the number of possibilities is: $2\times3\times2$. <i>If the first digit is 3</i>, there is only one possibility for the second digit: 1 because otherwise, the number would be larger than $320$. The final result for this route can be calculated with $1\times1\times2$ or can be counted by listing $312$ and $314$.
+\[ (2\times3\times2) + (1\times1\times2) = 14 \]</p>
 
-For this problem, an addition was used because we counted by part instead of under-counting every possibility. One thing to highlight this type of problem is when your logic route has conditional statements "if".
+<p>For this problem, an addition was used because we counted by part instead of under-counting every possibility. One thing to highlight this type of problem is when your logic route has conditional statements "if".</p>
 
-In both questions, we solved not by blindly applying the permutation or combination formula but rather by starting from scratch. This is extremely useful to help you keep track of what you are counting or for problems with multiple datasets to consider.
-
-\input{math/calc-1}
+<p>In both questions, we solved not by blindly applying the permutation or combination formula but rather by starting from scratch. This is extremely useful to help you keep track of what you are counting or for problems with multiple datasets to consider.</p>
