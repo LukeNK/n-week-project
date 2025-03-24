@@ -13,8 +13,13 @@
 
         body {
             font-family: "Inter", Helvetica, Arial, sans-serif;
-            font-size: large;
             overflow-x: hidden; /* prevent weird bug with MathJax (issue 3348) */
+        }
+
+        main {
+            margin: auto;
+            max-width: 800px;
+            font-size: large;
             counter-reset: part chapter section;
         }
 
@@ -43,6 +48,8 @@
         }
 
         h3::before {
+            display: inline-block;
+            width: 4rem;
             counter-increment: section;
             content: counter(chapter) "." counter(section) " ";
         }
@@ -72,36 +79,43 @@
         note:hover span {
             display: block;
         }
+
+        @media print {
+            main {
+                max-width: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <h2 noNumber>About This Note</h2>
-    <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
+    <main>
+        <h2 noNumber>About This Note</h2>
+        <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
 
-    <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.</p>
+        <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.</p>
 
-    <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
+        <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
 
-    <p>A lot of times, the topics are cross-disciplined and are useful in multiple fields, making sorting them into one particular part difficult. If that is the case, the topic will be put in a Part that is the most popular to be associated with that topic, then other cross-disciplined fields will be indicated in a bracket on the title of that topic. Therefore, if you did not find a topic you want to see in a part, maybe other parts will contain the concept you want to understand.</p>
+        <p>A lot of times, the topics are cross-disciplined and are useful in multiple fields, making sorting them into one particular part difficult. If that is the case, the topic will be put in a Part that is the most popular to be associated with that topic, then other cross-disciplined fields will be indicated in a bracket on the title of that topic. Therefore, if you did not find a topic you want to see in a part, maybe other parts will contain the concept you want to understand.</p>
 
-    <p>An explanation of the reason why the parts were ordered the way it is: the author believed that math is the foundation of sciences, so it was put in the beginning. Biology will be followed after it because it is the science that is (mostly) visible to human application — it is the first machine being built based on the other science. At a lower level, chemistry will explain the interaction between substances that make up the organs and show how to build those living machines. Physics was put last but not least because physics itself describes the rules that others must follow. The order itself is less of something academic but more of the personal belief of the author.</p>
+        <p>An explanation of the reason why the parts were ordered the way it is: the author believed that math is the foundation of sciences, so it was put in the beginning. Biology will be followed after it because it is the science that is (mostly) visible to human application — it is the first machine being built based on the other science. At a lower level, chemistry will explain the interaction between substances that make up the organs and show how to build those living machines. Physics was put last but not least because physics itself describes the rules that others must follow. The order itself is less of something academic but more of the personal belief of the author.</p>
 
-    <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
+        <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
 
-    <h1>Math</h1>
-    <!-- <div subject="m"></div> -->
+        <h1>Math</h1>
+        <!-- <div subject="m"></div> -->
 
-    <h1>Chemistry</h1>
-    <div subject="c"></div>
+        <h1>Chemistry</h1>
+        <div subject="c"></div>
 
-    <h1>Physics</h1>
-    <!-- <div subject="p"></div> -->
+        <h1>Physics</h1>
+        <!-- <div subject="p"></div> -->
 
-    <h1>Problems</h1>
-    <p>Inspired by xkcd's What If, this part is here to show how very real math can solve real or unreal problems — it is here for your entertainment. The author understands that it will make the file a bit heavier with a mostly unused part, but it was here for a reason. Luke had a problem and because he was too lazy to create a different file, Luke decided to write the problem in this file with LaTeX. Then once again because Luke was too lazy, Luke decided that he would make it as a part and write a whole paragraph to justify instead of making a new file and deleting the notes. That is productivity at its peak.</p>
+        <h1>Problems</h1>
+        <p>Inspired by xkcd's What If, this part is here to show how very real math can solve real or unreal problems — it is here for your entertainment. The author understands that it will make the file a bit heavier with a mostly unused part, but it was here for a reason. Luke had a problem and because he was too lazy to create a different file, Luke decided to write the problem in this file with LaTeX. Then once again because Luke was too lazy, Luke decided that he would make it as a part and write a whole paragraph to justify instead of making a new file and deleting the notes. That is productivity at its peak.</p>
 
-    <p>Read this for your enjoyment and get a break from the academic-filled parts above — enjoy a moment when practicality starts to spank the author.</p>
-
+        <p>Read this for your enjoyment and get a break from the academic-filled parts above — enjoy a moment when practicality starts to spank the author.</p>
+    </main>
 </body>
 <script>
 window.MathJax = {
