@@ -124,11 +124,11 @@
         <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
 
         <h1>Math</h1>
-        <!-- <div subject="m"></div>
-        <div subject="a"></div> -->
+        <div subject="m"></div>
+        <div subject="a"></div>
 
         <h1>Chemistry</h1>
-        <!-- <div subject="c"></div> -->
+        <div subject="c"></div>
 
         <h1>Physics</h1>
         <div subject="p"></div>
@@ -174,6 +174,15 @@ function subjectLoad() {
     script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
     script.async = true;
     document.head.appendChild(script);
+}
+
+window.onload = () => {
+    setTimeout(
+        () =>
+            document.getElementById(window.location.hash.slice(1))
+            .scrollIntoView()
+        , 1000
+    );
 }
 
 </script>

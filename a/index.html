@@ -360,8 +360,8 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
 \end{equation}</p>
 
 <p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to figure <a href="fig:m10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
+<span class="label" id="eq-m3"></span>
 \begin{equation}
-    \label{eq:m3}
     f'(x)
     = \lim_{\Delta x\to 0} \frac
         {f(x+\Delta x)-f(x)}
@@ -650,14 +650,15 @@ Is it quite fascinating to see that the integral sign and the $dx$ are similar t
 \end{equation}</p>
 
 <p><b>The power rule</b> has a requirement that $n \neq -1$:
+<span class="label" id="eq-m4"></span>
 \begin{equation}
-    \label{eq:m4}
     \int x^n \;dx
     = \frac{x^{n+1}}{n+1} + C
 \end{equation}</p>
 
 <p><b>Integration by parts</b> is useful when you can separate your functions into two parts and multiply those together. Assume you found two functions $u(x)$ and $v(x)$:
-\begin{equation}\label{eq:m5}
+<span class="label" id="eq-m5"></span>
+\begin{equation}
     \int u v \;dx
     = u \int v \;dx - \int u' \cdot \left(\int v \;dx\right) dx
 \end{equation}
