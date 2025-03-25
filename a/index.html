@@ -9,35 +9,28 @@
 
 <p>You may wonder: why I said that the limit is <i>both</i> the upper and the lower bound but my result only gives out one value. This is because the difference between the upper bound and the lower bound is <i>approaching</i> one single number. If you have two butter cubes, both the maximum and the minimum you can spread is 4. Later you will see that is not always true for certain equations.</p>
 
-<p>Another interesting thing is that the limit is essentially what the value of the function <i>is supposed</i> to be. In our case, we evaluate that limit by simply plugging $g(2)=4$. This is the property we got from the definition of limit itself: it is the "restriction" of the y-axis (the output) as the x-axis (the input) gets closer to a value (figure \ref{fig:m2</i>). If x "squeeze" then it will result in $g(x)$ being squeezed to a value. This is why when solving limits, it is about arranging your function to the point where you can plug in the $x$ value to answer your limit.
-\begin{figure}
-    \centering
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{math/2.png}
-        \caption{Representation of $\lim_{x\to2}g(x)=4$}
-        \label{fig:m2}
-    \end{minipage}
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=0.75\linewidth]{math/3.png}
-        \caption{A discontinuous function}
-        \label{fig:m3}
-    \end{minipage}
-\end{figure}</p>
+<p>Another interesting thing is that the limit is essentially what the value of the function <i>is supposed</i> to be. In our case, we evaluate that limit by simply plugging $g(2)=4$. This is the property we got from the definition of limit itself: it is the "restriction" of the y-axis (the output) as the x-axis (the input) gets closer to a value (<a href="#fig-m2"></a>). If x "squeeze" then it will result in $g(x)$ being squeezed to a value. This is why when solving limits, it is about arranging your function to the point where you can plug in the $x$ value to answer your limit.
+<figure style="width: 40%; text-align: center;">
+    <img src="2.png" style="width: 90%;" alt="Representation of lim(x→2)g(x)=4">
+    <figcaption>Representation of $ \lim_{x\to2}g(x)=4 $</figcaption>
+</figure>
+<figure style="width: 40%; text-align: center;">
+    <img src="3.png" style="width: 75%;" alt="A discontinuous function">
+    <figcaption>A discontinuous function</figcaption>
+</figure></p>
 
 <p>The biggest takeaway from this section is: limit is what the output approaches given the input is approaching a number. Moreover, because both the upper bound and the lower bound approach a number, we can think of the limit as a value that the function is supposed to be at a given x-coordinate, even if the function is undefined at that point.</p>
 
 <h3>Limit from different sides</h3>
-<p>The example above "squeezes" the x-axis from both sides but what if we have an equation like figure \ref{fig:m3}?</p>
+<p>The example above "squeezes" the x-axis from both sides but what if we have an equation like figure <a href="fig-m3"></a>?</p>
 
-<p>No matter how hard you push the x-axis from two sides together, the y-axis limit will not get smaller. If we let $x$ approach from the left side (<b>negative side}) then the limit approaches $0$; if we let $x$ approach from the <b>positive side</b> then the limit approaches $1$. This is the situation we mentioned earlier about the upper bound and the lower bound creating a range instead of approaching one single number. In this case, we can only state what the limit approach as $x$ approaches from either side:
+<p>No matter how hard you push the x-axis from two sides together, the y-axis limit will not get smaller. If we let $x$ approach from the left side (<b>negative side</b>) then the limit approaches $0$; if we let $x$ approach from the <b>positive side</b> then the limit approaches $1$. This is the situation we mentioned earlier about the upper bound and the lower bound creating a range instead of approaching one single number. In this case, we can only state what the limit approach as $x$ approaches from either side:
 \[
     \lim_{x\to0^-}f(x) = 0
     \qquad
     \lim_{x\to0^+}f(x) = 1
 \]
-Be careful: the sign denotes where we <i>start}. If the sign is negative, we approach it <i>from the negative side} and move <i>to the positive side</i>. I do not know why I used to mistake between those two, so that is a way to remember. Moreover, the limit of $f(x)$ as $x\to0$ does not exist.</p>
+Be careful: the sign denotes where we <i>start</i>. If the sign is negative, we approach it <i>from the negative side</i> and move <i>to the positive side</i>. I do not know why I used to mistake between those two, so that is a way to remember. Moreover, the limit of $f(x)$ as $x\to0$ does not exist.</p>
 
 <p>A function's limit only exists if the limit from both sides approaches the same number:
 \[
@@ -50,26 +43,21 @@ Be careful: the sign denotes where we <i>start}. If the sign is negative, we app
 This leads us to the definition of <b>continuity</b>: if the limit of $f(x)$ at $a$ is equal to $f(x)$ then the function is continuous at $a$.</p>
 
 <h3>Unbound limit</h3>
-<p>\begin{figure}
-    \centering
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{math/1.png}
-        \caption{The graph of the function $f(x)=\frac{1}{x^2}$}
-        \label{fig:m1}
-    \end{minipage}%
-    \begin{minipage}{.5\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{math/4.png}
-        \caption{The graph of function $f(x)=\frac{1}{x}$}
-        \label{fig:m4}
-    \end{minipage}
-\end{figure}</p>
+<p>
+    <figure style="width: 45%; text-align: center;">
+        <img src="1.png" style="width: 90%;" alt="The graph of the function f(x)=1/x^2">
+        <figcaption>The graph of the function $ f(x)=\frac{1}{x^2} $</figcaption>
+    </figure>
+    <figure style="width: 45%; text-align: center;">
+        <img src="4.png" style="width: 90%;" alt="The graph of function f(x)=1/x">
+        <figcaption>The graph of function $ f(x)=\frac{1}{x} $</figcaption>
+    </figure>
+</p>
 
-<p>Consider the function $f(x)=1/x^2$ in figure \ref{fig:m1},  you can see that moving from both sides, the limit slowly becomes higher and higher. It seems like it is <b>unbounded} or the limit seems to reach <b>positive infinity</b>.
+<p>Consider the function $f(x)=1/x^2$ in figure <a href="fig:m1"></a>,  you can see that moving from both sides, the limit slowly becomes higher and higher. It seems like it is <b>unbounded</b> or the limit seems to reach <b>positive infinity</b>.
 \[ \lim_{x\to0} \frac{1}{x^2} = \infty \]</p>
 
-<p>As you can see, both the upper limit and the lower limit still attempt to reach closer to one single value, so the limit still exists. Consider $f(x)=1/x$ in figure \ref{fig:m4}, we have the following:
+<p>As you can see, both the upper limit and the lower limit still attempt to reach closer to one single value, so the limit still exists. Consider $f(x)=1/x$ in figure <a href="fig:m4"></a>, we have the following:
 \[
     \lim_{x\to0}\frac{1}{x} <b> does not exist, but</b>
 \]
@@ -118,30 +106,45 @@ The basic <b>limit theorems</b> are:
 \end{equation}
 These theorems can be deducted from the concept that limit is essentially substituting $a$ into our functions, so all standard number arithmetic still works just fine.</p>
 
-<p>From these theorems, you can see that <b>finding a finite limit} is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in figure \ref{fig:m5</b>.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{math/5.png}
-    \caption{Procedure to calculate limit, courtesy of Khan Academy.}
-    \label{fig:m5}
-\end{figure}</p>
+<p>From these theorems, you can see that <b>finding a finite limit</b> is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in figure <a href="#fig-m5"></a>.
+<figure>
+    <img src="5.png" style="width: 75%;" alt="Procedure to calculate limit, courtesy of Khan Academy.">
+    <figcaption>Procedure to calculate limit, courtesy of Khan Academy.</figcaption>
+</figure></p>
 
 <h4>Vertical asymptote</h4>
 <p>The tables in this section use $+$ simply to denote the fact that the number is $>0$ and similarly with the negative sign.</p>
 
-<p><b>The limit of the multiplication between two functions}, when it is at the asymptote, can be simplified in table \ref{tab:m1</b>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|} \hline
-         $\lim_{x\to a}f(x)$ &$\lim_{x\to a}g(x)$ & $\lim_{x\to a}[f(x)\cdot g(x)]$\\ \hline
-         $+\infty$ & $+$ & $+\infty$\\ \hline
-         $+\infty$ & $-$ & $-\infty$\\ \hline
-         $-\infty$ & $+$ & $-\infty$\\ \hline
-         $-\infty$ & $-$ & $+\infty$\\ \hline
-    \end{tabular}
-    \caption{Finding the limit of the multiplication between two functions}
-    \label{tab:m1}
-\end{table}</p>
+<p><b>The limit of the multiplication between two functions</b>, when it is at the asymptote, can be simplified in table <a href="tab:m1"></a>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.
+<table border="1">
+    <caption>Finding the limit of the multiplication between two functions</caption>
+    <tr>
+        <th>$\lim_{x\to a}f(x)$</th>
+        <th>$\lim_{x\to a}g(x)$</th>
+        <th>$\lim_{x\to a}[f(x) \cdot g(x)]$</th>
+    </tr>
+    <tr>
+        <td>$+&infin;$</td>
+        <td>$+$</td>
+        <td>$+&infin;$</td>
+    </tr>
+    <tr>
+        <td>$+&infin;$</td>
+        <td>$-$</td>
+        <td>$-&infin;$</td>
+    </tr>
+    <tr>
+        <td>$-&infin;$</td>
+        <td>$+$</td>
+        <td>$-&infin;$</td>
+    </tr>
+    <tr>
+        <td>$-&infin;$</td>
+        <td>$-$</td>
+        <td>$+&infin;$</td>
+    </tr>
+</table>
+</p>
 
 <p><b>The limit of a division between two functions</b> $f(x)$ and $g(x)$ starts with two requirements:
 \[
@@ -149,19 +152,35 @@ These theorems can be deducted from the concept that limit is essentially substi
     \text{ and }
     \lim_{x\to a}g(x) = 0
 \]
-After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is larger than $0$ or not — you are checking the result that the whole function will dispense. The interaction between the limit of $f(x)$ and the sign of $g(x)$ can be found in table \ref{tab:m2}. Note that you still need to pay close attention to which direction you are approaching $x$ and whether the limit exists at that point. Once again the signs are similar to typical division.
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|} \hline
-        $\lim_{x\to a}f(x)$ & The sign of $g(x)$ & $\lim_{x\to a}\frac{f(x)}{g(x)}$ \\ \hline
-        $+$ & $+$ & $+\infty$ \\ \hline
-        $+$ & $-$ & $-\infty$ \\ \hline
-        $-$ & $+$ & $-\infty$ \\ \hline
-        $-$ & $-$ & $+\infty$ \\ \hline
-    \end{tabular}
-    \caption{Interaction of the limit between two functions}
-    \label{tab:m2}
-\end{table}</p>
+After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is larger than $0$ or not — you are checking the result that the whole function will dispense. The interaction between the limit of $f(x)$ and the sign of $g(x)$ can be found in table <a href="tab-m2"></a>. Note that you still need to pay close attention to which direction you are approaching $x$ and whether the limit exists at that point. Once again the signs are similar to typical division. &infin;
+<table border="1">
+    <caption>Interaction of the limit between two functions</caption>
+    <tr>
+        <th>$\lim_{x\to a}f(x)$</th>
+        <th>The sign of $g(x)$</th>
+        <th>$\lim_{x\to a}\frac{f(x)}{g(x)}$</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>+</td>
+        <td>+&infin;</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>-</td>
+        <td>-&infin;</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>+</td>
+        <td>-&infin;</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>-</td>
+        <td>+&infin;</td>
+    </tr>
+</table></p>
 
 <h4>Trigonometric identities</h4>
 <p>As it is impossible to cover all of the identities, this section will list identities that are useful in AP Calculus exams. First, recall the definition of a few trigonometric functions:
@@ -175,13 +194,11 @@ After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is l
     \sec\theta = \frac{1}{\cos\theta}
 \end{equation}</p>
 
-<p>Here are <b>Pythagorean identities}, which help when reviewing with a unit circle that displays trigonometric functions like figure \ref{fig:m8</b>:
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{math/8.png}
-    \caption{A unit circle with trigonometric functions}
-    \label{fig:m8}
-\end{figure}
+<p>Here are <b>Pythagorean identities</b>, which help when reviewing with a unit circle that displays trigonometric functions like figure <a href="fig-m8"></a>:
+<figure>
+    <img src="8.png" style="width: 75%;" alt="A unit circle with trigonometric functions">
+    <figcaption>A unit circle with trigonometric functions</figcaption>
+</figure>
 \begin{equation}
     \sin^2\theta + \cos^2\theta = 1^2
     \qquad
@@ -245,23 +262,16 @@ then for some real number $a$:
 \end{equation}
 Read: If we certainly know that, inside the range we are evaluating, $h(x)$ is always between the other two functions, then if the limit of both $f(x)$ and $g(x)$ is equal to a number, then those two limits "sandwich" $h(x)$ to that same value.</p>
 
-<p>For example, we have the following function with the graph from figure \ref{fig:m7} and \ref{fig:m6}:
+<p>For example, we have the following function with the graph from figure <a href="fig-m7"></a> and <a href="fig-m6"></a>:
 \[ x^2 \sin\left( \frac{1}{x} \right) \]
-\begin{figure}
-    \centering
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=0.75\linewidth]{math/7.png}
-        \caption{The graph of $x^2\sin{\frac{1}{x}}$ and $\pm x^2$}
-        \label{fig:m7}
-    \end{minipage}
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=1\linewidth]{math/6.png}
-        \caption{The graph zoomed in}
-        \label{fig:m6}
-    \end{minipage}
-\end{figure}</p>
+<figure style="width: 40%; text-align: center;">
+    <img src="7.png" style="width: 75%;" alt="The graph of x^2 sin(1/x) and ±x^2">
+    <figcaption>The graph of $ x^2\sin{\frac{1}{x}} $ and $ \pm x^2 $</figcaption>
+</figure>
+<figure style="width: 40%; text-align: center;">
+    <img src="6.png" style="width: 100%;" alt="The graph zoomed in">
+    <figcaption>The graph zoomed in</figcaption>
+</figure></p>
 
 <p>Of course, we can observe from the graph that the function approaches $0$ as $x\to0$, but what if we don't have the graph? We know from the property of a sine graph that the coefficient at the front will determine the height of the graph. Therefore, we know that:
 \[
@@ -301,7 +311,7 @@ And we know that at $0$, $-x^2 = x^2 = 0$, therefore making:
 
 <p>It is once again crucial to remember that you cannot simply substitute $\infty$ into your equation and manipulate it as if it is a variable.</p>
 
-<h3>L'Hôpital's rule} \label{sec:m-limit-hopital</h3>
+<h3 id="sec-m-limit-hopital">L'Hôpital's rule</h3>
 <p>If you think the derivative $f'(x)$ is simply a special transformation of the original function $f(x)$, we can use the derived function to solve a limit that is in the indeterminate form:
 \begin{equation}
     \lim_{x\to a} \frac{f(x)}{g(x)}
@@ -344,7 +354,7 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
     = \frac{y_2-y_1}{x_2-x_1}
 \end{equation}</p>
 
-<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit}) until they are essentially one point similar to figure \ref{fig:m10</i>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
+<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to figure <a href="fig:m10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
 \begin{equation}
     \label{eq:m3}
     f'(x)
@@ -352,12 +362,10 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
         {f(x+\Delta x)-f(x)}
         {\Delta x}
 \end{equation}
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/10.png}
-    \caption{Two points approaching each other, courtesy of Math is Fun}
-    \label{fig:m10}
-\end{figure}</p>
+<figure>
+    <img src="10.png" style="width: 50%;" alt="Two points approaching each other, courtesy of Math is Fun">
+    <figcaption>Two points approaching each other, courtesy of Math is Fun</figcaption>
+</figure></p>
 
 <p>Other notations to highlight the fact that the derivative is simply the rate of change of a function at a point is:
 \begin{equation}
@@ -382,7 +390,7 @@ If you were to manipulate the original equation as a composite function the deri
 <p><b>Multiplication by a constant</b>:
 \begin{equation} (cf)' = cf' \end{equation}</p>
 
-<p>The <b>sum} and <b>difference rule</b> are a bit anti-climatic:
+<p>The <b>sum</b> and <b>difference rule</b> are a bit anti-climatic:
 \begin{equation}
     (f+g)' = f'+g'
     \qquad
@@ -406,7 +414,7 @@ If you were to manipulate the original equation as a composite function the deri
     = -\frac{f'}{f^2}
 \end{equation}</p>
 
-<p>It is also appropriate to recall the <b>fractional exponent rule} and <b>negative exponent rule</b>:
+<p>It is also appropriate to recall the <b>fractional exponent rule</b> and <b>negative exponent rule</b>:
 \begin{equation}
     a^\frac{m}{n} = \sqrt[n]{a^m}
     \qquad
@@ -423,24 +431,23 @@ You can remember that the power rule "flattened" our exponent graph by one degre
 \end{equation}
 This means that "the derivative of $f$ plug in original $g$ times the derivative of $g$ plug in $x$". You can feel it showcases a "staircase" approach to the composite function.</p>
 
-<p>The <b>L'Hôpital rule} is used when finding the limit at a point with an indeterminate result (read more about its usage in \ref{sec:m-limit-hopital</b> Limit chapter, L'Hôpital section):
+<p>The <b>L'Hôpital rule</b> is used when finding the limit at a point with an indeterminate result (read more about its usage in <a href="sec-m-limit-hopital"></a>):
 \begin{equation}
     \lim_{x\to a} \frac{f(x)}{g(x)}
     = \lim_{x\to a} \frac{f'(x)}{g'(x)}
 \end{equation}
 This means the limit of a quotient of two functions equals the limit of the quotient of the derivative of those two functions.</p>
 
-<p>When all rules fail, you can always use the original derivative definition in equation \ref{eq:m3}</p>
+<p>When all rules fail, you can always use the original derivative definition in equation <a href="eq-m3"></a></p>
 
 <h4>Visualizing the product rule</h4>
 <p>% Maybe someday change f(x) to y and df to dy. I won't change it right now because that means redrawing figure m11.
-Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it is the multiplication between two functions, you can think of $f(x)$ as the area of a rectangle with $h(x)$ and $g(x)$ as two sides, similar to figure \ref{fig:m11}.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/11.png}
-    \caption{Representation of a product between two functions}
-    \label{fig:m11}
-\end{figure}</p>
+Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it is the multiplication between two functions, you can think of $f(x)$ as the area of a rectangle with $h(x)$ and $g(x)$ as two sides, similar to figure <a href="fig-m11"></a>.
+<figure>
+    <img src="11.png" style="width: 50%;" alt="Representation of a product between two functions">
+    <figcaption>Representation of a product between two functions</figcaption>
+</figure>
+</p>
 
 <p>To calculate the rate of change at that point, we need another point $dx$ away from $x$ and $dx\to0$. Furthermore, we need to consider how our two functions "react" to $dx$. We deduct from the formula of derivative:
 \[
@@ -466,13 +473,11 @@ Because $dx\to0$, we can eliminate that term:
 <h4>Visualizing the chain rule</h4>
 <p>An anonymous professor once said: "Using the chain rule is like peeling an onion: you have to deal with each layer at a time, and if it is too big you will start crying."</p>
 
-<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in figure \ref{fig:m12}. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/12.png}
-    \caption{Chain rule visualization}
-    \label{fig:m12}
-\end{figure}</p>
+<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in figure <a href="fig:m12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
+<figure>
+    <img src="12.png" style="width: 50%;" alt="Chain rule visualization">
+    <figcaption>Chain rule visualization</figcaption>
+</figure></p>
 
 <p>As we increase our input by a $dx$ amount, it will increase the <i>output</i> of the function $h$ by a $dh$ amount. Similar to the product rule, we manipulate our derivative ratio $dh/dx$ to calculate that change in the output:
 \[ dh = h'(x) \;dx \]
@@ -527,9 +532,9 @@ If you think of  $dg/dh$ as "derivative of $g$ when plugging in $h$", another in
 \end{equation}</p>
 
 <h3>Additional material</h3>
-<p>It is recommended that you explore chapter \ref{sec:m-integral} for the <i>inverse} concept of derivative: anti-derivative. For other additional reading material connecting to calculus as a whole, place look at the additional material section at \ref{sec:m-integral-material</i>.</p>
+<p>It is recommended that you explore chapter <a href="sec:m-integral"></a> for the <i>inverse</i> concept of derivative: anti-derivative. For other additional reading material connecting to calculus as a whole, place look at the additional material section at <a href="sec-m-integral-material"></a>.</p>
 
-<h2>Integrals}\label{sec:m-integral</h2>
+<h2 id="sec-m-integral">Integrals</h2>
 <p>It is an absolute requirement that the reader understands derivatives, which in turn requires the knowledge of limits.</p>
 
 <h3>Why antiderivative is integral?</h3>
@@ -538,22 +543,15 @@ If you think of  $dg/dh$ as "derivative of $g$ when plugging in $h$", another in
 <p>Assume we have a graph $f(x)$ and an unknown function $A(x)$ that represents the area under $f(x)$ between the y-axis and the input. We will split into two situations and each situation will explain a different component of integration to construct the full image:</p>
 
 <h4>The main function is zero-degree (constant)</h4>
-<p>If we have $f(x)=c$, the graph of our constructed function will look like figure \ref{fig:m13}. If we were to find the area between $0$ and $a$, we could simply calculate $A(a)$ to get the result.
-\begin{figure}
-    \centering
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{math/13.png}
-        \caption{A representation of a constant function's integral}
-        \label{fig:m13}
-    \end{minipage}
-    \begin{minipage}{.4\textwidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{math/14.png}
-        \caption{A representation of a linear function's integral}
-        \label{fig:m14}
-    \end{minipage}
-\end{figure}</p>
+<p>If we have $f(x)=c$, the graph of our constructed function will look like figure <a href="fig:m13"></a>. If we were to find the area between $0$ and $a$, we could simply calculate $A(a)$ to get the result.
+<figure style="width: 40%; text-align: center;">
+    <img src="13.png" style="width: 90%;" alt="A representation of a constant function's integral">
+    <figcaption>A representation of a constant function's integral</figcaption>
+</figure>
+<figure style="width: 40%; text-align: center;">
+    <img src="14.png" style="width: 90%;" alt="A representation of a linear function's integral">
+    <figcaption>A representation of a linear function's integral</figcaption>
+</figure></p>
 
 <p>If we move $a$ a $dx$ amount to the right and want to find the area at that point, we plug $A(a+dx)$. If you look at the red rectangle on the figure, there are two ways to interpret that area:
 <ul>
@@ -578,14 +576,14 @@ Then re-arrange the equation:
 Hang on... that essentially stated that the slope of $A(x)$ is the value of $f(x)$; on the other hand, it stated that essentially $f(x)$ is the derivative of $A(x)$! Despite $A(x)$ being unknown in the beginning, we can find a function whose derivative is $f(x)$ to get $A(x)$. Thus, the antiderivative is the area under the graph.</p>
 
 <h4>The main function is first-degree (linear)</h4>
-<p>Alright, we have seen the connection between $A(x)$ and $f(x)$, but where are the $\int$ sign and the final $dx$? Assume $f(x)$ is a linear equation with a graph similar to figure \ref{fig:m14}. Notice that now our area function will need to account for both the green rectangle and the pink triangle at the top of every rectangle.</p>
+<p>Alright, we have seen the connection between $A(x)$ and $f(x)$, but where are the $\int$ sign and the final $dx$? Assume $f(x)$ is a linear equation with a graph similar to figure <a href="fig:m14"></a>. Notice that now our area function will need to account for both the green rectangle and the pink triangle at the top of every rectangle.</p>
 
 <p>If we want to find the area under $f(x)$ from $0$ to $a$, we will need to add the area of all of the slices between $0$ and $a$. The area of each green rectangle is $f(x) \;dx$ and we want to find the sum of all of those areas from $0$ to $a$:
 \[
     \int^a_0 f(x) \;dx + \text{pink area}
     = A(a)
 \]
-As you can see, the $\int$ acts both as a $\Sigma$ notation for the sum of the rectangles and $\lim_{dx\to0} f(x)\;dx$\footnote{This notation is semi-accurate for the sake of simplicity. If you want to understand integral as summation, search "Riemann sum".}. Intuitively, you can see that the slope of $f(x)$ will dictate how much the area will grow moving from $a$ to $dx$: the sharper $f(x)$ is, the faster the area will grow and reverse. The integral is the accumulation of change.</p>
+As you can see, the $\int$ acts both as a $\Sigma$ notation for the sum of the rectangles and $\lim_{dx\to0} f(x)\;dx$<note>This notation is semi-accurate for the sake of simplicity. If you want to understand integral as summation, search "Riemann sum".</note>. Intuitively, you can see that the slope of $f(x)$ will dictate how much the area will grow moving from $a$ to $dx$: the sharper $f(x)$ is, the faster the area will grow and reverse. The integral is the accumulation of change.</p>
 
 <p>Note that the smaller the $dx$, the finer we slice our area, making our pink area approach $0$ and our summation of the green area closer to the actual area. Algebraically, this is because $f(x)=dA/dx$ so the left term will cancel out $dx$, while the pink area will still be multiplied by $dx$ (the base width of the triangle). Eventually, we have:
 \[
@@ -602,7 +600,7 @@ As you can see, the $\int$ acts both as a $\Sigma$ notation for the sum of the r
 <h3>Integration concept</h3>
 <p>Starting with a geometry intuition: think of a paper. If you look at a paper from the edge, it has a very tiny thickness. However, as you stack the papers together, eventually those tiny thicknesses will create an area on the side: you can measure the height of the stack and multiply it by the edge's length to get the stack's edge area.</p>
 
-<p>Integral is the <b>antiderivative} of a function, which helps us find the area under a curve by chopping it into thin sheets and stir-frying it... wait sorry wrong note... <i>Ehem...</b></p>
+<p>Integral is the <b>antiderivative</b> of a function, which helps us find the area under a curve by chopping it into thin sheets and stir-frying it... wait sorry wrong note... <i>Ehem...</i></p>
 
 <p>Integral helps us find the area under a function $f(x)$ by slicing it into many small pieces with equal $dx$ thickness and height of $dx$. As $dx\to0$, our approximation of the area will get better and better; at some point with extremely small $dx$, the value would just be the sum of all small segments of $f(x)$. Similar to our paper example from above: as we continue to stack the papers, the sides will eventually create an area. To tell that $F(x)$ is the <b>indefinite integral</b> of $f(x)$, we use
 \begin{equation}
@@ -621,18 +619,18 @@ Note that the $C$ was <i>conveniently</i> cancelled, so we can ignore that.</p>
 
 <p>Another important thing to remember is integral is the <b>signed area</b> under a function. What that meant is that if the function $f(x)$ ever dipped below $0$, then the area between the x-axis and $f(x)$ will be considered negative. If you want the area in general without that subtraction, consider splitting your integral into two: calculate the positive area then add it to the absolute value of the negative area.</p>
 
-<p><b>Notation-wise}, because integration is the sum of $f(x)\;dx$, it is also appropriate to remember that the $dx$ is still a part of the integral\footnote{Technically, you can still move the $dx$ outside of the integral since the $dx$ was distributed into multiple terms of $f(x)$, so you just need to symbolize the sum of all $f(x)$ then multiplied it to $dx$. However, this is a high-level technique and requires an in-depth understanding of this topic itself.</b>:
+<p><b>Notation-wise</b>, because integration is the sum of $f(x)\;dx$, it is also appropriate to remember that the $dx$ is still a part of the integral<note>Technically, you can still move the $dx$ outside of the integral since the $dx$ was distributed into multiple terms of $f(x)$, so you just need to symbolize the sum of all $f(x)$ then multiplied it to $dx$. However, this is a high-level technique and requires an in-depth understanding of this topic itself.</note>:
 \[
     \int (f(x)\cdot dx)
 \]
-Please don't kidnap $dx$ in the dead of the night when you are doing homework that is due the next day. Only physicists do that\footnote{Feel free to contemplate on the equation $e^x=(1-\int)^{-1}0$ before contacting your local physicist.}.</p>
+Please don't kidnap $dx$ in the dead of the night when you are doing homework that is due the next day. Only physicists do that<note>Feel free to contemplate on the equation $e^x=(1-\int)^{-1}0$ before contacting your local physicist</note>.</p>
 
-<p>A final word of this section: <b>antiderivative (indefinite integral)} is simply the function $F(x)$ without any real value, while <b>definite integral</b> is the result of plugging in values into our indefinite integral. Those two terms are usually used interchangeably, but they are slightly different.</p>
+<p>A final word of this section: <b>antiderivative (indefinite integral)</b> is simply the function $F(x)$ without any real value, while <b>definite integral</b> is the result of plugging in values into our indefinite integral. Those two terms are usually used interchangeably, but they are slightly different.</p>
 
 <h3>Integration rules</h3>
 <p>Note that the lowercase $c$ in this section is different from the integral constant $C$ (uppercase). Generally, the integral of a function will have a higher degree and will be a bit more complex but in academic settings, the teachers will usually make integration easy.</p>
 
-<p><b>The sum rule} and the similar <b>difference rule</b> are almost universal at this point after you learn limit, derivative, and integral:
+<p><b>The sum rule</b> and the similar <b>difference rule</b> are almost universal at this point after you learn limit, derivative, and integral:
 \begin{equation}
     \int [f(x) + g(x)] \;dx
     = \int f(x) \;dx + \int g(x) \;dx
@@ -661,16 +659,13 @@ Or, if we assume that capital $V=\int v\;dx$, we have:
     \int u v \; dx
     = uV - \int u' V \; dx
 \end{equation}
-You can take a look at figure \ref{fig:m15} for a visualization of the rule.
-\begin{figure}
-    \centering
-    \centering
-    \includegraphics[width=0.5\linewidth]{math/15.png}
-    \caption{Integration by parts diagram, courtesy of Math is Fun}
-    \label{fig:m15}
-\end{figure}</p>
+You can take a look at figure <a href="fig-m15"></a> for a visualization of the rule.
+<figure>
+    <img src="15.png" style="width: 50%;" alt="Integration by parts diagram, courtesy of Math is Fun">
+    <figcaption>Integration by parts diagram, courtesy of Math is Fun</figcaption>
+</figure></p>
 
-<p><b>Integration by substitution} or <b>the reverse chain rule</b> requires you to set up your chained function in a particular way. Assume:
+<p><b>Integration by substitution</b> or <b>the reverse chain rule</b> requires you to set up your chained function in a particular way. Assume:
 \[
     g(x)=u
     \qquad
@@ -681,13 +676,11 @@ We can use $u$ as an input placeholder and compute our integral as:
     \int f(g(x) \cdot g'(x)) \;dx
     = \int f(u) \;du
 \end{equation}
-After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use figure \ref{fig:m17} to assist you when setting up the equation.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.4\linewidth]{math/17.png}
-    \caption{Integration by substituting. courtesy of Math is Fun}
-    \label{fig:m17}
-\end{figure}</p>
+After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use figure <a href="fig:m17"></a> to assist you when setting up the equation.
+<figure>
+    <img src="17.png" style="width: 40%;" alt="Integration by substituting, courtesy of Math is Fun">
+    <figcaption>Integration by substituting, courtesy of Math is Fun</figcaption>
+</figure></p>
 
 <h4>The power rule</h4>
 <p>The intuition has $nx^{n-1} = (x^n)'$ as the derivative's power rule. However, the left side is $n$ times larger than our function inside the integral. If we were to divide both sides by $n$, then the input would be the original function stated in the rule. Of course, the $n$ is offset by $1$ because we put it relative to the derivative on the right side.
@@ -703,7 +696,7 @@ Such a way of thinking will work, but as you can see, it is not accurate when yo
 
 <p>It is important to identify which $u$ and $v$ to use to make the derivatives and integrals easier — you should choose a $u$ that gets simpler when you differentiate it and is similar to $v$ integration. A rule to remember is <b>I LATE</b>. You should choose $u$ based on which of these comes first:
 <ul>
-    <li><b>I}: inverse trigonometric functions such as $sin^{-1</b>$</li>
+    <li><b>I</b>: inverse trigonometric functions such as $sin^{-1}$</li>
     <li><b>L</b>: logarithmic functions like $\ln(x)$ or $log(x)$</li>
     <li><b>A</b>: algebraic functions like $x^2$ or $x+1$</li>
     <li><b>T</b>: trigonometric functions such as $\sin(x)$</li>
@@ -721,26 +714,46 @@ Such a way of thinking will work, but as you can see, it is not accurate when yo
 \end{aligned}\]</p>
 
 <h4>Integration by parts trick: the tabular method</h4>
-<p>This is a quick trick to calculate the integral function that was set up according to our stated format $\int uv\;dx$ of the integration by parts rule. It is recommended that the reader find an online resource with videos to explain as it is much easier to understand with an interactive format. A recommended video was included in the additional material section \ref{sec:m-integral-material}.</p>
+<p>This is a quick trick to calculate the integral function that was set up according to our stated format $\int uv\;dx$ of the integration by parts rule. It is recommended that the reader find an online resource with videos to explain as it is much easier to understand with an interactive format. A recommended video was included in the additional material section<a href="sec-m-integral-material"></a>.</p>
 
 <p>It is best to show the procedure as an example. Let's say we have the following integral:
 \[ \int x^3\sin x \;dx \]
-We identify $u=x^3$ and $v=\sin x$. Next, we set up the table \ref{tab:m3}. For every row on the $u$ column, we take a derivative of the previous row; similarly, we take the antiderivative for every $v$ row. For the sign, you can either denote it on the arrow, make a separate column for it, or negate the results in the $u$ column; the last row of the sign column was left empty as a reminder that you will not take the last derivative into the final result.
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|c|} \hline
-          Sign&$u$& $v$\\ \hline
-          $+$&$x^3$& $\sin x$\\ \hline
-          $-$&$3x^2$& $-\cos x$\\ \hline
-          $+$&$6x$& $-\sin x$\\ \hline
-          $-$&$6$& $\cos x$\\ \hline
-          &$0$& $\sin x$\\ \hline
-    \end{tabular}
-    \caption{Example of the tabular method's table}
-    \label{tab:m3}
-\end{table}</p>
+We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="tab-m3"></a>. For every row on the $u$ column, we take a derivative of the previous row; similarly, we take the antiderivative for every $v$ row. For the sign, you can either denote it on the arrow, make a separate column for it, or negate the results in the $u$ column; the last row of the sign column was left empty as a reminder that you will not take the last derivative into the final result.
+<table border="1">
+    <caption>Example of the tabular method's table</caption>
+    <tr>
+        <th>Sign</th>
+        <th>$ u $</th>
+        <th>$ v $</th>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>$ x^3 $</td>
+        <td>$ \sin x $</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>$ 3x^2 $</td>
+        <td>$ -\cos x $</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>$ 6x $</td>
+        <td>$ -\sin x $</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>$ 6 $</td>
+        <td>$ \cos x $</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>$ 0 $</td>
+        <td>$ \sin x $</td>
+    </tr>
+</table></p>
 
-<p>Take a look at figure \ref{fig:m16} and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
+<p>Take a look at figure <a href="fig:m16"></a> and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
 \[\begin{aligned}
     \int x^3\sin x \;dx =
     &+ x^3 (-\cos x) \\
@@ -749,14 +762,12 @@ We identify $u=x^3$ and $v=\sin x$. Next, we set up the table \ref{tab:m3}. For 
     &- 6 (\sin x) \\
     =& -x^3\cos x + 3x^2\sin x + 6x\cos x - 6\sin x
 \end{aligned}\]
-\begin{figure}
-    \centering
-    \includegraphics[width=0.4\linewidth]{math/16.png}
-    \caption{Integration by part using the tabular method}
-    \label{fig:m16}
-\end{figure}</p>
+<figure>
+    <img src="16.png" style="width: 40%;" alt="Integration by part using the tabular method">
+    <figcaption>Integration by part using the tabular method</figcaption>
+</figure></p>
 
-<p>You need the $u$ column to eventually reach $0$ to make this method work. In case your table gets too long, maybe consider using the original integration by parts formula (\ref{eq:m5}). Furthermore, do not worry about accidentally going past the stop point, as the $0$ in the $u$ column should remind you that $a\times0=0$.</p>
+<p>You need the $u$ column to eventually reach $0$ to make this method work. In case your table gets too long, maybe consider using the original integration by parts formula (<a href="eq-m5"></a>). Furthermore, do not worry about accidentally going past the stop point, as the $0$ in the $u$ column should remind you that $a\times0=0$.</p>
 
 <h4>Integration by substitution</h4>
 <p>The listed formula somehow subtlety cancelled out everything but in reality, it is just simply an expansion of the derivative $du$ itself. Let's start fresh from an integral:
@@ -799,11 +810,11 @@ Replace $dx$ into our integral, we can see the $2x$ were cancelled out nicely, m
 \end{aligned}\]</p>
 
 <h3>Integral of common functions</h3>
-<p><b>The constant function} has a similar representation to the figure \ref{fig:m13} where the integral will increase the degree of a function. It is the power rule in equation (\ref{eq:m4</b>).
+<p><b>The constant function</b> has a similar representation to the figure <a href="fig:m13"></a> where the integral will increase the degree of a function. It is the power rule in equation (<a href="eq:m4"></a>).
 \begin{equation}
     \int a \;dx = ax + C
 \end{equation}
-If you continue to expand the power rule, we will have an integral for <b>linear function} and a <b>squared</b>:
+If you continue to expand the power rule, we will have an integral for <b>linear function</b> and a <b>squared</b>:
 \begin{equation}
     \int x \;dx = \frac{x^2}{2} + C
     \qquad
@@ -835,24 +846,22 @@ If you continue to expand the power rule, we will have an integral for <b>linear
 \end{equation}</p>
 
 <p><b>Trigonometric functions</b> can be remembered by recalling the original derivative trigonometric functions:
-\begin{equation}
-    \int \cos(x) dx = \sin(x) + C
-    \qquad
-    \int \sin(x) dx = -\cos(x) + C
-    \qquad
-    \int \sec^2(x) dx = \tan(x) + C
-\end{equation}</p>
+\begin{equation}\begin{aligned}
+    \int \cos(x) dx = \sin(x) + C \\
+    \int \sin(x) dx = -\cos(x) + C \\
+    \int \sec^2(x) dx = \tan(x) + C \\
+\end{aligned}\end{equation}</p>
 
-<h3>Additional material}\label{sec:m-integral-material</h3>
+<h3 id="sec-m-integral-material">Additional material</h3>
 <p><ul>
     <li>A YouTube playlist by 3Blue1Brown to help with the visualization of constructing derivatives (as well as other calculus concepts): \href{https://www.youtube.com/playlist?list=PL0-GT3co4r2wlh6UHTUeQsrf3mlS2lk6x}{Essence of calculus}</li>
     <li>An in-depth look into the proof and connection between derivatives and integrals: \url{https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus}</li>
     <li>The tabular method explanation video: \url{https://www.youtube.com/watch?v=Yyic5aaXGaw}</li>
-    <li>A strongly worded flowchart to solve integrals can be found in figure \ref{fig:m18}</li>
-\begin{figure}
-    \centering
-    \includegraphics[width=1\linewidth]{math/18.png}
-    \caption{Solving integrals flowchart, courtesy of a deleted Reddit user on r/math}
-    \label{fig:m18}
-\end{figure}
+    <li>A strongly worded flowchart to solve integrals can be found in figure <a href="fig:m18"></a></li>
+
 </ul>
+<figure>
+    <img id="abc" src="18.png" style="width: 100%;" alt="Solving integrals flowchart, courtesy of a deleted Reddit user on r/math">
+    <figcaption>Solving integrals flowchart, courtesy of a deleted Reddit user on r/math</figcaption>
+</figure>
+</p>

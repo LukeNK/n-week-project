@@ -20,3 +20,5 @@
 `\\textbf\{` to `<b>`
 
 `\\textit\{` to `<i>`
+
+Find `\ref`, `\footnote`
