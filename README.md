@@ -22,3 +22,7 @@
 `\\textit\{` to `<i>`
 
 Find `\ref`, `\footnote`
+
+Remove `style="width: .*%;" ` (space at the end)
+
+`figure style="width: .*%; text-align: center;"`to `figure`

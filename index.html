@@ -54,9 +54,32 @@
             content: counter(chapter) "." counter(section) " ";
         }
 
+        /* Content styling */
         p {
             text-indent: 2rem;
             text-align: justify;
+        }
+
+        figure {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .figure {
+            display: flex;
+            justify-content: space-around;
+        }
+        .figure figure {
+            width: 50%;
+        }
+        figure img {
+            max-height: 50vh;
+            max-width: 100%;
+        }
+        figcaption {
+            flex-basis: 100%;
+            text-align: center;
+            margin-top: 1rem;
         }
 
         /* Footnotes */
@@ -66,8 +89,6 @@
             font-size: 0.75em;
             cursor: pointer;
         }
-
-        /* Tooltip text */
         note span {
             display: none;
             background-color: black;
@@ -103,11 +124,11 @@
         <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
 
         <h1>Math</h1>
-        <!-- <div subject="m"></div> -->
+        <div subject="m"></div>
         <div subject="a"></div>
 
         <h1>Chemistry</h1>
-        <!-- <div subject="c"></div> -->
+        <div subject="c"></div>
 
         <h1>Physics</h1>
         <!-- <div subject="p"></div> -->
