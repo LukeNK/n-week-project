@@ -276,8 +276,8 @@ Since you would measure the states of $|\psi\rangle$ independently, what you wou
 
 <h3>Two qubits</h3>
 <p>We map multiple bits together with classical bits by simply string them as "01" and so on. For qubits, it is a bit different. Instead of stringing the bits together, we describe the possibility of two qubits being in the following states.
+<span class="label" id="eq-p1"></span>
 \begin{equation}
-    \label{eq:p1}
     |00\rangle = \begin{pmatrix}1 \\ 0 \\ 0 \\ 0\end{pmatrix}
     \qquad
     |01\rangle = \begin{pmatrix}0 \\ 1 \\ 0 \\ 0\end{pmatrix}
@@ -385,8 +385,8 @@ In addition to that, we need to make all the probabilities add up to $1$:
         \end{pmatrix}
 \end{equation}
 The joint state $|\psi\rangle_{AB} \in \mathbb{C}^2\otimes\mathbb{C}^2$ can be expressed as a <b>tensor product</b>:
+<span class="label" id="eq-p2"></span>
 \begin{equation}
-    \label{eq:p2}
     |\psi\rangle_{AB}
     = |\psi\rangle_A \otimes |\psi\rangle_B
     = \begin{pmatrix}
@@ -469,9 +469,9 @@ This DOES NOT violate the non-commutative property, since the order is still pre
  In other words, the order in which you apply the tensor product operator matters.</p>
 
 <h3>Quantum entanglement</h3>
-<p>If we further break down the tensor product equation according to equation (<a href="eq-p2"></a>), we will have a representation of multiple qubits using classical bits:
+<p>If we further break down the tensor product equation according to equation (<a href="#eq-p2"></a>), we will have a representation of multiple qubits using classical bits:
+<span class="label" id="eq-p3"></span>
 \begin{equation}
-    \label{eq:p3}
     (\alpha_A|0\rangle + \beta_A|1\rangle) \otimes
     (\alpha_B|0\rangle + \beta_B|1\rangle)
     = \begin{pmatrix}
@@ -489,7 +489,7 @@ As you can see, the equation above implies the fact that these two qubits are wo
     |1\rangle_A \otimes |1\rangle_B
     = \begin{pmatrix} 1 \\ 0 \\ 0 \\ 1 \end{pmatrix}
 \end{equation}
-This equation describes a relationship where if $|\psi\rangle_A$ is 0, then we know that  $|\psi\rangle_B$ must be 0 — it is special in the fact that we cannot describe it using the independent state equation (<a href="eq-p3"></a>). The matrix here describes the fact that there is <i>no possibility</i> that these two qubits are different, so knowing one is enough to know the state of the other qubit.</p>
+This equation describes a relationship where if $|\psi\rangle_A$ is 0, then we know that  $|\psi\rangle_B$ must be 0 — it is special in the fact that we cannot describe it using the independent state equation (<a href="#eq-p3"></a>). The matrix here describes the fact that there is <i>no possibility</i> that these two qubits are different, so knowing one is enough to know the state of the other qubit.</p>
 
 <p>How can we make such entanglement happen? That is the question for the engineers to manufacture the particles — entanglement is possible from our theory and it is their job to figure out how. That is why sometimes it is best to think of quantum entanglement as a mathematical concept rather than a practical connection. We know that it is possible to produce in real life because there is nothing <i>theoretically</i> stopping us from doing that. It is like having a $1+1=2$ equation to tell you that you can add things in real life but the practical interpretation is up to you.</p>
 
