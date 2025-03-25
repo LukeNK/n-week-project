@@ -57,10 +57,10 @@ This leads us to the definition of <b>continuity</b>: if the limit of $f(x)$ at 
     </figure>
 </div>
 
-<p>Consider the function $f(x)=1/x^2$ in figure <a href="#fig:m1"></a>,  you can see that moving from both sides, the limit slowly becomes higher and higher. It seems like it is <b>unbounded</b> or the limit seems to reach <b>positive infinity</b>.
+<p>Consider the function $f(x)=1/x^2$ in figure <a href="#fig-m1"></a>,  you can see that moving from both sides, the limit slowly becomes higher and higher. It seems like it is <b>unbounded</b> or the limit seems to reach <b>positive infinity</b>.
 \[ \lim_{x\to0} \frac{1}{x^2} = \infty \]</p>
 
-<p>As you can see, both the upper limit and the lower limit still attempt to reach closer to one single value, so the limit still exists. Consider $f(x)=1/x$ in figure <a href="#fig:m4"></a>, we have the following:
+<p>As you can see, both the upper limit and the lower limit still attempt to reach closer to one single value, so the limit still exists. Consider $f(x)=1/x$ in figure <a href="#fig-m4"></a>, we have the following:
 \[
     \lim_{x\to0}\frac{1}{x} <b> does not exist, but</b>
 \]
@@ -118,7 +118,7 @@ These theorems can be deducted from the concept that limit is essentially substi
 <h4>Vertical asymptote</h4>
 <p>The tables in this section use $+$ simply to denote the fact that the number is $>0$ and similarly with the negative sign.</p>
 
-<p><b>The limit of the multiplication between two functions</b>, when it is at the asymptote, can be simplified in table <a href="#tab:m1"></a>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.
+<p><b>The limit of the multiplication between two functions</b>, when it is at the asymptote, can be simplified in table <a href="#tab-m1"></a>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.
 <table border="1">
     <caption>Finding the limit of the multiplication between two functions</caption>
     <tr>
@@ -359,7 +359,7 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
     = \frac{y_2-y_1}{x_2-x_1}
 \end{equation}</p>
 
-<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to figure <a href="#fig:m10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
+<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to figure <a href="#fig-m10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
 <span class="label" id="eq-m3"></span>
 \begin{equation}
     f'(x)
@@ -478,7 +478,7 @@ Because $dx\to0$, we can eliminate that term:
 <h4>Visualizing the chain rule</h4>
 <p>An anonymous professor once said: "Using the chain rule is like peeling an onion: you have to deal with each layer at a time, and if it is too big you will start crying."</p>
 
-<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in figure <a href="#fig:m12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
+<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in figure <a href="#fig-m12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
 <figure>
     <img src="12.png" alt="Chain rule visualization">
     <figcaption>Chain rule visualization</figcaption>
@@ -548,7 +548,7 @@ If you think of  $dg/dh$ as "derivative of $g$ when plugging in $h$", another in
 <p>Assume we have a graph $f(x)$ and an unknown function $A(x)$ that represents the area under $f(x)$ between the y-axis and the input. We will split into two situations and each situation will explain a different component of integration to construct the full image:</p>
 
 <h4>The main function is zero-degree (constant)</h4>
-<p>If we have $f(x)=c$, the graph of our constructed function will look like figure <a href="#fig:m13"></a>. If we were to find the area between $0$ and $a$, we could simply calculate $A(a)$ to get the result.
+<p>If we have $f(x)=c$, the graph of our constructed function will look like figure <a href="#fig-m13"></a>. If we were to find the area between $0$ and $a$, we could simply calculate $A(a)$ to get the result.
 <div class="figure">
     <figure>
         <img src="13.png" alt="A representation of a constant function's integral">
@@ -583,7 +583,7 @@ Then re-arrange the equation:
 Hang on... that essentially stated that the slope of $A(x)$ is the value of $f(x)$; on the other hand, it stated that essentially $f(x)$ is the derivative of $A(x)$! Despite $A(x)$ being unknown in the beginning, we can find a function whose derivative is $f(x)$ to get $A(x)$. Thus, the antiderivative is the area under the graph.</p>
 
 <h4>The main function is first-degree (linear)</h4>
-<p>Alright, we have seen the connection between $A(x)$ and $f(x)$, but where are the $\int$ sign and the final $dx$? Assume $f(x)$ is a linear equation with a graph similar to figure <a href="#fig:m14"></a>. Notice that now our area function will need to account for both the green rectangle and the pink triangle at the top of every rectangle.</p>
+<p>Alright, we have seen the connection between $A(x)$ and $f(x)$, but where are the $\int$ sign and the final $dx$? Assume $f(x)$ is a linear equation with a graph similar to figure <a href="#fig-m14"></a>. Notice that now our area function will need to account for both the green rectangle and the pink triangle at the top of every rectangle.</p>
 
 <p>If we want to find the area under $f(x)$ from $0$ to $a$, we will need to add the area of all of the slices between $0$ and $a$. The area of each green rectangle is $f(x) \;dx$ and we want to find the sum of all of those areas from $0$ to $a$:
 \[
@@ -684,7 +684,7 @@ We can use $u$ as an input placeholder and compute our integral as:
     \int f(g(x) \cdot g'(x)) \;dx
     = \int f(u) \;du
 \end{equation}
-After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use figure <a href="#fig:m17"></a> to assist you when setting up the equation.
+After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use figure <a href="#fig-m17"></a> to assist you when setting up the equation.
 <figure>
     <img src="17.png" alt="Integration by substituting, courtesy of Math is Fun">
     <figcaption>Integration by substituting, courtesy of Math is Fun</figcaption>
@@ -761,7 +761,7 @@ We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="#tab-m3">
     </tr>
 </table></p>
 
-<p>Take a look at figure <a href="#fig:m16"></a> and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
+<p>Take a look at figure <a href="#fig-m16"></a> and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
 \[\begin{aligned}
     \int x^3\sin x \;dx =
     &+ x^3 (-\cos x) \\
@@ -818,7 +818,7 @@ Replace $dx$ into our integral, we can see the $2x$ were cancelled out nicely, m
 \end{aligned}\]</p>
 
 <h3>Integral of common functions</h3>
-<p><b>The constant function</b> has a similar representation to the figure <a href="#fig:m13"></a> where the integral will increase the degree of a function. It is the power rule in equation (<a href="#eq-m4"></a>).
+<p><b>The constant function</b> has a similar representation to the figure <a href="#fig-m13"></a> where the integral will increase the degree of a function. It is the power rule in equation (<a href="#eq-m4"></a>).
 \begin{equation}
     \int a \;dx = ax + C
 \end{equation}
@@ -865,7 +865,7 @@ If you continue to expand the power rule, we will have an integral for <b>linear
     <li>A YouTube playlist by 3Blue1Brown to help with the visualization of constructing derivatives (as well as other calculus concepts): <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2wlh6UHTUeQsrf3mlS2lk6x">Essence of calculus</a></li>
     <li>An in-depth look into the proof and connection between derivatives and integrals: <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus">https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus</a></li>
     <li>The tabular method explanation video: <a href="https://www.youtube.com/watch?v=Yyic5aaXGaw">https://www.youtube.com/watch?v=Yyic5aaXGaw</a></li>
-    <li>A strongly worded flowchart to solve integrals can be found in figure <a href="#fig:m18"></a></li>
+    <li>A strongly worded flowchart to solve integrals can be found in figure <a href="#fig-m18"></a></li>
 
 </ul>
 <figure>
