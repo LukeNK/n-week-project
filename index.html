@@ -72,6 +72,7 @@
             color: white;
         }
 
+        /* figure */
         figure {
             display: flex;
             justify-content: space-around;
@@ -92,6 +93,29 @@
             flex-basis: 100%;
             text-align: center;
             margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* tables */
+        table {
+            margin: auto;
+            min-width: 20rem;
+            border-collapse: collapse;
+            font-size: inherit;
+        }
+        table caption {
+            margin-top: 1rem;
+            caption-side: bottom;
+            font-style: italic;
+        }
+        th {
+            background-color: black;
+            color: white;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 0.5rem;
+            text-align: center;
         }
 
         /* Footnotes */
@@ -153,6 +177,9 @@
 </body>
 <script>
 window.MathJax = {
+    // loader: {
+    //     load: ['ui/lazy']
+    // },
     tex: {
         tags: 'ams',
         inlineMath: [['$', '$']],

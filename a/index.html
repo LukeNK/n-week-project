@@ -118,7 +118,7 @@ These theorems can be deducted from the concept that limit is essentially substi
 <h4>Vertical asymptote</h4>
 <p>The tables in this section use $+$ simply to denote the fact that the number is $>0$ and similarly with the negative sign.</p>
 
-<p><b>The limit of the multiplication between two functions</b>, when it is at the asymptote, can be simplified in table <a href="#tab-a1"></a>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.
+<p><b>The limit of the multiplication between two functions</b>, when it is at the asymptote, can be simplified in table <a href="#tab-a1"></a>. Remember that multiplication is commutative and check if the limit exists in the first place or not. The table is pretty straightforward, as the signs are similar to multiplication between two numbers: two negatives get a positive.</p>
 <table id="tab-a1">
     <caption>Finding the limit of the multiplication between two functions</caption>
     <tr>
@@ -147,7 +147,6 @@ These theorems can be deducted from the concept that limit is essentially substi
         <td>$+&infin;$</td>
     </tr>
 </table>
-</p>
 
 <p><b>The limit of a division between two functions</b> $f(x)$ and $g(x)$ starts with two requirements:
 \[
@@ -155,7 +154,7 @@ These theorems can be deducted from the concept that limit is essentially substi
     \text{ and }
     \lim_{x\to a}g(x) = 0
 \]
-After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is larger than $0$ or not — you are checking the result that the whole function will dispense. The interaction between the limit of $f(x)$ and the sign of $g(x)$ can be found in table <a href="#tab-a2"></a>. Note that you still need to pay close attention to which direction you are approaching $x$ and whether the limit exists at that point. Once again the signs are similar to typical division. &infin;
+After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is larger than $0$ or not — you are checking the result that the whole function will dispense. The interaction between the limit of $f(x)$ and the sign of $g(x)$ can be found in table <a href="#tab-a2"></a>. Note that you still need to pay close attention to which direction you are approaching $x$ and whether the limit exists at that point. Once again the signs are similar to typical division. &infin;</p>
 <table id="tab-a2">
     <caption>Interaction of the limit between two functions</caption>
     <tr>
@@ -183,7 +182,7 @@ After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is l
         <td>-</td>
         <td>+&infin;</td>
     </tr>
-</table></p>
+</table>
 
 <h4>Trigonometric identities</h4>
 <p>As it is impossible to cover all of the identities, this section will list identities that are useful in AP Calculus exams. First, recall the definition of a few trigonometric functions:
@@ -726,7 +725,7 @@ Such a way of thinking will work, but as you can see, it is not accurate when yo
 
 <p>It is best to show the procedure as an example. Let's say we have the following integral:
 \[ \int x^3\sin x \;dx \]
-We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="#tab-a3"></a>. For every row on the $u$ column, we take a derivative of the previous row; similarly, we take the antiderivative for every $v$ row. For the sign, you can either denote it on the arrow, make a separate column for it, or negate the results in the $u$ column; the last row of the sign column was left empty as a reminder that you will not take the last derivative into the final result.
+We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="#tab-a3"></a>. For every row on the $u$ column, we take a derivative of the previous row; similarly, we take the antiderivative for every $v$ row. For the sign, you can either denote it on the arrow, make a separate column for it, or negate the results in the $u$ column; the last row of the sign column was left empty as a reminder that you will not take the last derivative into the final result.</p>
 <table id="tab-a3">
     <caption>Example of the tabular method's table</caption>
     <tr>
@@ -759,7 +758,7 @@ We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="#tab-a3">
         <td>$ 0 $</td>
         <td>$ \sin x $</td>
     </tr>
-</table></p>
+</table>
 
 <p>Take a look at figure <a href="#fig-a16"></a> and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
 \[\begin{aligned}
@@ -770,10 +769,11 @@ We identify $u=x^3$ and $v=\sin x$. Next, we set up the table <a href="#tab-a3">
     &- 6 (\sin x) \\
     =& -x^3\cos x + 3x^2\sin x + 6x\cos x - 6\sin x
 \end{aligned}\]
+</p>
 <figure>
     <img src="16.png" alt="Integration by part using the tabular method">
     <figcaption>Integration by part using the tabular method</figcaption>
-</figure></p>
+</figure>
 
 <p>You need the $u$ column to eventually reach $0$ to make this method work. In case your table gets too long, maybe consider using the original integration by parts formula (<a href="#eq-m5"></a>). Furthermore, do not worry about accidentally going past the stop point, as the $0$ in the $u$ column should remind you that $a\times0=0$.</p>
 
