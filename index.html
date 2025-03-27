@@ -20,7 +20,7 @@
             margin: auto;
             max-width: 800px;
             font-size: large;
-            counter-reset: part chapter section;
+            counter-reset: part chapter section subsection;
         }
 
         h1 {
@@ -52,6 +52,14 @@
             width: 4rem;
             counter-increment: section;
             content: counter(chapter) "." counter(section) " ";
+            counter-set: subsection 0;
+        }
+
+        h4::before {
+            display: inline-block;
+            width: 4rem;
+            counter-increment: subsection;
+            content: counter(chapter) "." counter(section) "." counter(subsection) " ";
         }
 
         /* Content styling */
