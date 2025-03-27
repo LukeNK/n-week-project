@@ -59,6 +59,10 @@
             text-indent: 2rem;
             text-align: justify;
         }
+        .error {
+            background-color: red;
+            color: white;
+        }
 
         figure {
             display: flex;
@@ -152,10 +156,15 @@ let subjects = document.querySelectorAll('div[subject]'), subjectLoaded = 0;
 subjects.forEach(async (subject) => {
     let response = await fetch(`./${subject.getAttribute('subject')}/index.html`);
     response = await response.text();
-
-    response = response.replaceAll('src="', `src="${subject.getAttribute('subject')}/`);
-
     subject.innerHTML = response;
+
+    subject.querySelectorAll('img').forEach(img => {
+        let src = img.getAttribute('src');
+        img.src = subject.getAttribute('subject') + '/' + src;
+        src = src.split('.')[0];
+        img.parentElement.id = `fig-${subject.getAttribute('subject')}${src}`;
+    });
+
     subjectLoad();
 })
 
@@ -163,6 +172,7 @@ function subjectLoad() {
     subjectLoaded++
     if (subjectLoaded < subjects.length) return;
 
+    console.log('Checking links')
     document.querySelectorAll('a').forEach(a => {
         // reference
         let ref = a.getAttribute('href');
@@ -172,7 +182,8 @@ function subjectLoad() {
         if (!ref.startsWith('#')) return;
         // check if reference exists
         if (!document.getElementById(ref.slice(1))) {
-            a.parentElement.style.backgroundColor = 'red';
+            a.parentElement.classList.add('error');
+            a.parentElement.title = 'This paragraph contains broken link';
             console.log(a)
         }
     });
