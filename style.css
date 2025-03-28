@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Helvetica, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+header div {
+    display: flex;
+    align-items: center;
+}
+header img {
+    margin-left: 0;
+    max-height: 10rem;
+}
+header p {
+    text-indent: 0;
+    text-align: center;
+}
+header p.med {
+    font-size: 2rem;
+    margin: 0;
+}
+header p.large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+    font-size: 3rem;
+}
+
+main {
+    margin: auto;
+    max-width: 800px;
+    font-size: large;
+    counter-reset: part chapter section subsection;
+}
+
+h1 {
+    break-before: page;
+    text-align: center;
+}
+h1:not([noNumber])::before {
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid black;
+    counter-increment: part;
+    content: "Part " counter(part, upper-roman);
+}
+
+h2 {
+    break-before: page;
+}
+h2:not([noNumber])::before {
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px dotted black;
+    counter-increment: chapter;
+    content: "Chapter " counter(chapter) " ";
+    counter-set: section 0;
+}
+
+h3::before {
+    display: inline-block;
+    width: 4rem;
+    counter-increment: section;
+    content: counter(chapter) "." counter(section) " ";
+    counter-set: subsection 0;
+}
+
+h4::before {
+    display: inline-block;
+    width: 4rem;
+    counter-increment: subsection;
+    content: counter(chapter) "." counter(section) "." counter(subsection) " ";
+}
+
+mjx-assistive-mml {
+    /* https://github.com/mathjax/MathJax/issues/3348 */
+    text-indent: 0 ! important;
+    bottom: 0;
+    right: 0;
+}
+
+/* Content styling */
+p {
+    text-indent: 2rem;
+    text-align: justify;
+}
+.error {
+    background-color: red;
+    color: white;
+}
+
+/* figure */
+figure {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.figure {
+    display: flex;
+    justify-content: space-around;
+}
+.figure figure {
+    width: 50%;
+}
+figure img {
+    max-height: 50vh;
+    max-width: 100%;
+}
+figcaption {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* tables */
+table {
+    margin: auto;
+    min-width: 20rem;
+    border-collapse: collapse;
+    font-size: inherit;
+}
+table caption {
+    margin-top: 1rem;
+    caption-side: bottom;
+    font-style: italic;
+}
+th {
+    background-color: black;
+    color: white;
+}
+th, td {
+    border: 1px solid black;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* labels */
+eq {
+    position: relative;
+    display: block;
+}
+eq > span {
+    position: absolute; /* Position the span relative to the eq container */
+    right: 0; /* Align to the right */
+    top: 50%; /* Move to the vertical center */
+    transform: translateY(-50%); /* Adjust to center the text vertically */
+}
+
+/* Footnotes */
+note {
+    vertical-align: super;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    font-size: 0.75em;
+    cursor: pointer;
+}
+note span {
+    display: none;
+    background-color: black;
+    color: #fff;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+note:hover span {
+    display: block;
+}
+
+@media print {
+    main {
+        max-width: none;
+    }
+}
