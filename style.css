@@ -99,6 +99,10 @@ p {
     color: white;
 }
 
+a {
+    word-break: break-word;
+}
+
 /* figure */
 figure {
     display: flex;
