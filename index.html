@@ -118,6 +118,18 @@
             text-align: center;
         }
 
+        /* labels */
+        eq {
+            position: relative;
+            display: block;
+        }
+        eq > span {
+            position: absolute; /* Position the span relative to the eq container */
+            right: 0; /* Align to the right */
+            top: 50%; /* Move to the vertical center */
+            transform: translateY(-50%); /* Adjust to center the text vertically */
+        }
+
         /* Footnotes */
         note {
             vertical-align: super;
@@ -161,13 +173,13 @@
 
         <h1>Math</h1>
         <div subject="m"></div>
-        <div subject="a"></div>
+        <!-- <div subject="a"></div> -->
 
         <h1>Chemistry</h1>
-        <div subject="c"></div>
+        <!-- <div subject="c"></div> -->
 
         <h1>Physics</h1>
-        <div subject="p"></div>
+        <!-- <div subject="p"></div> -->
 
         <h1>Problems</h1>
         <p>Inspired by xkcd's What If, this part is here to show how very real math can solve real or unreal problems — it is here for your entertainment. The author understands that it will make the file a bit heavier with a mostly unused part, but it was here for a reason. Luke had a problem and because he was too lazy to create a different file, Luke decided to write the problem in this file with LaTeX. Then once again because Luke was too lazy, Luke decided that he would make it as a part and write a whole paragraph to justify instead of making a new file and deleting the notes. That is productivity at its peak.</p>
@@ -181,7 +193,7 @@ window.MathJax = {
     //     load: ['ui/lazy']
     // },
     tex: {
-        tags: 'ams',
+        // tags: 'ams',
         inlineMath: [['$', '$']],
     }
 };
@@ -234,9 +246,8 @@ function subjectLoad() {
             caption = e.querySelector('figcaption');
         caption.innerText = `${ref}: ${caption.innerText}`;
         allAs.forEach(a => {
-            if (a.getAttribute('href') === `#${e.id}`) {
+            if (a.getAttribute('href') === `#${e.id}`)
                 a.innerText = ref;
-            }
         });
     });
 
@@ -249,21 +260,23 @@ function subjectLoad() {
             caption = e.querySelector('caption');
         caption.innerText = `${ref}: ${caption.innerText}`;
         allAs.forEach(a => {
-            if (a.getAttribute('href') === `#${e.id}`) {
+            if (a.getAttribute('href') === `#${e.id}`)
                 a.innerText = ref;
-            }
         });
     });
 
-    console.log('Assign numbering - labels');
+    console.log('Assign numbering - equations');
     chapter = 0, count = 0;
-    document.querySelectorAll('span.label, h2:not([noNumber])').forEach(e => {
+    document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
         count++;
+        e.innerHTML = `
+            \\begin{equation*}\\begin{aligned} ${e.innerHTML} \\end{aligned}\\end{equation*}
+            <span>(${chapter}.${count})</span>`;
+        if (e.id === '') return;
         allAs.forEach(a => {
-            if (a.getAttribute('href') === `#${e.id}`) {
-                a.innerText = `${chapter}.${count}`;
-            }
+            if (a.getAttribute('href') === `#${e.id}`)
+                a.innerText = `(${chapter}.${count})`;
         });
     });
 
@@ -284,7 +297,6 @@ function subjectLoad() {
 
 window.onload = () => {
     // create a time out to scroll to the hash after the page is loaded
-    // cir
     setTimeout(
         () => {
             try {
