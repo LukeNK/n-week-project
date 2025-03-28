@@ -15,6 +15,34 @@
             font-family: "Inter", Helvetica, Arial, sans-serif;
         }
 
+        header {
+            text-align: center;
+        }
+        header div {
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            margin-left: 0;
+            max-height: 10rem;
+        }
+        header p {
+            text-indent: 0;
+            text-align: center;
+        }
+        header p.med {
+            font-size: 2rem;
+            margin: 0;
+        }
+        header p.large {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70%;
+            width: 100%;
+            font-size: 3rem;
+        }
+
         main {
             margin: auto;
             max-width: 800px;
@@ -163,7 +191,18 @@
     </style>
 </head>
 <body>
+    <header>
+        <div>
+            <img src="letterhead.svg" alt="">
+            <p class="med">
+                LukeNK
+            </p>
+        </div>
+        <p class="large">The Note of Science Topics</p>
+        <p>N-week project</p>
+    </header>
     <main>
+
         <h2 noNumber>About This Note</h2>
         <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
 
