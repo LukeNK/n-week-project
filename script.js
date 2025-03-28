@@ -22,9 +22,6 @@ subjects.forEach(async (subject) => {
         src = src.split('.')[0];
         img.parentElement.id = `fig-${subject.getAttribute('subject')}${src}`;
     });
-    subject.querySelectorAll('note').forEach((note, id) => {
-        note.innerHTML = `[${id}]<span>${note.innerHTML}</span>`;
-    })
 
     subjectLoad();
 })
@@ -98,7 +95,19 @@ function subjectLoad() {
         });
     });
 
-    console.log('Assign numbering - sections')
+    console.log('Assign numbering - notes');
+    chapter = 0, count = 0;
+    document.querySelectorAll('note, h2:not([noNumber])').forEach(e => {
+        if (e.tagName === 'H2') { chapter++; count = 0; return; }
+        count++;
+        let ref = `${chapter}.${count}`,
+            content = e.innerHTML;
+        e.innerHTML = `[${ref}]<span>${content}</span>`;
+        document.querySelector('footer').innerHTML +=
+            `<p><b>[${ref}]</b> ${content}</p>`;
+    });
+
+    console.log('Assign link reference - sections')
     document.querySelectorAll('h2:not([noNumber])').forEach(e => {
         allAs.forEach(a => {
             if (a.getAttribute('href') === `#${e.id}`) {
