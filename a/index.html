@@ -88,25 +88,25 @@ The main limit does not exist, but the limit from either side is unbounded. The 
     \lim_{x\to a}g(x) = M
 \]
 The basic <b>limit theorems</b> are:
-\begin{equation}
+<eq>
     \lim_{x\to a}[f(x)+g(x)] = L+M
     \qquad
     \lim_{x\to a}[f(x)-g(x)] = L-M
-\end{equation}
-\begin{equation}
+</eq>
+<eq>
     \lim_{x\to a}[f(x)\cdot g(x)] = L\cdot M
     \qquad
     \lim_{x\to a}[f(x)/g(x)] = L/M
-\end{equation}
-\begin{equation}
+</eq>
+<eq>
     \lim_{x\to a}c = c
-\end{equation}
-\begin{equation}
+</eq>
+<eq>
     \lim_{x\to a} \left[f(x)^n\right]
     = \left[\lim_{x\to a}f(x)\right]^n
     \qquad
     (n \in N)
-\end{equation}
+</eq>
 These theorems can be deducted from the concept that limit is essentially substituting $a$ into our functions, so all standard number arithmetic still works just fine.</p>
 
 <p>From these theorems, you can see that <b>finding a finite limit</b> is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in <a href="#fig-a5"></a>.
@@ -186,7 +186,7 @@ After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is l
 
 <h4>Trigonometric identities</h4>
 <p>As it is impossible to cover all of the identities, this section will list identities that are useful in AP Calculus exams. First, recall the definition of a few trigonometric functions:
-\begin{equation}
+<eq>
     \tan\theta = \frac{\sin\theta}{\cos\theta}
     \qquad
     \cot = \frac{1}{\tan\theta} = \frac{\cos\theta}{\sin\theta}
@@ -194,52 +194,52 @@ After that, you need to check if the function $g(x)$ for $x$ approaches $a$ is l
     \csc\theta = \frac{1}{\sin\theta}
     \qquad
     \sec\theta = \frac{1}{\cos\theta}
-\end{equation}</p>
+</eq></p>
 
 <p>Here are <b>Pythagorean identities</b>, which help when reviewing with a unit circle that displays trigonometric functions like <a href="#fig-a8"></a>:
 <figure>
     <img src="8.png" alt="A unit circle with trigonometric functions">
     <figcaption>A unit circle with trigonometric functions</figcaption>
 </figure>
-\begin{equation}
+<eq>
     \sin^2\theta + \cos^2\theta = 1^2
     \qquad
     \tan^2\theta + 1^2 = \sec^2\theta
     \qquad
     1^2 + \cot^2\theta = \csc^2\theta
-\end{equation}
+</eq>
 The $1^2=1$ was added to help the reader remember the connection to the original Pythagorean theorem $a^2+b^2=c^2$. You can work out more identities from the figure. Just in case you forgot, $\sin^2\theta=\sin(\theta)\cdot\sin(\theta)$ — it is the squared of the <i>result</i> of the function, NOT the $\theta$ inside the function.</p>
 
 <p>The <b>double-angle identities</b>:
-\begin{equation}
+<eq>
     \sin2\theta = 2 \sin\theta \cos\theta
-\end{equation}
-\begin{equation}\begin{aligned}
+</eq>
+<eq>\begin{aligned}
     \cos2\theta
     =& \cos^2\theta - \sin^2\theta \\
     =& 2\cos^2\theta - 1 \\
     =& 1 - 2\sin^2\theta
-\end{aligned}\end{equation}
-\begin{equation}
+\end{aligned}</eq>
+<eq>
     \tan2\theta = \frac{2\tan\theta}{1 - \tan^2\theta}
-\end{equation}</p>
+</eq></p>
 
 <p>The <b>half-angle identities</b> frequently being mentioned but more often used for integral questions:
-\begin{equation}
+<eq>
     \sin^2\theta = \frac{1}{2}(1-\cos2\theta)
-\end{equation}
-\begin{equation}
+</eq>
+<eq>
     \cos^2\theta = \frac{1}{2}(1+\cos2\theta)
-\end{equation}</p>
+</eq></p>
 
 <p>Finally, it is crucial to remember that the limit of most of the trigonometric functions as $\theta\to0$ is undefined. Can you see why?</p>
 
 <h4>Composite function limits</h4>
 <p>The standard theorem is:
-\begin{equation}
+<eq>
     \lim_{x\to a} f(g(x))
     = f(\lim_{x\to a} g(x))
-\end{equation}
+</eq>
 If and only if the limit of $g(x)$ exists and $f(x)$ is continuous at $\lim_{x\to a} g(x)$:
 \[
     \lim_{x\to a}g(x) = L
@@ -257,11 +257,11 @@ If and only if the limit of $g(x)$ exists and $f(x)$ is continuous at $\lim_{x\t
 <p>Also known as the <b>sandwich theorem</b>, it helps calculate limits that are a bit weird. Suppose in an area that we know:
 \[ f(x) \leq h(x) \leq g(x) \]
 then for some real number $a$:
-\begin{equation}
+<eq>
     \text{If } \lim_{x\to a}f(x) = L = \lim_{x\to a}g(x)
     \text{ then }
     \lim_{x\to a}h(x) = L
-\end{equation}
+</eq>
 Read: If we certainly know that, inside the range we are evaluating, $h(x)$ is always between the other two functions, then if the limit of both $f(x)$ and $g(x)$ is equal to a number, then those two limits "sandwich" $h(x)$ to that same value.</p>
 
 <p>For example, we have the following function with the graph from <a href="#fig-a7"></a> and <a href="#fig-a6"></a>:
@@ -317,12 +317,12 @@ And we know that at $0$, $-x^2 = x^2 = 0$, therefore making:
 
 <h3 id="sec-a-limit-hopital">L'Hôpital's rule</h3>
 <p>If you think the derivative $f'(x)$ is simply a special transformation of the original function $f(x)$, we can use the derived function to solve a limit that is in the indeterminate form:
-\begin{equation}
+<eq>
     \lim_{x\to a} \frac{f(x)}{g(x)}
     = \lim_{x\to a} \frac{f'(x)}{g'(x)}
-\end{equation}
+</eq>
 Here are the <b>indeterminate forms</b> that L'Hôpital rule can help with:
-\begin{equation}
+<eq>
     \frac{0}{0} \qquad
     \frac{\infty}{\infty} \qquad
     0\times\infty \qquad
@@ -330,7 +330,7 @@ Here are the <b>indeterminate forms</b> that L'Hôpital rule can help with:
     0^0 \qquad
     \infty^0 \qquad
     \infty - \infty
-\end{equation}
+</eq>
 The <b>conditions</b> are, very obvious, the functions must be differentiable and the final limit must exist. Less obvious is the fact that you can only use this rule when $f(x)/g(x)$ is indeterminate.</p>
 
 <p>You can take as many differentiations as it takes to solve the limit equation. You can also take the antiderivative but usually, that will result in a more complex function. Consider we have this example:
@@ -352,35 +352,34 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
 
 <h3>Derivative concept</h3>
 <p>Today is a beautiful day to find the slope of a graph at a point. We remember that the slope between two points is the difference in the y-axis divided by the difference in the x-axis:
-\begin{equation}
+<eq>
     m
     = \frac{\Delta y}{\Delta x}
     = \frac{y_2-y_1}{x_2-x_1}
-\end{equation}</p>
+</eq></p>
 
 <p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to <a href="#fig-a10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
-<span class="label" id="eq-m3"></span>
-\begin{equation}
+<eq id="eq-m3">
     f'(x)
     = \lim_{\Delta x\to 0} \frac
         {f(x+\Delta x)-f(x)}
         {\Delta x}
-\end{equation}
+</eq>
 <figure>
     <img src="10.png" alt="Two points approaching each other, courtesy of Math is Fun">
     <figcaption>Two points approaching each other, courtesy of Math is Fun</figcaption>
 </figure></p>
 
 <p>Other notations to highlight the fact that the derivative is simply the rate of change of a function at a point is:
-\begin{equation}
+<eq>
     \frac{d}{dx}f(x) = \frac{df}{dx} = \frac{dy}{dx}f(x)
-\end{equation}
+</eq>
 This notation highlights the fact that the derivative is the <i>ratio</i> between the change in the y-axis and the change in the x-axis, giving you the ability to move $dx$ in the scenario of integrals, which you will learn later.</p>
 
 <p>Lastly, you can take derivatives as many times as you like. After all, if you take the derivative of a derivative, it simply showing the rate of change of the derivative function itself.
-\begin{equation}
+<eq>
     f''(x)=(f'(x))'
-\end{equation}</p>
+</eq></p>
 
 <h3>Derivative rules</h3>
 <p>In this section, instead of using the full notation $f(x)$, the function is simplified to $f$. The start of this section will simply provide a quick look-up sheet of the rules, while the latter part will explain the intuition of some harder rules.</p>
@@ -392,61 +391,61 @@ This notation highlights the fact that the derivative is the <i>ratio</i> betwee
 If you were to manipulate the original equation as a composite function the derivative would be much messier.</p>
 
 <p><b>Multiplication by a constant</b>:
-\begin{equation} (cf)' = cf' \end{equation}</p>
+<eq> (cf)' = cf' </eq></p>
 
 <p>The <b>sum</b> and <b>difference rule</b> are a bit anti-climatic:
-\begin{equation}
+<eq>
     (f+g)' = f'+g'
     \qquad
     (f-g)' = f'-g'
-\end{equation}</p>
+</eq></p>
 
 <p>The <b>product rule</b> can be remembered by the phrase "Left-D right, right-D left":
-\begin{equation}
+<eq>
     (fg)' = fg'+f'g
-\end{equation}</p>
+</eq></p>
 
 <p>The <b>quotient rule</b> was found by expanding the derivative's limit definition. Unfortunately, this rule does not have any possible visualization so you might have to rote learn this:
-\begin{equation}
+<eq>
     \left( \frac{f}{g} \right)'
     = \frac{f'g-fg'}{g^2}
-\end{equation}</p>
+</eq></p>
 
 <p>The <b>reciprocal rule</b> is another rule that is a bit hard to digest, but luckily rarely seen:
-\begin{equation}
+<eq>
     \left( \frac{1}{f} \right)'
     = -\frac{f'}{f^2}
-\end{equation}</p>
+</eq></p>
 
 <p>It is also appropriate to recall the <b>fractional exponent rule</b> and <b>negative exponent rule</b>:
-\begin{equation}
+<eq>
     a^\frac{m}{n} = \sqrt[n]{a^m}
     \qquad
     a^{-n} = \frac{1}{a^n}
-\end{equation}
+</eq>
 Which will be useful when utilizing <b>the power rule</b>:
-\begin{equation} (x^n)' = nx^{n-1} \end{equation}
+<eq> (x^n)' = nx^{n-1} </eq>
 You can remember that the power rule "flattened" our exponent graph by one degree.</p>
 
 <p>The <b>chain rule</b> in a wordy notation but the one that gets across my mind is: assume we have $u=g(x)$ and $y=f(u)=f(g(x))$ then the derivative is:
-\begin{equation}
+<eq>
     y'_x
     = y'_u \cdot u'_x
-\end{equation}
+</eq>
 This means that "the derivative of $f$ plug in original $g$ times the derivative of $g$ plug in $x$". You can feel it showcases a "staircase" approach to the composite function.</p>
 
 <p>The <b>L'Hôpital rule</b> is used when finding the limit at a point with an indeterminate result (read more about its usage in <a href="#sec-a-limit-hopital"></a>):
-\begin{equation}
+<eq>
     \lim_{x\to a} \frac{f(x)}{g(x)}
     = \lim_{x\to a} \frac{f'(x)}{g'(x)}
-\end{equation}
+</eq>
 This means the limit of a quotient of two functions equals the limit of the quotient of the derivative of those two functions.</p>
 
 <p>When all rules fail, you can always use the original derivative definition in equation <a href="#eq-m3"></a></p>
 
 <h4>Visualizing the product rule</h4>
-<p>% Maybe someday change f(x) to y and df to dy. I won't change it right now because that means redrawing figure m11.
-Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it is the multiplication between two functions, you can think of $f(x)$ as the area of a rectangle with $h(x)$ and $g(x)$ as two sides, similar to <a href="#fig-a11"></a>.
+<!-- Maybe someday change f(x) to y and df to dy. I won't change it right now because that means redrawing figure m11. -->
+<p>Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it is the multiplication between two functions, you can think of $f(x)$ as the area of a rectangle with $h(x)$ and $g(x)$ as two sides, similar to <a href="#fig-a11"></a>.
 <figure>
     <img src="11.png" alt="Representation of a product between two functions">
     <figcaption>Representation of a product between two functions</figcaption>
@@ -496,44 +495,44 @@ If you think of  $dg/dh$ as "derivative of $g$ when plugging in $h$", another in
 
 <h3>Derivative of common functions</h3>
 <p><b>A constant</b> will have a slope equal to $0$:
-\begin{equation} (c)' = 0 \end{equation}</p>
+<eq> (c)' = 0 </eq></p>
 
 <p><b>A line</b> will have a slope similar to its... slope. This is similar to $m$ in the form $y=mx+b$:
-\begin{equation}
+<eq>
     (ax)' = a
     \qquad
     (x)' = 1
-\end{equation}</p>
+</eq></p>
 
 <p><b>The derivative of a square root:</b>
-\begin{equation}
+<eq>
     \sqrt{x}
     = x^\frac{1}{2}
     = \frac{1}{2} x^{-\frac{1}{2}}
-\end{equation}</p>
+</eq></p>
 
 <p><b>Exponential functions</b> with $x$ as the exponent. Further explanation can be found in Euler's constant and the natural $\log$:
-\begin{equation}
+<eq>
     (e^x)' = e^x
     \qquad
     (a^x)' = a^x\ln(a)
-\end{equation}</p>
+</eq></p>
 
 <p><b>Logarithms</b>:
-\begin{equation}
+<eq>
     (\ln(x))' = \frac{1}{x}
     \qquad
     (\log_a(x) )' = \frac{1}{x\ln(a)}
-\end{equation}</p>
+</eq></p>
 
 <p><b>Trigonometric functions</b>:
-\begin{equation}
+<eq>
     (\sin x)' = \cos x
     \qquad
     (\cos x)' = -\sin x
     \qquad
     (\tan x)' = \sec^2x
-\end{equation}</p>
+</eq></p>
 
 <h3>Additional material</h3>
 <p>It is recommended that you explore chapter <a href="#sec-a-integral"></a> for the <i>inverse</i> concept of derivative: anti-derivative. For other additional reading material connecting to calculus as a whole, place look at the additional material section at <a href="#sec-a-integral-material"></a>.</p>
@@ -609,18 +608,18 @@ As you can see, the $\int$ acts both as a $\Sigma$ notation for the sum of the r
 <p>Integral is the <b>antiderivative</b> of a function, which helps us find the area under a curve by chopping it into thin sheets and stir-frying it... wait sorry wrong note... <i>Ehem...</i></p>
 
 <p>Integral helps us find the area under a function $f(x)$ by slicing it into many small pieces with equal $dx$ thickness and height of $dx$. As $dx\to0$, our approximation of the area will get better and better; at some point with extremely small $dx$, the value would just be the sum of all small segments of $f(x)$. Similar to our paper example from above: as we continue to stack the papers, the sides will eventually create an area. To tell that $F(x)$ is the <b>indefinite integral</b> of $f(x)$, we use
-\begin{equation}
+<eq>
     \int f(x) \;dx = F(x) + C
-\end{equation}</p>
+</eq></p>
 
 <p>The reason we have $C$ is because any constant will have its derivative as $0$, so both $F(x)+1$ or $F(x)+3$ will have the the derivative as $f(x)$. To express that we have a lot of possible antiderivatives, we use the constant $C$. <i>When solving integrals</i>, most of the time you can simply add the integration constant at the very end when answering the question instead of accounting it for every small step.</p>
 
 <p>The notation we used above is <i>indefinite integral</i> which expresses a function without any particular input and does not spit out any number. If we want to find the area of a particular region $[a,b]$, we will use a <b>definite integral</b> to denote $a$ as the lower bound and $b$ as the upper bound. Since we have $F(x)$ as the area function from $0$ to $x$, we find the area of $[0,b]$ and then subtract it by $[0,a]$ to get the interested area:
-\begin{equation}
+<eq>
     \int^b_a f(x) \;dx
     = \left. F(x) \right|^b_a
     = F(b) - F(a)
-\end{equation}
+</eq>
 Note that the $C$ was <i>conveniently</i> cancelled, so we can ignore that.</p>
 
 <p>Another important thing to remember is integral is the <b>signed area</b> under a function. What that meant is that if the function $f(x)$ ever dipped below $0$, then the area between the x-axis and $f(x)$ will be considered negative. If you want the area in general without that subtraction, consider splitting your integral into two: calculate the positive area then add it to the absolute value of the negative area.</p>
@@ -637,35 +636,33 @@ Please don't kidnap $dx$ in the dead of the night when you are doing homework th
 <p>Note that the lowercase $c$ in this section is different from the integral constant $C$ (uppercase). Generally, the integral of a function will have a higher degree and will be a bit more complex but in academic settings, the teachers will usually make integration easy.</p>
 
 <p><b>The sum rule</b> and the similar <b>difference rule</b> are almost universal at this point after you learn limit, derivative, and integral:
-\begin{equation}
+<eq>
     \int [f(x) + g(x)] \;dx
     = \int f(x) \;dx + \int g(x) \;dx
-\end{equation}
+</eq>
 Is it quite fascinating to see that the integral sign and the $dx$ are similar to being distributed across the terms?</p>
 
 <p><b>Multiplication by a constant</b>:
-\begin{equation}
+<eq>
     \int cf(x) \;dx = c\int f(x) \;dx
-\end{equation}</p>
+</eq></p>
 
 <p><b>The power rule</b> has a requirement that $n \neq -1$:
-<span class="label" id="eq-m4"></span>
-\begin{equation}
+<eq id="eq-m4">
     \int x^n \;dx
     = \frac{x^{n+1}}{n+1} + C
-\end{equation}</p>
+</eq></p>
 
 <p><b>Integration by parts</b> is useful when you can separate your functions into two parts and multiply those together. Assume you found two functions $u(x)$ and $v(x)$:
-<span class="label" id="eq-m5"></span>
-\begin{equation}
+<eq id="eq-m5">
     \int u v \;dx
     = u \int v \;dx - \int u' \cdot \left(\int v \;dx\right) dx
-\end{equation}
+</eq>
 Or, if we assume that capital $V=\int v\;dx$, we have:
-\begin{equation}
+<eq>
     \int u v \; dx
     = uV - \int u' V \; dx
-\end{equation}
+</eq>
 You can take a look at <a href="#fig-a15"></a> for a visualization of the rule.
 <figure>
     <img src="15.png" alt="Integration by parts diagram, courtesy of Math is Fun">
@@ -679,10 +676,10 @@ You can take a look at <a href="#fig-a15"></a> for a visualization of the rule.
     g'(x) \;dx=du
 \]
 We can use $u$ as an input placeholder and compute our integral as:
-\begin{equation}
+<eq>
     \int f(g(x) \cdot g'(x)) \;dx
     = \int f(u) \;du
-\end{equation}
+</eq>
 After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use <a href="#fig-a17"></a> to assist you when setting up the equation.
 <figure>
     <img src="17.png" alt="Integration by substituting, courtesy of Math is Fun">
@@ -818,47 +815,47 @@ Replace $dx$ into our integral, we can see the $2x$ were cancelled out nicely, m
 \end{aligned}\]</p>
 
 <h3>Integral of common functions</h3>
-<p><b>The constant function</b> has a similar representation to the <a href="#fig-a13"></a> where the integral will increase the degree of a function. It is the power rule in equation (<a href="#eq-m4"></a>).
-\begin{equation}
+<p><b>The constant function</b> has a similar representation to the <a href="#fig-a13"></a> where the integral will increase the degree of a function. It is the power rule in <a href="#eq-m4"></a>.
+<eq>
     \int a \;dx = ax + C
-\end{equation}
+</eq>
 If you continue to expand the power rule, we will have an integral for <b>linear function</b> and a <b>squared</b>:
-\begin{equation}
+<eq>
     \int x \;dx = \frac{x^2}{2} + C
     \qquad
     \int x^2 \;dx = \frac{x^3}{3} + C
-\end{equation}</p>
+</eq></p>
 
 <p><b>The reciprocal function</b> can be used for general situations or when $n=-1$ for the power rule:
-\begin{equation}
+<eq>
     \int x^{-1} \;dx
     = \int \frac{1}{x} \;dx
     = \ln|x| + C
-\end{equation}</p>
+</eq></p>
 
 <p><b>Exponential with Euler's number</b> is quite easy to remember if you remember that its derivative is always itself (with the $C$):
-\begin{equation}
+<eq>
     \int e^x \;dx = e^x + C
-\end{equation}</p>
+</eq></p>
 
 <p>If we have <b>the variable as the power</b>, natural log once again came up:
-\begin{equation}
+<eq>
     \int a^x \;dx = \frac{a^x}{ln(a)} + C
-\end{equation}</p>
+</eq></p>
 
 <p>And if we put <b>a natural log</b> on the table after appearing in so many equations, we have its integral as:
-\begin{equation}
+<eq>
     \int \ln(x)dx
     = x \ln(x) - x + C
     % = x(\ln(x) - 1) + C
-\end{equation}</p>
+</eq></p>
 
 <p><b>Trigonometric functions</b> can be remembered by recalling the original derivative trigonometric functions:
-\begin{equation}\begin{aligned}
+<eq>\begin{aligned}
     \int \cos(x) dx = \sin(x) + C \\
     \int \sin(x) dx = -\cos(x) + C \\
     \int \sec^2(x) dx = \tan(x) + C \\
-\end{aligned}\end{equation}</p>
+\end{aligned}</eq></p>
 
 <h3 id="sec-a-integral-material">Additional material</h3>
 <p><ul>
