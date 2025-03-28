@@ -13,7 +13,6 @@
 
         body {
             font-family: "Inter", Helvetica, Arial, sans-serif;
-            overflow-x: hidden; /* prevent weird bug with MathJax (issue 3348) */
         }
 
         main {
@@ -60,6 +59,13 @@
             width: 4rem;
             counter-increment: subsection;
             content: counter(chapter) "." counter(section) "." counter(subsection) " ";
+        }
+
+        mjx-assistive-mml {
+            /* https://github.com/mathjax/MathJax/issues/3348 */
+            text-indent: 0 ! important;
+            bottom: 0;
+            right: 0;
         }
 
         /* Content styling */
