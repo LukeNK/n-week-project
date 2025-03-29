@@ -124,15 +124,12 @@ function subjectLoad() {
 
 window.onload = () => {
     // create a time out to scroll to the hash after the page is loaded
-    setTimeout(
-        () => {
-            try {
-                document.getElementById(window.location.hash.slice(1))
-                .scrollIntoView()
-            } catch (err) {
-                console.info('No hash to scroll')
-            }
+    setTimeout(() => {
+        try {
+            document.getElementById(window.location.hash.slice(1))
+            .scrollIntoView()
+        } catch (err) {
+            console.info('No hash to scroll')
         }
-        , 1000
-    );
+    }, 1000);
 }
