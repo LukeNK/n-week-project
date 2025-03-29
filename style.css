@@ -36,6 +36,27 @@ header p.large {
     font-size: 3rem;
 }
 
+aside {
+    counter-reset: part;
+    span {
+        display: block;
+        font-size: larger;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    span::before {
+        counter-increment: part;
+        content: counter(part, upper-roman) ". ";
+    }
+    p {
+        margin: 0
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
 main {
     margin: auto;
     max-width: 800px;
