@@ -51,7 +51,7 @@ function subjectLoad() {
         count++;
         let ref = `Figure ${chapter}.${count}`,
             caption = e.querySelector('figcaption');
-        caption.innerText = `${ref}: ${caption.innerText}`;
+        caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
         allAs.forEach(a => {
             if (a.getAttribute('href') === `#${e.id}`)
                 a.innerText = ref;
@@ -65,7 +65,7 @@ function subjectLoad() {
         count++;
         let ref = `Table ${chapter}.${count}`,
             caption = e.querySelector('caption');
-        caption.innerText = `${ref}: ${caption.innerText}`;
+        caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
         allAs.forEach(a => {
             if (a.getAttribute('href') === `#${e.id}`)
                 a.innerText = ref;
