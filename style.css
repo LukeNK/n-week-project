@@ -82,7 +82,7 @@ h2 {
 h2:not([noNumber])::before {
     display: block;
     font-weight: normal;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px solid black;
     counter-increment: chapter;
     content: "Chapter " counter(chapter) " ";
     counter-set: section 0;
