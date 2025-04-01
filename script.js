@@ -102,9 +102,19 @@ function subjectLoad() {
         count++;
         let ref = `${chapter}.${count}`,
             content = e.innerHTML;
+
+        e.id = `note-${ref}`;
+        e.addEventListener('click', () => {
+            window.location.hash = `#foot-${ref}`;
+        });
         e.innerHTML = `[${ref}]<span>${content}</span>`;
+
         document.querySelector('footer').innerHTML +=
-            `<p><b>[${ref}]</b> ${content}</p>`;
+            `<p id="foot-${ref}">
+                <b>[${ref}]</b>
+                <a href="#note-${ref}" style="text-decoration: none;">&uarr;</a>
+                ${content}
+            </p>`;
     });
 
     console.log('Assign link reference - sections')

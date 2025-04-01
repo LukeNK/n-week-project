@@ -191,9 +191,16 @@ note {
 }
 note span {
     display: none;
-    background-color: black;
+    z-index: 10;
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    padding: 0.5rem;
+    background-color: #000000a0;
+    backdrop-filter: blur(5px);
+    border-radius: 0.5rem;
     color: #fff;
-    padding: 5px;
     font-size: 1rem;
 }
 
