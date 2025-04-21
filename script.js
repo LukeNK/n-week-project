@@ -101,21 +101,29 @@ function subjectLoad() {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
         count++;
         let ref = `${chapter}.${count}`,
-            content = e.innerHTML;
+            content = e.innerHTML,
+            pElement = e.parentElement;
 
-        e.id = `note-${ref}`;
-        e.addEventListener('click', () => {
-            window.location.hash = `#foot-${ref}`;
+        e.innerHTML = `[${ref}]`;
+
+        pElement.style.float = 'left';
+        pElement.style.marginTop = '0';
+        pElement.style.width = '75%';
+        pElement.style.paddingRight = '1rem';
+
+        let aside = document.createElement('aside');
+        aside.id = `note-${ref}`;
+        aside.addEventListener('click', () => {
+            window.location.hash = `#note-${ref}`;
         });
-        e.innerHTML = `[${ref}]<span>${content}</span>`;
+        aside.innerHTML = `<b>[${ref}]</b> ${content}`;
 
-        document.querySelector('footer').innerHTML +=
-            `<p id="foot-${ref}">
-                <b>[${ref}]</b>
-                <a href="#note-${ref}" style="text-decoration: none;">&uarr;</a>
-                ${content}
-            </p>`;
-    });
+        if (pElement.nextElementSibling.tagName == 'ASIDE')
+            pElement.nextElementSibling.innerHTML +=
+                `<br><b>[${ref}]</b> ${content}`;
+        else
+            pElement.insertAdjacentElement('afterend', aside);
+        });
 
     console.log('Assign link reference - sections')
     document.querySelectorAll('h2:not([noNumber])').forEach(e => {
@@ -127,7 +135,7 @@ function subjectLoad() {
     });
 
     console.log('Generate table of contents');
-    let toc = document.querySelector('aside');
+    let toc = document.querySelector('nav');
     chapter = 0;
     document.querySelectorAll('h1, h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H1') {

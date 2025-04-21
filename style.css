@@ -36,7 +36,7 @@ header p.large {
     font-size: 3rem;
 }
 
-aside {
+nav {
     counter-reset: part;
     span {
         display: block;
@@ -78,6 +78,10 @@ h1:not([noNumber])::before {
 
 h2 {
     break-before: page;
+    /* position: sticky;
+    top: 20px;
+    backdrop-filter: blur(5px);
+    z-index: 1; */
 }
 h2:not([noNumber])::before {
     display: block;
@@ -122,6 +126,23 @@ p {
 
 a {
     word-break: break-word;
+}
+
+note {
+    vertical-align: super;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    font-size: 0.75em;
+}
+aside {
+    float: right;
+    clear: right;
+    width: 25%;
+    border-left: 0.25rem solid black;
+    padding-left: 0.5rem;
+    cursor: pointer;
+}
+aside + * {
+    clear: both;
 }
 
 /* figure */
@@ -180,32 +201,6 @@ eq > span {
     right: 0; /* Align to the right */
     top: 50%; /* Move to the vertical center */
     transform: translateY(-50%); /* Adjust to center the text vertically */
-}
-
-/* Footnotes */
-note {
-    vertical-align: super;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-    font-size: 0.75em;
-    cursor: pointer;
-}
-note span {
-    display: none;
-    z-index: 10;
-    position: fixed;
-    bottom: 2rem;
-    left: 2rem;
-    right: 2rem;
-    padding: 0.5rem;
-    background-color: #000000a0;
-    backdrop-filter: blur(5px);
-    border-radius: 0.5rem;
-    color: #fff;
-    font-size: 1rem;
-}
-
-note:hover span {
-    display: block;
 }
 
 @media print {
