@@ -147,6 +147,17 @@ function subjectLoad() {
     document.head.appendChild(script);
 }
 
+(async () => {
+    // Handle version
+    let sha = await fetch('https://api.github.com/repos/LukeNK/T24/git/trees/main?recursive=1');
+    sha = await sha.json();
+    sha = sha.sha;
+
+    let date = new Date();
+    document.querySelector('time').setAttribute('datetime', date.toISOString());
+    document.querySelector('time').innerHTML = sha.slice(0, 7);
+})();
+
 window.onload = () => {
     // create a time out to scroll to the hash after the page is loaded
     setTimeout(() => {
