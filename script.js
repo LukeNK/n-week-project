@@ -155,7 +155,10 @@ function subjectLoad() {
 
     let date = new Date();
     document.querySelector('time').setAttribute('datetime', date.toISOString());
-    document.querySelector('time').innerHTML = sha.slice(0, 7);
+    document.querySelector('time').innerHTML =
+        sha.slice(0, 7) +
+        (window.location.href.includes('lukenk.github.io')?
+            '' : ' (non-official)');
 })();
 
 window.onload = () => {
