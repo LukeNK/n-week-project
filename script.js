@@ -102,27 +102,18 @@ function subjectLoad() {
         count++;
         let ref = `${chapter}.${count}`,
             content = e.innerHTML,
-            pElement = e.parentElement;
+            pElement = e.parentElement,
+            aside = document.createElement('aside');
 
         e.innerHTML = `[${ref}]`;
 
-        pElement.style.float = 'left';
-        pElement.style.marginTop = '0';
-        pElement.style.width = '75%';
-        pElement.style.paddingRight = '1rem';
-
-        let aside = document.createElement('aside');
         aside.id = `note-${ref}`;
         aside.addEventListener('click', () => {
             window.location.hash = `#note-${ref}`;
         });
         aside.innerHTML = `<b>[${ref}]</b> ${content}`;
 
-        if (pElement.nextElementSibling.tagName == 'ASIDE')
-            pElement.nextElementSibling.innerHTML +=
-                `<br><b>[${ref}]</b> ${content}`;
-        else
-            pElement.insertAdjacentElement('afterend', aside);
+        pElement.insertAdjacentElement('beforebegin', aside);
         });
 
     console.log('Assign link reference - sections')
