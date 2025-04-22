@@ -158,7 +158,7 @@ function subjectLoad() {
     document.querySelector('time').innerHTML =
         sha.slice(0, 7) +
         (window.location.href.includes('lukenk.github.io')?
-            '' : ' (non-official)');
+            '' : ' (downstream)');
 })();
 
 window.onload = () => {
