@@ -26,3 +26,6 @@ Find `\ref`, `\footnote`
 Remove `style="width: .*%;" ` (space at the end)
 
 `figure style="width: .*%; text-align: center;"`to `figure`
+
+## Note of what to write here
+- `.GITIGNORE` to have header background unique to each publication at `/header.*`

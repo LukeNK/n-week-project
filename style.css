@@ -28,9 +28,12 @@ header p.med {
     margin: 0;
 }
 header p.large {
-    margin-bottom: 90%;
+    margin-top: 1rem;
     font-weight: bold;
     font-size: 3rem;
+}
+object, object > img {
+    max-height: 38rem;
 }
 
 nav {
