@@ -149,7 +149,7 @@ function subjectLoad() {
 
 (async () => {
     // Handle version
-    let sha = await fetch('https://api.github.com/repos/LukeNK/T24/git/trees/main?recursive=1');
+    let sha = await fetch('https://api.github.com/repos/LukeNK/n-week-project/git/trees/main?recursive=1');
     sha = await sha.json();
     sha = sha.sha;
 
