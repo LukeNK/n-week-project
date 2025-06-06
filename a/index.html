@@ -254,6 +254,15 @@ If and only if the limit of $g(x)$ exists and $f(x)$ is continuous at $\lim_{x\t
 
 <p>Finally, if the graph is discontinuous, it does not mean that the limit at that point does not exist. Slowly follow one-sided limits and see if they are equal.</p>
 
+<h4>Intermediate Value Theorem</h4>
+<p>If a function is continuous over an interval $[x_0, x_1]$, what you might be able to see is the fact that the function's result (y-axis) will need to move from $y_1$ to $y_2$ — the function cannot "jump" because it is continuous. Therefore, this theorem guarantees that within $[x_0, x_1]$, you will find a value within $[y_0, y_1]$:
+<eq>
+    f(x) \text{ continuous on } [x_0, x_1] \text { and } c \in [x_0, x_1]
+    &rArr;
+    f(c) \in [f(x_0), f(x_1)]
+</eq>
+The f(x) <i>may</i> get out of the specified range (most notably quadratic equations), but we are certain that there exists <i>at least</i> one value satisfies our equation.</p>
+
 <h4>The squeeze theorem</h4>
 <p>Also known as the <b>sandwich theorem</b>, it helps calculate limits that are a bit weird. Suppose in an area that we know:
 \[ f(x) \leq h(x) \leq g(x) \]
@@ -375,7 +384,10 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
 <eq>
     \frac{d}{dx}f(x) = \frac{df}{dx} = \frac{dy}{dx}f(x)
 </eq>
-This notation highlights the fact that the derivative is the <i>ratio</i> between the change in the y-axis and the change in the x-axis, giving you the ability to move $dx$ in the scenario of integrals, which you will learn later.</p>
+This notation highlights the fact that the derivative is the <i>ratio</i> between the change in the y-axis and the change in the x-axis, giving you the ability to move $dx$ in a certain scenario. If you want to find the slope at a certain $x=c$, you can use the following notation:
+<eq>
+    \left.\frac{d}{dx}f(x)\right|_{x=c} = f'(x)\bigg|_{x=c} = f'(c)
+</eq></p>
 
 <p>Lastly, you can take derivatives as many times as you like. After all, if you take the derivative of a derivative, it simply showing the rate of change of the derivative function itself.
 <eq>
