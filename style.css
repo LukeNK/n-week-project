@@ -6,6 +6,8 @@
 
 body {
     font-family: "Inter", Helvetica, Arial, sans-serif;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
 }
 
 header {
@@ -86,7 +88,8 @@ h2 {
 h2:not([noNumber])::before {
     display: block;
     font-weight: normal;
-    border-bottom: 1px solid black;
+    color: white;
+    background-color: black;
     counter-increment: chapter;
     content: "Chapter " counter(chapter) " ";
     counter-set: section 0;
