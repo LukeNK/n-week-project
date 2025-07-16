@@ -110,11 +110,11 @@ The basic <b>limit theorems</b> are:
 </eq>
 These theorems can be deducted from the concept that limit is essentially substituting $a$ into our functions, so all standard number arithmetic still works just fine.</p>
 
-<p>From these theorems, you can see that <b>finding a finite limit</b> is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in <a href="#fig-a5"></a>.
+<p>From these theorems, you can see that <b>finding a finite limit</b> is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in <a href="#fig-a5"></a>.</p>
 <figure>
     <img src="5.png" alt="Procedure to calculate limit, courtesy of Khan Academy.">
     <figcaption>Procedure to calculate limit, courtesy of Khan Academy.</figcaption>
-</figure></p>
+</figure>
 
 <h4>Vertical asymptote</h4>
 <p>The tables in this section use $+$ simply to denote the fact that the number is $>0$ and similarly with the negative sign.</p>
@@ -368,7 +368,7 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
     = \frac{y_2-y_1}{x_2-x_1}
 </eq></p>
 
-<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to <a href="#fig-a10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):
+<p>However, what we originally asked is the slope of a graph at one single point, therefore we need to move the two points as close as possible to each other (<i>the definition of limit</i>) until they are essentially one point similar to <a href="#fig-a10"></a>. Consider the fact that the y-axis essentially is the output of the function $f(x)$, making $\Delta y=f(x+\Delta x)-f(x)$, we can use limit to describe the fact that the difference $\Delta x$ is getting smaller and smaller ($\Delta x\to0$):</p>
 <eq id="eq-m3">
     f'(x)
     = \lim_{\Delta x\to 0} \frac
@@ -378,7 +378,7 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
 <figure>
     <img src="10.png" alt="Two points approaching each other, courtesy of Math is Fun">
     <figcaption>Two points approaching each other, courtesy of Math is Fun</figcaption>
-</figure></p>
+</figure>
 
 <p>Other notations to highlight the fact that the derivative is simply the rate of change of a function at a point is:
 <eq>
@@ -489,11 +489,11 @@ Because $dx\to0$, we can eliminate that term:
 <h4>Visualizing the chain rule</h4>
 <p>An anonymous professor once said: "Using the chain rule is like peeling an onion: you have to deal with each layer at a time, and if it is too big you will start crying."</p>
 
-<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in <a href="#fig-a12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
+<p>Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in <a href="#fig-a12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.</p>
 <figure>
     <img src="12.png" alt="Chain rule visualization">
     <figcaption>Chain rule visualization</figcaption>
-</figure></p>
+</figure>
 
 <p>As we increase our input by a $dx$ amount, it will increase the <i>output</i> of the function $h$ by a $dh$ amount. Similar to the product rule, we manipulate our derivative ratio $dh/dx$ to calculate that change in the output:
 \[ dh = h'(x) \;dx \]
@@ -675,12 +675,12 @@ Or, if we assume that capital $V=\int v\;dx$, we have:
 <eq>
     \int u v \; dx
     = uV - \int u' V \; dx
-</eq>
+</eq></p>
 You can take a look at <a href="#fig-a15"></a> for a visualization of the rule.
 <figure>
     <img src="15.png" alt="Integration by parts diagram, courtesy of Math is Fun">
     <figcaption>Integration by parts diagram, courtesy of Math is Fun</figcaption>
-</figure></p>
+</figure>
 
 <p><b>Integration by substitution</b> or <b>the reverse chain rule</b> requires you to set up your chained function in a particular way. Assume:
 \[
@@ -693,11 +693,11 @@ We can use $u$ as an input placeholder and compute our integral as:
     \int f(g(x)) \cdot g'(x) \;dx
     = \int f(u) \;du
 </eq>
-After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use <a href="#fig-a17"></a> to assist you when setting up the equation.
+After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use <a href="#fig-a17"></a> to assist you when setting up the equation.</p>
 <figure>
     <img src="17.png" alt="Integration by substituting, courtesy of Math is Fun">
     <figcaption>Integration by substituting, courtesy of Math is Fun</figcaption>
-</figure></p>
+</figure>
 
 <h4>The power rule</h4>
 <p>The intuition has $nx^{n-1} = (x^n)'$ as the derivative's power rule. However, the left side is $n$ times larger than our function inside the integral. If we were to divide both sides by $n$, then the input would be the original function stated in the rule. Of course, the $n$ is offset by $1$ because we put it relative to the derivative on the right side.
