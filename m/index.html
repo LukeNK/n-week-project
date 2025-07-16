@@ -431,7 +431,7 @@ This calls: select space to insert $n-1$ separators. Now you may ask why it is n
     C(n+r-1,r) = C(n+r-1,n-1)
 </eq></p>
 
-<p>The first hint to realize that you are dealing with combinations without repetition is in the fact that $n < r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.</p>
+<p>The first hint to realize that you are dealing with combinations without repetition is in the fact that $n &lt; r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.</p>
 
 <h3>Solving problems</h3>
 <p><b>How many ways we can rearrange the word "Canada"?</b> This question cares about the order, so the first step is to get the basic permutation with the factorial formula $6!=720$. However, notice that there are three different "a" inside that word, so we need to "remove" that over-count. We do that by dividing our over-count by the number of possible arrangements of the three "a" characters:
