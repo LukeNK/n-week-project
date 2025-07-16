@@ -377,7 +377,7 @@ In the last step, we know that $e^x$ grows much more rapidly than $2$.</p>
 </eq>
 <figure>
     <img src="10.png" alt="Two points approaching each other, courtesy of Math is Fun">
-    <figcaption>Two points approaching each other, courtesy of Math is Fun</figcaption>
+    <figcaption>Two points approaching each other</figcaption>
 </figure>
 
 <p>Other notations to highlight the fact that the derivative is simply the rate of change of a function at a point is:
@@ -671,16 +671,12 @@ Is it quite fascinating to see that the integral sign and the $dx$ are similar t
     \int u v \;dx
     = u \int v \;dx - \int u' \cdot \left(\int v \;dx\right) dx
 </eq>
-Or, if we assume that capital $V=\int v\;dx$, we have:
+You can specifically define two functions as $u$ and $v'$, and solve for $u'$ and $v$ individually:
 <eq>
-    \int u v \; dx
-    = uV - \int u' V \; dx
-</eq></p>
-You can take a look at <a href="#fig-a15"></a> for a visualization of the rule.
-<figure>
-    <img src="15.png" alt="Integration by parts diagram, courtesy of Math is Fun">
-    <figcaption>Integration by parts diagram, courtesy of Math is Fun</figcaption>
-</figure>
+    \int u v' \; dx
+    = uv - \int u' v \; dx
+</eq>
+When writing the result, remember: alternate both $u$ and $u'$, but you only use the solved $v$.</p>
 
 <p><b>Integration by substitution</b> or <b>the reverse chain rule</b> requires you to set up your chained function in a particular way. Assume:
 \[
@@ -693,11 +689,7 @@ We can use $u$ as an input placeholder and compute our integral as:
     \int f(g(x)) \cdot g'(x) \;dx
     = \int f(u) \;du
 </eq>
-After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation. Use <a href="#fig-a17"></a> to assist you when setting up the equation.</p>
-<figure>
-    <img src="17.png" alt="Integration by substituting, courtesy of Math is Fun">
-    <figcaption>Integration by substituting, courtesy of Math is Fun</figcaption>
-</figure>
+After that, solve the integral normally (remember the variable is now a placeholder $u$) before substituting $g(x)$ back into the equation.</p>
 
 <h4>The power rule</h4>
 <p>The intuition has $nx^{n-1} = (x^n)'$ as the derivative's power rule. However, the left side is $n$ times larger than our function inside the integral. If we were to divide both sides by $n$, then the input would be the original function stated in the rule. Of course, the $n$ is offset by $1$ because we put it relative to the derivative on the right side.
