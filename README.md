@@ -1,6 +1,9 @@
 # n-week-project
 *Currently migrating, please wait for more information...*
 
+## Style guide
+![style guide](./style-guide.png)
+
 ## Regex rules for migration
 `\n\n` to
 ```html
