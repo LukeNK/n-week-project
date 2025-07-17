@@ -46,7 +46,7 @@ function subjectLoad() {
     console.log('Assign numbering - figures');
     let chapter = 0, count = 0,
         allAs = document.querySelectorAll('a');
-    document.querySelectorAll('figure, h2:not([noNumber])').forEach(e => {
+    document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
         count++;
         let ref = `Figure ${chapter}.${count}`,
