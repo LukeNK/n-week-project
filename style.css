@@ -6,8 +6,8 @@
 
 body {
     font-family: "Inter", Helvetica, Arial, sans-serif;
-    -webkit-print-color-adjust:exact !important;
-    print-color-adjust:exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
 
 header {
@@ -122,6 +122,9 @@ p {
     text-indent: 2rem;
     text-align: justify;
 }
+.loading p {
+    animation: loading 0.5s infinite alternate;
+}
 .error {
     background-color: red;
     color: white;
@@ -207,6 +210,15 @@ eq > span {
     right: 0; /* Align to the right */
     top: 50%; /* Move to the vertical center */
     transform: translateY(-50%); /* Adjust to center the text vertically */
+}
+
+@keyframes loading {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 0.3;
+    }
 }
 
 @media print {
