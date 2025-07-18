@@ -121,12 +121,13 @@ function subjectLoad() {
         pElement.insertAdjacentElement('beforebegin', aside);
     });
 
-    console.log('Assign link reference - sections')
-    document.querySelectorAll('h2:not([noNumber])').forEach(e => {
+    console.log('Assign link reference - chapters and sections')
+    document.querySelectorAll('h2:not([noNumber]), h3').forEach(e => {
         allAs.forEach(a => {
-            if (a.getAttribute('href') === `#${e.id}`) {
-                a.innerText = `Section "${e.innerText}"`;
-            }
+            if (a.getAttribute('href') === `#${e.id}`)
+                a.innerText =
+                    (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
+                    + ` "${e.innerText}"`;
         });
     });
 
