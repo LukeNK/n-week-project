@@ -8,7 +8,12 @@ window.MathJax = {
     }
 };
 
-let subjects = document.querySelectorAll('div[subject]'), subjectLoaded = 0;
+let subjects = document.querySelectorAll('div[subject]'),
+    subjectLoaded = 0,
+    checksum = {
+        visuals: 0,
+        equations: 0
+    };
 
 subjects.forEach(async (subject) => {
     let response = await fetch(`./${subject.getAttribute('subject')}/index.html`);
@@ -48,7 +53,7 @@ function subjectLoad() {
         allAs = document.querySelectorAll('a');
     document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
-        count++;
+        count++; checksum.visuals++;
         let ref = `Figure ${chapter}.${count}`,
             caption = e.querySelector('figcaption');
         caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
@@ -62,7 +67,7 @@ function subjectLoad() {
     chapter = 0, count = 0;
     document.querySelectorAll('table, h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
-        count++;
+        count++; checksum.visuals++;
         let ref = `Table ${chapter}.${count}`,
             caption = e.querySelector('caption');
         caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
@@ -76,7 +81,7 @@ function subjectLoad() {
     chapter = 0, count = 0;
     document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
         if (e.tagName === 'H2') { chapter++; count = 0; return; }
-        count++;
+        count++; checksum.equations++;
         // Create equation number
         e.innerHTML = `
             \\begin{equation*}\\begin{aligned} ${e.innerHTML} \\end{aligned}\\end{equation*}
@@ -114,7 +119,7 @@ function subjectLoad() {
         aside.innerHTML = `<b>[${ref}]</b> ${content}`;
 
         pElement.insertAdjacentElement('beforebegin', aside);
-        });
+    });
 
     console.log('Assign link reference - sections')
     document.querySelectorAll('h2:not([noNumber])').forEach(e => {
@@ -155,10 +160,15 @@ function subjectLoad() {
 
     let date = new Date();
     document.querySelector('time').setAttribute('datetime', date.toISOString());
-    document.querySelector('time').innerHTML =
-        sha.slice(0, 7) +
-        (window.location.href.includes('lukenk.github.io')?
-            '' : ' (downstream)');
+    document.querySelector('time').innerHTML = sha.slice(0, 7).toUpperCase();
+    checksum = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length.toString(16).toUpperCase()
+        + '.'
+        + checksum.visuals.toString(16).toUpperCase() + '+'
+        + checksum.equations.toString(16).toUpperCase();
+    if (!window.location.href.includes('lukenk.github.io'))
+        document.querySelector('time').innerHTML +=
+            '<br>(downstream '+ checksum + ')';
+    else console.log('Checksum:', checksum);
 })();
 
 window.onload = () => {
