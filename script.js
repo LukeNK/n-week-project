@@ -174,7 +174,6 @@ function subjectLoad() {
 
 window.onload = () => {
     // create a time out to scroll to the hash after the page is loaded
-    document.querySelector('main').classList.remove('loading');
     setTimeout(() => {
         try {
             document.getElementById(window.location.hash.slice(1))
@@ -182,5 +181,6 @@ window.onload = () => {
         } catch (err) {
             console.info('No hash to scroll')
         }
-    }, 1000);
+        document.querySelector('main').classList.remove('loading');
+    }, 100);
 }
