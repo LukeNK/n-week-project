@@ -13,6 +13,9 @@ _Let's go second time_
 <h3>(.*)</h3>
 ### $1
 
+<img src="(.*)">
+<img src="m/(.*)">
+
 <b>(.*)</b>
 **$1**
 
