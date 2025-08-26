@@ -281,7 +281,7 @@ Since you would measure the states of $|\psi\rangle$ independently, what you wou
     Probability(1) = \frac{\mid\beta\mid^2}{\mid\alpha\mid^2 + \mid\beta\mid^2}
 </eq>
 
-Noted that from both equations above, it is the probability of the _result of the measurement_ and we assume that the measurement reflects _exactly_ the system's state. In simple terms, if we get the result labelled as $0$ of some measurement, we are certain that the state of our system is $|0\rangle$.
+Noted that from both equations above, it is the probability of the _result of the measurement_ and we assume that the measurement reflects _exactly_ the system's state. In simple terms, if we get the result labelled as $0$ of some measurement, we are certain that the state of our system is $\|0\rangle$.
 
 ## Combine Qubits, Tensor Product, and Quantum Entanglement
 This chapter is quite long due to the connected nature of these three concepts. As a preview, a tensor product is a way to combine qubits, while entanglement is a math equation from two tensor products.
@@ -526,7 +526,7 @@ We have Luka who is having a hard time deciding between the coffee shop and the 
     \end{pmatrix}
 \\]
 
-**Multiple qubits**: we have Luke represented by $|E\rangle$, who is also indecisive between the two shops. We now need to describe the fact that there are four possibilities:
+**Multiple qubits**: we have Luke represented by $\|E\rangle$, who is also indecisive between the two shops. We now need to describe the fact that there are four possibilities:
 
 - Both of them go to the coffee shop
 - Luka goes to the coffee shop, Luke goes to the tea shop

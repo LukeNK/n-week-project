@@ -219,7 +219,7 @@ Scientific notation is a way to deal with very big or very small numbers. There 
 <eq> m \times 10^n </eq>
 A good way to think of the exponent $n$ is in terms of how you move the decimal point in the mantissa $m$. If $n$ is positive, move the decimal point to the right $n$ times (which is $\times10^n$), and vice versa for a negative power.
 
-A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 &leq; |m| &lt; 10$). If you have $0.6$, simply move the decimal to the right and _subtract_ the exponent by $1$, which gives you $6\times10^{-1}$. The mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with **negative scientific notation**, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.
+A constraint for the mantissa to prevent people from writing the number too hard to read is it must be between 1 and less than 10 ($1 ≤ \|m\| < 10$). If you have $0.6$, simply move the decimal to the right and _subtract_ the exponent by $1$, which gives you $6\times10^{-1}$. The mantissa can be also negative ($-1.3\times10^1$ for example). When dealing with **negative scientific notation**, just treat it like a normal notation and do not confuse between negative mantissa and negative exponent.
 
 **Ten raised by zero** equals 1, useful to represent numbers with the right mantissa but does not hint at the fact that it is in scientific notation:
 <eq> 10^0=1 </eq>
@@ -430,7 +430,7 @@ The $n-1$ on the denominator gets from $n+r-1-r$ being cancelled, therefore we h
     C(n+r-1,r) = C(n+r-1,n-1)
 </eq>
 
-The first hint to realize that you are dealing with combinations without repetition is in the fact that $n &lt; r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.
+The first hint to realize that you are dealing with combinations without repetition is in the fact that $n < r$. In our example, we had more positions to fill than the items we had, so we must repeat some. Notice that in this case, $n$ and $r$ "swapped" places for each other compared to other formulas; what we plugged in our original combination formula is still the same though.
 
 ### Solving problems
 **How many ways we can rearrange the word "Canada"?** This question cares about the order, so the first step is to get the basic permutation with the factorial formula $6!=720$. However, notice that there are three different "a" inside that word, so we need to "remove" that over-count. We do that by dividing our over-count by the number of possible arrangements of the three "a" characters:
