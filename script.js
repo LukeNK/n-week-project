@@ -14,53 +14,13 @@ let subjects = document.querySelectorAll('div[subject]'),
         equations: 0
     };
 
-// check links here to cross-reference between subjects
-console.log('Checking links');
-document.querySelectorAll('a').forEach(a => {
-    let ref = a.getAttribute('href');
-    if (!ref.startsWith('#')) return;
-    if (!document.getElementById(ref.slice(1))) {
-        a.parentElement.classList.add('error');
-        a.parentElement.title = 'This paragraph contains broken link';
-        console.log(a)
-        return;
-    }
-});
-
-console.log('Assign numbering - figures');
+console.log('Assign numbering - equations');
 let chapter = 0, count = 0,
     allAs = document.querySelectorAll('a');
-document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e => {
-    if (e.tagName === 'H2') { chapter++; count = 0; return; }
-    count++; checksum.visuals++;
-    let ref = `Figure ${chapter}.${count}`,
-        caption = e.querySelector('figcaption');
-    caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.id}`)
-            a.innerText = ref;
-    });
-});
-
-console.log('Assign numbering - tables');
-chapter = 0, count = 0;
-document.querySelectorAll('table, h2:not([noNumber])').forEach(e => {
-    if (e.tagName === 'H2') { chapter++; count = 0; return; }
-    count++; checksum.visuals++;
-    let ref = `Table ${chapter}.${count}`,
-        caption = e.querySelector('caption');
-    caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.id}`)
-            a.innerText = ref;
-    });
-});
-
-console.log('Assign numbering - equations');
-chapter = 0, count = 0;
 document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
     if (e.tagName === 'H2') { chapter++; count = 0; return; }
     count++; checksum.equations++;
+
     // Create equation number
     e.innerHTML = `
         \\begin{equation*}\\begin{aligned} ${e.innerHTML} \\end{aligned}\\end{equation*}
@@ -73,22 +33,60 @@ document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
         e.id = '';
         e.parentElement.id = id;
     }
+
+    // Add text to link references
     allAs.forEach(a => {
         if (a.getAttribute('href') === `#${id}`)
             a.innerText = `Equation ${chapter}.${count}`;
     });
 });
 
+// Render equations
 var script = document.createElement('script');
 script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js';
 script.async = true;
 document.head.appendChild(script);
+
+console.log('Assign numbering - figures');
+chapter = 0, count = 0;
+document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e => {
+    if (e.tagName === 'H2') { chapter++; count = 0; return; }
+    count++; checksum.visuals++;
+
+    let ref = `Figure ${chapter}.${count}`,
+        src = e.querySelector('img').getAttribute('src').split('/').slice(1),
+        caption = e.querySelector('figcaption');
+    e.id = 'fig-' + src[0] + src[1].split('.')[0];
+    caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
+
+    // Add text to links that is referencing figures
+    allAs.forEach(a => {
+        if (a.getAttribute('href') === `#${e.id}`)
+            a.innerText = ref;
+    });
+});
+
+console.log('Assign numbering - tables');
+chapter = 0, count = 0;
+document.querySelectorAll('table, h2:not([noNumber])').forEach(e => {
+    if (e.tagName === 'H2') { chapter++; count = 0; return; }
+    count++; checksum.visuals++;
+
+    let ref = `Table ${chapter}.${count}`,
+        caption = e.querySelector('caption');
+    caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
+    allAs.forEach(a => {
+        if (a.getAttribute('href') === `#${e.id}`)
+            a.innerText = ref;
+    });
+});
 
 console.log('Assign numbering - notes');
 chapter = 0, count = 0;
 document.querySelectorAll('note, h2:not([noNumber])').forEach(e => {
     if (e.tagName === 'H2') { chapter++; count = 0; return; }
     count++;
+
     let ref = `${chapter}.${count}`,
         content = e.innerHTML,
         pElement = e.parentElement,
@@ -113,6 +111,18 @@ document.querySelectorAll('h2:not([noNumber]), h3').forEach(e => {
                 (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
                 + ` "${e.innerText}"`;
     });
+});
+
+console.log('Checking links');
+document.querySelectorAll('a').forEach(a => {
+    let ref = a.getAttribute('href');
+    if (!ref.startsWith('#')) return;
+    if (!document.getElementById(ref.slice(1))) {
+        a.parentElement.classList.add('error');
+        a.parentElement.title = 'This paragraph contains broken link';
+        console.log(a)
+        return;
+    }
 });
 
 console.log('Generate table of contents');
