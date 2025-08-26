@@ -348,7 +348,7 @@ From <a href="#eq-m2"></a>, we can yield the general formula when raising  a com
 \\[ \Rightarrow r_{result} = r^n \qquad \theta_{result} = n \times \theta \\]
 
 ## Permutation and Combination
-The difference between **permutation** and <b>combination</b> is in the order. **Permutation is an ordered combination** or in other words, a combination does not concern the order.
+The difference between **permutation** and **combination** is in the order. **Permutation is an ordered combination** or in other words, a combination does not concern the order.
 
 **Order does not matter** here means that a 123 string is the same as a 213 string.
 

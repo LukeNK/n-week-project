@@ -33,7 +33,7 @@ No matter how hard you push the x-axis from two sides together, the y-axis limit
     \qquad
     \lim_{x\to0^+}f(x) = 1
 \\]
-Be careful: the sign denotes where we _start_. If the sign is negative, we approach it <i>from the negative side</i> and move _to the positive side_. I do not know why I used to mistake between those two, so that is a way to remember. Moreover, the limit of $f(x)$ as $x\to0$ does not exist.
+Be careful: the sign denotes where we _start_. If the sign is negative, we approach it _from the negative side_ and move _to the positive side_. I do not know why I used to mistake between those two, so that is a way to remember. Moreover, the limit of $f(x)$ as $x\to0$ does not exist.
 
 A function's limit only exists if the limit from both sides approaches the same number:
 \\[

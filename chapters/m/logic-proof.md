@@ -43,7 +43,7 @@ Predicate is the founding block of functions — that is why the function notati
 <eq> \forall xP(x) </eq>
 Essentially that statement allowed us to plug every possible $x$ into our predicate $P(x)$.
 
-**The existential quantifier** is used to denote sentences with words like "some". It implies the fact that there are at least <i>some</i> variables that make the predicate $P$ hold.
+**The existential quantifier** is used to denote sentences with words like "some". It implies the fact that there are at least _some_ variables that make the predicate $P$ hold.
 <eq> \exists xP(x) </eq>
 Informally, $\forall$ is just a bunch of  $\land$s and $\exists$ is just a bunch of $\lor$s.
 
@@ -53,7 +53,7 @@ Noted that for **nested quantifiers**, the order does matter:
     \qquad
     \exists x \forall y (x+y=0)
 \\]
-The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select <i>any</i> $y$, the value $x+y=0$".
+The first one is: "For all $x$, there exists $y$ that makes the predicate true". The second one is saying "There is some $x$ that when you select _any_ $y$, the value $x+y=0$".
 
 **Therefore** symbol is:
 <eq> \therefore </eq>
@@ -77,7 +77,7 @@ A few logic terms:
 
 **Disproving conjecture** is a proving method that applies to theorems with $\forall xP(x)$, where you can simply find a single $x$ that dissatisfies $P(x)$.
 
-**Direct proof** assumes that $p$ is true, then follows implications to show that $q$ is true. This is <i>similar</i> to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of **hypothetical syllogism**:
+**Direct proof** assumes that $p$ is true, then follows implications to show that $q$ is true. This is _similar_ to how you do algebra where you make multiple $=$ lines to get to your answer. To be more exact, it is algebra that gets this idea from logic. This is the application of **hypothetical syllogism**:
 <eq>
     (p \rightarrow r)\land(r \rightarrow q)
     \rightarrow (p \rightarrow q)

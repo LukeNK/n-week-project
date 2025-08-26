@@ -31,7 +31,7 @@ If body $A$ exerts a force $\vec{F}$ on body $B$, then $B$ simultaneously exerts
     \vec{F}_{AB} = -\vec{F}_{BA}
 </eq>
 
-A common misconception is that the action and the reaction forces cancel each other out. This was cleared out by the law's equation because the forces were considered on two different systems. For example, when pulling down on a vertical rope, a climber is exerting a force _on the rope_ ($\vec{F}_{AB}$), while the rope is pulling upward <i>on the person</i> ($-\vec{F}_{BA}$). When you draw a free-body diagram, the downward vector is the gravitational vector pulling _on the person_, so it is not $\vec{F}_{AB}$. Repeat: $\vec{F}_{AB}$ DOES NOT CANCEL $-\vec{F}_{BA}$.
+A common misconception is that the action and the reaction forces cancel each other out. This was cleared out by the law's equation because the forces were considered on two different systems. For example, when pulling down on a vertical rope, a climber is exerting a force _on the rope_ ($\vec{F}_{AB}$), while the rope is pulling upward _on the person_ ($-\vec{F}_{BA}$). When you draw a free-body diagram, the downward vector is the gravitational vector pulling _on the person_, so it is not $\vec{F}_{AB}$. Repeat: $\vec{F}_{AB}$ DOES NOT CANCEL $-\vec{F}_{BA}$.
 
 ### Work
 Work is simply what the force accomplishes. Try to ask yourselves "How much work you have done today" and that is what work is telling you about a force.
@@ -107,7 +107,7 @@ $x$ is the length that the material was stretched or compressed.
 This equation also tells you that the stiffness of a material matters less compared to how far you can stretch that material. The author is writing this out of spite because he once had an assignment about making a crossbow; he decided to make the string harder, resulting in less energy being created and the bow being a lot weaker. Knowing this could've saved him a two-week spring break contemplating on life, questioning his career choice, and doubting his make-shift ability. It was about a year since, but he still remembers the moment the physics teacher wrote this equation on the board and told the author that the topic was supposed to be learned much later. Lesson: physics and all sciences are interconnected.
 
 <h4>Thermal energy</h4>
-The heat that you feel with touching objects is because the molecules within them are wiggling. Because the molecules are moving, you can consider it a form of kinetic energy; the _sum_ of those little motions is called the thermal energy, and the <i>average</i> is called temperature. A hot object means the molecules in the substance are wiggling faster and storing more energy, increasing the average and the total energy. It is also important to note that thermal energy will transfer from hot to cold object until the _temperature_ is the same.
+The heat that you feel with touching objects is because the molecules within them are wiggling. Because the molecules are moving, you can consider it a form of kinetic energy; the _sum_ of those little motions is called the thermal energy, and the _average_ is called temperature. A hot object means the molecules in the substance are wiggling faster and storing more energy, increasing the average and the total energy. It is also important to note that thermal energy will transfer from hot to cold object until the _temperature_ is the same.
 
 A quantity to connect between energy and temperature is **specific heat capacity**, the standard unit is $\frac{J}{kg.K}$. It is the amount of the energy needed to heat a kg of mass to 1 degree of Kelvin. This is a property specific to each material, because just like the kinetic energy $mv^2/2$, the mass of each molecules matters. Combining all of the things above, we have the formula for **thermal energy**:
 <eq>
@@ -236,7 +236,7 @@ To add complexity (to be more accurate, _simplicity_) to the problem, we can lau
 This is a more "practical" example of the commonly misrepresented Schrodinger's cat thought experiment. Most of the time in quantum physics, we use probability on one single "item" to represent the possible states it can achieve. In this experiment, our probability applies to the photons and does not in any way imply the fact that it, in a typical sense, _exists_ in two different states — it is stating the possibility that it can become either.
 
 ### A qubit
-**A bit** in quantum mechanics can be written differently. Since a bit can only be _either_ 0 or 1, it can be represented with a ket that has a length of 1 (indicating a bit is certainly $100\%$ true or false). As a representation for the positive x-axis is 0, and the y-axis is the possibility that a bit is 1, we have the <b>standard basis</b> (also known as the **computational basis**):
+**A bit** in quantum mechanics can be written differently. Since a bit can only be _either_ 0 or 1, it can be represented with a ket that has a length of 1 (indicating a bit is certainly $100\%$ true or false). As a representation for the positive x-axis is 0, and the y-axis is the possibility that a bit is 1, we have the **standard basis** (also known as the **computational basis**):
 <eq>
     0 \rightarrow |0\rangle = \begin{pmatrix} 1 \\ 0\end{pmatrix}
     \qquad

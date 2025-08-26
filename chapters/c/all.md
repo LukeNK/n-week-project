@@ -84,7 +84,7 @@ A mole of atoms of an element acts as the central unit to convert between differ
     n = \frac{m\text{ g}}{M\text{ g/mol}}
 </eq>
 
-$1$ mole of any gas at **standard temperature and pressure** or <b>STP</b> occupies exactly $22.4$ litres. That property only appears for gasses but not liquids or solids. If you want to calculate **the number of moles in a volume of gas**:
+$1$ mole of any gas at **standard temperature and pressure** or **STP** occupies exactly $22.4$ litres. That property only appears for gasses but not liquids or solids. If you want to calculate **the number of moles in a volume of gas**:
 <eq id="eq-c-mol-in-gas">
     n = V\text{ L} \times \frac{1\text{mol}}{22.4\text{L}}
 </eq>
