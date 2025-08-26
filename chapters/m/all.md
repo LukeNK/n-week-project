@@ -230,18 +230,18 @@ Scientific notation is helpful when counting significant figures because now all
 
 **To add/subtract** numbers in scientific notation, make the exponent the same and simply deal with the mantissa, then readjust the result to proper scientific notation by moving the decimal. The answer should be rounded to the least number of decimal places.
 \\[\begin{aligned}
-    & 3.0 \times 10^2 + 6.4 \times 10^3 \qquad 300 + 6400 \\
-    =& 3.0 \times 10^2 + 64 \times 10^2 \qquad \text{least number of decimal places is }0 \\
-    =& (3.0 + 64) \times 10^2 \\
-    =& 67.0 \times 10^2 \qquad \text{round the number, return the mantissa to scientific notation} \\
+    & 3.0 \times 10^2 + 6.4 \times 10^3 \qquad 300 + 6400 \\\\\\
+    =& 3.0 \times 10^2 + 64 \times 10^2 \qquad \text{least number of decimal places is }0 \\\\\\
+    =& (3.0 + 64) \times 10^2 \\\\\\
+    =& 67.0 \times 10^2 \qquad \text{round the number, return the mantissa to scientific notation} \\\\\\
     =& 6.7 \times 10^3
 \end{aligned}\\]
 
 **To multiply/divide**, you also multiply/divide the mantissa by themselves first, then multiply/divide the exponents by using an exponent rule $10^n\cdot10^m=10^{n+m}$. This was hidden behind the fact that multiplication is commutative. The answer should have the same significant figures as the number with the least significant figures.
 \\[\begin{aligned}
-    & (4.1\times10^6)\times(3.110\times10^8) \qquad\text{2SF} \times\text{4SF} \\
-    =& (4.1\times3.110)\times10^{6+8} \\
-    =& 12.751\times10^{14} \qquad \text{round to 2SF and shift decimal point} \\
+    & (4.1\times10^6)\times(3.110\times10^8) \qquad\text{2SF} \times\text{4SF} \\\\\\
+    =& (4.1\times3.110)\times10^{6+8} \\\\\\
+    =& 12.751\times10^{14} \qquad \text{round to 2SF and shift decimal point} \\\\\\
     =& 1.2\times10^{15}
 \end{aligned}\\]
 
@@ -303,10 +303,10 @@ A fascinating fact is when you multiply a complex number by $i$, the result is a
 
 **Dividing** is a bit of work. You start with a fraction, then multiply the first fraction by another fraction with both the numerator and the denominator as the conjugate of the first fraction's denominator (making the second fraction equal to 1). Here is an example:
 \\[\begin{aligned}
-    &\frac{2 + 3i}{4 - 5i} \\
-    =& \frac{2+3i}{4-5i} \cdot \frac{4+5i}{4+5i} \\
-    =& \frac{(2 + 3i)(4 + 5i)}{4^2 + 5^2} \qquad (a + bi)(a - bi) = a^2 + b^2 \\
-    =& \frac{8 + 10i + 12i - 15}{41} \\
+    &\frac{2 + 3i}{4 - 5i} \\\\\\
+    =& \frac{2+3i}{4-5i} \cdot \frac{4+5i}{4+5i} \\\\\\
+    =& \frac{(2 + 3i)(4 + 5i)}{4^2 + 5^2} \qquad (a + bi)(a - bi) = a^2 + b^2 \\\\\\
+    =& \frac{8 + 10i + 12i - 15}{41} \\\\\\
     =& \frac{-7 + 22i}{41}
     = -\frac{7}{41} + \frac{22}{41}i
 \end{aligned}\\]
@@ -410,9 +410,9 @@ We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (
 
 Because order does not matter, we will list our teas in the same order: A then B then C. Next, we will add a separator between the teas. Here is what our diagram will look like:
 \\[\begin{bmatrix}
-    -&-&-&|&-&-&|&- \\
-    |&-&-&-&|&-&-&- \\
-    |&-&-&-&-&-&-&| \\
+    -&-&-&|&-&-&|&- \\\\\\
+    |&-&-&-&|&-&-&- \\\\\\
+    |&-&-&-&-&-&-&| \\\\\\
     |&|&-&-&-&-&-&-
 \end{bmatrix}\\]
 There are still six dashes representing our six allowed selections, while the two separators simply indicate that we are moving between the types of tea. In the second example, you can see that we did not select A but only B and C. The third example only shows that there was only B that was selected; similar to C in the fourth example

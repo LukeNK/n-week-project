@@ -217,8 +217,8 @@ The **double-angle identities**:
 </eq>
 <eq>\begin{aligned}
     \cos2\theta
-    =& \cos^2\theta - \sin^2\theta \\
-    =& 2\cos^2\theta - 1 \\
+    =& \cos^2\theta - \sin^2\theta \\\\\\
+    =& 2\cos^2\theta - 1 \\\\\\
     =& 1 - 2\sin^2\theta
 \end{aligned}</eq>
 <eq>
@@ -309,17 +309,17 @@ Finally, you can combine with the theorems mentioned above to adjust your answer
 
 The **algebraic way** is to transform what you have into what you can evaluate. All the theorems from the solving finite limit section still hold unless specified otherwise.
 \\[\begin{aligned}
-    & lim_{x\to\infty}\frac{5x^2+1}{3x^2-x} \\
+    & lim_{x\to\infty}\frac{5x^2+1}{3x^2-x} \\\\\\
     =&
         lim_{x\to\infty}\frac{(5x^2+1) / x^2}{(3x^2-x) / x^2}
-        &\text{divide by } x^2 \\
-    =& lim_{x\to\infty}\frac{5+\frac{1}{x^2}}{3-\frac{x}{x^2}} \\
+        &\text{divide by } x^2 \\\\\\
+    =& lim_{x\to\infty}\frac{5+\frac{1}{x^2}}{3-\frac{x}{x^2}} \\\\\\
     =&
         \frac
             {lim_{x\to\infty}(5+\frac{1}{x^2})}
             {lim_{x\to\infty}(3-\frac{x}{x^2})}
-        &\text{apply the theorems} \\
-    =& \frac{5+0}{3-0} &\text{find the limit of each term} \\
+        &\text{apply the theorems} \\\\\\
+    =& \frac{5+0}{3-0} &\text{find the limit of each term} \\\\\\
     =& \frac{5}{3}
 \end{aligned}\\]
 
@@ -714,12 +714,12 @@ It is important to identify which $u$ and $v$ to use to make the derivatives and
 
 **The formula** originates from algebra manipulation of the original product rule:
 \\[\begin{aligned}
-    &(fg)' = fg'+f'g \\
-    \Leftrightarrow& fg' = (fg)'-f'g \\
+    &(fg)' = fg'+f'g \\\\\\
+    \Leftrightarrow& fg' = (fg)'-f'g \\\\\\
     \Leftrightarrow&\int fg'\;dx = \int(fg)'\;dx-\int f'g\;dx
-        &\text{Take the integral of every terms}\\
+        &\text{Take the integral of every terms}\\\\\\
     \Leftrightarrow&\int fg'\;dx = fg -\int f'g\;dx
-        &\text{Derivative cancels the integral}\\
+        &\text{Derivative cancels the integral}\\\\\\
 \end{aligned}\\]
 
 <h4>Integration by parts trick: the tabular method</h4>
@@ -765,10 +765,10 @@ We identify $u=x^3$ and $v=\sin x$. Next, we set up the <a href="#tab-a3"></a>. 
 Take a look at <a href="#fig-a16"></a> and now look at what one should get as a result. It is easier to remember the method visually than a wordy description.
 \\[\begin{aligned}
     \int x^3\sin x \;dx =
-    &+ x^3 (-\cos x) \\
-    &- 3x^2 (-\sin x) \\
-    &+ 6x (\cos x) \\
-    &- 6 (\sin x) \\
+    &+ x^3 (-\cos x) \\\\\\
+    &- 3x^2 (-\sin x) \\\\\\
+    &+ 6x (\cos x) \\\\\\
+    &- 6 (\sin x) \\\\\\
     =& -x^3\cos x + 3x^2\sin x + 6x\cos x - 6\sin x
 \end{aligned}\\]
 
@@ -797,9 +797,9 @@ Therefore $u'$ or the derivative of $u$, notated with small changes in $du$ is:
 Replace $dx$ into our integral, we can see the $2x$ were cancelled out nicely, making all the variables inside the integral become $u$ instead of $x$. After that, we can calculate the integral with our input variable as $u$, then substitute $u$ back to answer:
 \\[\begin{aligned}
     \int \cos(x^2) \cdot 2x \;dx
-    &= \int \cos(u) \cdot 2x \;\frac{du}{2x} \\
-    &= \int \cos(u) \;du \\
-    &= \sin(u) + C \\
+    &= \int \cos(u) \cdot 2x \;\frac{du}{2x} \\\\\\
+    &= \int \cos(u) \;du \\\\\\
+    &= \sin(u) + C \\\\\\
     &= \sin(x^2) + C
 \end{aligned}\\]
 
@@ -807,14 +807,14 @@ Note that most of the time, it is not possible to start with an already set-up f
 \\[\begin{aligned}
     \int x\sqrt{x-1} \;dx
     &= \int x\sqrt{u} \;du
-    \qquad\text{Define } u=x-1 \text{ and } du=dx \\
+    \qquad\text{Define } u=x-1 \text{ and } du=dx \\\\\\
     &= \int (u+1)\sqrt{u} \;du
-    \qquad\text{From the original definition: } x=u+1 \\
-    &= \int (u+1)u^{\frac{1}{2}} \;du \\
-    &= \int u^{\frac{3}{2}} + u^{\frac{1}{2}} \;du \\
-    &= \frac{2}{5}u^{\frac{5}{2}} + \frac{2}{3}u^{\frac{3}{2}} \\
+    \qquad\text{From the original definition: } x=u+1 \\\\\\
+    &= \int (u+1)u^{\frac{1}{2}} \;du \\\\\\
+    &= \int u^{\frac{3}{2}} + u^{\frac{1}{2}} \;du \\\\\\
+    &= \frac{2}{5}u^{\frac{5}{2}} + \frac{2}{3}u^{\frac{3}{2}} \\\\\\
     &= \frac{2}{5}(x-1)^{\frac{5}{2}} + \frac{2}{3}(x-1)^{\frac{3}{2}}
-    \qquad\text{Substitute } u=x-1 \\
+    \qquad\text{Substitute } u=x-1 \\\\\\
     &= \frac{2}{5}\sqrt{(x-1)^5} + \frac{2}{3}\sqrt{(x-1)^3}
     \qquad\text{Add integration constant}
 \end{aligned}\\]
@@ -857,9 +857,9 @@ And if we put **a natural log** on the table after appearing in so many equation
 
 **Trigonometric functions** can be remembered by recalling the original derivative trigonometric functions:
 <eq>\begin{aligned}
-    \int \cos(x) dx = \sin(x) + C \\
-    \int \sin(x) dx = -\cos(x) + C \\
-    \int \sec^2(x) dx = \tan(x) + C \\
+    \int \cos(x) dx = \sin(x) + C \\\\\\
+    \int \sin(x) dx = -\cos(x) + C \\\\\\
+    \int \sec^2(x) dx = \tan(x) + C \\\\\\
 \end{aligned}</eq>
 
 <h3 id="sec-a-integral-material">Additional material</h3>

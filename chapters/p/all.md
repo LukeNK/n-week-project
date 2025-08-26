@@ -154,7 +154,7 @@ The “bra” of this vector is the conjugate transpose of the ket vector:
     \langle v|
     = ((\,|0\rangle\,)^*)^T
     = \begin{pmatrix}
-        1^* \\
+        1^* \\\\\\
         0^*
     \end{pmatrix}^T
     = \begin{pmatrix} 1 & 0 \end{pmatrix}
@@ -302,9 +302,9 @@ We map multiple bits together with classical bits by simply string them as "01" 
 An intuition to read this is to think that each row in the vector corresponds to a possibility that the qubit can become. For example, the $|00\rangle$ ket is telling us that it is certain that is it a "00" bit. The ket vectors can be re-imagined like this:
 \\[
     \begin{pmatrix}
-        \text{Probability of }|00\rangle \\
-        \text{Probability of }|01\rangle \\
-        \text{Probability of }|10\rangle \\
+        \text{Probability of }|00\rangle \\\\\\
+        \text{Probability of }|01\rangle \\\\\\
+        \text{Probability of }|10\rangle \\\\\\
         \text{Probability of }|11\rangle
     \end{pmatrix}
 \\]
@@ -312,13 +312,13 @@ An intuition to read this is to think that each row in the vector corresponds to
 Now recall that qubits are simply the basis vectors multiplied by a certain amplitude. The amplitude we will put into our equation here essentially alters the chance a certain combination ("00" for example) will appear. Let's consider a state $|\psi_{AB}\rangle$ that is an equal superposition of all the standard basis vectors from <a href="eq-p1"></a>:
 \\[\begin{aligned}
     |\psi_{AB}\rangle
-    &= \frac{1}{2}|00\rangle + \frac{1}{2}|01\rangle + \frac{1}{2}|10\rangle + \frac{1}{2}|11\rangle \\
+    &= \frac{1}{2}|00\rangle + \frac{1}{2}|01\rangle + \frac{1}{2}|10\rangle + \frac{1}{2}|11\rangle \\\\\\
     &= \frac{1}{2}(
         \begin{pmatrix}1 \\ 0 \\ 0 \\ 0\end{pmatrix} +
         \begin{pmatrix}0 \\ 1 \\ 0 \\ 0\end{pmatrix} +
         \begin{pmatrix}0 \\ 0 \\ 1 \\ 0\end{pmatrix} +
         \begin{pmatrix}0 \\ 0 \\ 0 \\ 1\end{pmatrix}
-    ) \\
+    ) \\\\\\
     &= \frac{1}{2}\begin{pmatrix}1 \\ 1 \\ 1 \\ 1\end{pmatrix}
     = \begin{pmatrix}
         1/2 \\ 1/2 \\ 1/2 \\ 1/2
@@ -353,15 +353,15 @@ Now we have our **standard bases** as:
 </eq>
 With that, you need $\{\alpha_1,\dots,\alpha_d\}$ to represent the probability of each combination showing up in your qubits. Your final ket will look something like this:
 \\[\begin{pmatrix}
-    \alpha_1|x_1\rangle \\
-    \vdots \\
+    \alpha_1|x_1\rangle \\\\\\
+    \vdots \\\\\\
     \alpha_d|x_d\rangle
 \end{pmatrix}\\]
 
 The following is the formal, correct, and common notation. The notation above was the simplified notation for the sake of simplicity in this guide.
 <eq>\begin{aligned}
     \text{For each distinct string }
-    x & \in \{0, 1\}^n \\
+    x & \in \{0, 1\}^n \\\\\\
     \text{ associate }x\text{ with a distinct integer }
     i & \in \{1,2,\dots,d\}
 \end{aligned}</eq>
@@ -390,7 +390,7 @@ Also known as the **outer product** or the **Kronecker product**, this is the ma
         = \begin{pmatrix}
             \alpha_A|0\rangle \\ \beta_A|1\rangle
         \end{pmatrix}
-    \\
+    \\\\\\
     |\psi\rangle_B
         = \alpha_B|0\rangle + \beta_B|1\rangle
         = \begin{pmatrix}
@@ -408,10 +408,10 @@ The joint state $|\psi\rangle_{AB} \in \mathbb{C}^2\otimes\mathbb{C}^2$ can be e
         \alpha_A|\psi\rangle_B \\ \beta_A|\psi\rangle_B
     \end{pmatrix}
     = \begin{pmatrix}
-        \alpha_A\alpha_B \\
-        \alpha_A\beta_B \\
-        \beta_A\alpha_B \\
-        \beta_A\beta_B \\
+        \alpha_A\alpha_B \\\\\\
+        \alpha_A\beta_B \\\\\\
+        \beta_A\alpha_B \\\\\\
+        \beta_A\beta_B \\\\\\
     \end{pmatrix}
 </eq>
 As you can see, each row of the product is simply the amplitude of a basis vector in a direction. Probabilistic-wise, it simply shows the probability of two independent events happening together (two states appearing together). Moreover, the example shows you why combining qubits makes the vector space grow exponentially to $n$: for every $\alpha_i$ there will be $n$ number of $\alpha_{i+1}$, and so on.
@@ -437,8 +437,8 @@ Another thing to realize is that the length of the result vector relates to $d_1
         \beta_1 & \dots & \beta_d
     \end{pmatrix}
     = \begin{pmatrix}
-        \alpha_1\beta_1 & \dots & \alpha_1\beta_d \\
-        \vdots & \ddots & \vdots \\
+        \alpha_1\beta_1 & \dots & \alpha_1\beta_d \\\\\\
+        \vdots & \ddots & \vdots \\\\\\
         \alpha_d\beta_1 & \dots & \alpha_d\beta_d
     \end{pmatrix}
 \\]
@@ -486,10 +486,10 @@ If we further break down the tensor product equation according to <a href="#eq-p
     (\alpha_A|0\rangle + \beta_A|1\rangle) \otimes
     (\alpha_B|0\rangle + \beta_B|1\rangle)
     = \begin{pmatrix}
-        \alpha_A\alpha_B \\
-        \alpha_A\beta_B \\
-        \beta_A\alpha_B \\
-        \beta_A\beta_B \\
+        \alpha_A\alpha_B \\\\\\
+        \alpha_A\beta_B \\\\\\
+        \beta_A\alpha_B \\\\\\
+        \beta_A\beta_B \\\\\\
     \end{pmatrix}
 </eq>
 As you can see, the equation above implies the fact that these two qubits are working independently from each other. The fact that $|\psi\rangle_A$ is in a state does not change the possibilities in the other qubit.
@@ -521,7 +521,7 @@ We have Luka who is having a hard time deciding between the coffee shop and the 
     |A\rangle
     = \frac{1}{\sqrt{2}}|c\rangle + \frac{1}{\sqrt{2}}|t\rangle
     = \begin{pmatrix}
-        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} \\\\\\
         \frac{1}{\sqrt{2}}
     \end{pmatrix}
 \\]
@@ -537,10 +537,10 @@ Assign each of these events into a vector. If we see both of them in the coffee 
 \\[
     |A\rangle \otimes |E\rangle
     = \begin{pmatrix}
-        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} \\\\\\
         \frac{1}{\sqrt{2}}
     \end{pmatrix} \otimes \begin{pmatrix}
-        \frac{1}{\sqrt{2}} \\
+        \frac{1}{\sqrt{2}} \\\\\\
         \frac{1}{\sqrt{2}}
     \end{pmatrix}
     = \begin{pmatrix}

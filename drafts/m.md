@@ -55,7 +55,7 @@ In this case, $k=1/2$.
 </figure>
 <p>Continuing with the section above: what if we give each point a coordinate? Consider the axis Ox, we can define a <b>unit vector</b> by giving the length of 1 for $\vec{i}$; we define similar with Oy and $\vec{j}$. We can define any vector in the Oxy system with <a href="#fig-m2"></a>. Since a vector is an instruction to move from one point to another, we can subtract their coordinates to yield that instruction. In the image above<note>The representation of vectors using upper or lower case depends on culture, so be mindful that for this specific image, a vector without a clear head or tail will take an upper case letter. </note>, it is:
 <eq>
-    A_x = \Delta x = x_e - x_b \\
+    A_x = \Delta x = x_e - x_b \\\\\\
     A_y = \Delta y = y_e - y_b
 </eq>
 This works because at the end of the day, the head of the result vector is the head-to-tail addition of the two unit vectors. This is the <b>Cartesian coordinate system</b>.</p>
