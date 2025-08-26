@@ -373,13 +373,13 @@ The $x \in \{0,1\}^n$ simply tells that elements in the ket $x$ are either 0 or 
 A $n$-qubit state $|\psi\rangle \in \mathbb{C}^d$ with $d=2^n$ can be written as a **superposition of standard basis elements**:
 <eq>
     |\psi\rangle
-    = \sum_{{x\in\{0,1\}}^n} \alpha_x |x\rangle
+    = \sum_{x\in\{0,1\}^n} \alpha_x |x\rangle
     \qquad
     \text{where } \forall x,\alpha \in \mathbb{C}
 </eq>
 In addition to that, we need to make all the probabilities add up to $1$:
 <eq>
-    \sum_{{x\in\{0,1\}}^n} |\alpha_x|^2 = 1
+    \sum_{x\in\{0,1\}^n} |\alpha_x|^2 = 1
 </eq>
 
 ### Tensor product
