@@ -135,7 +135,7 @@ We have a similar equation with elastic potential energy:
     = \text{constant}
 </eq>
 <figure comic>
-    <img src="figures/p/1.png">
+    <img src="{{ site.url }}/figures/p/1.png">
 </figure>
 
 ## Bra–ket Notation

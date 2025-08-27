@@ -54,7 +54,7 @@ document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e =
     count++; checksum.visuals++;
 
     let ref = `Figure ${chapter}.${count}`,
-        src = e.querySelector('img').getAttribute('src').split('/').slice(1),
+        src = e.querySelector('img').getAttribute('src').split('/').slice(-2),
         caption = e.querySelector('figcaption');
     e.id = 'fig-' + src[0] + src[1].split('.')[0];
     caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;

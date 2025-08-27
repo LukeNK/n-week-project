@@ -259,7 +259,7 @@ Because $b=0$ for real numbers, the conjugate of a real number is itself.
 
 ### Visual intuition
 <figure>
-    <img src="figures/m/9.png" alt="Complex number intuition">
+    <img src="{{ site.url }}/figures/m/9.png" alt="Complex number intuition">
     <figcaption>Complex number intuition</figcaption>
 </figure>
 As a way to draw it on a standard two-axis graph similar to <a href="#fig-m9"></a>, you can put the horizontal axis (x-axis) as $a$ and the vertical axis as $b$ to represent the imaginary part of a complex number. This works better if you also recall that we were taught real numbers on a left-right number line.

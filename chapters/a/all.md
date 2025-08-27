@@ -12,11 +12,11 @@ You may wonder: why I said that the limit is _both_ the upper and the lower boun
 Another interesting thing is that the limit is essentially what the value of the function _is supposed_ to be. In our case, we evaluate that limit by simply plugging $g(2)=4$. This is the property we got from the definition of limit itself: it is the "restriction" of the y-axis (the output) as the x-axis (the input) gets closer to a value (<a href="#fig-a2"></a>). If x "squeeze" then it will result in $g(x)$ being squeezed to a value. This is why when solving limits, it is about arranging your function to the point where you can plug in the $x$ value to answer your limit.
 <div class="figure">
     <figure>
-        <img src="figures/a/2.png" alt="Representation of lim(x→2)g(x)=4">
+        <img src="{{ site.url }}/figures/a/2.png" alt="Representation of lim(x→2)g(x)=4">
         <figcaption>Representation of $ \lim_{x\to2}g(x)=4 $</figcaption>
     </figure>
     <figure>
-        <img src="figures/a/3.png" alt="A discontinuous function">
+        <img src="{{ site.url }}/figures/a/3.png" alt="A discontinuous function">
         <figcaption>A discontinuous function</figcaption>
     </figure>
 </div>
@@ -48,11 +48,11 @@ This leads us to the definition of **continuity**: if the limit of $f(x)$ at $a$
 ### Unbound limit
 <div class="figure">
     <figure>
-        <img src="figures/a/1.png" alt="The graph of the function f(x)=1/x^2">
+        <img src="{{ site.url }}/figures/a/1.png" alt="The graph of the function f(x)=1/x^2">
         <figcaption>The graph of the function $ f(x)=\frac{1}{x^2} $</figcaption>
     </figure>
     <figure>
-        <img src="figures/a/4.png" alt="The graph of function f(x)=1/x">
+        <img src="{{ site.url }}/figures/a/4.png" alt="The graph of function f(x)=1/x">
         <figcaption>The graph of function $ f(x)=\frac{1}{x} $</figcaption>
     </figure>
 </div>
@@ -112,7 +112,7 @@ These theorems can be deducted from the concept that limit is essentially substi
 
 From these theorems, you can see that **finding a finite limit** is simply doing algebra manipulation of the function until you reach a point where you can substitute $x$ into your equation. The typical procedure to solve a finite limit can be found in <a href="#fig-a5"></a>.
 <figure>
-    <img src="figures/a/5.png" alt="Procedure to calculate limit, courtesy of Khan Academy.">
+    <img src="{{ site.url }}/figures/a/5.png" alt="Procedure to calculate limit, courtesy of Khan Academy.">
     <figcaption>Procedure to calculate limit, courtesy of Khan Academy.</figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ As it is impossible to cover all of the identities, this section will list ident
 
 Here are **Pythagorean identities**, which help when reviewing with a unit circle that displays trigonometric functions like <a href="#fig-a8"></a>:
 <figure>
-    <img src="figures/a/8.png" alt="A unit circle with trigonometric functions">
+    <img src="{{ site.url }}/figures/a/8.png" alt="A unit circle with trigonometric functions">
     <figcaption>A unit circle with trigonometric functions</figcaption>
 </figure>
 <eq>
@@ -278,11 +278,11 @@ For example, we have the following function with the graph from <a href="#fig-a7
 \\[ x^2 \sin\left( \frac{1}{x} \right) \\]
 <div class="figure">
     <figure>
-        <img src="figures/a/7.png" alt="The graph of x^2 sin(1/x) and ±x^2">
+        <img src="{{ site.url }}/figures/a/7.png" alt="The graph of x^2 sin(1/x) and ±x^2">
         <figcaption>The graph of $ x^2\sin{\frac{1}{x}} $ and $ \pm x^2 $</figcaption>
     </figure>
     <figure>
-        <img src="figures/a/6.png" alt="The graph zoomed in">
+        <img src="{{ site.url }}/figures/a/6.png" alt="The graph zoomed in">
         <figcaption>The graph zoomed in</figcaption>
     </figure>
 </div>
@@ -376,7 +376,7 @@ However, what we originally asked is the slope of a graph at one single point, t
         {\Delta x}
 </eq>
 <figure>
-    <img src="figures/a/10.png" style="max-height: 15rem;" alt="Two points approaching each other">
+    <img src="{{ site.url }}/figures/a/10.png" style="max-height: 15rem;" alt="Two points approaching each other">
     <figcaption>Two points approaching each other</figcaption>
 </figure>
 
@@ -460,7 +460,7 @@ When all rules fail, you can always use the original derivative definition in eq
 <!-- Maybe someday change f(x) to y and df to dy. I won't change it right now because that means redrawing figure m11. -->
 Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it is the multiplication between two functions, you can think of $f(x)$ as the area of a rectangle with $h(x)$ and $g(x)$ as two sides, similar to <a href="#fig-a11"></a>.
 <figure>
-    <img src="figures/a/11.png" style="max-height: 15rem;" alt="Representation of a product between two functions">
+    <img src="{{ site.url }}/figures/a/11.png" style="max-height: 15rem;" alt="Representation of a product between two functions">
     <figcaption>Representation of a product between two functions</figcaption>
 </figure>
 
@@ -491,7 +491,7 @@ An anonymous professor once said: "Using the chain rule is like peeling an onion
 
 Assume we have $g(h(x))$. We can imagine these two functions like a production line: we put in the raw number $x$, and then the function $h$ will "process" the input before passing it to $g$, after which the output will then be given. This production chain can be visualized in <a href="#fig-a12"></a>. Note that now we denote a tiny change in our input as $dx$, a tiny change in our output as $dy$, and our ultimate goal is to find the ratio $dy/dx$.
 <figure>
-    <img src="figures/a/12.png" alt="Chain rule visualization">
+    <img src="{{ site.url }}/figures/a/12.png" alt="Chain rule visualization">
     <figcaption>Chain rule visualization</figcaption>
 </figure>
 
@@ -562,11 +562,11 @@ Assume we have a graph $f(x)$ and an unknown function $A(x)$ that represents the
 If we have $f(x)=c$, the graph of our constructed function will look like <a href="#fig-a13"></a>. If we were to find the area between $0$ and $a$, we could simply calculate $A(a)$ to get the result.
 <div class="figure">
     <figure>
-        <img src="figures/a/13.png" alt="A representation of a constant function's integral">
+        <img src="{{ site.url }}/figures/a/13.png" alt="A representation of a constant function's integral">
         <figcaption>A representation of a constant function's integral</figcaption>
     </figure>
     <figure>
-        <img src="figures/a/14.png" alt="A representation of a linear function's integral">
+        <img src="{{ site.url }}/figures/a/14.png" alt="A representation of a linear function's integral">
         <figcaption>A representation of a linear function's integral</figcaption>
     </figure>
 </div>
@@ -773,7 +773,7 @@ Take a look at <a href="#fig-a16"></a> and now look at what one should get as a 
 \end{aligned}\\]
 
 <figure>
-    <img src="figures/a/16.png" alt="Integration by part using the tabular method">
+    <img src="{{ site.url }}/figures/a/16.png" alt="Integration by part using the tabular method">
     <figcaption>Integration by part using the tabular method</figcaption>
 </figure>
 
@@ -871,6 +871,6 @@ And if we put **a natural log** on the table after appearing in so many equation
 
 
 <figure>
-    <img src="figures/a/18.png" alt="Solving integrals flowchart, courtesy of a deleted Reddit user on r/math">
+    <img src="{{ site.url }}/figures/a/18.png" alt="Solving integrals flowchart, courtesy of a deleted Reddit user on r/math">
     <figcaption>Solving integrals flowchart, courtesy of a deleted Reddit user on r/math</figcaption>
 </figure>

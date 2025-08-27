@@ -188,7 +188,7 @@ Those there quantum numbers are enough to indicate which orbit you are talking a
 ### Orbital diagram
 An orbital diagram is used to represent how many electrons are there, and what orbit they are in. Each box here represents an orbit, which can store two electrons drawn by two arrows; if there is only one electron, that electron will have up spin. <a href="#fig-c1"></a> represents how electrons slowly fill from the smallest to the biggest orbit (from 1s to 2s). It is once again important to remember the **Pauil's exclusion principle** and the fact that the two electrons that share the same orbit should have a different spin.
 <figure>
-    <img src="figures/c/1.png" alt="Orbital diagram and electron configuration of Helium and Lithium">
+    <img src="{{ site.url }}/figures/c/1.png" alt="Orbital diagram and electron configuration of Helium and Lithium">
     <figcaption>Orbital diagram and electron configuration of Helium and Lithium</figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ We group orbitals from the same subshell by connecting the sides of the orbital 
 </quote>
 In simple terms demonstrated by <a href="#fig-c2"></a>, you should fill all the orbitals in the same subshell with electrons of the same spin (_in most cases_, up spin) before putting in the opposite spin.
 <figure>
-    <img src="figures/c/2.png" alt="How electrons fill the orbits from the 2p subshell">
+    <img src="{{ site.url }}/figures/c/2.png" alt="How electrons fill the orbits from the 2p subshell">
     <figcaption>How electrons fill the orbits from the 2p subshell</figcaption>
 </figure>
 
@@ -213,11 +213,11 @@ Another thing you need to keep in mind is the **Aufbau principle** ("Aufbau" in 
 </quote>
 This principle is here to warn you of the fact that the subshell's energy level is not in order. Yes, the order _inside a shell_ follows the basic order based on $l$; however, an example would be the subshell 4s has a lower energy level compared to the 3d subshell. This is a reminder that $n$ is simply to show you the _relative size_ of the orbit (compared to a similarly shaped orbit) while $l$ is the shape — this is why the terminology "shell" is confusing in this case, as we tend to think they are orderly stacked but in fact, they are not (<a href="#fig-c3"></a>). Luckily, there is a trick to remember the energy level, presented in <a href="#fig-c4"></a>; the Aufbau principle starts to kick as we reach scandium, the first transition metal in the periodic table.
 <figure>
-    <img src="figures/c/3.png" alt="Energy diagram for each subshell">
+    <img src="{{ site.url }}/figures/c/3.png" alt="Energy diagram for each subshell">
     <figcaption>Energy diagram for each subshell, courtesy of BYJUS</figcaption>
 </figure>
 <figure>
-    <img src="figures/c/4.png" style="height: 70vh;" alt="Aufbau principle's trick diagram">
+    <img src="{{ site.url }}/figures/c/4.png" style="height: 70vh;" alt="Aufbau principle's trick diagram">
     <figcaption>Aufbau principle's trick diagram, courtesy of BYJUS</figcaption>
 </figure>
 

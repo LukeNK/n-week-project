@@ -11,3 +11,4 @@ layout: excerpt
         {% endif %}
     {% endif %}
 {% endfor %}
+<p>Draft content for <i>N-week-project</i> by LukeNK</p>
