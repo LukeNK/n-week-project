@@ -1,5 +1,5 @@
 ---
-layout: excerpt
+layout: draft
 ---
 {% for page in site.static_files %}
     {% if page.extname == ".md" %}
@@ -11,4 +11,3 @@ layout: excerpt
         {% endif %}
     {% endif %}
 {% endfor %}
-<p>Draft content for <i>N-week-project</i> by LukeNK</p>
