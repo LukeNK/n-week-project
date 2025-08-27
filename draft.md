@@ -1,13 +1,11 @@
 ---
 layout: draft
 ---
-{% for page in site.static_files %}
-    {% if page.extname == ".md" %}
-        {% assign dir = page.path | slice: 1, 6 %}
-        {% if dir == "drafts" %}
-{% include_relative {{ page.path }} %}
-
-<hr>
+{% for page in site.pages %}
+    {% assign ext = page.name | split: "." | last%}
+    {% if ext == "md" %}
+        {% if page.layout == "draft" and page.name != "draft.md" %}
+            {% include_relative {{ page.path }} %}
         {% endif %}
     {% endif %}
 {% endfor %}
