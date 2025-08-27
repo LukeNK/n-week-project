@@ -1,3 +1,6 @@
+---
+layout: chapter
+---
 ## Limit
 Despite the author trying their best to explain this chapter for complete beginners, it is still expected that the reader has some basic understanding of limits. Please go read about limits somewhere first before hopping on this guide.
 

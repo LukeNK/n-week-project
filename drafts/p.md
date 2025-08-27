@@ -1,3 +1,6 @@
+---
+layout: draft
+---
 ## Waves
 
 ### Describing a wave

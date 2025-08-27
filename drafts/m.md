@@ -1,4 +1,6 @@
-
+---
+layout: draft
+---
 ## Vectors in coordinate space
 _If you are reading this section with the image of an arrow, then this is a chapter for you. If you are seeking for a tuple or even more, then this section will be a brief primer for that._ This chapter does not concern about the correct definitions of things but rather focusing on making you understand the concepts as well as the connection between each level of visualization.
 
