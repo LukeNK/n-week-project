@@ -1,14 +1,20 @@
 ---
 layout: full
+chapters:
+    math:
+        - all
+        - calc
+    chemistry:
+        - all
+    physics:
+        - all
 ---
-# Math
-{% include_relative chapters/m/all.md %}
-
-# Calculus
-{% include_relative chapters/a/all.md %}
-
-# Chemistry
-{% include_relative chapters/c/all.md %}
-
-# Physics
-{% include_relative chapters/p/all.md %}
+{% for subject in page.chapters %}
+# {{ subject[0] | capitalize }}
+    {% for chapter in subject[1] %}
+        {% assign sub = subject[0] | slice: 0, 1 %}
+        {% assign path = "chapters/" |  append: sub | append: "/"  %}
+        {% assign path = path | append: chapter | append: ".md" %}
+{% include_relative {{ path }} %}
+    {% endfor %}
+{% endfor%}
