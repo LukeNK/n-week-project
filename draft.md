@@ -5,7 +5,9 @@ layout: excerpt
     {% if page.extname == ".md" %}
         {% assign dir = page.path | slice: 1, 6 %}
         {% if dir == "drafts" %}
-            {% include_relative {{ page.path }} %}
+{% include_relative {{ page.path }} %}
+
+<hr>
         {% endif %}
     {% endif %}
 {% endfor %}

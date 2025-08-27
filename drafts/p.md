@@ -1,8 +1,9 @@
 ## Waves
+
 ### Describing a wave
 At a basic level, the trigonometric function sine is the foundation of all waves. If we take a "snapshot" of a wave at a specific time, we may get the following figure:
 <figure>
-    <img src="2.png">
+    <img src="figures/m/2.png">
     <figcaption>A wave at a specific time</figcaption>
 </figure>
 

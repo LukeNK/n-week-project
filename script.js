@@ -127,19 +127,21 @@ document.querySelectorAll('a').forEach(a => {
 
 console.log('Generate table of contents');
 let toc = document.querySelector('nav');
-chapter = 0;
-document.querySelectorAll('h1, h2:not([noNumber])').forEach(e => {
-    if (e.tagName === 'H1') {
-        toc.innerHTML += `<span>${e.innerText}</span>`;
-    } else {
+if (toc) {
+    chapter = 0;
+    document.querySelectorAll('h1, h2:not([noNumber])').forEach(e => {
+        if (e.tagName === 'H1') {
+            toc.innerHTML += `<span>${e.innerText}</span>`;
+        } else {
         chapter++;
         toc.innerHTML +=
             `<p><a href="#${chapter}">
                 <b>${chapter}</b>.<nbp>
                 ${e.innerText}
             </a></p>`;
-    }
-});
+        }
+    });
+}
 
 (async () => {
     // Handle version
