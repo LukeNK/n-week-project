@@ -1,6 +1,15 @@
 ---
 layout: base
 ---
+<style>
+    h2 {
+        break-before: auto;
+    }
+    h2::before {
+        /* font-size: medium; */
+        content: "Chapter {{ page.path | split: "/" | slice: -2, 2 | join: "/" }}" !important;
+    }
+</style>
 <main class="loading">
     {{ content }}
 </main>
