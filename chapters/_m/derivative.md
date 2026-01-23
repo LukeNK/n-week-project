@@ -2,7 +2,7 @@
 layout: chapter
 title: Derivatives
 prerequisites:
-  - m/limit
+  - m-limit
 ---
 It is recommended that the reader understand about limits before proceeding.
 

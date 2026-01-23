@@ -7,7 +7,10 @@ layout: base
 <!-- Import data -->
 {% for collection in site.collections %}
     {% for page in collection.docs %}
-        <data subject="{{ collection.name }}" chapter="{{ page.url | slice: 1, page.url.size }}">{{ page.prerequisites | join: ', ' }}</data>
+        <data
+            subject="{{ collection.name }}"
+            chapter="{{ page.url | slice: 1, page.url.size | replace: '/', '-' }}"
+        >{{ page.prerequisites | join: ',' }}</data>
     {% endfor %}
 {% endfor %}
 <main><time datetime=""></time></main>
@@ -25,7 +28,7 @@ layout: base
     dataElements.forEach(data => {
         const subject = data.getAttribute('subject');
         const chapter = data.getAttribute('chapter');
-        const prerequisites = data.textContent.split(', ').filter(prereq => prereq.trim() !== '');
+        const prerequisites = data.textContent.split(',').filter(prereq => prereq.trim() !== '');
         chapters[chapter] = { subject, prerequisites, level: 0 };
     });
 

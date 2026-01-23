@@ -2,7 +2,7 @@
 layout: chapter
 title: Integrals
 prerequisites:
-  - m/derivative
+  - m-derivative
 ---
 It is an absolute requirement that the reader understands derivatives, which in turn requires the knowledge of limits.
 

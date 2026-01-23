@@ -2,7 +2,7 @@
 layout: chapter
 title: Qubits Introduction
 prerequisites:
-  - p/braket
+  - p-braket
 ---
 "God does not play dice" — Albert Einstein
 
