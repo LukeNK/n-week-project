@@ -7,10 +7,11 @@ layout: base
     }
     h2::before {
         /* font-size: medium; */
-        content: "Chapter {{ page.path | split: "/" | slice: -2, 2 | join: "/" }}" !important;
+        content: "Chapter {{ page.url | slice: 1, page.url.size }}" !important;
     }
 </style>
 <main class="loading">
+    <h2>{{ page.title }}</h2>
     {{ content }}
 </main>
 <hr>
