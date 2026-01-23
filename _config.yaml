@@ -1,2 +1,14 @@
 url: /n-week-project
 theme: null
+permalink: none
+
+collections:
+  c:
+    name: Chemistry
+    output: true
+  m:
+    name: Mathematics
+    output: true
+  p:
+    name: Physics
+    output: true
