@@ -94,6 +94,13 @@ In the case of having an angle between two vectors, you can use the cosine law t
 </figure>
 
 <h4>Dot product</h4>
+I think there is enough material on dot product, but one of the intruiging fact about it is that there are two ways to calculate it:
+<eq>
+    \vec{a} \cdot \vec{b}
+    = x_a x_b + y_a y_b
+    = \mid \vec{a} \mid \mid \vec{b} \mid \cos{\theta}
+</eq>
+Both formulas are useful in different situations, depending on your knowns and unknowns. To derive the second formula from the first, you can use the cosine law on the triangle formed by the two vectors and their resultant.
 
 ### Ordered list of number
 In sections above, we represented vectors as a list of numbers, forming a coordinates. What if we do not use a coordinate system and assign a different meaning to vectors? This is the very foundation of vector: it is a list of numbers in order. We just happen to use a coordinate plane to visualize them to ease the introduction to vectors.
