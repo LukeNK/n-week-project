@@ -16,8 +16,6 @@ layout: base
     Assign course numbering to each chapter
     Each chapter with be assigned a four-digit code
     The first two digits are the level of the chapter, starting from 00 for subjects with no prerequisites
-    If the subject has prerequisites, then the level is one plus the maximum level of its prerequisites
-    The last two digits show how many chapters have the current chapter as a prerequisite
 -->
 <script>
     const dataElements = document.querySelectorAll('data');
@@ -33,15 +31,6 @@ layout: base
 
     // Function to compute level recursively
     function computeLevel(chapter) {
-        if (chapters[chapter].dependentsCount === undefined) {
-            chapters[chapter].dependentsCount = 0;
-            Object.keys(chapters).forEach(otherChapter => {
-                if (chapters[otherChapter].prerequisites.includes(chapter)) {
-                    chapters[chapter].dependentsCount += 1;
-                }
-            });
-        }
-
         if (chapters[chapter].level > 0) {
             return chapters[chapter].level;
         }
@@ -67,17 +56,37 @@ layout: base
         computeLevel(chapter);
     });
 
-
-    // Show results as links
-    const main = document.querySelector('main');
-    Object.keys(chapters).forEach(chapter => {
-        const chapterData = chapters[chapter];
-        const levelStr = String(chapterData.level).padStart(2, '0') + String(chapterData.dependentsCount).padStart(2, '0');
-        const link = document.createElement('a');
-        link.href = `{{ site.url }}/${chapter}`;
-        link.textContent = `${levelStr} - ${chapter}`;
-        const para = document.createElement('p');
-        para.appendChild(link);
-        main.appendChild(para);
+    // sort by level
+    const sortedChapters = Object.keys(chapters).sort((a, b) => {
+        return chapters[a].level - chapters[b].level;
     });
+
+    // Output result as table, with each row is a level
+    const main = document.querySelector('main');;
+    const table = document.createElement('table');
+    let currentLevel = -1;
+    let tbody = null;
+    sortedChapters.forEach(chapter => {
+        const level = chapters[chapter].level;
+        if (level !== currentLevel) {
+            currentLevel = level;
+            tbody = document.createElement('tbody');
+            const headerRow = document.createElement('tr');
+            const headerCell = document.createElement('th');
+            headerCell.colSpan = 2;
+            headerCell.textContent = `Level ${level}`;
+            headerRow.appendChild(headerCell);
+            tbody.appendChild(headerRow);
+            table.appendChild(tbody);
+        }
+        const row = document.createElement('tr');
+        const chapterCell = document.createElement('td');
+        chapterCell.textContent = chapter;
+        const subjectCell = document.createElement('td');
+        subjectCell.textContent = chapters[chapter].subject;
+        row.appendChild(chapterCell);
+        row.appendChild(subjectCell);
+        tbody.appendChild(row);
+    });
+    main.appendChild(table);
 </script>
