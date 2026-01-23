@@ -75,8 +75,7 @@ layout: base
         const levelStr = String(chapterData.level).padStart(2, '0') + String(chapterData.dependentsCount).padStart(2, '0');
         const link = document.createElement('a');
         link.href = `{{ site.url }}/${chapter}`;
-        link.textContent = `${levelStr} - ${chapter.replace(/-/g, ' ')
-            .charAt(0).toUpperCase() + chapter.replace(/-/g, ' ').slice(1)}`;
+        link.textContent = `${levelStr} - ${chapter}`;
         const para = document.createElement('p');
         para.appendChild(link);
         main.appendChild(para);
