@@ -35,3 +35,8 @@ If body $A$ exerts a force $\vec{F}$ on body $B$, then $B$ simultaneously exerts
 </eq>
 
 A common misconception is that the action and the reaction forces cancel each other out. This was cleared out by the law's equation because the forces were considered on two different systems. For example, when pulling down on a vertical rope, a climber is exerting a force _on the rope_ ($\vec{F}_{AB}$), while the rope is pulling upward _on the person_ ($-\vec{F}_{BA}$). When you draw a free-body diagram, the downward vector is the gravitational vector pulling _on the person_, so it is not $\vec{F}_{AB}$. Repeat: $\vec{F}_{AB}$ DOES NOT CANCEL $-\vec{F}_{BA}$.
+
+<figure>
+    <img src="{{ site.url }}/figures/p/1.png">
+    <figcaption>The reason why it is hard to wake up in the morning</figcaption>
+</figure>
