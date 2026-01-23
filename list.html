@@ -1,0 +1,84 @@
+---
+layout: base
+---
+
+<!-- This is the webpage to show the prerequisites -->
+
+<!-- Import data -->
+{% for collection in site.collections %}
+    {% for page in collection.docs %}
+        <data subject="{{ collection.name }}" chapter="{{ page.url | slice: 1, page.url.size }}">{{ page.prerequisites | join: ', ' }}</data>
+    {% endfor %}
+{% endfor %}
+<main><time datetime=""></time></main>
+
+<!--
+    Assign course numbering to each chapter
+    Each chapter with be assigned a four-digit code
+    The first two digits are the level of the chapter, starting from 00 for subjects with no prerequisites
+    If the subject has prerequisites, then the level is one plus the maximum level of its prerequisites
+    The last two digits show how many chapters have the current chapter as a prerequisite
+-->
+<script>
+    const dataElements = document.querySelectorAll('data');
+    const chapters = {};
+
+    // First pass: collect prerequisites
+    dataElements.forEach(data => {
+        const subject = data.getAttribute('subject');
+        const chapter = data.getAttribute('chapter');
+        const prerequisites = data.textContent.split(', ').filter(prereq => prereq.trim() !== '');
+        chapters[chapter] = { subject, prerequisites, level: 0 };
+    });
+
+    // Function to compute level recursively
+    function computeLevel(chapter) {
+        if (chapters[chapter].dependentsCount === undefined) {
+            chapters[chapter].dependentsCount = 0;
+            Object.keys(chapters).forEach(otherChapter => {
+                if (chapters[otherChapter].prerequisites.includes(chapter)) {
+                    chapters[chapter].dependentsCount += 1;
+                }
+            });
+        }
+
+        if (chapters[chapter].level > 0) {
+            return chapters[chapter].level;
+        }
+        if (chapters[chapter].prerequisites.length === 0) {
+            chapters[chapter].level = 0;
+            return 0;
+        }
+        let maxPrereqLevel = 0;
+        chapters[chapter].prerequisites.forEach(prereq => {
+            if (chapters[prereq]) {
+                const prereqLevel = computeLevel(prereq);
+                if (prereqLevel > maxPrereqLevel) {
+                    maxPrereqLevel = prereqLevel;
+                }
+            }
+        });
+        chapters[chapter].level = maxPrereqLevel + 1;
+        return chapters[chapter].level;
+    }
+
+    // Second pass: compute levels
+    Object.keys(chapters).forEach(chapter => {
+        computeLevel(chapter);
+    });
+
+
+    // Show results as links
+    const main = document.querySelector('main');
+    Object.keys(chapters).forEach(chapter => {
+        const chapterData = chapters[chapter];
+        const levelStr = String(chapterData.level).padStart(2, '0') + String(chapterData.dependentsCount).padStart(2, '0');
+        const link = document.createElement('a');
+        link.href = `{{ site.url }}/${chapter}`;
+        link.textContent = `${levelStr} - ${chapter.replace(/-/g, ' ')
+            .charAt(0).toUpperCase() + chapter.replace(/-/g, ' ').slice(1)}`;
+        const para = document.createElement('p');
+        para.appendChild(link);
+        main.appendChild(para);
+    });
+</script>
