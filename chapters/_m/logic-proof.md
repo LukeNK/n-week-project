@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Logic and Proofs
 ---
-## Logic and Proofs
 Logic is very easy to understand. If it is hard for you, you have a bigger problem that this chapter cannot solve. However, to save time, mathematicians created multiple notations to make their lives easier (and our lives a bit harder). This chapter is an attempt to quickly summarize those notations and acts as a reference sheet whenever you see strange logic notations.
 
 ### Symbols and notations

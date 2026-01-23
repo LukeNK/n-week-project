@@ -25,8 +25,6 @@ layout: base
 
     <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
 
-    <p>A lot of times, the topics are cross-disciplined and are useful in multiple fields, making sorting them into one particular part difficult. If that is the case, the topic will be put in a Part that is the most popular to be associated with that topic, then other cross-disciplined fields will be indicated in a bracket on the title of that topic. Therefore, if you did not find a topic you want to see in a part, maybe other parts will contain the concept you want to understand.</p>
-
     <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
 
     <nav>
@@ -49,6 +47,7 @@ layout: base
         {% for page in collection.docs %}
             {% assign id = page.url | split: "/" | last | split: "." | first %}
             <div class="chapter" id="{{ id }}">
+                <h2>{{ page.title }}</h2>
                 {{ page.content | markdownify }}
             </div>
         {% endfor %}

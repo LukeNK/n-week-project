@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Electron Configuration
 ---
-## Electron Configuration
 ### Introduction: The modern model of atoms
 This section is for a simplified explanation of what is going on. It is not required if you are in a hurry but is highly recommended to grasp the deeper understanding of the explanations in the latter sections.
 

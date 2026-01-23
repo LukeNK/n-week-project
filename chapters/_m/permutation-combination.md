@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Permutation and Combination
 ---
-## Permutation and Combination
 The difference between **permutation** and **combination** is in the order. **Permutation is an ordered combination** or in other words, a combination does not concern the order.
 
 **Order does not matter** here means that a 123 string is the same as a 213 string.

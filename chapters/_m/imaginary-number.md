@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Imaginary Numbers
 ---
-## Complex Numbers
 ### Introduction
 The definition of a **complex number**:
 <eq> i = \sqrt{-1} </eq>

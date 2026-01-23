@@ -1,9 +1,9 @@
 ---
 layout: chapter
+title: Integrals
 prerequisites:
   - m/derivative
 ---
-<h2 id="sec-a-integral">Integrals</h2>
 It is an absolute requirement that the reader understands derivatives, which in turn requires the knowledge of limits.
 
 ### Why antiderivative is integral?

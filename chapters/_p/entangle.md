@@ -1,9 +1,9 @@
 ---
 layout: chapter
+title: Combine Qubits, Tensor Product, and Quantum Entanglement
 prerequisites:
   - p/qubit
 ---
-## Combine Qubits, Tensor Product, and Quantum Entanglement
 This chapter is quite long due to the connected nature of these three concepts. As a preview, a tensor product is a way to combine qubits, while entanglement is a math equation from two tensor products.
 
 Moreover, this chapter is math-heavy to explain the computation behind the basic intuition of superposition (which is sometimes portrayed wrongly). When you approach it from a mathematical perspective, qubit becomes less of something magic and much more realistic. After this section, you will realize that superposition is the representation of a mathematical concept — it is a math equation that you can _experience_ in reality.

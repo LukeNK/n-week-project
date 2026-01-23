@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Mechanical Force, Work, Power, and Energy
 ---
-## Mechanical Force, Work, Power, and Energy
 This is a chapter to distinguish the four concepts and draw a connection between them. This chapter concerns mechanical physics so you might need to look somewhere else for thermal and electrical energy.
 
 ### Force

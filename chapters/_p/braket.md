@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Bra–ket Notation
 ---
-## Bra–ket Notation
 ### Introduction
 The bra–ket notation provides a separation from the term “vector” that is used for quantities like displacement or velocity — these vectors tend to be related to the three dimensions of space. In quantum mechanics, a “state” is more complex and involves more abstract multi- or infinite-dimensional vector space (that is, it has multiple axes instead of x, y, and z). At an elementary level, the bra–ket notation is just another way of denoting an arrow over a label for vectors.
 

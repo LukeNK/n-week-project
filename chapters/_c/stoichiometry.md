@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Stoichiometry
 ---
-## Stoichiometry
 Stoichiometry simply means that we are dealing with chemical reactions and the quantitative data from such reactions (like weight, volume, number of atoms, etc...).
 
 <h3 id="sec-c-mole">The mole — the central number of chemistry</h3>

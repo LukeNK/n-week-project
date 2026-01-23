@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Useful Figures and Formulas in Chemistry
 ---
-## Useful Figures and Formulas in Chemistry
 **The periodic table of the elements** is arguably one, if not, the most important thing to have when learning chemistry. For the high school level, the most useful periodic table is the one that has ion charges of the elements.
 
 **A table of common symbols used in formulas** can be found in <a href="#tab-c0"></a>

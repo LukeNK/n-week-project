@@ -1,7 +1,7 @@
 ---
 layout: chapter
+title: Sets
 ---
-## Sets
 Because sets are fairly simple to understand, this chapter will act more as a quick reference sheet.
 
 ### Basic

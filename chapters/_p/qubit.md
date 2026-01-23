@@ -1,9 +1,9 @@
 ---
 layout: chapter
+title: Qubits Introduction
 prerequisites:
   - p/braket
 ---
-## Qubit Introduction
 "God does not play dice" — Albert Einstein
 
 "Stop telling God what to do" — Niels Bohr
