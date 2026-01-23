@@ -42,7 +42,7 @@ layout: base
         <h1>{{ collection.name }}</h1>
         {% for page in collection.docs %}
             {% assign id = page.url | split: "/" | last | split: "." | first %}
-            <div class="chapter" id="{{ id }}">
+            <div class="chapter" id="{{ collection.label }}-{{ id }}">
                 <h2>{{ page.title }}</h2>
                 {% if page.prerequisites.size > 0 %}
                     <i>Prerequisites: {{ page.prerequisites | array_to_sentence_string }}</i>

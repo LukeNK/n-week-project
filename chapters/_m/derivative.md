@@ -194,4 +194,4 @@ If you think of  $dg/dh$ as "derivative of $g$ when plugging in $h$", another in
 </eq>
 
 ### Additional material
-It is recommended that you explore <a href="#integral"></a> for the _inverse_ concept of derivative: anti-derivative. For other additional reading material connecting to calculus as a whole, place look at <a href="#sec-a-integral-material"></a>.
+It is recommended that you explore <a href="#m-integral"></a> for the _inverse_ concept of derivative: anti-derivative. For other additional reading material connecting to calculus as a whole, place look at <a href="#sec-a-integral-material"></a>.
