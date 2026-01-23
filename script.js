@@ -135,7 +135,7 @@ if (toc) {
         } else {
         chapter++;
         toc.innerHTML +=
-            `<p><a href="#${chapter}">
+            `<p><a href="#${e.parentElement.id}">
                 <b>${chapter}</b>.<nbp>
                 ${e.innerText}
             </a></p>`;
