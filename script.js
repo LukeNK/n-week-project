@@ -120,6 +120,7 @@ document.querySelectorAll('a').forEach(a => {
     if (!document.getElementById(ref.slice(1))) {
         a.parentElement.classList.add('error');
         a.parentElement.title = 'This paragraph contains broken link';
+        a.innerText = a.getAttribute('href');
         console.log(a)
         return;
     }
