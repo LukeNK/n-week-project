@@ -1,6 +1,7 @@
 url: /n-week-project
 theme: null
 permalink: /:collection/:name
+collections_dir: chapters
 
 collections:
   c:
