@@ -1,5 +1,7 @@
 ---
 layout: chapter
+prerequisites:
+  - p/braket
 ---
 ## Qubit Introduction
 "God does not play dice" — Albert Einstein

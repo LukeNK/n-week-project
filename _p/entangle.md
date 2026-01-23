@@ -1,5 +1,7 @@
 ---
 layout: chapter
+prerequisites:
+  - p/qubit
 ---
 ## Combine Qubits, Tensor Product, and Quantum Entanglement
 This chapter is quite long due to the connected nature of these three concepts. As a preview, a tensor product is a way to combine qubits, while entanglement is a math equation from two tensor products.
