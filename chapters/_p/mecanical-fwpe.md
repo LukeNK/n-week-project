@@ -15,7 +15,7 @@ Thanks to Sir Issac Newton, we have three Newton laws of motion that describe th
     An object at rest remains at rest, or if in motion, remains in motion at a constant velocity unless acted on by a net external force
 </quote>
 
-In short, if the $\vec{F}_{net} = 0$ then the object will continue to do what it is doing. This law resulted in the existence of **momentum**: you don't need to do anything to keep an object moving in a no-friction environment — it is the _change_ in motion that requires a force to alter the object's movement.
+In short, if the $ \vec{F}_{net} = 0 $ then the object will continue to do what it is doing. This law resulted in the existence of **momentum**: you don't need to do anything to keep an object moving in a no-friction environment — it is the *change* in motion that requires a force to alter the object's movement.
 
 <h4>Newton's second law</h4>
 The algebraic version of Newton's second law is:
@@ -34,8 +34,8 @@ If body $A$ exerts a force $\vec{F}$ on body $B$, then $B$ simultaneously exerts
     \vec{F}_{AB} = -\vec{F}_{BA}
 </eq>
 
-A common misconception is that the action and the reaction forces cancel each other out. This was cleared out by the law's equation because the forces were considered on two different systems. For example, when pulling down on a vertical rope, a climber is exerting a force _on the rope_ ($\vec{F}_{AB}$), while the rope is pulling upward _on the person_ ($-\vec{F}_{BA}$). When you draw a free-body diagram, the downward vector is the gravitational vector pulling _on the person_, so it is not $\vec{F}_{AB}$. Repeat: $\vec{F}_{AB}$ DOES NOT CANCEL $-\vec{F}_{BA}$.
-
+<!-- Error: because the _ is also italic in MD, so the MD got precedence before MathJax -->
+A common misconception is that the action and the reaction forces cancel each other out. This was cleared out by the law's equation because the forces were considered on two different systems. For example, when pulling down on a vertical rope, a climber is exerting a force *on the rope* ($ \vec{F}\_{AB} $), while the rope is pulling upward *on the person* ($ -\vec{F}\_{BA} $). When you draw a free-body diagram, the downward vector is the gravitational vector pulling *on the person*, so it is not $ \vec{F}\_{AB} $. Repeat: $ \vec{F}\_{AB} $ DOES NOT CANCEL $ -\vec{F}\_{BA} $.
 ### Work
 Work is simply what the force accomplishes. Try to ask yourselves "How much work you have done today" and that is what work is telling you about a force.
 <eq>
