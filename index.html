@@ -35,10 +35,6 @@ layout: base
         -->
     </nav>
 
-    {% comment %}
-        https://stackoverflow.com/questions/71475643/include-another-page-with-jekyll-without-displaying-front-matter
-    {% endcomment %}
-
     {% for collection in site.collections %}
         {% if collection.label == "posts" %}
             {% continue %}
@@ -48,6 +44,9 @@ layout: base
             {% assign id = page.url | split: "/" | last | split: "." | first %}
             <div class="chapter" id="{{ id }}">
                 <h2>{{ page.title }}</h2>
+                {% if page.prerequisites.size > 0 %}
+                    <i>Prerequisites: {{ page.prerequisites | array_to_sentence_string }}</i>
+                {% endif %}
                 {{ page.content | markdownify }}
             </div>
         {% endfor %}
