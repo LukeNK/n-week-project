@@ -1,6 +1,6 @@
 url: /n-week-project
 theme: null
-permalink: none
+permalink: /:collection/:name
 
 collections:
   c:
