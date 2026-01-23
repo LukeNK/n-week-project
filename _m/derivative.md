@@ -1,5 +1,7 @@
 ---
 layout: chapter
+prerequisites:
+  - m/limit
 ---
 ## Derivatives
 It is recommended that the reader understand about limits before proceeding.
