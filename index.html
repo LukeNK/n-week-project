@@ -21,9 +21,11 @@ layout: base
     <h2 noNumber>About This Note</h2>
     <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
 
-    <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet. Despite there being topics that are "harder" than other topics, it does not mean that learning the latter is the requirement for the "more difficult" topics.</p>
+    <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet.</p>
 
     <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
+
+    <p>In 2026, the Note undergoes a major layout shift. Currently, the parts and chapters are sorted alphabetically, because the Note intended to be a "dictionary" of topics rather than a linear textbook. However, there there are certain topics that requires prior knowledge from previous chapters, so the Note includes a prerequisite system to help guide the reader through the necessary background knowledge. At the heart of the system is "level": a course without prerequisite will have level 0, while a course at level 1 will have at least one course at level 0 as a prerequisite.</p>
 
     <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
 
@@ -69,4 +71,88 @@ layout: base
             </div>
         {% endfor %}
     {% endfor %}
+
+    <h1>Appendix</h1>
+    <h2>Chapters Sorted by Level</h2>
+    <table id="navLevels">
+        <caption>Chapters Sorted by Level</caption>
+    </table>
 </main>
+
+<script>
+    // Script to check prerequisites and assign levels
+    const dataElements = document.querySelectorAll('data');
+    const chapters = {};
+
+    // First pass: collect prerequisites
+    dataElements.forEach(data => {
+        const subject = data.getAttribute('subject');
+        const chapter = data.getAttribute('chapter');
+        const prerequisites = data.getAttribute('prerequisites').split(',').filter(prereq => prereq.trim() !== '');
+        chapters[chapter] = { subject, prerequisites, level: 0 };
+    });
+
+    // Function to compute level recursively
+    function computeLevel(chapter) {
+        if (chapters[chapter].level > 0) {
+            return chapters[chapter].level;
+        }
+        if (chapters[chapter].prerequisites.length === 0) {
+            chapters[chapter].level = 0;
+            return 0;
+        }
+        let maxPrereqLevel = 0;
+        chapters[chapter].prerequisites.forEach(prereq => {
+            if (chapters[prereq]) {
+                const prereqLevel = computeLevel(prereq);
+                if (prereqLevel > maxPrereqLevel) {
+                    maxPrereqLevel = prereqLevel;
+                }
+            }
+        });
+        chapters[chapter].level = maxPrereqLevel + 1;
+        return chapters[chapter].level;
+    }
+
+    // Second pass: compute levels
+    Object.keys(chapters).forEach(chapter => {
+        computeLevel(chapter);
+    });
+
+    // assign levels to data elements
+    dataElements.forEach(data => {
+        const chapter = data.getAttribute('chapter');
+        const levelSpan = data.querySelector('.level');
+        levelSpan.textContent = chapters[chapter].level;
+    });
+
+    // sort by level
+    const sortedChapters = Object.keys(chapters).sort((a, b) => {
+        return chapters[a].level - chapters[b].level;
+    });
+
+    // output result as table, with each row is a level and each column is a subject. Each cell contains links to chapters of the same subject of the same level. The column arrangement is based on the order of first appearance of subjects.
+    const navLevelsTable = document.getElementById('navLevels');
+    const subjectsOrder = [];
+    Object.values(chapters).forEach(chapter => {
+        if (!subjectsOrder.includes(chapter.subject)) {
+            subjectsOrder.push(chapter.subject);
+        }
+    });
+    let currentLevel = -1;
+    let currentRow;
+    sortedChapters.forEach(chapterKey => {
+        const chapter = chapters[chapterKey];
+        if (chapter.level !== currentLevel) {
+            currentLevel = chapter.level;
+            currentRow = document.createElement('tr');
+            currentRow.innerHTML += `<th>Level ${currentLevel}</th>`;
+            for (let subject of subjectsOrder)
+                currentRow.innerHTML += `<td></td>`;
+            navLevelsTable.appendChild(currentRow);
+        }
+        const subjectIndex = subjectsOrder.indexOf(chapter.subject) + 1; // +1 for level cell
+        const cell = currentRow.children[subjectIndex];
+        cell.innerHTML += `<a href="#${chapterKey}">${chapterKey}</a><br>`;
+    });
+</script>
