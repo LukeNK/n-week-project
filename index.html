@@ -1,95 +1,56 @@
 ---
 layout: base
 ---
-<header>
-    <div>
-        <img src="https://lukenk.github.io/print/letterhead.svg" alt="">
-        <p class="med">
-            LukeNK
-        </p>
-    </div>
-    <p class="large">THE NOTE OF SCIENCE&nbsp;TOPICS</p>
-    <object data="header.png" type="image/png">
-        <img src="header.jpg">
-    </object>
-    <p>
-        N-week project<br>
-        Publication <time></time>
-    </p>
-</header>
-<main class="loading">
-    <h2 noNumber>About This Note</h2>
-    <p>This Note is constructed into multiple parts, each based on the content of a big subject or field. In each part are topics that were sorted in ascending difficulty based on Luke's personal experience, not necessarily based on the actual comprehension difficulty.</p>
+<style>
+    data {
+        display: none;
+    }
+</style>
 
-    <p>When reading about a topic, it is expected that you will start to search about the terminologies as well as the concepts that were mentioned that you did not understand. A good place to begin looking up is in this guide itself before going to the internet.</p>
-
-    <p>This Note was written in a way to provide intuition to difficult topics, giving a different perspective to digest a concept. On other topics, this Note acts as a cheat sheet for a quick review before tests. Whatever the case might be, I hope you find this Note somewhat helpful on the path that you choose. It is recommended that you follow through on a topic to the end, as most of the time topics are structured in a way that does not repeat the mentioned notices more than once.</p>
-
-    <p>In 2026, the Note undergoes a major layout shift. Currently, the parts and chapters are sorted alphabetically, because the Note intended to be a "dictionary" of topics rather than a linear textbook. However, there there are certain topics that requires prior knowledge from previous chapters, so the Note includes a prerequisite system to help guide the reader through the necessary background knowledge. At the heart of the system is "level": a course without prerequisite will have level 0, while a course at level 1 will have at least one course at level 0 as a prerequisite.</p>
-
-    <p>The Note of Science Topics by Luke NK is free and unlicensed. The author simply suggests the astute reader share this with anybody who needs a different perspective to look at the topics. Knowledge is best used when everybody knows it.</p>
-
-    <nav>
-        <h2 noNumber>Chapters</h2>
-        <!--
-            Call it chapters for now because there is no page number yet
-            Also there is no link to the chapters yet
-        -->
-    </nav>
-
-    {% for subject in site.collections %}
-        {% if subject.label == "posts" %}
-            {% continue %}
-        {% endif %}
-        <h1>{{ subject.name }}</h1>
-        {% assign docs = subject.docs | sort: "title" %}
-        {% for chapter in docs %}
-            {% assign id = chapter.url | split: "/" | last | split: "." | first %}
-            <div class="chapter" id="{{ subject.label }}-{{ id }}">
-                <h2>{{ chapter.title }}</h2>
-                <data
-                    subject="{{ subject.name }}"
-                    chapter="{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}"
-                    prerequisites="{{ chapter.prerequisites | join: ',' }}"
-                >
-                    <code>{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}</code><br>
-                    <div>
-                        <b>Level</b><br>
-                        <span class="level"></span>
-                    </div>
-                    <div>
-                        <b>Prerequisites</b><br>
-                        {% for prerequisite in chapter.prerequisites %}
-                            <a href="#{{ prerequisite }}">{{ prerequisite }}</a><br>
-                        {% else %}
-                            <i>None</i>
-                        {% endfor %}
-                    </div>
-                </data>
-
-                {{ chapter.content | markdownify }}
-            </div>
-        {% endfor %}
+<!-- Import data -->
+{% for collection in site.collections %}
+    {% for page in collection.docs %}
+        <data
+            subject="{{ collection.name }}"
+            chapter="{{ page.url | slice: 1, page.url.size | replace: '/', '-' }}"
+        >{{ page.prerequisites | join: ',' }}</data>
     {% endfor %}
+{% endfor %}
+<main>
+    <header>
+        <div>
+            <img src="https://lukenk.github.io/print/letterhead.svg" alt="">
+            <p class="med">
+                LukeNK
+            </p>
+        </div>
+        <p class="large">THE NOTE OF SCIENCE&nbsp;TOPICS</p>
+        <p>
+            N-week project<br>
+            Publication <time></time>
+        </p>
+    </header>
 
-    <h1>Appendix</h1>
-    <h2>Chapters Sorted by Level</h2>
     <table id="navLevels">
-        <caption>Chapters Sorted by Level</caption>
+        <caption>Prerequisite Levels</caption>
     </table>
 </main>
 
+<!--
+    Assign course numbering to each chapter
+    Each chapter with be assigned a four-digit code
+    The first two digits are the level of the chapter, starting from 00 for subjects with no prerequisites
+-->
 <script>
-    // Script to check prerequisites and assign levels
     const dataElements = document.querySelectorAll('data');
     const chapters = {};
 
     // First pass: collect prerequisites
-    dataElements.forEach(data => {
+    dataElements.forEach((data, number) => {
         const subject = data.getAttribute('subject');
         const chapter = data.getAttribute('chapter');
-        const prerequisites = data.getAttribute('prerequisites').split(',').filter(prereq => prereq.trim() !== '');
-        chapters[chapter] = { subject, prerequisites, level: 0 };
+        const prerequisites = data.textContent.split(',').filter(prereq => prereq.trim() !== '');
+        chapters[chapter] = { subject, prerequisites, level: 0, number: number + 1 };
     });
 
     // Function to compute level recursively
@@ -119,40 +80,26 @@ layout: base
         computeLevel(chapter);
     });
 
-    // assign levels to data elements
-    dataElements.forEach(data => {
-        const chapter = data.getAttribute('chapter');
-        const levelSpan = data.querySelector('.level');
-        levelSpan.textContent = chapters[chapter].level;
-    });
-
     // sort by level
     const sortedChapters = Object.keys(chapters).sort((a, b) => {
         return chapters[a].level - chapters[b].level;
     });
 
-    // output result as table, with each row is a level and each column is a subject. Each cell contains links to chapters of the same subject of the same level. The column arrangement is based on the order of first appearance of subjects.
-    const navLevelsTable = document.getElementById('navLevels');
-    const subjectsOrder = [];
-    Object.values(chapters).forEach(chapter => {
-        if (!subjectsOrder.includes(chapter.subject)) {
-            subjectsOrder.push(chapter.subject);
-        }
-    });
+    // Output result as table, with each row is a level
+    const table = document.getElementById('navLevels');
     let currentLevel = -1;
-    let currentRow;
-    sortedChapters.forEach(chapterKey => {
-        const chapter = chapters[chapterKey];
-        if (chapter.level !== currentLevel) {
-            currentLevel = chapter.level;
-            currentRow = document.createElement('tr');
-            currentRow.innerHTML += `<th>Level ${currentLevel}</th>`;
-            for (let subject of subjectsOrder)
-                currentRow.innerHTML += `<td></td>`;
-            navLevelsTable.appendChild(currentRow);
+    sortedChapters.forEach(chapter => {
+        const level = chapters[chapter].level;
+        if (level !== currentLevel) {
+            currentLevel = level;
+            table.innerHTML += `<tr><th colspan="2">Level ${level}</th></tr>`;
         }
-        const subjectIndex = subjectsOrder.indexOf(chapter.subject) + 1; // +1 for level cell
-        const cell = currentRow.children[subjectIndex];
-        cell.innerHTML += `<a href="#${chapterKey}">${chapterKey}</a><br>`;
+
+        let link = chapter.replace('-', '/');
+
+        table.innerHTML += `<tr>
+            <td><a href="{{ site.url }}/${link}">${link}</a></td>
+            <td><a href="{{ site.url}}/full/#${chapter}">Chapter ${chapters[chapter].number}</a></td>
+        </tr>`;
     });
 </script>

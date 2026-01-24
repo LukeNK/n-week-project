@@ -113,6 +113,7 @@ h4::before {
 
 #navLevels td {
     text-align: left;
+    vertical-align: top;
 }
 
 mjx-assistive-mml {
