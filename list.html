@@ -1,8 +1,11 @@
 ---
 layout: base
 ---
-
-<!-- This is the webpage to show the prerequisites -->
+<style>
+    data {
+        display: none;
+    }
+</style>
 
 <!-- Import data -->
 {% for collection in site.collections %}
@@ -13,7 +16,25 @@ layout: base
         >{{ page.prerequisites | join: ',' }}</data>
     {% endfor %}
 {% endfor %}
-<main><time datetime=""></time></main>
+<main>
+    <header>
+        <div>
+            <img src="https://lukenk.github.io/print/letterhead.svg" alt="">
+            <p class="med">
+                LukeNK
+            </p>
+        </div>
+        <p class="large">THE NOTE OF SCIENCE&nbsp;TOPICS</p>
+        <p>
+            N-week project<br>
+            Publication <time></time>
+        </p>
+    </header>
+
+    <table id="navLevels">
+        <caption>Prerequisite Levels</caption>
+    </table>
+</main>
 
 <!--
     Assign course numbering to each chapter
@@ -25,11 +46,11 @@ layout: base
     const chapters = {};
 
     // First pass: collect prerequisites
-    dataElements.forEach(data => {
+    dataElements.forEach((data, number) => {
         const subject = data.getAttribute('subject');
         const chapter = data.getAttribute('chapter');
         const prerequisites = data.textContent.split(',').filter(prereq => prereq.trim() !== '');
-        chapters[chapter] = { subject, prerequisites, level: 0 };
+        chapters[chapter] = { subject, prerequisites, level: 0, number: number + 1 };
     });
 
     // Function to compute level recursively
@@ -65,31 +86,20 @@ layout: base
     });
 
     // Output result as table, with each row is a level
-    const main = document.querySelector('main');;
-    const table = document.createElement('table');
+    const table = document.getElementById('navLevels');
     let currentLevel = -1;
-    let tbody = null;
     sortedChapters.forEach(chapter => {
         const level = chapters[chapter].level;
         if (level !== currentLevel) {
             currentLevel = level;
-            tbody = document.createElement('tbody');
-            const headerRow = document.createElement('tr');
-            const headerCell = document.createElement('th');
-            headerCell.colSpan = 2;
-            headerCell.textContent = `Level ${level}`;
-            headerRow.appendChild(headerCell);
-            tbody.appendChild(headerRow);
-            table.appendChild(tbody);
+            table.innerHTML += `<tr><th colspan="2">Level ${level}</th></tr>`;
         }
-        const row = document.createElement('tr');
-        const chapterCell = document.createElement('td');
-        chapterCell.textContent = chapter;
-        const subjectCell = document.createElement('td');
-        subjectCell.textContent = chapters[chapter].subject;
-        row.appendChild(chapterCell);
-        row.appendChild(subjectCell);
-        tbody.appendChild(row);
+
+        let link = chapter.replace('-', '/');
+
+        table.innerHTML += `<tr>
+            <td><a href="{{ site.url }}/${link}">${link}</a></td>
+            <td><a href="{{ site.url}}#${chapter}">Chapter ${chapters[chapter].number}</a></td>
+        </tr>`;
     });
-    main.appendChild(table);
 </script>
