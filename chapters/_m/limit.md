@@ -277,18 +277,12 @@ then for some real number $a$:
 </eq>
 Read: If we certainly know that, inside the range we are evaluating, $h(x)$ is always between the other two functions, then if the limit of both $f(x)$ and $g(x)$ is equal to a number, then those two limits "sandwich" $h(x)$ to that same value.
 
-For example, we have the following function with the graph from <a href="#fig-a7"></a> and <a href="#fig-a6"></a>:
+For example, we have the following function with the graph from <a href="#fig-a7"></a>:
 \\[ x^2 \sin\left( \frac{1}{x} \right) \\]
-<div class="figure">
-    <figure>
-        <img src="{{ site.url }}/figures/a/7.png" alt="The graph of x^2 sin(1/x) and ±x^2">
-        <figcaption>The graph of $ x^2\sin{\frac{1}{x}} $ and $ \pm x^2 $</figcaption>
-    </figure>
-    <figure>
-        <img src="{{ site.url }}/figures/a/6.png" alt="The graph zoomed in">
-        <figcaption>The graph zoomed in</figcaption>
-    </figure>
-</div>
+<figure>
+    <img src="{{ site.url }}/figures/a/7.png" alt="The graph of x^2 sin(1/x) and ±x^2">
+    <figcaption>The graph of $ x^2\sin{\frac{1}{x}} $ and $ \pm x^2 $</figcaption>
+</figure>
 
 Of course, we can observe from the graph that the function approaches $0$ as $x\to0$, but what if we don't have the graph? We know from the property of a sine graph that the coefficient at the front will determine the height of the graph. Therefore, we know that:
 \\[

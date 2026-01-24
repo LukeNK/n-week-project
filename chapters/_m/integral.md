@@ -24,7 +24,7 @@ If we have $f(x)=c$, the graph of our constructed function will look like <a hre
     </figure>
 </div>
 
-If we move $a$ a $dx$ amount to the right and want to find the area at that point, we plug $A(a+dx)$. If you look at the red rectangle on the figure, there are two ways to interpret that area:
+If we move $a$ a $dx$ amount to the right and want to find the area at that point, we plug $A(a+dx)$. If you look at the purple rectangle on the figure, there are two ways to interpret that area:
 
 - It is the area of $A(a+dx)$ subtracted by $A(a)$
 - It is the area created by the increase in the variable $a$ (which is $dx$) multiplied by the height of that area $f(a)$ (in this case, we plug the number in to find the height).
