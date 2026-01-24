@@ -134,12 +134,12 @@ if (toc) {
         if (e.tagName === 'H1') {
             toc.innerHTML += `<span>${e.innerText}</span>`;
         } else {
-        chapter++;
-        toc.innerHTML +=
-            `<p><a href="#${e.parentElement.id}">
-                <b>${chapter}</b>.<nbp>
-                ${e.innerText}
-            </a></p>`;
+            chapter++;
+            toc.innerHTML +=
+                `<p><a href="#${e.parentElement.id}">
+                    <b>${chapter}</b>.<nbp>
+                    ${e.innerText}
+                </a></p>`;
         }
     });
 }
