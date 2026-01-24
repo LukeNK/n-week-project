@@ -35,19 +35,37 @@ layout: base
         -->
     </nav>
 
-    {% for collection in site.collections %}
-        {% if collection.label == "posts" %}
+    {% for subject in site.collections %}
+        {% if subject.label == "posts" %}
             {% continue %}
         {% endif %}
-        <h1>{{ collection.name }}</h1>
-        {% for page in collection.docs %}
-            {% assign id = page.url | split: "/" | last | split: "." | first %}
-            <div class="chapter" id="{{ collection.label }}-{{ id }}">
-                <h2>{{ page.title }}</h2>
-                {% if page.prerequisites.size > 0 %}
-                    <i>Prerequisites: {{ page.prerequisites | array_to_sentence_string }}</i>
-                {% endif %}
-                {{ page.content | markdownify }}
+        <h1>{{ subject.name }}</h1>
+        {% assign docs = subject.docs | sort: "title" %}
+        {% for chapter in docs %}
+            {% assign id = chapter.url | split: "/" | last | split: "." | first %}
+            <div class="chapter" id="{{ subject.label }}-{{ id }}">
+                <h2>{{ chapter.title }}</h2>
+                <data
+                    subject="{{ subject.name }}"
+                    chapter="{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}"
+                    prerequisites="{{ chapter.prerequisites | join: ',' }}"
+                >
+                    <code>{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}</code><br>
+                    <div>
+                        <b>Level</b><br>
+                        <span class="level"></span>
+                    </div>
+                    <div>
+                        <b>Prerequisites</b><br>
+                        {% for prerequisite in chapter.prerequisites %}
+                            <a href="#{{ prerequisite }}">{{ prerequisite }}</a><br>
+                        {% else %}
+                            <i>None</i>
+                        {% endfor %}
+                    </div>
+                </data>
+
+                {{ chapter.content | markdownify }}
             </div>
         {% endfor %}
     {% endfor %}

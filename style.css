@@ -84,6 +84,7 @@ h2 {
     top: 20px;
     backdrop-filter: blur(5px);
     z-index: 1; */
+    margin-bottom: 0;
 }
 h2:not([noNumber])::before {
     display: block;
@@ -118,6 +119,18 @@ mjx-assistive-mml {
 }
 
 /* Content styling */
+data {
+    display: flex;
+    gap: 1rem;
+}
+data > code {
+    flex: 1  1 0;
+}
+data > div:last-child {
+    border-left: 1px solid black;
+    padding-left: 1rem;
+}
+
 p {
     text-indent: 2rem;
     text-align: justify;
@@ -201,7 +214,7 @@ th, td {
     text-align: center;
 }
 
-/* labels */
+/* equation */
 eq {
     position: relative;
     display: block;
