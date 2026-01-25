@@ -128,10 +128,10 @@ The joint state $|\psi\rangle_{AB} \in \mathbb{C}^2\otimes\mathbb{C}^2$ can be e
         \alpha_A|\psi\rangle_B \\ \beta_A|\psi\rangle_B
     \end{pmatrix}
     = \begin{pmatrix}
-        \alpha_A\alpha_B \\\\\\
-        \alpha_A\beta_B \\\\\\
-        \beta_A\alpha_B \\\\\\
-        \beta_A\beta_B \\\\\\
+        \alpha_A\alpha_B \\
+        \alpha_A\beta_B \\
+        \beta_A\alpha_B \\
+        \beta_A\beta_B \\
     \end{pmatrix}
 </eq>
 As you can see, each row of the product is simply the amplitude of a basis vector in a direction. Probabilistic-wise, it simply shows the probability of two independent events happening together (two states appearing together). Moreover, the example shows you why combining qubits makes the vector space grow exponentially to $n$: for every $\alpha_i$ there will be $n$ number of $\alpha_{i+1}$, and so on.
