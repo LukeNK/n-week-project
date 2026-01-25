@@ -1,10 +1,10 @@
 ---
-layout: draft
+layout: chapter
+title: Vector Introduction
 ---
-## Vectors in coordinate space
 _If you are reading this section with the image of an arrow, then this is a chapter for you. If you are seeking for a tuple or even more, then this section will be a brief primer for that._ This chapter does not concern about the correct definitions of things but rather focusing on making you understand the concepts as well as the connection between each level of visualization.
 
-This chapter will walk the reader through three seemingly different ways to imagine a vector, each of them the Author encountered in different grade highschool<note>Vietnamese highschool system has 3 grades: 10 to 12</note>. However, teachers rarely had the time to recall the old concepts before moving on to the main lesson, so this chapter is that bridge that the Author did not have.
+This chapter will walk the reader through three seemingly different ways to imagine a vector, each of them the Author encountered in different high school math classes. However, teachers rarely have the time to recall the old concepts before moving on to the main lesson, so this chapter is that bridge that the Author did not have.
 
 ### Vectors in geometry
 <figure>
@@ -13,7 +13,7 @@ This chapter will walk the reader through three seemingly different ways to imag
 </figure>
 The first intuition to get is the fact that a vector is simply an instruction to move from one place (point) to another. In <a href="#fig-m1"></a>, we also notice that even if we move from A to B then to C, it is still end up as if we moved directly from A to C. Therefore, we can represent **vector addition** with this:
 <eq> \vec{AB} + \vec{BC} = \vec{AC} </eq>
-A good intuition is simply to connect the vector head-to-tail — we most get to the point B first before we continue our journey from B to C. However, we must remember that it is not the destination that matters<note>As the saying goes: "It is not the destination but the journey that matters"</note>, but the length and the direction — it just happen that if you started from a point and ended up at the same terminal point, then you must have gone the same direction and length.
+A good intuition is simply to connect the vector head-to-tail — we most get to the point B first before we continue our journey from B to C. However, we must remember that it is not the destination that matters<note>As the saying goes: "It is not the destination but the journey that matters"</note>, but the length and the direction — it just happen that if you started from a point and ended up at the same terminal point, then your displacement is the same.
 
 We also notice that there are two directions between two points that are opposite from each other, therefore **opposite vectors** can be represented with:
 <eq id="eq-m3"> \vec{AB} = -\vec{BA} </eq>
@@ -30,7 +30,6 @@ If after all of the instruction, we come back to our starting place, we call it 
     = \vec{0}
 </eq>
 
-
 In case we want to add two vectors with the same initial point, we can use the **parallelogram laws**. Recall that a parallelogram is a shape with the facing sides are of equal length, therefore a parallelogram ABCD will have $AD = BC$. So if we have two vectors $\vec{AB}$ and $\vec{AD}$ that we want to add, we can construct a parallelogram with the vectors as two consective sides:
 <figure>
     <img src="{{ site.url }}/figures/m/4.png">
@@ -42,12 +41,11 @@ In case we want to add two vectors with the same initial point, we can use the *
     = \vec{AC}
 </eq>
 
-If instead of determine a set start and end for our vector, we can set it to be using an arbitrary name (commonly with a lower case letter) like $\vec{a}$.
+Finally, instead of determine a set start and end for our vector, we can set it to be using an arbitrary name (commonly with a lower case letter) like $\vec{a}$.
 
-From <a href="#eq-m3"></a>, we can see that $ \vec{AB} = -1\times\vec{BC} $, therefore a **multiple of a number with a vector** will return a scaled version of that vector. If we have a midpoint M of AC, what we get is the fact that AM is parallel to AC**:
+From <a href="#eq-m3"></a>, we can see that $ \vec{AB} = -1\times\vec{BC} $, therefore a **multiple of a number with a vector** will return a scaled version of that vector. If we have a midpoint M of AC, what we get is the fact that AM is parallel to AC:
 <eq> \vec{AM}&par;\vec{AC} &hArr; \vec{AM} = k\cdot\vec{AC}</eq>
 In this case, $k=1/2$.
-
 
 ### Vectors and coordinates
 <h4>General intuition</h4>
@@ -100,7 +98,42 @@ I think there is enough material on dot product, but one of the intruiging fact 
     = x_a x_b + y_a y_b
     = \mid \vec{a} \mid \mid \vec{b} \mid \cos{\theta}
 </eq>
-Both formulas are useful in different situations, depending on your knowns and unknowns. To derive the second formula from the first, you can use the cosine law on the triangle formed by the two vectors and their resultant.
+Both formulas are useful in different situations, depending on your knowns and unknowns. To derive the second formula from the first, you can use the cosine law on the triangle formed by the two vectors and their resultant. Dot product is also called the multiplication of projection: projecting one vector onto another and multiplying the length of the projection with the length of the other vector.
+
+The reason why the dot product is important is that it allows us to understand the relationship between two vectors. Most of the time, you will want to know whether it is zero or not: if it is zero, then the two vectors are perpendicular to each other. Otherwise, it is rather difficult to interpret the result of the dot product, but professors love to throw that in tests.
 
 ### Ordered list of number
 In sections above, we represented vectors as a list of numbers, forming a coordinates. What if we do not use a coordinate system and assign a different meaning to vectors? This is the very foundation of vector: it is a list of numbers in order. We just happen to use a coordinate plane to visualize them to ease the introduction to vectors.
+
+In this case, we can represent a vector $\vec{a}$ in n-dimension as:
+<eq>
+    \vec{a}
+    = (a_1, a_2, a_3, ..., a_n)
+</eq>
+This looks similar to the coordinate representation, and in a sense it is. Coordinate system is simple a representation of these ordered lists of numbers in a geometric way. However, it would be extremely hard to represent a 10-dimension vector in our world, so this is where the abstraction of vectors as ordered lists of numbers come in handy.
+
+Therefore, the math on vectors is similar to the coordinate system representation: we do addition and subtraction component-wise. The dot product is also the same as before. However, now we simply generalize the rule to n-dimensions: if we do an operation on a vector, we do it on each component of the vector.
+<eq>
+    \vec{a} + \vec{b}
+    = (a_1 + b_1, a_2 + b_2, ..., a_n + b_n)
+</eq>
+<eq>
+    c \times \vec{a}
+    = (c \times a_1, c \times a_2, ..., c \times a_n)
+</eq>
+<eq>
+    \vec{a} \cdot \vec{b}
+    = a_1 b_1 + a_2 b_2 + ... + a_n b_n
+</eq>
+
+Spcifically for 3-dimension vectors, we have the **cross product** which yields another vector that is perpendicular to both of the original vectors. The formula is as follows:
+<eq>
+    \vec{a} \times \vec{b}
+    = (a_2 b_3 - a_3 b_2, a_3 b_1 - a_1 b_3, a_1 b_2 - a_2 b_1)
+    =
+</eq>
+The direction of the resultant vector can be determined by the right-hand rule. If you realize it, the magnitude of the cross product is the dot product, but with sine so that perpendicular vectors yield the maximum result:
+<eq>
+    \vec{a} \times \vec{b}
+    = \mid \vec{a} \mid \mid \vec{b} \mid \sin{\theta}
+</eq>
