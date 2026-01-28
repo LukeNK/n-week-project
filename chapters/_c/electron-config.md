@@ -96,24 +96,24 @@ Taking from <a href="#fig-c1"></a>, lithium's electron configuration has 3 elect
     n\,l\,^x
 </eq>
 This makes the electron configuration for Li which has 3 electrons as:
-\begin{equation*}
+\\[
     1s^2\;2s^1
-\end{equation*}
+\\]
 
 Regarding the Aufbau principle, there are conflicting sources regarding whether you should sort according to the energy level or the shell's number order. This is up to you but consult your instructor for their preference. However, sorting by shell order is especially useful for writing the electron configuration of ions (which will be discussed later).
 
 **The core notation** allows us to condense the electron configuration of elements based on the last noble gas before the element in the periodic table. This is because of the property where noble gas has a full valence shell. For example, sodium follows immediately after neon, so we can simplify to the core notation with warping Ne in a square bracket:
-\begin{equation*}
+\\[
     1s^2 \; 2s^2 \; 2p^6 \; 3s^1
     \rightarrow
     [\text{Ne}] \; 3s^1
-\end{equation*}
+\\]
 
 The valence shell (the outermost shell) is also how chemists name the blocks from the periodic table. From the example above, Na is clearly from the s block, as its outermost subshell is s. Once again, keep in mind the Aufbau principle and the outermost shell is not necessarily the shell with the highest $n$ quantum number.
 
 Recall that a cation has fewer electrons (positively charged) and an anion has more, which will in turn remove some electrons from the electron configuration. For _only_ cations, sort the neutral atom's electron configuration from the smallest to the largest, disregarding the Aufbau principle. After that, simply add or remove the electron according to your sorted order. Because of that, Sn<sup>4+</sup> should not be written as [Kr] 5s<sup>2</sup> 4d<sup>8</sup> but instead as:
-\begin{equation*}
+\\[
     \text{[Kr]} \; 4d^{10}
-\end{equation*}
+\\]
 
 If an ion has the same electron configuration as another neutrally charged element, we call it **isoelectronic** with that element.
