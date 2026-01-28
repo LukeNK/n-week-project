@@ -82,6 +82,12 @@ We can further break down the **components** of the vector into x and y, and cal
     = (x_a + x_b, y_a + y_b)
 </eq>
 
+The reverse relationship also holds true: if you have the components of a vector, you can construct the vector to have its length and angle to an axis. This relationship is facilitated by the Cupid of Mathematics, Pythagorean:
+<eq>
+    \mid \vec{a} \mid = \sqrt{x^2 + y^2}
+    \qquad \theta = tan^{-1}(y / x)
+</eq>
+
 In the case of having an angle between two vectors, you can use the cosine law to find the resultant vector:
 <eq>
     c^2 = a^2 + b^2 + 2ab\cos{\theta}
