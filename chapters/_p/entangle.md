@@ -33,15 +33,15 @@ Now recall that qubits are simply the basis vectors multiplied by a certain ampl
 \\[\begin{aligned}
     |\psi_{AB}\rangle
     &= \frac{1}{2}|00\rangle + \frac{1}{2}|01\rangle + \frac{1}{2}|10\rangle + \frac{1}{2}|11\rangle \\\\\\
-    &= \frac{1}{2}(
-        \begin{pmatrix}1 \\ 0 \\ 0 \\ 0\end{pmatrix} +
-        \begin{pmatrix}0 \\ 1 \\ 0 \\ 0\end{pmatrix} +
-        \begin{pmatrix}0 \\ 0 \\ 1 \\ 0\end{pmatrix} +
-        \begin{pmatrix}0 \\ 0 \\ 0 \\ 1\end{pmatrix}
-    ) \\\\\\
-    &= \frac{1}{2}\begin{pmatrix}1 \\ 1 \\ 1 \\ 1\end{pmatrix}
+    &= \frac{1}{2} \left(
+        \begin{pmatrix}1 \\\ 0 \\\ 0 \\\ 0\end{pmatrix} +
+        \begin{pmatrix}0 \\\ 1 \\\ 0 \\\ 0\end{pmatrix} +
+        \begin{pmatrix}0 \\\ 0 \\\ 1 \\\ 0\end{pmatrix} +
+        \begin{pmatrix}0 \\\ 0 \\\ 0 \\\ 1\end{pmatrix}
+    \right) \\\\\\
+    &= \frac{1}{2}\begin{pmatrix}1 \\\ 1 \\\ 1 \\\ 1\end{pmatrix}
     = \begin{pmatrix}
-        1/2 \\ 1/2 \\ 1/2 \\ 1/2
+        1/2 \\\ 1/2 \\\ 1/2 \\\ 1/2
     \end{pmatrix}
 \end{aligned}\\]
 Upon verifying the norm of the vector with $4\times(\frac{1}{2})^2 = 1$, we can confirm that $|\psi_{AB}\rangle$ is a valid two-qubit quantum state, while the amplitudes tell us that those two qubits have an equal chance of being 00, 01, 10, or 11.
@@ -207,10 +207,10 @@ If we further break down the tensor product equation according to <a href="#eq-p
     (\alpha_A|0\rangle + \beta_A|1\rangle) \otimes
     (\alpha_B|0\rangle + \beta_B|1\rangle)
     = \begin{pmatrix}
-        \alpha_A\alpha_B \\\\\\
-        \alpha_A\beta_B \\\\\\
-        \beta_A\alpha_B \\\\\\
-        \beta_A\beta_B \\\\\\
+        \alpha_A\alpha_B \\\
+        \alpha_A\beta_B \\\
+        \beta_A\alpha_B \\\
+        \beta_A\beta_B
     \end{pmatrix}
 </eq>
 As you can see, the equation above implies the fact that these two qubits are working independently from each other. The fact that $|\psi\rangle_A$ is in a state does not change the possibilities in the other qubit.
