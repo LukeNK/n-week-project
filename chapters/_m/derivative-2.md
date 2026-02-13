@@ -5,7 +5,7 @@ prerequisites:
   - m-derivative
 ---
 
-### Implicit differenciation
+### Implicit differentiation
 When being introduced to derivatives, we mostly focus on functions with one input to one output, which can be checked by using the vertical line test. However, there are certain curves that cannot be defined as a function, such as a circle. Therefore, we use implicit differentiation to find the slope at a point by thinking y itself as a function of x; rather than saying $y=...x...$, we just do not bother with defining y itself and just treat it as a function.
 
 We first start by thinking that $y$ is a function, so we define its derivative as:
