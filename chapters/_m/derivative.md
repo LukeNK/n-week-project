@@ -110,7 +110,6 @@ Assume we have two functions: $g(x)$ and $h(x)$, and $f(x)=h\cdot g$. Because it
     <figcaption>Representation of a product between two functions</figcaption>
 </figure>
 
-
 To calculate the rate of change at that point, we need another point $dx$ away from $x$ and $dx\to0$. Furthermore, we need to consider how our two functions "react" to $dx$. We deduct from the formula of derivative:
 \\[
     \frac{dh}{dx} = h'
