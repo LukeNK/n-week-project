@@ -8,6 +8,10 @@ layout: draft
             {% capture text %}
 {% include_relative {{ page.path }} %}
             {% endcapture %}
+            {% if page.title %}
+## {{ page.title }}
+            {% endif %}
+            {{ text | split: "---" | first }}
             {{ text | split: "---" | last }}
 <hr>
         {% endif %}

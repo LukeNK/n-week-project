@@ -46,7 +46,10 @@ layout: base
         {% for chapter in docs %}
             {% assign id = chapter.url | split: "/" | last | split: "." | first %}
             <div class="chapter" id="{{ subject.label }}-{{ id }}">
-                <h2>{{ chapter.title }}</h2>
+                <h2>
+                    {% if chapter.layout == "draft" %}[Draft] {% endif %}
+                    {{ chapter.title }}
+                </h2>
                 <data
                     subject="{{ subject.name }}"
                     chapter="{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}"
