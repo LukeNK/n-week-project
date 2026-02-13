@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Integrals
+title: Integral
 prerequisites:
   - m-derivative
 ---

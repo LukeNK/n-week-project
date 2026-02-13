@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Derivatives
+title: Derivative
 prerequisites:
   - m-limit
 ---
