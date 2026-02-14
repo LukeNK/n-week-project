@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Trigonometric Functions
 ---
 
@@ -57,3 +57,19 @@ The inverse functions are named with "arc" in front of the name, and they are us
 </figure>
 
 There is another problem with the inverse functions and it comes from the periodicity of trigonometric functions. When you rotate by 360&deg; (2&pi; radians), you will end up looking at the same direction. This is similar on the unit circle, where the coordinate would be the same after a full rotation. That is why for one ratio, there are infinitely many angles, so it is important for us to know the range of the angle we are looking for (usually $0^\circ \leq \theta < 360^\circ$ or $0 \leq \theta < 2\pi$).
+
+### Trigonometric identities
+The pythagorean identity is the most important one, which can be derived from the Pythagorean theorem and the definition of sine and cosine:
+<eq>
+    \sin^2{\theta} + \cos^2{\theta} = 1
+</eq>
+
+Since the Author believes in the reader's ability to break down the problem into sine and cosine, we can move ahead with the double angle identities from sinde and cosine:
+<eq>
+    \sin{2\theta} = 2\sin{\theta}\cos{\theta}
+</eq>
+<eq>
+    \cos{2\theta} = \cos^2{\theta} - \sin^2{\theta}
+</eq>
+
+And one extremely useful fact in math: if you have an angle that does not fit into the identities, you can equate what you need with what you have. For example, if I have $\sin{x/2}$, I can just let $x/2 = 2\theta$, use the identity, and then subtitle back.
