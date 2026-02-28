@@ -41,6 +41,11 @@ We have the following values that is worth remembering. A lot of people said tha
     a^{1} = a
 </eq>
 
+It is also worth noting that radical is just the "opposite" of exponent, just like subtraction is the opposite of addition:
+<eq>
+    a^n = b \Leftrightarrow a = \sqrt[n]{b}
+</eq>
+
 Other other hand, we should know that radicals are also just another way to write exponents. So far, we have only considered integer exponents, but we can expand it to rational numbers as well. This is why fractional exponents are just another way to write roots. Note that from this rule, it makes no difference if we take the root first or the power first.
 <eq>
     a^{\frac{1}{n}} = \sqrt[n]{a} \qquad
@@ -94,9 +99,15 @@ In an elementary level, log functions are simply what you need to find the expon
     &= x + y
 \end{aligned}</eq>
 
-It should be clear: the base of the log should not be matter, as long as it is consistent across all terms. Normally, we would take either $e$ or $10$ as the base, and allow me to quote my professor: "there is a good reason for that".
+It should be clear: the base of the log should not be matter, as long as it is consistent across all terms. Normally, we would take either $e$ or $10$ as the base, and allow me to quote my professor: "There is a good reason for that".
 <eq>
     \ln(a^{x+y}) = \ln(a^x) + \ln(a^y)
+</eq>
+
+They are so important that they are called "natural log" and "common log", respectively:
+<eq>
+    \log_e x = \ln x \qquad
+    \log_{10} x = \log x
 </eq>
 
 Therefore, the exponential properties can be translated into logarithmic properties:
@@ -116,4 +127,21 @@ And here are some special values:
     \log_a a = 1
 </eq>
 
-#### Restriction on the base
+And you can also change the base of the log function with the following formula:
+<eq>
+    \log_a x = \frac{\log_b x}{\log_b a}
+</eq>
+
+### Restriction on the base
+This section is not really important, but it is here to explain some of the quirky properties of exponential and logarithmic functions. The Author first started wondering about this equation:
+\\[
+    16=(-2)^4 \Leftrightarrow \log_{-2} 16 = 4
+\\]
+
+It totally make sense in a normal algebraic way. After all, if it make sense for *some* number, it should be okay for other numbers, right? However, mathematicians define:
+<eq>
+    y = a^x \Leftrightarrow x = \log_a(y) \qquad
+    (a > 0)
+</eq>
+
+This is because
