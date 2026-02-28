@@ -64,12 +64,56 @@ Regardless of the base, all exponential functions will never touch the x-axis $y
 
 Except when $a=0$ (in which case, we will just have a line at $y=0$), we notice that:
 <eq>\begin{aligned}
-    &f(x) < 0 \text{ for } x < 0 \qquad
+    &f(x) < 0 \text{ for } x < 0
     &f(x) > 0 \text{ for } x > 0 \qquad
     &\text{ when } a > 1  & \\\
-    &f(x) > 0 \text{ for } x < 0 \qquad
+    &f(x) > 0 \text{ for } x < 0
     &f(x) < 0 \text{ for } x > 0 \qquad
     &\text{ when } 0 < a < 1
 \end{aligned}</eq>
+
+What about for $a < 0$? You technically can still get y at a certain x, but there are some problems with it, which will be discussed more in the next section. However, the first problem you might have noticed with negative exponent is the very foundation of complex number. If we allow negative base, our solution set won't be restricted to the real numbers. Assume that we allow negative base, eventually we will run into a problem like this:
+<eq>
+    y = (-1)^\frac{1}{2} = \sqrt{-1} = i
+</eq>
+
+### Logarithmic
+Because an exponential function is an one-to-one function, that means that we can define an invert function. A lot of people said that the logarithmic function just come out of nowhere, and that is exactly what it is: we simply define a function as an invert function of another function. This is similar to say that since you can disassemble a laptop, you can simply "invert" your actions to assemble it.
+<eq>
+    x = a^y \Rightarrow y = \log_a x
+</eq>
+
+Or if you prefer seeing log as the main hero ("Logarithme" is masculine according to French):
+<eq>
+    \log_a(a^x) = x
+</eq>
+
+In an elementary level, log functions are simply what you need to find the exponent given the base and the result. However, at a higher level, you should know that all of the properties of exponent functions also carry to logarithmic functions. You can imagine that the arithmetics between log functions are the world between the exponents, while the inside of the log function is the world between the bases.
+<eq>\begin{aligned}
+    a^xa^y = a^{x+y} \Leftrightarrow \log_a(a^{x+y}) &= \log_a(a^x) + \log_a(a^y) \\
+    &= x + y
+\end{aligned}</eq>
+
+It should be clear: the base of the log should not be matter, as long as it is consistent across all terms. Normally, we would take either $e$ or $10$ as the base, and allow me to quote my professor: "there is a good reason for that".
+<eq>
+    \ln(a^{x+y}) = \ln(a^x) + \ln(a^y)
+</eq>
+
+Therefore, the exponential properties can be translated into logarithmic properties:
+<eq>
+    \log_a(xy) = \log_a x + \log_a y \qquad
+</eq>
+<eq>
+    \log_a(x^n) = n\log_a x
+</eq>
+<eq>
+    \log_a(a^x) = x
+</eq>
+
+And here are some special values:
+<eq>
+    \log_a 1 = 0 \qquad
+    \log_a a = 1
+</eq>
 
 #### Restriction on the base
