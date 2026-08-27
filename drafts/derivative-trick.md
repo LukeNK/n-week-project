@@ -4,7 +4,7 @@ title: Derivative Trick
 prerequisites:
   - m-derivative
 ---
-This is a derivative trick that the Author found from "Feynman's Tips on Physics" book, chapter 1-4. This trick is especially useful when computing derivative functions without transcendental functions.
+This is a derivative trick that the Author found from *Feynman's Tips on Physics* book, chapter 1-4. This trick is especially useful when computing derivative functions without transcendental functions.
 
 ### The basics
 Let's start with a simple example, where we have two functions $u(x)^a$ and $v(x)^b$. We define the mutiple of those three as $f(x)$:
@@ -41,3 +41,9 @@ In the above example, you may have noticed that $a$ and $b$ can be negative or f
     =& \frac{(x-1) - 2(x-2)}{(x-1)^3} \qquad\text{this is similar to the quotient rule} \\\\\\
     =& \frac{-x+3}{(x-1)^3}
 \end{aligned}\\]
+
+Of course, you can have more than just $u^a\cdot v^b$. However, because the Author is lazy to format all of the LaTeX, so here is the formula that is mentioned in *Feynman's Tips on Physics* that inspired this chapter:
+<eq>
+    f(x) = k \cdot u^a \cdot v^b \cdot w^c \cdot ...
+    \Rightarrow f'(x) = f\cdot\left(a\frac{u'}{u} + b\frac{v'}{v} + c\frac{w'}{w} +... \right)
+</eq>
