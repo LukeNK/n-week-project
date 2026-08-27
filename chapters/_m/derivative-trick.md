@@ -59,7 +59,7 @@ Anyway, we can quickly find the derivative of the above function using our formu
 \\[
     f'(x) = \frac{(x+4)\sin x}{\sqrt{x+1}}\Biggl[
 \\]
-The next step is just simply go through each term, think about their power and their derivative, and write down:
+The next step is just simply go through each small function, think about its power and write it in the front, think about its derivative and write it on the top, and write down the original numerator in the denominator:
 \\[
     f'(x) = \frac{(x+4)\sin x}{\sqrt{x+1}}\left[ 1\frac{1}{x+4} + 1\frac{\cos x}{\sin x} -\frac{1}{2}\frac{1}{x+1} \right]
 \\]
