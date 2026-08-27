@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Feynman's Derivative Trick
 prerequisites:
   - m-derivative
