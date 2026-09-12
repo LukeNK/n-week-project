@@ -14,7 +14,7 @@ Similar to how half a dozen is $0.5\times12=6$, you can tell other scientists th
     \frac{1\text{mol of item}}{6.02\times10^{23}\text{ items}}
 </eq>
 
-A mole of atoms of an element acts as the central unit to convert between different units or elements in a reaction.
+A mole of atoms of an element acts as the central unit to convert between different units or elements in a reaction. If using mol is a bit difficult for you, the best way to deal with it is simply to think it as a "number of particles." So for example, if you have "1.3 mol of a particle," you could simplify it to "1.3 particles" and go about your day. This shortcut will work most of the time until you are required to calculate the number of molecules or atoms, and then you should remember the $6.02\times 10^{23}$ number.
 
 **Molar mass** is the mass of $1$ mole of an element while the **formula mass** of a compound is the sum of all atoms in that compound. They are both similar in value but different in the unit: molar mass's unit is usually in grams per mole while formula mass is in the atomic unit, which is $1/12$ the weight of a carbon atom (or about $1$ hydrogen atom). The atomic unit will be abbreviated as "u" throughout this note.
 
