@@ -137,6 +137,23 @@ if (toc) {
     });
 }
 
+function navWebScroll() {
+    let previousElm = null;
+    for (let e of [...document.querySelectorAll('h2:not([noNumber])') ]) {
+        let bound = e.getBoundingClientRect();
+        if (bound.top < 0) {
+            previousElm = e;
+            continue
+        }
+
+        if (previousElm)
+            previousElm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        return
+    }
+}
+
 (async () => {
     // Handle version
     let sha = await fetch('https://api.github.com/repos/LukeNK/n-week-project/git/trees/main?recursive=1');
