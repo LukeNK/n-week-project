@@ -69,7 +69,7 @@ To calculate an **empirical formula**, we start by pretending we have $100$g of 
 \\]
 Then divide them by the smallest factor (in this case $5.5625$) to get the ratio between elements:
 \\[ 11/5.5625=1.977 \\]
-Because of the estimations in our equation, it is appropriate to assume that it is 2 moles of hydrogen for every oxygen atom or H₂0.
+Because of the estimations in our equation, it is appropriate to assume that it is 2 moles of hydrogen for every oxygen atom or H₂O.
 
 If you were to simplify the process of calculating **empirical formula** into an equation, define the formula A<sub>x</sub>B<sub>y</sub> and $n_A$ is the molar mass of A, we have the ratio:
 <eq>
