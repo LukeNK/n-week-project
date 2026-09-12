@@ -63,7 +63,7 @@ We can define a basic exponential function as follow. Note this is different fro
     <figcaption>The graph of $y=2^x$</figcaption>
 </figure>
 
-I hope now you can see why people describe certain things as "exponential growth": as x increases, y also increases, but the further we go to the possible x direction, the faster y will grow. I hope you can also see that there is an asymptote $x=0$, which is true for all exponential functions: they will always be possitive and smiling.
+I hope now you can see why people describe certain things as "exponential growth": as x increases, y also increases, but the further we go to the possible x direction, the faster y will grow. I hope you can also see that there is an asymptote $x=0$, which is true for all exponential functions: they will always be possitive and smiling. We should try to be like them, too!
 
 Regardless of the base, all exponential functions will never touch the x-axis $y=0$, as well as always crossing the y-axis at $x=1$. Furthermore, because any base raises to the power of 1 is itself, $f(1) = a$.
 
