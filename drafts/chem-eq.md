@@ -36,3 +36,22 @@ We can now see how much HCl we get by considering this: for each "portion" of H�
 \\]
 
 From here, you can once again use stoichiometry to convert HCl to a practical unit for measuring.
+
+### Balancing equations
+You will need to remember: **the number atom of each elements are conserved before and after a reaction.** This means that if you supply two hydrogen atoms, you will get two hydrogen atoms at the end. They could be arranged differently, they could be separated, but they still exist. You cannot start with a fish but get a beef Wellington in the end.
+
+In some cases, certain moleculars are bonded tightly to the point they won't be separated throughout the reactions. Take this example:
+\\[
+    \text{Na}_3\text{PO}_4 + \text{KOH} \rightarrow \text{NaOH} + \text{K}_3\text{PO}_4
+\\]
+This is the steps that the Author uses to balance, but you can definitely do it differently:
+```
+_Na₃PO₄ + _KOH → _NaOH + _K₃PO₄    Notices that K is imbalanced
+_Na₃PO₄ + 3KOH → _NaOH + 1K₃PO₄    Balances K, OH is imbalanced
+_Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄
+1Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄    Checks each element
+```
+
+So balancing chemical equations is basically just trials-and-errors. In certain cases, you will need to use fractions — which is certainly valid as long as the proportion is correct — but most instructors require that you use whole number if possible.
+
+### Limiting reagents
