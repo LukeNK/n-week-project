@@ -103,8 +103,18 @@ document.querySelectorAll('note, h2:not([noNumber])').forEach(e => {
     pElement.insertAdjacentElement('beforebegin', aside);
 });
 
-console.log('Assign link reference - chapters and sections')
-document.querySelectorAll('h2:not([noNumber]), h3').forEach(e => {
+console.log('Assign link reference - chapter')
+document.querySelectorAll('h2:not([noNumber])').forEach(e => {
+    allAs.forEach(a => {
+        if (a.getAttribute('href') === `#${e.parentElement.id}`)
+            a.innerText =
+                (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
+                + ` "${e.innerText}"`;
+    });
+});
+
+console.log('Assign link reference - sections')
+document.querySelectorAll('h3').forEach(e => {
     allAs.forEach(a => {
         if (a.getAttribute('href') === `#${e.id}`)
             a.innerText =
