@@ -12,27 +12,28 @@ body {
 
 header {
     text-align: center;
-}
-header div {
-    display: flex;
-    align-items: center;
-}
-header img {
-    margin-left: 0;
-    max-height: 10rem;
-}
-header p {
-    text-indent: 0;
-    text-align: center;
-}
-header p.med {
-    font-size: 2rem;
-    margin: 0;
-}
-header p.large {
-    margin-top: 1rem;
-    font-weight: bold;
-    font-size: 3rem;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+    img {
+        margin-left: 0;
+        max-height: 10rem;
+    }
+    p {
+        text-indent: 0;
+        text-align: center;
+    }
+    p.med {
+        font-size: 2rem;
+        margin: 0;
+    }
+    p.large {
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 3rem;
+    }
 }
 object, object > img {
     max-height: 38rem;
@@ -277,7 +278,7 @@ eq > span {
 }
 
 @media print {
-    #navigation {
+    #navWeb {
         display: none;
     }
     main {
