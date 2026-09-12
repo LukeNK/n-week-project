@@ -15,8 +15,7 @@ let subjects = document.querySelectorAll('div[subject]'),
     };
 
 console.log('Assign numbering - equations');
-let chapter = 0, count = 0,
-    allAs = document.querySelectorAll('a');
+let chapter = 0, count = 0;
 document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
     if (e.tagName === 'H2') { chapter++; count = 0; return; }
     count++; checksum.equations++;
@@ -35,9 +34,8 @@ document.querySelectorAll('eq, h2:not([noNumber])').forEach(e => {
     }
 
     // Add text to link references
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${id}`)
-            a.innerText = `Equation ${chapter}.${count}`;
+    document.querySelectorAll('a#' + id).forEach(a => {
+        a.innerText = `Equation ${chapter}.${count}`;
     });
 });
 
@@ -60,9 +58,8 @@ document.querySelectorAll('figure:not([comic]), h2:not([noNumber])').forEach(e =
     caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
 
     // Add text to links that is referencing figures
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.id}`)
-            a.innerText = ref;
+    document.querySelectorAll(`a[href="#${e.id}"]`).forEach(a => {
+        a.innerText = ref;
     });
 });
 
@@ -75,9 +72,10 @@ document.querySelectorAll('table, h2:not([noNumber])').forEach(e => {
     let ref = `Table ${chapter}.${count}`,
         caption = e.querySelector('caption');
     caption.innerHTML = `<b>${ref}</b>: ${caption.innerText}`;
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.id}`)
-            a.innerText = ref;
+
+    // Add text to links that is referencing tables
+    document.querySelectorAll(`a[href="#${e.id}"]`).forEach(a => {
+        a.innerText = ref;
     });
 });
 
@@ -105,21 +103,19 @@ document.querySelectorAll('note, h2:not([noNumber])').forEach(e => {
 
 console.log('Assign link reference - chapter')
 document.querySelectorAll('h2:not([noNumber])').forEach(e => {
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.parentElement.id}`)
-            a.innerText =
-                (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
-                + ` "${e.innerText}"`;
+    document.querySelectorAll(`a[href="#${e.parentElement.id}"]`).forEach(a => {
+        a.innerText =
+            (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
+            + ` "${e.innerText}"`;
     });
 });
 
 console.log('Assign link reference - sections')
 document.querySelectorAll('h3').forEach(e => {
-    allAs.forEach(a => {
-        if (a.getAttribute('href') === `#${e.id}`)
-            a.innerText =
-                (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
-                + ` "${e.innerText}"`;
+    document.querySelectorAll(`a[href="#${e.id}"]`).forEach(a => {
+        a.innerText =
+            (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
+            + ` "${e.innerText}"`;
     });
 });
 
