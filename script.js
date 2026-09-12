@@ -101,35 +101,22 @@ document.querySelectorAll('note, h2:not([noNumber])').forEach(e => {
     pElement.insertAdjacentElement('beforebegin', aside);
 });
 
-console.log('Assign link reference - chapter')
-document.querySelectorAll('h2:not([noNumber])').forEach(e => {
-    document.querySelectorAll(`a[href="#${e.parentElement.id}"]`).forEach(a => {
-        a.innerText =
-            (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
-            + ` "${e.innerText}"`;
-    });
-});
-
-console.log('Assign link reference - sections')
-document.querySelectorAll('h3').forEach(e => {
-    document.querySelectorAll(`a[href="#${e.id}"]`).forEach(a => {
-        a.innerText =
-            (e.tagName === 'H2' ? 'Chapter ' : 'Section ')
-            + ` "${e.innerText}"`;
-    });
-});
-
-console.log('Checking links');
+console.log('Assign link reference - chapters and sections')
 document.querySelectorAll('a').forEach(a => {
-    let ref = a.getAttribute('href');
-    if (!ref.startsWith('#')) return;
-    if (!document.getElementById(ref.slice(1))) {
+    let href = a.getAttribute('href');
+    if (!href.startsWith('#')) return;
+    let elm = document.querySelector(`[id="${href.slice(1)}"]`);
+
+    if (!elm) {
+        // Broken link check
         a.parentElement.classList.add('error');
         a.parentElement.title = 'This paragraph contains broken link';
         a.innerText = a.getAttribute('href');
-        console.log(a)
-        return;
-    }
+        console.log(a);
+    } else if (elm.tagName == 'DIV')
+        a.innerText = `Chapter ${href.slice(1)}`
+    else if (elm.tagName == 'H3')
+        a.innerText = `Section "${elm.innerText}"`;
 });
 
 console.log('Generate table of contents');
