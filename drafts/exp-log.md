@@ -88,7 +88,7 @@ Because an exponential function is an one-to-one function, that means that we ca
     x = a^y \Rightarrow y = \log_a x
 </eq>
 
-Or if you prefer seeing log as the main hero ("Logarithme" is masculine according to French):
+Or if you prefer seeing log as the main hero ("logarithme" is masculine according to French):
 <eq>
     \log_a(a^x) = x
 </eq>
@@ -132,16 +132,19 @@ And you can also change the base of the log function with the following formula:
     \log_a x = \frac{\log_b x}{\log_b a}
 </eq>
 
-### Restriction on the base
-This section is not really important, but it is here to explain some of the quirky properties of exponential and logarithmic functions. The Author first started wondering about this equation:
-\\[
-    16=(-2)^4 \Leftrightarrow \log_{-2} 16 = 4
-\\]
-
-It totally make sense in a normal algebraic way. After all, if it make sense for *some* number, it should be okay for other numbers, right? However, mathematicians define:
+### Negative bases
+Note that there is a restriction on the base of exponential and log functions. Mathematicians explicitly require it to be possible:
 <eq>
     y = a^x \Leftrightarrow x = \log_a(y) \qquad
     (a > 0)
 </eq>
 
-This is because
+One common couter-example you might think of is $(-2)^2 = 4 \Rightarrow \log_{-2} 2 = 4$. However, the problem arises when there are numbers that are not so well-behaved, such as $(-2)^x = 3 \Rightarrow x = ?$. To ensure consistency, mathematicians just "ban" the lower half of the number line entirely. You can also simply put $(-2)^x$ in any graphing calculator to see how exponentional functions with negative bases are naughty.
+
+You can also further test this idea out by doing some calculations. The value of $(-2)^1 = -2$ and $(-2)^2 = 4$ can be easily calculated, but let's talk about their mid-point:
+\\[
+    (-2)^{1.5} = (-2)^1 \times (-2)^{\frac{1}{2}} = (-2)^1 \times \sqrt{-2} = ???
+\\]
+As you can see, you cannot take the square root of a negative number; by extension, the base cannot be negative or else the function would have holes everywhere.
+
+However, that is not the end of the story. The complex plane allow us to find solutions that are not the real numbers, yet they are at least *consistent*. You can find more about it in <a href="#m-imaginary-number"></a>
