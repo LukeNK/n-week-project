@@ -9,6 +9,16 @@
 </head>
 <body>
     {{ content }}
+    <div id="navWeb">
+        <button
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            title="Scroll to top"
+        >⬆</button>
+        <button
+            onclick="window.location.href='{{ site.url }}'"
+            title="Go to home"
+        >⬅</button>
+    </div>
 </body>
 <script src="{{ site.url }}/script.js"></script>
 </html>

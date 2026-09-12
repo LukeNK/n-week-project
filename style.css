@@ -116,6 +116,33 @@ h4::before {
     vertical-align: top;
 }
 
+#navWeb {
+    z-index: 1;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    overflow-y: auto;
+
+    button {
+        display: block;
+        opacity: 0.25;
+        font-size: xx-large;
+        outline: none;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        color: white;
+        background-color: black;
+        cursor: pointer;
+
+        &:hover {
+            animation: fadeIn 0.5s forwards;
+        }
+    }
+
+
+}
+
 mjx-assistive-mml {
     /* https://github.com/mathjax/MathJax/issues/3348 */
     text-indent: 0 ! important;
@@ -240,7 +267,19 @@ eq > span {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0.25;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 @media print {
+    #navigation {
+        display: none;
+    }
     main {
         max-width: none;
     }
