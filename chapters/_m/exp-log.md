@@ -59,7 +59,7 @@ We can define a basic exponential function as follow. Note this is different fro
 </eq>
 
 <figure>
-    <img src="{{ site.url }}/figures/m/11.png">
+    <img style="max-height: 20rem;" src="{{ site.url }}/figures/m/11.png">
     <figcaption>The graph of $y=2^x$</figcaption>
 </figure>
 
@@ -71,7 +71,7 @@ Except when $a=0$ (in which case, we will just have a line at $y=0$), we notice 
 <eq>\begin{aligned}
     &f(x) < 0 \text{ for } x < 0
     &f(x) > 0 \text{ for } x > 0 \qquad
-    &\text{ when } a > 1  & \\\
+    &\text{ when } a > 1  & \\\\\\
     &f(x) > 0 \text{ for } x < 0
     &f(x) < 0 \text{ for } x > 0 \qquad
     &\text{ when } 0 < a < 1
@@ -95,7 +95,7 @@ Or if you prefer seeing log as the main hero ("logarithme" is masculine accordin
 
 In an elementary level, log functions are simply what you need to find the exponent given the base and the result. However, at a higher level, you should know that all of the properties of exponent functions also carry to logarithmic functions. You can imagine that the arithmetics between log functions are the world between the exponents, while the inside of the log function is the world between the bases.
 <eq>\begin{aligned}
-    a^xa^y = a^{x+y} \Leftrightarrow \log_a(a^{x+y}) &= \log_a(a^x) + \log_a(a^y) \\
+    a^xa^y = a^{x+y} \Leftrightarrow \log_a(a^{x+y}) &= \log_a(a^x) + \log_a(a^y) \\\\\\
     &= x + y
 \end{aligned}</eq>
 
