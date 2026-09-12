@@ -69,7 +69,7 @@ Usually, you will be asked to calculate the remaining excess reactant. You can u
 ### Percent yield
 Of course, all of the calculations are theoretical. In reality, there will be errors that make the amount of products being less than what is expected.
 <eq>
-    yield% = \frac{\text{actual}}{\text{calculated}} \times 100%
+    \text{yield}\% = \frac{\text{actual}}{\text{calculated}} \times 100\%
 </eq>
 
 Percent yield is usually calculated based on mass, but there are definitely situations where it is based on volume. It should akso be less than 100%. If you somehow get percent yielf higher than 100%, then please contact either the Nobel prize or your instructor, or you have supplied more reactants than what you have calculated.
