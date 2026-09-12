@@ -18,7 +18,7 @@ So that is the general idea of chemical equations: they are recipes for you to "
 <eq id='eq-chem-eq-1'>
     2\text{HCl} \rightarrow 1\text{H}_2 + 1\text{Cl}_2
 </eq>
-From that equation, it simply shows you that for two HCl molecules, you can get one molecule of H₂ and one molecule of Cl₂; by extension, it means that two moles of HCl can give you one mole of each product.
+From that equation, it simply shows you that for two HCl molecules, you can get one molecule of H₂ and one molecule of Cl₂; by extension, it means that two moles of HCl can give you one mole of each product. In chemical equations, we usually omit coefficients equal to one.
 
 ### Stoichiometry
 But you see, it is quite difficult to pick each atom and tell them to react with each other. That is why we need stoichiometry because it is a way to convert between what is practical for us and what is actually happening.
@@ -51,11 +51,20 @@ _Na₃PO₄ + 3KOH → _NaOH + 1K₃PO₄    Balances K, OH is imbalanced
 _Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄
 1Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄    Checks each element
 ```
+<eq id='eq-chem-eq-2'>
+    \text{Na}_3\text{PO}_4 + 3\text{KOH} \rightarrow 3\text{NaOH} + \text{K}_3\text{PO}_4
+</eq>
 
 So balancing chemical equations is basically just trials-and-errors. In certain cases, you will need to use fractions — which is certainly valid as long as the proportion is correct — but most instructors require that you use whole number if possible.
 
-### Limiting reagents
-To calculate the
+### Limiting reagent
+The limiting reagent is the chemical that stops you from using the entirety of the other chemicals. Let's go back to our balanced example in <a href='#eq-chem-eq-2'></a>. If we only have 3 mol of KOH, we can only make 3 mol of NaOH even when we have a lot of Na₃PO₄.
+
+To decide which one is the limiting reactant, simply pick one product (usually the one with a coefficient of 1) then ask yourself "how much product can this reactant make?" After calculating each reactant, the limiting reactant is the one that can make the least amount of the product.
+
+Let's say we got 1 mol of each reactant from <a href='#eq-chem-eq-2'></a> and we pick the product K₃PO₄. 1 mol of Na₃PO₄ can make 1 mol of the product, but 1 mol of KOH can only make 1/3. Therefore, we can conclude that KOH is the limiting reactant.
+
+Usually, you will be asked to calculate the remaining excess reactant. You can use the limiting reactant as the main reference and calculate how much the excess reactant was consumed. Then you can subtract that from the amount of excess reactant given to get is remaining. Using those steps, we should have 2/3 mol of Na₃PO₄ remaining.
 
 ### Percent yield
 Of course, all of the calculations are theoretical. In reality, there will be errors that make the amount of products being less than what is expected.
