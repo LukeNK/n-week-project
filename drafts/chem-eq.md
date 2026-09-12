@@ -55,3 +55,12 @@ _Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄
 So balancing chemical equations is basically just trials-and-errors. In certain cases, you will need to use fractions — which is certainly valid as long as the proportion is correct — but most instructors require that you use whole number if possible.
 
 ### Limiting reagents
+To calculate the
+
+### Percent yield
+Of course, all of the calculations are theoretical. In reality, there will be errors that make the amount of products being less than what is expected.
+<eq>
+    yield% = \frac{\text{actual}}{\text{calculated}} \times 100%
+</eq>
+
+Percent yield is usually calculated based on mass, but there are definitely situations where it is based on volume. It should akso be less than 100%. If you somehow get percent yielf higher than 100%, then please contact either the Nobel prize or your instructor, or you have supplied more reactants than what you have calculated.
