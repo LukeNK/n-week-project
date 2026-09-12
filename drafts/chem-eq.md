@@ -8,7 +8,7 @@ prerequisites:
 ### Chemical equations
 A chemical equation usually indicates the proportion of the chemicals that participate in a reaction, essentially showing the mole of particles you need. Take a simple and very practical equation:
 \\[
-    200\text{ ml milk} + 10\text{ ml matcha} \rightarrow 210{ ml matcha latte}
+    200\text{ ml milk} + 10\text{ ml matcha} \rightarrow 210\text{ ml matcha latte}
 \\]
 If you read that equation, you will come to a conclusion that "I will need to have 200 ml of milk and 10 ml of matcha to get the *perfect* matcha latte." From that equation, you can also easily scale the formula according to your need: if you need double the amount of matcha latte (420 ml), you would double the amount of the ingredients to get 400 ml of milk and 20 ml of matcha.
 
@@ -29,11 +29,11 @@ Let's go back to <a href='#eq-chem-eq-1'></a> and assume that we got 1 gram of H
 \\]
 
 We can now see how much HCl we get by considering this: for each "portion" of H₂, two new portions of HCl are created.
-\\[
-    1\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} = 2\text{ molecules HCl}
+\\[\begin{aligned}
+    1\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} &= 2\text{ molecules HCl} \\\\\\
     \Rightarrow
-    0.9921\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} = 1,984\text{ molecules HCl}
-\\]
+    0.9921\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} &= 1.984\text{ molecules HCl}
+\end{aligned}\\]
 
 From here, you can once again use stoichiometry to convert HCl to a practical unit for measuring.
 
@@ -62,7 +62,7 @@ The limiting reagent is the chemical that stops you from using the entirety of t
 
 To decide which one is the limiting reactant, simply pick one product (usually the one with a coefficient of 1) then ask yourself "how much product can this reactant make?" After calculating each reactant, the limiting reactant is the one that can make the least amount of the product.
 
-Let's say we got 1 mol of each reactant from <a href='#eq-chem-eq-2'></a> and we pick the product K₃PO₄. 1 mol of Na₃PO₄ can make 1 mol of the product, but 1 mol of KOH can only make 1/3. Therefore, we can conclude that KOH is the limiting reactant.
+Let's say we got 1 mol of each reactant and we pick the product K₃PO₄. 1 mol of Na₃PO₄ can make 1 mol of the product, but 1 mol of KOH can only make 1/3. Therefore, we can conclude that KOH is the limiting reactant.
 
 Usually, you will be asked to calculate the remaining excess reactant. You can use the limiting reactant as the main reference and calculate how much the excess reactant was consumed. Then you can subtract that from the amount of excess reactant given to get is remaining. Using those steps, we should have 2/3 mol of Na₃PO₄ remaining.
 
