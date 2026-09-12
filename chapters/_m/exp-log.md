@@ -1,6 +1,6 @@
 ---
-layout: draft
-title: "Exponential and Logarithmic Functions"
+layout: chapter
+title: Exponential and Logarithmic Functions
 ---
 
 ### Exponential rules
@@ -147,4 +147,4 @@ You can also further test this idea out by doing some calculations. The value of
 \\]
 As you can see, you cannot take the square root of a negative number; by extension, the base cannot be negative or else the function would have holes everywhere.
 
-However, that is not the end of the story. The complex plane allow us to find solutions that are not the real numbers, yet they are at least *consistent*. You can find more about it in <a href="#m-imaginary-number"></a>
+However, that is not the end of the story. The complex plane allow us to find solutions that are not the real numbers, yet they are at least *consistent*. You can find more about it in <a href="#m-imaginary-number"></a>.
