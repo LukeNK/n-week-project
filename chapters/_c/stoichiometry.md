@@ -77,6 +77,3 @@ If you were to simplify the process of calculating **empirical formula** into an
     = \frac{\%A}{n_A} : \frac{\%B}{n_B}
     = m_A : m_B
 </eq>
-
-### Chemical equations
-A chemical equation usually indicates the proportion of the chemicals that participate in a reaction, essentially showing the mole of particles you need.
