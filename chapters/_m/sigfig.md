@@ -2,7 +2,7 @@
 layout: chapter
 title: Significant Figures, Rounding, and Scientific Notation
 ---
-**Significant figures (digits)**, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the accuracy of your number. The rules are very easy to follow:
+**Significant figures (digits)**, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the uncertainty of your number. The rules are very easy to follow:
 
 - All **leading** zeros are not significant
 - If there is a decimal point, all **trailing** zeros are significant
@@ -14,6 +14,8 @@ Remember, the second point only counts trailing zeros, which are zeros after a n
 We can add "**plus/minus**" ($\pm$) to further show our level of accuracy.
 
 **Rounding** is simply reducing the number of significant figures. Here is an additional rule you might not know about rounding 5: you should round it to make the last digit _even_. This ensures that the ups and downs will cancel out each other over a long chain of calculations.
+
+You will need to remember that the significant figures implies the uncertainty of a number. For example, if someone report a measurement as 15.2 cm, then we know that the last digit is the uncertain digit. This means that ruler's smallest division is 1cm, and then the reader simply "guess" the number 0.2 cm from the gap.
 
 ### Scientific notation
 Scientific notation is a way to deal with very big or very small numbers. There are two parts in a scientific notation: the **mantissa** $m$ (decimal portion) and the **exponent** $n$ (ordinate):
