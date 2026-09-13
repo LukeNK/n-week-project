@@ -27,7 +27,7 @@ There is a gap between the two lines of smallest division (1cm). Therefore, you 
 
 That would be the end for most of the scales but for rulers, there is also one special rule: you will technically need to read the uncertainty from two different places on a ruler: the start and the end. Despite how careful you are at aligning the start, there is also a physical uncertainty. Therefore, the **reading uncertainty for rulers** is:
 <eq>
-    2 \times (\frac{1/4}\text{the smallest division}) = \frac{1}{2}\text{the smallest division}
+    2 \times \left(\frac{1}{4}\text{the smallest division}\right) = \frac{1}{2}\text{the smallest division}
 </eq>
 
 #### Physical uncertainty
@@ -64,14 +64,14 @@ So when we do math operations with uncertainty, we are combining the uncertainti
 
 Similarly, we have **multiplication/division**. Note that here, we are using fractional uncertainty in our calculation.
 <eq>\begin{aligned}
-    F &= \frac{A \times B}{C} \\\\\\
-    \Rightarrow \frac{\delta F}{F} &= \sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2} \\\\\\
-    \Leftrightrrow \delta F &= \frac{AB}{C}\sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2}
+    F &= \frac{A \times B}{C} \\
+    \Rightarrow \frac{\delta F}{F} &= \sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2} \\
+    \Leftrightarrow \delta F &= \frac{AB}{C}\sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2}
 \end{aligned}</eq>
 
 As for **composite function**, we will need to take the derivative. This is because the uncertainty is simply indicate how "off" you are, so when it is suplied into a fuction, the uncertainty needs to scale at the same rate as the value.
 <eq>\begin{aligned}
-    \frac{\delta F}{\delta A} &= F'(A) \qquad\text{definition of derivative} \\\\\\
+    \frac{\delta F}{\delta A} &= F'(A) \qquad\text{definition of derivative} \\
     \Rightarrow \delta F &= \delta A \times F'(A)
 \end{aligned}</eq>
 
