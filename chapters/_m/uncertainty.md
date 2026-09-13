@@ -30,7 +30,7 @@ That would be the end for most of the scales but for rulers, there is also one s
     2 \times \left(\frac{1}{4}\text{the smallest division}\right) = \frac{1}{2}\text{the smallest division}
 </eq>
 
-Therefore, we should obtain the value for <a href="#fig-p2"></a> as 6.7 ± 0.5 cm.
+Therefore, we could obtain the value for <a href="#fig-p2"></a> as 6.7 ± 0.5 cm.
 
 #### Physical uncertainty
 If you were to measure the someone's height, there is an uncertainty comes from the fact that hair is fluffy which adds a few milimeters to their height. Or if you are trying to measure the diameter of a circle, you may misplace the ruler so that your measurement is a bit smaller than the actual diameter. Of course, you might try to shave everybody's hair from the first example but for an obvious reason, that is not available, so you would accept that as a physical uncertainty.
