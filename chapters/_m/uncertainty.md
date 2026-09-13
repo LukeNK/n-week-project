@@ -42,7 +42,7 @@ Another possible physical uncertainty comes from using stopwatches. Human's reac
 #### Instrumental uncertainty
 A lot of instruments will report that they have a small uncertainty, which you can refer from the user manual. Moreover, this also applies to digital measurement: a digital ruler that can report 1.543 m means there is an uncertainty of ± 0.001 m. So for instrumental uncertainty, you can just read the manual.
 
-### Assumptions
+#### Assumptions
 When you say things like "neglect the effect air resistance," this is where you should account for them. Of course, it is up to your judgement to decide the value of uncertainty in this case. However, it is best to avoid taking measurement directly from experiments where you need to make assumptions.
 
 ### Propagation
