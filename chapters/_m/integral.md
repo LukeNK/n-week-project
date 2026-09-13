@@ -176,7 +176,7 @@ It is important to identify which $u$ and $v$ to use to make the derivatives and
 \end{aligned}\\]
 
 <h4>Integration by parts trick: the tabular method</h4>
-This is a quick trick to calculate the integral function that was set up according to our stated format $\int uv\;dx$ of the integration by parts rule. It is recommended that the reader find an online resource with videos to explain as it is much easier to understand with an interactive format. A recommended video was included in the additional material section<a href="#sec-a-integral-material"></a>.
+This is a quick trick to calculate the integral function that was set up according to our stated format $\int uv\;dx$ of the integration by parts rule. It is recommended that the reader find an online resource with videos to explain as it is much easier to understand with an interactive format. A recommended video was included in <a href="#sec-a-integral-material"></a>.
 
 It is best to show the procedure as an example. Let's say we have the following integral:
 \\[ \int x^3\sin x \;dx \\]
