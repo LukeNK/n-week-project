@@ -21,7 +21,7 @@ When you read a value of a mechanical scale, you will be off by a tiny amount be
     <figcaption>Reading from a ruler</figcaption>
 </figure>
 
-There is a gap between the two lines of smallest division (1cm). Therefore, you will need to report that you have "guessed" the number between the gaps using uncertainty. That is why it is appropriate to state the **reading uncertainty** is:
+There is a gap between the two lines of smallest division (1 cm). Therefore, you will need to report that you have "guessed" the number between the gaps using uncertainty. That is why it is appropriate to state the **reading uncertainty** is:
 - 1/4 of the smallest division if the distance between the divisions is small; else
 - 1/10 of the smallest division otherwise.
 
@@ -29,6 +29,8 @@ That would be the end for most of the scales but for rulers, there is also one s
 <eq>
     2 \times \left(\frac{1}{4}\text{the smallest division}\right) = \frac{1}{2}\text{the smallest division}
 </eq>
+
+Therefore, we should obtain the value for <a href="#fig-p2"></a> as 6.7 ± 0.5 cm.
 
 #### Physical uncertainty
 If you were to measure the someone's height, there is an uncertainty comes from the fact that hair is fluffy which adds a few milimeters to their height. Or if you are trying to measure the diameter of a circle, you may misplace the ruler so that your measurement is a bit smaller than the actual diameter. Of course, you might try to shave everybody's hair from the first example but for an obvious reason, that is not available, so you would accept that as a physical uncertainty.
