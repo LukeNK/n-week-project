@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Uncertainty in Measurement
 prerequisites:
     - p-sigfig
@@ -17,7 +17,7 @@ That means the Author could be as tall as 1.95 m or as short as 1.45 m. However,
 #### Reading uncertainty
 When you read a value of a mechanical scale, you will be off by a tiny amount because there are gaps between the divisions. Take <a href="#fig-p2"></a> for example.
 <figure>
-    <img src="{{ site.url }}/figures/p/2.png" style="max-height: 15rem;">
+    <img src="{{ site.url }}/figures/p/2.png" style="max-height: 10rem;">
     <figcaption>Reading from a ruler</figcaption>
 </figure>
 
