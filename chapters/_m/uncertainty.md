@@ -2,7 +2,7 @@
 layout: chapter
 title: Uncertainty in Measurement
 prerequisites:
-    - p-sigfig
+    - m-sigfig
 ---
 
 The way presented here is not the only way to handle uncertainty. However, this is what the Author knows and it is one of the famous standard way to deal with uncertainty calculation.
