@@ -59,10 +59,10 @@ A fascinating fact is when you multiply a complex number by $i$, the result is a
 
 **Dividing** is a bit of work. You start with a fraction, then multiply the first fraction by another fraction with both the numerator and the denominator as the conjugate of the first fraction's denominator (making the second fraction equal to 1). Here is an example:
 \\[\begin{aligned}
-    &\frac{2 + 3i}{4 - 5i} \\\\\\
-    =& \frac{2+3i}{4-5i} \cdot \frac{4+5i}{4+5i} \\\\\\
-    =& \frac{(2 + 3i)(4 + 5i)}{4^2 + 5^2} \qquad (a + bi)(a - bi) = a^2 + b^2 \\\\\\
-    =& \frac{8 + 10i + 12i - 15}{41} \\\\\\
+    &\frac{2 + 3i}{4 - 5i} \\\\\
+    =& \frac{2+3i}{4-5i} \cdot \frac{4+5i}{4+5i} \\\\\
+    =& \frac{(2 + 3i)(4 + 5i)}{4^2 + 5^2} \qquad (a + bi)(a - bi) = a^2 + b^2 \\\\\
+    =& \frac{8 + 10i + 12i - 15}{41} \\\\\
     =& \frac{-7 + 22i}{41}
     = -\frac{7}{41} + \frac{22}{41}i
 \end{aligned}\\]

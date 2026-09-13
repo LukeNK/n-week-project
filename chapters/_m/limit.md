@@ -220,8 +220,8 @@ The **double-angle identities**:
 </eq>
 <eq>\begin{aligned}
     \cos2\theta
-    =& \cos^2\theta - \sin^2\theta \\\\\\
-    =& 2\cos^2\theta - 1 \\\\\\
+    =& \cos^2\theta - \sin^2\theta \\
+    =& 2\cos^2\theta - 1 \\
     =& 1 - 2\sin^2\theta
 \end{aligned}</eq>
 <eq>
@@ -306,17 +306,17 @@ Finally, you can combine with the theorems mentioned above to adjust your answer
 
 The **algebraic way** is to transform what you have into what you can evaluate. All the theorems from the solving finite limit section still hold unless specified otherwise.
 \\[\begin{aligned}
-    & lim_{x\to\infty}\frac{5x^2+1}{3x^2-x} \\\\\\
+    & lim_{x\to\infty}\frac{5x^2+1}{3x^2-x} \\\\\
     =&
         lim_{x\to\infty}\frac{(5x^2+1) / x^2}{(3x^2-x) / x^2}
-        &\text{divide by } x^2 \\\\\\
-    =& lim_{x\to\infty}\frac{5+\frac{1}{x^2}}{3-\frac{x}{x^2}} \\\\\\
+        &\text{divide by } x^2 \\\\\
+    =& lim_{x\to\infty}\frac{5+\frac{1}{x^2}}{3-\frac{x}{x^2}} \\\\\
     =&
         \frac
             {lim_{x\to\infty}(5+\frac{1}{x^2})}
             {lim_{x\to\infty}(3-\frac{x}{x^2})}
-        &\text{apply the theorems} \\\\\\
-    =& \frac{5+0}{3-0} &\text{find the limit of each term} \\\\\\
+        &\text{apply the theorems} \\\\\
+    =& \frac{5+0}{3-0} &\text{find the limit of each term} \\\\\
     =& \frac{5}{3}
 \end{aligned}\\]
 

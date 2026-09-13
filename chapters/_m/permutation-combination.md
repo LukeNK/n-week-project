@@ -64,9 +64,9 @@ We want to buy six tea bags, with three different flavours: (A) aloe vera tea, (
 
 Because order does not matter, we will list our teas in the same order: A then B then C. Next, we will add a separator between the teas. Here is what our diagram will look like:
 \\[\begin{bmatrix}
-    -&-&-&|&-&-&|&- \\\\\\
-    |&-&-&-&|&-&-&- \\\\\\
-    |&-&-&-&-&-&-&| \\\\\\
+    -&-&-&|&-&-&|&- \\\\\
+    |&-&-&-&|&-&-&- \\\\\
+    |&-&-&-&-&-&-&| \\\\\
     |&|&-&-&-&-&-&-
 \end{bmatrix}\\]
 There are still six dashes representing our six allowed selections, while the two separators simply indicate that we are moving between the types of tea. In the second example, you can see that we did not select A but only B and C. The third example only shows that there was only B that was selected; similar to C in the fourth example

@@ -30,7 +30,7 @@ Let's go back to <a href='#eq-chem-eq-1'></a> and assume that we got 1 gram of H
 
 We can now see how much HCl we get by considering this: for each "portion" of H₂, two new portions of HCl are created.
 \\[\begin{aligned}
-    1\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} &= 2\text{ molecules HCl} \\\\\\
+    1\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} &= 2\text{ molecules HCl} \\\\\
     \Rightarrow
     0.9921\text{ molecules H₂} \times \frac{2\text{ molecules HCl}}{1\text{ molecules H₂}} &= 1.984\text{ molecules HCl}
 \end{aligned}\\]

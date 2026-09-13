@@ -33,17 +33,17 @@ Scientific notation is helpful when counting significant figures because now all
 
 **To add/subtract** numbers in scientific notation, make the exponent the same and simply deal with the mantissa, then readjust the result to proper scientific notation by moving the decimal. The answer should be rounded to the least number of decimal places.
 \\[\begin{aligned}
-    & 3.0 \times 10^2 + 6.4 \times 10^3 \qquad 300 + 6400 \\\\\\
-    =& 3.0 \times 10^2 + 64 \times 10^2 \qquad \text{least number of decimal places is }0 \\\\\\
-    =& (3.0 + 64) \times 10^2 \\\\\\
-    =& 67.0 \times 10^2 \qquad \text{round the number, return the mantissa to scientific notation} \\\\\\
+    & 3.0 \times 10^2 + 6.4 \times 10^3 \qquad 300 + 6400 \\\\\
+    =& 3.0 \times 10^2 + 64 \times 10^2 \qquad \text{least number of decimal places is }0 \\\\\
+    =& (3.0 + 64) \times 10^2 \\\\\
+    =& 67.0 \times 10^2 \qquad \text{round the number, return the mantissa to scientific notation} \\\\\
     =& 6.7 \times 10^3
 \end{aligned}\\]
 
 **To multiply/divide**, you also multiply/divide the mantissa by themselves first, then multiply/divide the exponents by using an exponent rule $10^n\cdot10^m=10^{n+m}$. This was hidden behind the fact that multiplication is commutative. The answer should have the same significant figures as the number with the least significant figures.
 \\[\begin{aligned}
-    & (4.1\times10^6)\times(3.110\times10^8) \qquad\text{2SF} \times\text{4SF} \\\\\\
-    =& (4.1\times3.110)\times10^{6+8} \\\\\\
-    =& 12.751\times10^{14} \qquad \text{round to 2SF and shift decimal point} \\\\\\
+    & (4.1\times10^6)\times(3.110\times10^8) \qquad\text{2SF} \times\text{4SF} \\\\\
+    =& (4.1\times3.110)\times10^{6+8} \\\\\
+    =& 12.751\times10^{14} \qquad \text{round to 2SF and shift decimal point} \\\\\
     =& 1.2\times10^{15}
 \end{aligned}\\]
