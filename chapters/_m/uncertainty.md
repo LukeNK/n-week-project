@@ -66,7 +66,7 @@ So when we do math operations with uncertainty, we are combining the uncertainti
 
 Similarly, we have **multiplication/division**. Note that here, we are using fractional uncertainty in our calculation.
 <eq>\begin{aligned}
-    F &= \frac{A \times B}{C} \\
+    F &= \frac{A \cdot B}{C} \\
     \Rightarrow \frac{\delta F}{F} &= \sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2} \\
     \Leftrightarrow \delta F &= \frac{AB}{C}\sqrt{(\frac{\delta A}{A})^2 + (\frac{\delta B}{B})^2 + (\frac{\delta C}{C})^2}
 \end{aligned}</eq>
@@ -74,7 +74,7 @@ Similarly, we have **multiplication/division**. Note that here, we are using fra
 As for **composite function**, we will need to take the derivative. This is because the uncertainty is simply indicate how "off" you are, so when it is suplied into a fuction, the uncertainty needs to scale at the same rate as the value.
 <eq>\begin{aligned}
     \frac{\delta F}{\delta A} &= F'(A) \qquad\text{definition of derivative} \\
-    \Rightarrow \delta F &= \delta A \times F'(A)
+    \Rightarrow \delta F &= \delta A \cdit F'(A)
 \end{aligned}</eq>
 
 ### Significant figures
