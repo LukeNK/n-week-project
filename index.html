@@ -66,15 +66,16 @@ layout: base
         const level = chapters[chapter].level;
         if (level !== currentLevel) {
             currentLevel = level;
-            table.innerHTML += `<tr><th colspan="3">Level ${level}</th></tr>`;
+            table.innerHTML += `<tr><th colspan="4">Level ${level}</th></tr>`;
         }
 
         let link = chapter.replace('-', '/');
 
         table.innerHTML += `<tr id="${chapter}" prerequisites="${chapters[chapter].prerequisites.join(',')}">
-            <td><a href="{{ site.url }}/${link}">${link}</a></td>
-            <td><a href="{{ site.url }}/full#${chapter}">Chapter ${chapters[chapter].number}</a></td>
             <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">〇</button></td>
+            <td>${chapter}</td>
+            <td><a href="{{ site.url }}/${link}">Excerpt</a></td>
+            <td><a href="{{ site.url }}/full#${chapter}">Full</a></td>
         </tr>`;
     });
 
