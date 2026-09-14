@@ -46,14 +46,46 @@ layout: base
         const level = chapters[chapter].level;
         if (level !== currentLevel) {
             currentLevel = level;
-            table.innerHTML += `<tr><th colspan="2">Level ${level}</th></tr>`;
+            table.innerHTML += `<tr><th colspan="3">Level ${level}</th></tr>`;
         }
 
         let link = chapter.replace('-', '/');
 
-        table.innerHTML += `<tr>
+        table.innerHTML += `<tr id="${chapter}" prerequisites="${chapters[chapter].prerequisites.join(',')}">
             <td><a href="{{ site.url }}/${link}">${link}</a></td>
             <td><a href="{{ site.url }}/full#${chapter}">Chapter ${chapters[chapter].number}</a></td>
+            <td><button onclick="viewTree(this), viewLeaves('${chapter}')">View prerequisites</button></td>
         </tr>`;
     });
+
+    // Show prerequisites AND the chapters that will require it
+    function viewTree(button) {
+        const curRow = button.parentElement.parentElement;
+        const prerequisites = curRow.getAttribute('prerequisites').split(',');
+
+        // Hide all rows first
+        document.querySelectorAll('#navLevels tr[id]').forEach(row => {
+            row.style.display = 'none';
+        });
+
+        // Show only the rows that are prerequisites, cursively
+        prerequisites.forEach(prereq => {
+            const row = document.getElementById(prereq);
+            if (row) {
+                row.style.display = 'table-row';
+                viewTree(row.querySelector('button'));
+            }
+        });
+
+        // Show itself
+        curRow.style.display = 'table-row';
+    }
+
+    // Show the rows that require this chapter, cursively
+    function viewLeaves(chapterId) {
+        document.querySelectorAll(`#navLevels tr[prerequisites*="${chapterId}"]`).forEach(row => {
+            row.style.display = 'table-row';
+            viewLeaves(row.id);
+        });
+    }
 </script>
