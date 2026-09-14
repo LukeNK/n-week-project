@@ -5,6 +5,14 @@ layout: base
     data {
         display: none;
     }
+
+    button {
+        border: none;
+        outline: none;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
 </style>
 
 <!-- Import data -->
@@ -32,6 +40,13 @@ layout: base
         </p>
     </header>
 
+    <p>In the following table, you can see the list of all chapters. Click on the "〇" button to view the prerequisite tree for each chapter.</p>
+    <ul>
+        <li>⬤ - the current chapter</li>
+        <li>▲ - chapters required the current chapter</li>
+        <li>▼ - chapters that require the current chapter</li>
+        <li>〇 - irrelevant chapters</li>
+    </ul>
     <table id="navLevels">
         <caption>Prerequisite Levels</caption>
     </table>
@@ -54,7 +69,7 @@ layout: base
         table.innerHTML += `<tr id="${chapter}" prerequisites="${chapters[chapter].prerequisites.join(',')}">
             <td><a href="{{ site.url }}/${link}">${link}</a></td>
             <td><a href="{{ site.url }}/full#${chapter}">Chapter ${chapters[chapter].number}</a></td>
-            <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">View tree</button></td>
+            <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">〇</button></td>
         </tr>`;
     });
 
@@ -66,11 +81,11 @@ layout: base
         if (firstCall) {
             // Hide all rows
             document.querySelectorAll('#navLevels tr[id]').forEach(row => {
-                row.style.opacity = '0.25';
-                row.querySelector('button').innerText = 'View tree';
+                row.style.opacity = '0.1';
+                row.querySelector('button').innerText = '〇';
             });
 
-            curRow.querySelector('button').innerText = 'Current chapter';
+            curRow.querySelector('button').innerText = '⬤';
         }
 
         // Show only the rows that are prerequisites, recursively
@@ -78,7 +93,7 @@ layout: base
             const row = document.getElementById(prereq);
             if (row) {
                 row.style.opacity = '1';
-                row.querySelector('button').innerText = 'Prerequisite chapter';
+                row.querySelector('button').innerText = '▲';
                 viewTree(row.querySelector('button'));
             }
         });
@@ -91,7 +106,7 @@ layout: base
     function viewLeaves(chapterId) {
         document.querySelectorAll(`#navLevels tr[prerequisites*="${chapterId}"]`).forEach(row => {
             row.style.opacity = '1';
-            row.querySelector('button').innerText = 'Requires this chapter';
+            row.querySelector('button').innerText = '▼';
             viewLeaves(row.id);
         });
     }
