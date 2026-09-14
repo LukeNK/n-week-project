@@ -54,37 +54,44 @@ layout: base
         table.innerHTML += `<tr id="${chapter}" prerequisites="${chapters[chapter].prerequisites.join(',')}">
             <td><a href="{{ site.url }}/${link}">${link}</a></td>
             <td><a href="{{ site.url }}/full#${chapter}">Chapter ${chapters[chapter].number}</a></td>
-            <td><button onclick="viewTree(this), viewLeaves('${chapter}')">View prerequisites</button></td>
+            <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">View tree</button></td>
         </tr>`;
     });
 
-    // Show prerequisites AND the chapters that will require it
-    function viewTree(button) {
+    // Show prerequisites
+    function viewTree(button, firstCall) {
         const curRow = button.parentElement.parentElement;
         const prerequisites = curRow.getAttribute('prerequisites').split(',');
 
-        // Hide all rows first
-        document.querySelectorAll('#navLevels tr[id]').forEach(row => {
-            row.style.display = 'none';
-        });
+        if (firstCall) {
+            // Hide all rows
+            document.querySelectorAll('#navLevels tr[id]').forEach(row => {
+                row.style.opacity = '0.25';
+                row.querySelector('button').innerText = 'View tree';
+            });
 
-        // Show only the rows that are prerequisites, cursively
+            curRow.querySelector('button').innerText = 'Current chapter';
+        }
+
+        // Show only the rows that are prerequisites, recursively
         prerequisites.forEach(prereq => {
             const row = document.getElementById(prereq);
             if (row) {
-                row.style.display = 'table-row';
+                row.style.opacity = '1';
+                row.querySelector('button').innerText = 'Prerequisite chapter';
                 viewTree(row.querySelector('button'));
             }
         });
 
         // Show itself
-        curRow.style.display = 'table-row';
+        curRow.style.opacity = '1';
     }
 
-    // Show the rows that require this chapter, cursively
+    // Show the chapters that require this chapter, recursively
     function viewLeaves(chapterId) {
         document.querySelectorAll(`#navLevels tr[prerequisites*="${chapterId}"]`).forEach(row => {
-            row.style.display = 'table-row';
+            row.style.opacity = '1';
+            row.querySelector('button').innerText = 'Requires this chapter';
             viewLeaves(row.id);
         });
     }
