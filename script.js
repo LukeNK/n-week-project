@@ -113,7 +113,9 @@ document.querySelectorAll('a').forEach(a => {
         a.parentElement.title = 'This paragraph contains broken link';
         a.innerText = a.getAttribute('href');
         console.log(a);
-    } else if (elm.tagName == 'DIV')
+    } else if (a.innerText !== '')
+        return; // Don't overwrite existing text
+    else if (elm.tagName == 'DIV')
         a.innerText = `Chapter ${href.slice(1)}`
     else if (elm.tagName == 'H3')
         a.innerText = `Section "${elm.innerText}"`;
