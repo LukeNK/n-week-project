@@ -82,46 +82,8 @@ layout: base
     </table>
 </main>
 
+<script src="{{ site.url }}/level.js"></script>
 <script>
-    // Script to check prerequisites and assign levels
-    const dataElements = document.querySelectorAll('data');
-    const chapters = {};
-
-    // First pass: collect prerequisites
-    dataElements.forEach(data => {
-        const subject = data.getAttribute('subject');
-        const chapter = data.getAttribute('chapter');
-        const prerequisites = data.getAttribute('prerequisites').split(',').filter(prereq => prereq.trim() !== '');
-        chapters[chapter] = { subject, prerequisites, level: 0 };
-    });
-
-    // Function to compute level recursively
-    function computeLevel(chapter) {
-        if (chapters[chapter].level > 0) {
-            return chapters[chapter].level;
-        }
-        if (chapters[chapter].prerequisites.length === 0) {
-            chapters[chapter].level = 0;
-            return 0;
-        }
-        let maxPrereqLevel = 0;
-        chapters[chapter].prerequisites.forEach(prereq => {
-            if (chapters[prereq]) {
-                const prereqLevel = computeLevel(prereq);
-                if (prereqLevel > maxPrereqLevel) {
-                    maxPrereqLevel = prereqLevel;
-                }
-            }
-        });
-        chapters[chapter].level = maxPrereqLevel + 1;
-        return chapters[chapter].level;
-    }
-
-    // Second pass: compute levels
-    Object.keys(chapters).forEach(chapter => {
-        computeLevel(chapter);
-    });
-
     // assign levels to data elements
     dataElements.forEach(data => {
         const chapter = data.getAttribute('chapter');
@@ -129,12 +91,7 @@ layout: base
         levelSpan.textContent = chapters[chapter].level;
     });
 
-    // sort by level
-    const sortedChapters = Object.keys(chapters).sort((a, b) => {
-        return chapters[a].level - chapters[b].level;
-    });
-
-    // output result as table, with each row is a level and each column is a subject. Each cell contains links to chapters of the same subject of the same level. The column arrangement is based on the order of first appearance of subjects.
+    // Output result as table, with each row is a level and each column is a subject. Each cell contains links to chapters of the same subject of the same level. The column arrangement is based on the order of first appearance of subjects.
     const navLevelsTable = document.getElementById('navLevels');
     const subjectsOrder = [];
     Object.values(chapters).forEach(chapter => {

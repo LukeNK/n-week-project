@@ -10,7 +10,7 @@ const chapters = {};
 dataElements.forEach((data, number) => {
     const subject = data.getAttribute('subject');
     const chapter = data.getAttribute('chapter');
-    const prerequisites = data.textContent.split(',').filter(prereq => prereq.trim() !== '');
+    const prerequisites = data.getAttribute('prerequisites').split(',').filter(prereq => prereq.trim() !== '');
     chapters[chapter] = { subject, prerequisites, level: 0, number: number + 1 };
 });
 
