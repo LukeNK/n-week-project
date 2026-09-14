@@ -113,6 +113,15 @@ layout: base
         }
         const subjectIndex = subjectsOrder.indexOf(chapter.subject) + 1; // +1 for level cell
         const cell = currentRow.children[subjectIndex];
-        cell.innerHTML += `<a href="#${chapterKey}">${chapterKey}</a><br>`;
+        cell.innerHTML += `<a href="#${chapterKey}"></a><br>`;
+    });
+
+    // Scan to get chapter number for #navLevels table
+    let chapterNumber = 0;
+    document.querySelectorAll('h2:not([noNumber])').forEach(h2 => {
+        chapterNumber++;
+        const link = document.querySelector(`#navLevels a[href="#${h2.parentElement.id}"]`);
+        if (link)
+            link.textContent = `Chapter ${chapterNumber}`;
     });
 </script>
