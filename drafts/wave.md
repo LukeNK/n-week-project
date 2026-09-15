@@ -35,3 +35,15 @@ The most basic wave you will see is a transverse wave, which means the crests "m
 Another frequently seen wave is longitudinal wave: the particles in this waves will move back and forth along the direction of the wave. This is how soundwaves work.
 
 ### Wave phenomenons
+#### Diffraction
+When waves enter a hole, the sides of the wave will be slowed down by the walls, making the waves spread out after exiting the hole. Similarly, when a wave travel through an object, a similar thing happen to curve the wave.
+<figure>
+    <img src="{{ site.url }}/figures/p/5.png">
+    <figcaption>Wave diffraction</figcaption>
+</figure>
+
+A wave with a longer wavelength will have less momentum per crest, making it bends more than waves with shorter wavelengths.
+
+#### Refraction
+
+#### Reflection
