@@ -16,7 +16,13 @@ The next quantity that you will see very _frequently_ is **frequency** $f$. This
 <eq>T = \frac{1}{f}</eq>
 Another way to phrase period is: how many seconds before an event repeats.
 
-Notice that since we have the wavelength describing (in meters) how far apart the crests are, while period is telling us how much we need to wait for the next crest (in seconds), we can find the propagation speed by dividing them. Therefore, we have the **Universal wave equation**:
+Note that there is also a graph similar to <a href="#fig-p3"></a>, but with the x axis being labled as time. That graph will tell you the height of a point on the wave over time, which is useful to tell you the frequency of that wave (since it shows you the time between twi consecutive crests).
+<figure>
+    <img src="{{ site.url }}/figures/p/4.png">
+    <figcaption>A point in a wave over time</figcaption>
+</figure>
+
+Notice that since we have the wavelength describing (in meters) how far apart the crests are, while period is telling us how much we need to wait for the next crest (in seconds), we can find the propagation speed by dividing them. Therefore, we have the **universal wave equation**:
 <eq>
     v
     = \frac{&lambda;}{T}
@@ -24,8 +30,8 @@ Notice that since we have the wavelength describing (in meters) how far apart th
 </eq>
 If you think about this equation with frequency: because we are seeing the waves $f$ times per second, so if we multiply it by $&lambda;$, that means the first crest has traveled that much distance after a second.
 
-Let's tackle the y axis in our <a href="#fig-p2"></a>. The most basic wave you will see is a transverse wave, which means the crests "transverse", but the particles of the medium still stand in the same horizontal position — it only move up and down. You can imagine this like holding an end of a rope and swing it to create waves. As a part of the medium, your hand only move up and down to give the waves energy.
+The most basic wave you will see is a transverse wave, which means the crests "move", but the particles of the medium still stand in the same horizontal position — it only move up and down. You can imagine this like holding an end of a rope and swing it to create waves. As a part of the medium, your hand only move up and down to give the waves energy.
 
-Another frequently seen wave is longitudinal wave: the particles in this waves will move back and forth along the direction of the wave.
+Another frequently seen wave is longitudinal wave: the particles in this waves will move back and forth along the direction of the wave. This is how soundwaves work.
 
 ### Wave phenomenons
