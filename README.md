@@ -37,7 +37,7 @@ Compared to the "strong" math display, when you only need to use two backward sl
 We got to do something about this...
 
 ## Dynamic referencing
-To use dymaic referencing, you must first define a figure / an equation with an HTML ID. Then you can simply use anchor to refer to it:
+To use dymaic referencing, you must first define an equation / a table with an HTML ID (figures will be automatically assigned an ID using their filenames). Then you can simply use anchor to refer to it:
 ```html
 <a href="#eq-m-define"></a>
 ```
