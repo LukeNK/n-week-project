@@ -34,6 +34,8 @@ The most basic wave you will see is a transverse wave, which means the crests "m
 
 Another frequently seen wave is longitudinal wave: the particles in this waves will move back and forth along the direction of the wave. This is how soundwaves work.
 
+## Interference
+
 ### Wave phenomenons
 #### Diffraction
 When waves enter a hole, the sides of the wave will be slowed down by the walls, making the waves spread out after exiting the hole. Similarly, when a wave travel through an object, a similar thing happen to curve the wave.
