@@ -34,12 +34,4 @@ Now, let's think the other way. Let's think about what velocity actually means: 
     <figcaption>The graph of $6t$, $3t^2$, and $t^3$</figcaption>
 </figure>
 
-Acceleration $a(t)$ is defined as the change is speed over time. Conveniently, the change in value of a function is also known as the slope (derivative!), so we can define acceleration as:
-<eq>\begin{aligned}
-    a(t) &= \Delta v = v'(t) \\
-    &= \frac{d}{dx}3t^2 = 6t
-\end{aligned}</eq>
-
-However, what is the unit of acceleration? It is $\frac{m}{s^2}$!
-
-Now, let's think the other way. Let's think about what velocity actually means: the change in displacement.
+### Area under the curve
