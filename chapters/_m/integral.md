@@ -268,7 +268,7 @@ Note that most of the time, it is not possible to start with an already set-up f
     &= \frac{2}{5}u^{\frac{5}{2}} + \frac{2}{3}u^{\frac{3}{2}} \\\\\
     &= \frac{2}{5}(x-1)^{\frac{5}{2}} + \frac{2}{3}(x-1)^{\frac{3}{2}}
     \qquad\text{Substitute } u=x-1 \\\\\
-    &= \frac{2}{5}\sqrt{(x-1)^5} + \frac{2}{3}\sqrt{(x-1)^3}
+    &= \frac{2}{5}\sqrt{(x-1)^5} + \frac{2}{3}\sqrt{(x-1)^3} + C
     \qquad\text{Add integration constant}
 \end{aligned}\\]
 
