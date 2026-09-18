@@ -4,7 +4,7 @@
 ## Publication
 A chapter starts in `/drafts/` with `layout: draft`. This means that the chapter is still in early draft.
 
-When you are happy with the chapter and it is _almost_ ready to publish, you can now move the chapter to `/chapters` folder. This will indicate that the chapter is in final drafting, and will be likely published in a few publications.
+When you are happy with the chapter and it is _almost_ ready to publish, you can now move the chapter to `/chapters` folder. This will indicate that the chapter is in final drafting, and will likely be published in a few publications.
 
 When you want to publish a chapter, simply change the front matter to `layout: chapter`.
 
