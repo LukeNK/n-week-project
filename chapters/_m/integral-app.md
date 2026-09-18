@@ -19,14 +19,14 @@ So that is the meaning of the phrase "the accumulation of the value of a functio
 ### Net change and average
 We can rewrite the definition of definite integral in a way that give the spotlight to the resultant function:
 <eq>
-    \int^b_a f'(x) dx = f(b) - f(a)
+    \int^b_a f'(x) \;dx = f(b) - f(a)
 </eq>
 
 So the **net change** is the change in value of $f(x)$ from a to b, and if you have the value of the integral, it also tells you the difference between two points. We do not know why you have the value of the integral before actually computing the antiderivative, but it is definitely something that you can do.
 
 If you come back to integral definition, you will also remember one thing: the integration of a function is the sum of the tiny slices under the curve. Since the integration of a function already do half of the work for us, we can now simply subtract the number of tiny slices between between two values (which is simply the difference between them) to get the **average value of a function** over an interval:
 <eq>
-    f(x)_{average} = \frac{\int^b_a f(x) dx}{b-a}
+    f(x)_{average} = \frac{\int^b_a f(x) \;dx}{b-a}
 </eq>
 
 ### Displacement, velocity, and acceleration
@@ -48,7 +48,7 @@ The unit of acceleration can also give us another hint: $\frac{m}{s^2} = \frac{m
 Now, let's think the other way. Let's think about what velocity actually means: the change in displacement. So it is similar to the equation above but in the opposite direction: we are finding the function whose derivative is $v(t)$ (**antiderivative**!). Hence, we will need to take the integral of $v(t)$:
 <eq>\begin{aligned}
     v(t) &= \frac{\Delta d}{\Delta t}  = d'(t) \\
-    \Rightarrow d(t) &= \int 2t dx = t^2
+    \Rightarrow d(t) &= \int 2t \;dx = t^2
 \end{aligned}</eq>
 
 <figure>
