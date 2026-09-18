@@ -17,4 +17,9 @@ title: Gases
 
 ### Ideal gas equation
 
-Note that if we make sure $\frac{P}{RT}$ is constant (by keeping pressure, volume, and temperature), we can quickly determine the number of molecules in a gas from its volume. Therefore, chemists defined the condition where it is 1 atm pressure and 0&deg; celcius as **standard temperature and pressure** or **STP**<note>There are many different STP conditions and this is the one that the Author familiar with.</note>.
+Note that if we make sure $\frac{RT}{P}$ is constant (by holding temperature and pressure), we can determine the number of molecules in a gas from its volume. Therefore, chemists defined the condition where it is 1 atm pressure and 0&deg; celcius as **standard temperature and pressure** or **STP**<note>There are many different STP conditions and this is the one that the Author familiar with.</note>. With such STP, we can derive the a simple constant used to quickly convert between volume and the number of mols:
+<eq>\begin{aligned}
+    PV &= nRT \\
+    \Leftrightarrow V &= n\frac{RT}{V} \\
+    \Leftrightarrow V &= 22.4 \frac{\text{L}^2}{mol} \times n
+\end{aligned}</eq>
