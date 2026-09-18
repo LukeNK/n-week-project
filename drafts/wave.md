@@ -34,7 +34,7 @@ The most basic wave you will see is a transverse wave, which means the crests "m
 
 Another frequently seen wave is longitudinal wave: the particles in this waves will move back and forth along the direction of the wave. This is how soundwaves work.
 
-## Interference
+### Interference
 
 ### Wave phenomenons
 #### Diffraction
