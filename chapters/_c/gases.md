@@ -49,8 +49,7 @@ What is the significance of the equation above? Well... let's say you have a con
 
 And another equation to tell you that if you increase the pressure, the temperature will increase:
 <eq>
-    \frac{P_1\cancel{V_1}}{\cancel{n_1}T_1} = \frac{P_2\cancel{V_2}}{\cancel{n_2}T_2}
-    \Rightarrow \frac{P_1}{T_1} = \frac{P_2}{T_2}
+    \frac{P_1}{T_1} = \frac{P_2}{T_2}
 </eq>
 
 When solving excercises dealing with ideal gases, it is simply about trying to figure out which variable will remain the same before and after the change.
