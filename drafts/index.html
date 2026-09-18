@@ -9,7 +9,7 @@ layout: draft
 {% include_relative {{ page.path }} %}
             {% endcapture %}
             {% if page.title %}
-## {{ page.title }}
+<h2>{{ page.title }}</h2>
             {% endif %}
             {{ text | split: "---" | first }}
             {{ text | split: "---" | last }}
