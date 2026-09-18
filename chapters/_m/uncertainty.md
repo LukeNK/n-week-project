@@ -74,7 +74,7 @@ Similarly, we have **multiplication/division**. Note that here, we are using fra
 As for **composite function**, we will need to take the derivative. This is because the uncertainty is simply indicate how "off" you are, so when it is suplied into a fuction, the uncertainty needs to scale at the same rate as the value.
 <eq>\begin{aligned}
     \frac{\delta F}{\delta A} &= F'(A) \qquad\text{definition of derivative} \\
-    \Rightarrow \delta F &= \delta A \cdit F'(A)
+    \Rightarrow \delta F &= \delta A \cdot F'(A)
 \end{aligned}</eq>
 
 ### Significant figures
