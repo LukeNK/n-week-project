@@ -42,14 +42,11 @@ layout: base
             {% continue %}
         {% endif %}
         <h1>{{ subject.name }}</h1>
-        {% assign docs = subject.docs | sort: "title" %}
+        {% assign docs = subject.docs | where: "layout", "chapter" | sort: "title" %}
         {% for chapter in docs %}
             {% assign id = chapter.url | split: "/" | last | split: "." | first %}
             <div class="chapter" id="{{ subject.label }}-{{ id }}">
-                <h2>
-                    {% if chapter.layout == "draft" %}[Draft] {% endif %}
-                    {{ chapter.title }}
-                </h2>
+                <h2>{{ chapter.title }}</h2>
                 <data
                     subject="{{ subject.name }}"
                     chapter="{{ chapter.url | slice: 1, chapter.url.size | replace: '/', '-' }}"

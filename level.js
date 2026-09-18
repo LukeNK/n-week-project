@@ -11,7 +11,8 @@ dataElements.forEach((data, number) => {
     const subject = data.getAttribute('subject');
     const chapter = data.getAttribute('chapter');
     const prerequisites = data.getAttribute('prerequisites').split(',').filter(prereq => prereq.trim() !== '');
-    chapters[chapter] = { subject, prerequisites, level: 0, number: number + 1 };
+    const draft = data.getAttribute('draft') === 'true';
+    chapters[chapter] = { subject, prerequisites, level: 0, number: number + 1, draft };
 });
 
 // Function to compute level recursively

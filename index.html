@@ -27,6 +27,7 @@ layout: base
             subject="{{ collection.name }}"
             chapter="{{ page.url | slice: 1, page.url.size | replace: '/', '-' }}"
             prerequisites="{{ page.prerequisites | join: ',' }}"
+            draft="{% if page.layout == 'draft'%}true{% endif%}"
         ></data>
     {% endfor %}
 {% endfor %}
@@ -75,7 +76,12 @@ layout: base
             <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">〇</button></td>
             <td>${chapter}</td>
             <td><a href="{{ site.url }}/${link}">Excerpt</a></td>
-            <td><a href="{{ site.url }}/full#${chapter}">Full</a></td>
+            <td>
+                ${chapters[chapter].draft ?
+                    '<i>Draft</i>'
+                    : '<a href="{{ site.url }}/full#' + chapter + '">Full</a>'
+                }
+            </td>
         </tr>`;
     });
 
