@@ -58,5 +58,5 @@ Note that if we make sure $\frac{RT}{P}$ is constant (by holding temperature and
 <eq>\begin{aligned}
     PV &= nRT \\
     \Leftrightarrow V &= n\frac{RT}{V} \\
-    \Leftrightarrow V &= 22.4 \frac{\text{L}^2}{mol} \times n
+    \Leftrightarrow V &= 22.4 \frac{\text{L}^2}{\text{mol}} \times n
 \end{aligned}</eq>
