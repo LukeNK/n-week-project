@@ -77,13 +77,13 @@ layout: base
         table.innerHTML += `<tr id="${chapter}" prerequisites="${chapters[chapter].prerequisites.join(',')}">
             <td><button onclick="viewTree(this, true); viewLeaves('${chapter}')">〇</button></td>
             <td>${chapter}</td>
-            <td><a href="{{ site.url }}/${link}">Excerpt</a></td>
-            <td>
-                ${chapters[chapter].draft ?
-                    '<i>Draft</i>'
-                    : '<a href="{{ site.url }}/full#' + chapter + '">Full</a>'
-                }
-            </td>
+            ${chapters[chapter].draft ?
+                `<td colspan="2">
+                    <a href="{{ site.url }}/${link}">Draft</a>
+                </td>`
+                : `<td><a href="{{ site.url }}/${link}">Excerpt</a></td>
+                    <td><a href="{{ site.url }}/full#${chapter}">Full</a></td>`
+            }
         </tr>`;
     });
 
