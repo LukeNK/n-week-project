@@ -12,7 +12,7 @@ So that is the meaning of the phrase "the accumulation of the value of a functio
 
 <figure>
     <!-- In this figure, draw axis, then draw one pencil line from the x-axis to f(x). Have a scale to the right to tell the reader that the length of the line is f(x) and the integral -->
-    <img src="{{ site.url }}/figures/m/12.png">
+    <img src="{{ site.url }}/figures/m/12.png" style="max-height: 15rem">
     <figcaption>Shading the area under the curve using lines</figcaption>
 </figure>
 
@@ -50,7 +50,7 @@ Now, let's think the other way. Let's think about what velocity actually means: 
 \end{aligned}</eq>
 
 <figure>
-    <img src="{{ site.url }}/figures/m/13.png">
+    <img src="{{ site.url }}/figures/m/13.png" style="max-height: 15rem">
     <figcaption>The graph of $v(t)=2t$</figcaption>
 </figure>
 
