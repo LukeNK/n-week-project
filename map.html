@@ -1,0 +1,151 @@
+---
+layout: base
+---
+
+<style>
+    body {
+        background-color: #1f1f1f;
+        padding: 0;
+        margin: 0;
+    }
+
+    svg {
+        display: block;
+        margin: auto;
+    }
+
+    circle {
+        stroke: #A0B1BA;
+        stroke-width: 2;
+        fill: #1f1f1faa; /* Make the circle semi-transparent */
+        r: 5;
+
+        &.highlight {
+            fill: #A0B1BA;
+            r: 10;
+        }
+        &.prereq {
+            fill: #A0B1BA;
+            r: 10;
+        }
+        &.require {
+            r: 10;
+        }
+
+    }
+
+    text {
+        fill: #A0B1BA;
+        font-size: 0.5rem;
+    }
+
+    line {
+        stroke: #A0B1BA;
+        stroke-width: 2;
+    }
+</style>
+
+<!-- Import data -->
+{% for collection in site.collections %}
+    {% for page in collection.docs %}
+        <data
+            subject="{{ collection.name }}"
+            chapter="{{ page.url | slice: 1, page.url.size | replace: '/', '-' }}"
+            prerequisites="{{ page.prerequisites | join: ',' }}"
+            draft="{% if page.layout == 'draft'%}true{% endif%}"
+        ></data>
+    {% endfor %}
+{% endfor %}
+
+<!--
+    Each dot represents a chapter, each line represents a prerequisite.
+    Unfinished level does not have dot, but still have lines
+    the dots make a circle, with the inner circle represents chapter in the lower levels
+-->
+
+<svg width="600" height="600"></svg>
+
+<script src="{{ site.url }}/level.js"></script>
+<script>
+    const svg = document.querySelector("svg");
+
+    // make svg take the entire window
+    svg.setAttribute("width", window.innerWidth - 10);
+    svg.setAttribute("height", window.innerHeight - 10);
+    const maxX = svg.getAttribute("width"),
+        maxY = svg.getAttribute("height");
+    const maxLength = Math.min(maxX, maxY) - 100; // Leave some space for text
+    console.log(maxLength);
+
+    // First scan for the maximum level
+    let maxLevel = 0;
+    for (const id in chapters) {
+        const chapter = chapters[id];
+        if (chapter.level > maxLevel) {
+            maxLevel = chapter.level;
+        }
+    }
+
+    // Second scan for each chapter to draw visual
+    const levelLength = maxLength / (maxLevel + 1); // The length of each level
+    for (const id in chapters) {
+        const chapter = chapters[id];
+        let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
+            angle = Math.random() / 2 * Math.PI,
+            length = maxLength - chapter.level * levelLength; // Randomize the position a bit to avoid overlap
+        let x = length * Math.cos(angle),
+            y = length * Math.sin(angle);
+
+        dot.setAttribute("cx", x);
+        dot.setAttribute("cy", y);
+
+        dot.setAttribute("id", id);
+        dot.setAttribute("prerequisites", chapter.prerequisites.join(","));
+        dot.setAttribute("onclick", "viewTree(this, true); viewLeaves(this.id);");
+        dot.setAttribute("title", id);
+
+        svg.appendChild(dot);
+
+        let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", x + 15);
+        text.setAttribute("y", y + 5);
+        text.textContent = id;
+        svg.appendChild(text);
+    }
+
+    // Draw lines between two circle
+    function drawLine(from, to) {
+        let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", from.getAttribute("cx"));
+        line.setAttribute("y1", from.getAttribute("cy"));
+        line.setAttribute("x2", to.getAttribute("cx"));
+        line.setAttribute("y2", to.getAttribute("cy"));
+        svg.appendChild(line);
+    }
+
+    // Show prerequisites
+    function viewTree(circle, firstCall) {
+        console.log(circle);
+        const prerequisites = circle.getAttribute('prerequisites').split(',');
+        circle.classList.add('highlight');
+
+        // Show only the rows that are prerequisites, recursively
+        prerequisites.forEach(prereq => {
+            const preCircle = document.getElementById(prereq);
+            if (preCircle) {
+                preCircle.classList.add('prereq');
+                drawLine(circle, preCircle);
+                viewTree(preCircle);
+            }
+        });
+    }
+
+    // Show the chapters that require this chapter, recursively
+    function viewLeaves(chapterId) {
+        document.querySelectorAll(`circle[prerequisites*="${chapterId}"]`).forEach(dot => {
+            dot.classList.add('require');
+            drawLine(dot, document.getElementById(chapterId));
+            viewLeaves(dot.id);
+        });
+    }
+</script>
