@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Application of Integrals
 prerequisites:
     - m-integral
@@ -30,9 +30,7 @@ If you come back to integral definition, you will also remember one thing: the i
 </eq>
 
 ### Displacement, velocity, and acceleration
-This section will help you to visualize the back and forth relationship of derivative and integral.
-
-Assume that we have a function velocity over time (which means we can plug in the time to get the value of velocity):
+This section will help you to visualize the back and forth relationship of derivative and integral. Assume that we have a function velocity over time (which means we can plug in the time to get the value of velocity):
 <eq>
     v(t) = 2t
 </eq>
