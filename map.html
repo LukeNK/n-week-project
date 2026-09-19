@@ -64,11 +64,19 @@ layout: base
     the dots make a circle, with the inner circle represents chapter in the lower levels
 -->
 
-<svg width="600" height="600"></svg>
+<svg width="600" height="600">
+    <g id="line"></g>
+    <g id="text"></g>
+    <g id="dot"></g>
+</svg>
 
 <script src="{{ site.url }}/level.js"></script>
 <script>
-    const svg = document.querySelector("svg");
+    // Split to svg group to make sure the z-index prioritize the dot
+    const svg = document.querySelector("svg"),
+        svgLine = document.getElementById("line"),
+        svgText = document.getElementById("text"),
+        svgDot = document.getElementById("dot");
 
     // make svg take the entire window
     svg.setAttribute("width", window.innerWidth - 10);
@@ -76,7 +84,6 @@ layout: base
     const maxX = svg.getAttribute("width"),
         maxY = svg.getAttribute("height");
     const maxLength = Math.min(maxX, maxY) - 100; // Leave some space for text
-    console.log(maxLength);
 
     // First scan for the maximum level
     let maxLevel = 0;
@@ -105,13 +112,13 @@ layout: base
         dot.setAttribute("onclick", "viewTree(this, true); viewLeaves(this.id);");
         dot.setAttribute("title", id);
 
-        svg.appendChild(dot);
+        svgDot.appendChild(dot);
 
         let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text.setAttribute("x", x + 15);
         text.setAttribute("y", y + 2.5);
         text.textContent = id;
-        svg.appendChild(text);
+        svgText.appendChild(text);
     }
 
     // Draw lines between two circle
@@ -121,12 +128,11 @@ layout: base
         line.setAttribute("y1", from.getAttribute("cy"));
         line.setAttribute("x2", to.getAttribute("cx"));
         line.setAttribute("y2", to.getAttribute("cy"));
-        svg.appendChild(line);
+        svgLine.appendChild(line);
     }
 
     // Show prerequisites
     function viewTree(circle, firstCall) {
-        console.log(circle);
         const prerequisites = circle.getAttribute('prerequisites').split(',');
         circle.classList.add('highlight');
 
