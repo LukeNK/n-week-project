@@ -15,11 +15,13 @@ layout: base
     }
 
     circle {
-        stroke: #A0B1BA;
-        stroke-width: 2;
-        fill: #1f1f1faa; /* Make the circle semi-transparent */
-        r: 5;
-        cursor: pointer;
+        &:not(.background) {
+            stroke: #A0B1BA;
+            stroke-width: 2;
+            fill: #1f1f1faa; /* Make the circle semi-transparent */
+            r: 5;
+            cursor: pointer;
+        }
 
         &.highlight {
             fill: #A0B1BA;
@@ -33,6 +35,11 @@ layout: base
             r: 10;
         }
 
+        &.background {
+            fill: none;
+            stroke: #A0B1BA50;
+            stroke-width: 1;
+        }
     }
 
     text {
@@ -42,7 +49,17 @@ layout: base
 
     line {
         stroke: #A0B1BA;
-        stroke-width: 2;
+        stroke-width: 1;
+
+        &:not([class]) {
+            stroke: #A0B1BA50;
+        }
+        &.prereq {
+            stroke-width: 2;
+        }
+        &.require {
+            stroke-dasharray: 5, 5;
+        }
     }
 </style>
 
@@ -79,11 +96,9 @@ layout: base
         svgDot = document.getElementById("dot");
 
     // make svg take the entire window
-    svg.setAttribute("width", window.innerWidth - 10);
-    svg.setAttribute("height", window.innerHeight - 10);
-    const maxX = svg.getAttribute("width"),
-        maxY = svg.getAttribute("height");
-    const maxLength = Math.min(maxX, maxY) - 100; // Leave some space for text
+    const maxLength = Math.min(window.innerHeight, window.innerWidth) - 10; // Leave some space for text
+    svg.setAttribute("width", maxLength);
+    svg.setAttribute("height", maxLength);
 
     // First scan for the maximum level
     let maxLevel = 0;
@@ -94,24 +109,32 @@ layout: base
         }
     }
 
-    // Second scan for each chapter to draw visual
+    // Draw background circles for each level
     const levelLength = maxLength / (maxLevel + 1); // The length of each level
+    for (let i = 1; i <= maxLevel + 1; i++) {
+        let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", 10);
+        circle.setAttribute("cy", 10);
+        circle.setAttribute("r", i * levelLength);
+        circle.classList.add('background');
+        svgLine.appendChild(circle);
+    }
+
+    // Second scan for each chapter to draw visual
     for (const id in chapters) {
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = Math.random() / 2 * Math.PI,
-            length = maxLength - (chapter.level - Math.random() * 0.5) * levelLength; // Randomize the position a bit to avoid overlap
+            length = maxLength - (chapter.level + 1 - Math.random() * 0.8) * levelLength; // Randomize the position a bit to avoid overlap
         let x = length * Math.cos(angle) + 10,
             y = length * Math.sin(angle) + 10;
 
         dot.setAttribute("cx", x);
         dot.setAttribute("cy", y);
-
         dot.setAttribute("id", id);
         dot.setAttribute("prerequisites", chapter.prerequisites.join(","));
         dot.setAttribute("onclick", "viewTree(this); viewLeaves(this.id);");
         dot.setAttribute("title", id);
-
         svgDot.appendChild(dot);
 
         let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -122,12 +145,13 @@ layout: base
     }
 
     // Draw lines between two circle
-    function drawLine(from, to) {
+    function drawLine(from, to, type) {
         let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute("x1", from.getAttribute("cx"));
         line.setAttribute("y1", from.getAttribute("cy"));
         line.setAttribute("x2", to.getAttribute("cx"));
         line.setAttribute("y2", to.getAttribute("cy"));
+        line.classList.add(type);
         svgLine.appendChild(line);
     }
 
@@ -141,7 +165,7 @@ layout: base
             const preCircle = document.getElementById(prereq);
             if (preCircle) {
                 preCircle.classList.add('prereq');
-                drawLine(circle, preCircle);
+                drawLine(circle, preCircle, 'prereq');
                 viewTree(preCircle);
                 viewLeaves(preCircle.id);
             }
@@ -152,7 +176,7 @@ layout: base
     function viewLeaves(chapterId) {
         document.querySelectorAll(`circle[prerequisites*="${chapterId}"]`).forEach(dot => {
             dot.classList.add('require');
-            drawLine(dot, document.getElementById(chapterId));
+            drawLine(dot, document.getElementById(chapterId), 'require');
             viewLeaves(dot.id);
         });
     }
