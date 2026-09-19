@@ -109,7 +109,7 @@ layout: base
 
         dot.setAttribute("id", id);
         dot.setAttribute("prerequisites", chapter.prerequisites.join(","));
-        dot.setAttribute("onclick", "viewTree(this, true); viewLeaves(this.id);");
+        dot.setAttribute("onclick", "viewTree(this); viewLeaves(this.id);");
         dot.setAttribute("title", id);
 
         svgDot.appendChild(dot);
@@ -132,7 +132,7 @@ layout: base
     }
 
     // Show prerequisites
-    function viewTree(circle, firstCall) {
+    function viewTree(circle) {
         const prerequisites = circle.getAttribute('prerequisites').split(',');
         circle.classList.add('highlight');
 
