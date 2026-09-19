@@ -154,12 +154,12 @@ layout: base
     // Show prerequisites
     function viewTree(circle) {
         const prerequisites = circle.getAttribute('prerequisites').split(',');
+        circle.classList.add('prereq');
 
         // Show only the rows that are prerequisites, recursively
         prerequisites.forEach(prereq => {
             const preCircle = document.getElementById(prereq);
             if (preCircle) {
-                preCircle.classList.add('prereq');
                 drawLine(circle, preCircle, 'prereq');
                 viewTree(preCircle);
                 viewLeaves(preCircle.id);
