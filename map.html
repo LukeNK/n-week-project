@@ -188,7 +188,13 @@ layout: base
 
     // Show the chapters that require this chapter, recursively
     function viewLeaves(chapterId, first) {
-        document.querySelectorAll(`circle[prerequisites*="${chapterId}"]`).forEach(dot => {
+        for (const id in chapters) {
+            const chapter = chapters[id];
+            if (!chapter.prerequisites.includes(chapterId)) continue;
+
+            const dot = document.getElementById(id);
+            if (!dot) continue;
+
             if (first) {
                 drawLine(dot, document.getElementById(chapterId), 'connect');
             } else {
@@ -196,6 +202,6 @@ layout: base
                 drawLine(dot, document.getElementById(chapterId), 'require');
             }
             viewLeaves(dot.id, first);
-        });
+        }
     }
 </script>
