@@ -107,7 +107,7 @@ layout: base
         svgDot = document.getElementById("dot");
 
     // make svg take the entire window
-    const maxLength = Math.min(window.innerHeight, window.innerWidth) - 10; // Leave some space for text
+    const maxLength = Math.min(window.innerHeight, window.innerWidth) - 20; // Leave some space for text
     svg.setAttribute("width", maxLength);
     svg.setAttribute("height", maxLength);
     svgLegend.setAttribute("transform", `translate(${maxLength - 200}, ${maxLength - 100})`);
