@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Application of Integrals
+title: Integration Application
 prerequisites:
     - m-integral
 ---
