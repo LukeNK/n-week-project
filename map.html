@@ -19,6 +19,7 @@ layout: base
         stroke-width: 2;
         fill: #1f1f1faa; /* Make the circle semi-transparent */
         r: 5;
+        cursor: pointer;
 
         &.highlight {
             fill: #A0B1BA;
@@ -93,8 +94,8 @@ layout: base
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = Math.random() / 2 * Math.PI,
             length = maxLength - chapter.level * levelLength; // Randomize the position a bit to avoid overlap
-        let x = length * Math.cos(angle),
-            y = length * Math.sin(angle);
+        let x = length * Math.cos(angle) + 10,
+            y = length * Math.sin(angle) + 10;
 
         dot.setAttribute("cx", x);
         dot.setAttribute("cy", y);
@@ -108,7 +109,7 @@ layout: base
 
         let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
         text.setAttribute("x", x + 15);
-        text.setAttribute("y", y + 5);
+        text.setAttribute("y", y + 2.5);
         text.textContent = id;
         svg.appendChild(text);
     }
