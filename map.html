@@ -45,15 +45,17 @@ layout: base
 
     line {
         stroke: #A0B1BA;
-        stroke-width: 1;
 
-        &:not([class]) {
+        &.connect {
             stroke: #A0B1BA50;
+            stroke-width: 1;
+            stroke-dasharray: 5, 25;
         }
         &.prereq {
-            stroke-width: 2;
+            stroke-width: 3;
         }
         &.require {
+            stroke-width: 2;
             stroke-dasharray: 5, 5;
         }
     }
@@ -140,6 +142,9 @@ layout: base
         svgText.appendChild(text);
     }
 
+    // Third scan for each chapter to draw lines between prerequisites
+    for (const id in chapters) viewLeaves(id, true);
+
     // Draw lines between two circle
     function drawLine(from, to, type) {
         let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
@@ -168,11 +173,15 @@ layout: base
     }
 
     // Show the chapters that require this chapter, recursively
-    function viewLeaves(chapterId) {
+    function viewLeaves(chapterId, first) {
         document.querySelectorAll(`circle[prerequisites*="${chapterId}"]`).forEach(dot => {
-            dot.classList.add('require');
-            drawLine(dot, document.getElementById(chapterId), 'require');
-            viewLeaves(dot.id);
+            if (first) {
+                drawLine(dot, document.getElementById(chapterId), 'connect');
+            } else {
+                dot.classList.add('require');
+                drawLine(dot, document.getElementById(chapterId), 'require');
+            }
+            viewLeaves(dot.id, first);
         });
     }
 </script>
