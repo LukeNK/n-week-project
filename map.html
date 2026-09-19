@@ -93,7 +93,7 @@ layout: base
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = Math.random() / 2 * Math.PI,
-            length = maxLength - chapter.level * levelLength; // Randomize the position a bit to avoid overlap
+            length = maxLength - (chapter.level - Math.random() * 0.5) * levelLength; // Randomize the position a bit to avoid overlap
         let x = length * Math.cos(angle) + 10,
             y = length * Math.sin(angle) + 10;
 
