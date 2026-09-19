@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Gases
 ---
 
@@ -12,9 +12,9 @@ The **pressure** $P$ is the force exerted in a unit of of area. You must underst
     \Rightarrow
     &P_\text{gas to container} = P_\text{container to gas}
 \end{aligned}</eq>
-Because of that, we can simply measure deduct the pressure _from_ a gas by measure the pressure we put _on_ the gas itself.
+Because of that, we can simply deduct the pressure _from_ a gas by measuring the pressure we put _on_ the gas itself.
 
-The **temperarure** $T$ measures the average kinetic energy of something. Because the tiny molecules in our gas are flying around, they are carrying energy. By averaging that out, we can obtain the temperature. You should also realize that the molecules in a gas usually have more kinetic energy those in a solid; this is because there are more total kinetic energy and less molecules to average out the sum.
+The **temperarure** $T$ measures the average kinetic energy of something. Because the tiny molecules in our gas are flying around, they are carrying energy. By averaging that out, we can obtain the temperature. You should also realize that the molecules in a gas usually have more kinetic energy those in a solid; this is because the molecules are flying faster and and there are less molecules to average out the sum.
 
 ### Ideal gas
 The interaction between the molecules in a gas are very complex. However, when we put two specific assumptions, their interactions suddenly become much more simpler. Therefore, chemists came up with an **ideal gas**, which has two basic characteristics:
@@ -36,18 +36,23 @@ where:
 - $R$ is the ideal gas constant; and
 - $T$ is the temperature.
 
+The Author did not specified the units in the above equation and there ia a very good reason for that. Unlike other constants, the ideal gas constant does not have one _mostly agreed upon_ value due to unit. That is when when you want to use this equation, please check the unit of your &R& before plugging in other variables. However, if you caught yourself using litre, standard atmosphere, kelvin, and mol, the **ideal gas constant** is:
+<eq>
+    R = 0.082057 \frac{\text{L}\cdot\text{atm}}{\text{K}\cdot\text{mol}}
+</eq>
+
 This equation can easily manipulated to your liking but one of the most used variation is when you take a snapshot of a gas "before" and "after state, facilitated by the fact that $R$ is a constant:
 <eq>
     \frac{P_1V_1}{n_1T_1} = \frac{P_2V_2}{n_2T_2}
 </eq>
 
-What is the significance of the equation above? Well... let's say you have a container and a gas where you can control all of the variable above. If you keep the number of molecules and the temperature constant ($n_1 = n_2$ and $T_1 = T_2$), this equation will tell you that if you increase the volume, the pressure will be decreased:
+What is the significance of the equation above? Well... let's say you have a container and a gas where you can control all of the variable above. If you keep the number of molecules and the temperature constant ($n_1 = n_2$ and $T_1 = T_2$), this equation will tell you that if you increase the volume, the pressure will decrease:
 <eq>
     \frac{P_1V_1}{\cancel{n_1}\cancel{T_1}} = \frac{P_2V_2}{\cancel{n_2}\cancel{T_2}}
     \Rightarrow P_1V_1 = P_2V_2
 </eq>
 
-And another equation to tell you that if you increase the pressure, the temperature will increase:
+This is another variation to tell you that if you increase the pressure, the temperature will increase:
 <eq>
     \frac{P_1}{T_1} = \frac{P_2}{T_2}
 </eq>
