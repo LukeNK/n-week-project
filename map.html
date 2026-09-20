@@ -115,7 +115,7 @@ layout: base
 
     // Show prerequisites
     function viewTree(dot) {
-        const prerequisites = chapter[dot.getAttribute('id')].prerequisites;
+        const prerequisites = chapters[dot.id].prerequisites;
         dot.classList.add('prereq');
 
         // Show only the rows that are prerequisites, recursively
