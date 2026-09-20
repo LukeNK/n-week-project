@@ -172,9 +172,9 @@ layout: base
     let maxLevel = 0, allSubjects = {};
     for (const id in chapters) {
         const chapter = chapters[id];
-        if (chapter.level > maxLevel) {
+        if (chapter.level > maxLevel)
             maxLevel = chapter.level;
-        }
+
         if (allSubjects[chapter.subject])
             allSubjects[chapter.subject]++;
         else
