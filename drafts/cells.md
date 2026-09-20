@@ -69,7 +69,7 @@ This organnel is made of many flatten bubbles stacked onto each other. It have t
 The Golgi apparatus functions like a final packaging depot before the products reach the customer. The products are sometimes finalized here (**cisternal maturation**); other times, certain macromolecules are made here. After the products reach the _trans_ face, the Golgi apparatus sort them into small bubbles and send them into other parts of the cell — sometimes back to the endoplasmic reticulum. They put lables on these vesicles by adding molecular identification tags or exterior molecules that can only dock to the correct organelle.
 
 #### Lysosome
-The lysosome has a lot of hydrolytic enzymes used to digest macromolecules. Their main function is to digest food particles in a process called phagocytosis. However, they also _recycle_<note>Which is a better word for "eat other dead organelles"</note> cell's own organic material in a process called autophagy. This recycle process ensures than the cell keep renewing itself rather than wasting resources to make new biological materials.
+The lysosome has a lot of hydrolytic enzymes used to digest macromolecules. Their main function is to digest food particles in a process called phagocytosis. However, they also _recycle_<note>This is a better word for "eat other dead organelles"</note> cell's own organic material in a process called autophagy. This recycle process ensures than the cell keep renewing itself rather than wasting resources to make new biological materials.
 
 #### Mitochondrion
 The plural form of mitochondrion is "mitochondria" and we all heard the famous phrase "mitochondria is the powerhouse of the cell."
