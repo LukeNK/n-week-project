@@ -119,14 +119,14 @@ layout: base
         dot.classList.add('prereq');
 
         // Show only the dots that are prerequisites, recursively
-        prerequisites.forEach(prereq => {
+        for (const prereq of prerequisites) {
             const preDot = document.getElementById(prereq);
             if (preDot) {
                 drawLine(dot, preDot, 'prereq');
                 viewTree(preDot);
                 viewLeaves(preDot.id, 1);
             }
-        });
+        }
     }
 
     // Show the chapters that require this chapter, recursively
