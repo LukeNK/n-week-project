@@ -89,9 +89,39 @@ Inside the chloroplasts is a system of connected sacs, and each sac (**thylakoid
 The main function of the chloroplast is to convert light into chemical "fuel" in a process called **photosynthesis**. However, then can also remove nitrogen and make fatty acids, hormones, aino acids, heme, and vitaims. This is a bit outside of the topic, but it is thought that both the mitochondrion and the chloroplast used to be a bacteria that have a mutualism relationship with the cells. Eventually, those bacterias become a part of the cell. Isn't that cute?
 
 #### Cytoskeleton
+There are three different types of fibres that made up the cytoskeleton. The major difference them is the cross-section diameter and the material.
+
+All eukaryotic cells have **microtubules**, which is the widest of the three fibres. It is responsible for:
+- **Cell motility** (cell movement): the cilia and flagella are composed of microtubles's extentions;
+- **Vesicle transport**: kinesin protein "walks" on these highways to transport vesicles; and
+- **Miotic spindle**: the microtubules are what pull the chromosomes during cell division.
+
+**Microfilament** are built from molecules of **actin** and it is smaller than microtubule. It is involved directly in cell shape change when interacting with myosin proteins, and its functions are visible through:
+- **cytoplasmic streaming** where there are a current of cytosol cycle through the cell; and
+- **muscle cell contractions** in mammals.
+
+Between the size of microtubule and microfilament is **intermediate filament**. Its size varries and it is more permanent (compared to the other types where they are usually assembled and disassembled through out a cell's life). It acts as a permanent skeleton for the cell, making sure that other organelles stay in the correct place and acting as a base for the cell's shape.
+
+The **centralsome** is a _region_ that often located near the nucleus and it only exist in some eularyote cells. It contains a pair of **centroiles**, each with microtubes arranged in a ring. Its main job is so facilitate the construction of microtubes but for cells without a centralsome, they can just self-direct the contruction.
 
 #### Cell wall
+Only some eukaryotic cells have cell walls which protect cell contents, maintain cell shape, and prevent excessive water intake. It provides the rigidity that you can see in plants, so it make sure that the cells will hardly pop. There are also small channels between these walls for the cells to exchange substances called **plasmodesmata**.
 
-#### Plasmodesmata
+Apparently, one layer was not safe enough, so nature made sure that some plant cells are protected with three layers:
+- **Middle lamella**: a layer of pectin acting like a glue between the cells
+- **Primary wall**: the outer layer of the cell wall
+- **Secondary wall**: the inner layer of the cell wall, which is usually thicker and protect the cell better at the cost of lower mobility.
+
+#### Extracellular matrix
+Intsead of having cell walls, animal cells have extracellular matrix. It is made of **glycoproteins**:
+- **Collagen**: the primary material that forms strong fibres outside the cells;
+- **Proteoglycan**: a web of strings surrounded the collagen;
+- **Fibronectin**: the connector between the extracellular matrix and the cell; and
+- **Integrins**: receptor protein on the cell's surface where the fibronectin is anchored.
+
+The functions of the extracellular matrix include:
+- **structural support**: these rods and strings act as anchor points for the cells to cling on, like a climber holding on to their ropes;
+- **tissue segregation**: the extracellular matrix acts as the separation between tissues; and
+- **intercellular communication**: imagine the fibres here are fibre optic cables connecting between cells — they can use the classical send-a-protein-and-wait or use this new flashy extracellular matrix thing.
 
 <!-- ### Plant cells and animal cells -->
