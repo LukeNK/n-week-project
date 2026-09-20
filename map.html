@@ -114,17 +114,17 @@ layout: base
     }
 
     // Show prerequisites
-    function viewTree(circle) {
-        const prerequisites = circle.getAttribute('prerequisites').split(',');
-        circle.classList.add('prereq');
+    function viewTree(dot) {
+        const prerequisites = chapter[dot.getAttribute('id')].prerequisites;
+        dot.classList.add('prereq');
 
         // Show only the rows that are prerequisites, recursively
         prerequisites.forEach(prereq => {
-            const preCircle = document.getElementById(prereq);
-            if (preCircle) {
-                drawLine(circle, preCircle, 'prereq');
-                viewTree(preCircle);
-                viewLeaves(preCircle.id);
+            const preDot = document.getElementById(prereq);
+            if (preDot) {
+                drawLine(dot, preDot, 'prereq');
+                viewTree(preDot);
+                viewLeaves(preDot.id);
             }
         });
     }
