@@ -207,7 +207,7 @@ layout: base
 
     // Firefox does not apply CSS radius to SVG, so we apply it manually
     if (navigator.userAgent.includes("Firefox")) {
-        const circles = document.querySelectorAll("circle");
+        const circles = document.querySelectorAll("#dot circle");
         circles.forEach(circle => {
             circle.setAttribute("r", 10);
         });
