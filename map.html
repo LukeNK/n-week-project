@@ -193,21 +193,11 @@ layout: base
         svgLine.appendChild(circle);
     }
 
-    // Draw background lines for subjects
+    // Find the sum to calculate the angle for each subject
+    // this way we can distribute the subjects evenly
     let subjectIndexSum = 0;
     for (const subject in allSubjects)
         subjectIndexSum += allSubjects[subject];
-    // for (const subject in allSubjects) {
-    //     let line = document.createElementNS("http://www.w3.org/2000/svg", "line"),
-    //         angle = Math.PI / 2 + (subjectIndexSum / allSubjects.length) * i;
-    //     console.log(`Subject ${subject} angle: ${angle}`);
-    //     line.setAttribute("x1", 10);
-    //     line.setAttribute("y1", 10);
-    //     line.setAttribute("x2", maxLength * Math.cos(angle) + 10);
-    //     line.setAttribute("y2", maxLength * Math.sin(angle) + 10);
-    //     line.classList.add('background');
-    //     svgLine.appendChild(line);
-    // }
 
     // Second scan for each chapter to draw visual
     let curSubject = '', curSubjectIndex = 0, curSubjectAngle = 0, nextSubjectAngle = 0;
