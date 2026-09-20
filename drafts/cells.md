@@ -33,14 +33,30 @@ Most of the organelles are specialized in one specific function and has a double
 #### Nucleus
 
 #### Ribosome
+There are free ribosomes and bound ribosomes.
 
 #### Endoplasmic recticulum
+This is a network of sacs and tubes.
+
+**Rough endoplasmic reticulum** has little robosomes attached to it, so that is why it is rough. Its has the job to:
+- produce protein (thanks to the bound ribosomes);
+- send protein to Golgi apparatus; and
+- make new membrane for the cell.
+
+**Transitional endoplasmic reticulum** is the depot where protein—after being produced by the rough endoplasmic reticulum—are packaged inside **transport vesicles**. These vesicles are made by having the trasitional endoplasmic reticulum create bubbles with the proteins inside them.
+
+**Smooth endoplasmic reticulum** is usually smaller than the rough one, but it is there to:
+- produce lipids;
+- process carbonhydrates;
+- detoxify the cell; and
+- store calcium.
 
 #### Golgi apparatus
 
 #### Lysosome
 
 #### Mitochondria
+We all heard the famous phrase "mitochondria is the powerhouse of the cell."
 
 #### Chloroplast
 
