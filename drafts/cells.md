@@ -62,7 +62,7 @@ This is a network of sacs and tubes which are continuously connected. It has two
 - store calcium.
 
 #### Golgi apparatus
-This organnel is made of many flatten bubbles stacked onto each other. It have two sides:
+This organnel is made of many flatten bubbles stacked onto each other. It has two sides:
 - **cis face**: the arrival side facing to the nucleus where it receives vesicles from the endoplasmic reticulum; and
 - **trans face**: the departure side where it ship packages to other places.
 
