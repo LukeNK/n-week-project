@@ -41,7 +41,7 @@ The nucleus is where the genes are mostly located (some genes are also located i
 It is quite fitting because the chromatin is a blueprint for protein production, so the nucleolus must be the "master" to train students that can read that blueprint.
 
 #### Ribosome
-In this list, ribosome is the only component that is NOT considered as an organnel because it is not membrane-bounded. It is made of ribosomal RNA and protein, yet it's job is to make protein (**protein synthesis**).
+In this list, ribosome is the only component that is NOT considered as an organelle because it is not membrane-bounded. It is made of ribosomal RNA and protein, yet it's job is to make protein (**protein synthesis**).
 
 There are **free ribosomes**, which is called like that because they are simply floating around in the cytosol. The protein make by them mostly stay within the cell for _domestic consumption_. There are also **bound ribosomes**, which are identical to free ribosomes except they are attached to the rough endoplasmic reticulum. These ribosomes will make proteins for adding to the cell membrane, for packaging, or for exporting.
 
@@ -53,7 +53,7 @@ This is a network of sacs and tubes which are continuously connected. It has two
 - send protein to Golgi apparatus; and
 - make new membrane for the cell.
 
-**Transitional endoplasmic reticulum** is the depot<note>It is not a distinct region but rather attached to the rough endoplasmic reticulum</note> where protein — after being produced by the rough endoplasmic reticulum — are packaged inside **transport vesicles**. These vesicles are made by having the trasitional endoplasmic reticulum create bubbles with the proteins inside them.
+**Transitional endoplasmic reticulum** is the depot<note>It is not a distinct region but rather attached to the rough endoplasmic reticulum</note> where protein — after being produced by the rough endoplasmic reticulum — are packaged inside **transport vesicles**. These vesicles are made by having the trasitional endoplasmic reticulum create bubbles with the proteins packed inside them.
 
 **Smooth endoplasmic reticulum** is usually smaller than the rough one, but it is there to:
 - produce lipids;
@@ -62,8 +62,14 @@ This is a network of sacs and tubes which are continuously connected. It has two
 - store calcium.
 
 #### Golgi apparatus
+This organnel is made of many flatten bubbles stacked onto each other. It have two sides:
+- **cis face**: the arrival side facing to the nucleus where it receives vesicles from the endoplasmic reticulum; and
+- **trans face**: the departure side where it ship packages to other places.
+
+The Golgi apparatus functions like a final packaging depot before the products reach the customer. The products are sometimes finalized here (**cisternal maturation**); other times, certain macromolecules are made here. After the products reach the _trans_ face, the Golgi apparatus sort them into small bubbles and send them into other parts of the cell — sometimes back to the endoplasmic reticulum. They put lables on these vesicles by adding molecular identification tags or exterior molecules that can only dock to the correct organelle.
 
 #### Lysosome
+The lysosome has a lot of hydrolytic enzymes used to digest macromolecules. Their main function is to digest food particles in a process called phagocytosis. However, they also _recycle_<note>Which is a better word for "eat other dead organelles"</note> cell's own organic material in a process called autophagy. This recycle process ensures than the cell keep renewing itself rather than wasting resources to make new biological materials.
 
 #### Mitochondrion
 The plural form of mitochondrion is "mitochondria" and we all heard the famous phrase "mitochondria is the powerhouse of the cell."
