@@ -1,6 +1,8 @@
 ---
 layout: chapter
 title: Imaginary Numbers
+prerequisites:
+    - m-exp-log
 ---
 ### Introduction
 The definition of a **complex number**:
