@@ -118,19 +118,19 @@ layout: base
         const prerequisites = chapters[dot.id].prerequisites;
         dot.classList.add('prereq');
 
-        // Show only the rows that are prerequisites, recursively
+        // Show only the dots that are prerequisites, recursively
         prerequisites.forEach(prereq => {
             const preDot = document.getElementById(prereq);
             if (preDot) {
                 drawLine(dot, preDot, 'prereq');
                 viewTree(preDot);
-                viewLeaves(preDot.id);
+                viewLeaves(preDot.id, 1);
             }
         });
     }
 
     // Show the chapters that require this chapter, recursively
-    function viewLeaves(chapterId, first) {
+    function viewLeaves(chapterId, call) {
         for (const id in chapters) {
             const chapter = chapters[id];
             if (!chapter.prerequisites.includes(chapterId)) continue;
@@ -138,13 +138,17 @@ layout: base
             const dot = document.getElementById(id);
             if (!dot) continue;
 
-            if (first) {
+            if (call == 0) {
+                // Initial call from the third scan to draw connect lines
                 drawLine(dot, document.getElementById(chapterId), 'connect');
+                viewLeaves(dot.id, 0);
             } else {
+                // Call when user click on a chapter
+                if (call == 1)
+                    drawLine(dot, document.getElementById(chapterId), 'require');
                 dot.classList.add('require');
-                drawLine(dot, document.getElementById(chapterId), 'require');
+                viewLeaves(dot.id, call + 1);
             }
-            viewLeaves(dot.id, first);
         }
     }
 
@@ -187,7 +191,7 @@ layout: base
         dot.setAttribute("cy", y);
         dot.setAttribute("id", id);
         dot.setAttribute("prerequisites", chapter.prerequisites.join(","));
-        dot.setAttribute("onclick", "viewTree(this); viewLeaves(this.id);");
+        dot.setAttribute("onclick", "viewTree(this); viewLeaves(this.id, 1);");
         dot.setAttribute("title", id);
         svgDot.appendChild(dot);
 
@@ -199,7 +203,7 @@ layout: base
     }
 
     // Third scan for each chapter to draw lines between prerequisites
-    for (const id in chapters) viewLeaves(id, true);
+    for (const id in chapters) viewLeaves(id, 0);
 
     // Firefox does not apply CSS radius to SVG, so we apply it manually
     if (navigator.userAgent.includes("Firefox")) {
