@@ -102,6 +102,52 @@ layout: base
         svgText = document.getElementById("text"),
         svgDot = document.getElementById("dot");
 
+    // Draw lines between two circle
+    function drawLine(from, to, type) {
+        let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", from.getAttribute("cx"));
+        line.setAttribute("y1", from.getAttribute("cy"));
+        line.setAttribute("x2", to.getAttribute("cx"));
+        line.setAttribute("y2", to.getAttribute("cy"));
+        line.classList.add(type);
+        svgLine.appendChild(line);
+    }
+
+    // Show prerequisites
+    function viewTree(circle) {
+        const prerequisites = circle.getAttribute('prerequisites').split(',');
+        circle.classList.add('prereq');
+
+        // Show only the rows that are prerequisites, recursively
+        prerequisites.forEach(prereq => {
+            const preCircle = document.getElementById(prereq);
+            if (preCircle) {
+                drawLine(circle, preCircle, 'prereq');
+                viewTree(preCircle);
+                viewLeaves(preCircle.id);
+            }
+        });
+    }
+
+    // Show the chapters that require this chapter, recursively
+    function viewLeaves(chapterId, first) {
+        for (const id in chapters) {
+            const chapter = chapters[id];
+            if (!chapter.prerequisites.includes(chapterId)) continue;
+
+            const dot = document.getElementById(id);
+            if (!dot) continue;
+
+            if (first) {
+                drawLine(dot, document.getElementById(chapterId), 'connect');
+            } else {
+                dot.classList.add('require');
+                drawLine(dot, document.getElementById(chapterId), 'require');
+            }
+            viewLeaves(dot.id, first);
+        }
+    }
+
     // make svg take the entire window, can use Math.max for a scrollable map
     const maxLength = Math.min(window.innerHeight, window.innerWidth) - 20;
     svg.setAttribute("width", maxLength);
@@ -154,52 +200,6 @@ layout: base
 
     // Third scan for each chapter to draw lines between prerequisites
     for (const id in chapters) viewLeaves(id, true);
-
-    // Draw lines between two circle
-    function drawLine(from, to, type) {
-        let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        line.setAttribute("x1", from.getAttribute("cx"));
-        line.setAttribute("y1", from.getAttribute("cy"));
-        line.setAttribute("x2", to.getAttribute("cx"));
-        line.setAttribute("y2", to.getAttribute("cy"));
-        line.classList.add(type);
-        svgLine.appendChild(line);
-    }
-
-    // Show prerequisites
-    function viewTree(circle) {
-        const prerequisites = circle.getAttribute('prerequisites').split(',');
-        circle.classList.add('prereq');
-
-        // Show only the rows that are prerequisites, recursively
-        prerequisites.forEach(prereq => {
-            const preCircle = document.getElementById(prereq);
-            if (preCircle) {
-                drawLine(circle, preCircle, 'prereq');
-                viewTree(preCircle);
-                viewLeaves(preCircle.id);
-            }
-        });
-    }
-
-    // Show the chapters that require this chapter, recursively
-    function viewLeaves(chapterId, first) {
-        for (const id in chapters) {
-            const chapter = chapters[id];
-            if (!chapter.prerequisites.includes(chapterId)) continue;
-
-            const dot = document.getElementById(id);
-            if (!dot) continue;
-
-            if (first) {
-                drawLine(dot, document.getElementById(chapterId), 'connect');
-            } else {
-                dot.classList.add('require');
-                drawLine(dot, document.getElementById(chapterId), 'require');
-            }
-            viewLeaves(dot.id, first);
-        }
-    }
 
     // Firefox does not apply CSS radius to SVG, so we apply it manually
     if (navigator.userAgent.includes("Firefox")) {
