@@ -48,11 +48,12 @@ layout: base
         fill: var(--color-dark);
         font-size: 0.75rem;
 
-        &:hover, &.active, &.subject {
+        &:hover, &.active {
             fill: var(--color-bright);
         }
 
         &.subject {
+            fill: var(--color-darker);
             font-size: 1rem;
             font-weight: bold;
         }
@@ -242,6 +243,7 @@ layout: base
             let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
             text.setAttribute("x", (maxLength - levelLength + 50) * Math.cos((curSubjectAngle + nextSubjectAngle) / 2));
             text.setAttribute("y", (maxLength - levelLength + 50) * Math.sin((curSubjectAngle + nextSubjectAngle) / 2));
+            text.setAttribute("text-anchor", "middle");
             text.classList.add('subject');
             text.textContent = curSubject;
             svgText.appendChild(text);
