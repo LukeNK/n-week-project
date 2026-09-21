@@ -214,32 +214,26 @@ layout: base
     // Second scan for each chapter to draw visual
     let curSubject = '', curSubjectIndex = 0, curSubjectAngle = 0, nextSubjectAngle = 0;
     for (const id in chapters) {
-        if (curSubject == '')
-            curSubject = chapters[id].subject; // Skip first time
-
-        // Calculate the angle for the next subject, if any
-        const keys = Object.keys(allSubjects);
-        const nextSubject = keys[keys.indexOf(curSubject) + 1];
-        if (nextSubject) {
-            nextSubjectAngle = (Math.PI / 2) * ((curSubjectIndex + allSubjects[curSubject]) / subjectIndexSum);
-        } else {
-            nextSubjectAngle = Math.PI / 2; // Last subject, point to the top
-        }
-
         // If the subject changes, draw a line to separate the subjects
         if (curSubject != chapters[id].subject) {
-            curSubjectIndex += allSubjects[curSubject];
+            curSubjectIndex += allSubjects[curSubject] || 0;
             curSubject = chapters[id].subject;
             curSubjectAngle = (Math.PI / 2) * (curSubjectIndex / subjectIndexSum);
+            nextSubjectAngle = (Math.PI / 2) * ((curSubjectIndex + allSubjects[curSubject]) / subjectIndexSum);
 
-            let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-            line.setAttribute("x1", 10);
-            line.setAttribute("y1", 10);
-            line.setAttribute("x2", maxLength * Math.cos(curSubjectAngle) + 10);
-            line.setAttribute("y2", maxLength * Math.sin(curSubjectAngle) + 10);
-            line.classList.add('background');
-            svgLine.appendChild(line);
+            if (curSubjectAngle != 0) {
+                // Skip the first line, which is the top line, for artistic purposes
+                let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                line.setAttribute("x1", 10);
+                line.setAttribute("y1", 10);
+                line.setAttribute("x2", maxLength * Math.cos(curSubjectAngle) + 10);
+                line.setAttribute("y2", maxLength * Math.sin(curSubjectAngle) + 10);
+                line.classList.add('background');
+                svgLine.appendChild(line);
+            }
         }
+
+        console.log(id, curSubjectIndex, curSubjectAngle, nextSubjectAngle);
 
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
