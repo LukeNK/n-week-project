@@ -48,8 +48,13 @@ layout: base
         fill: var(--color-dark);
         font-size: 0.75rem;
 
-        &:hover, &.active {
+        &:hover, &.active, &.subject {
             fill: var(--color-bright);
+        }
+
+        &.subject {
+            font-size: 1rem;
+            font-weight: bold;
         }
     }
 
@@ -97,11 +102,11 @@ layout: base
 <svg width="600" height="600">
     <g id="legend">
         <circle cx="10" cy="10" r="5"></circle>
-        <text x="25" y="15">Chapter</text>
+        <text x="25" y="15" class="active">Chapter</text>
         <circle cx="10" cy="30" r="10" class="prereq"></circle>
-        <text x="25" y="35">Prerequisite</text>
+        <text x="25" y="35" class="active">Prerequisite</text>
         <circle cx="10" cy="50" r="10" class="require"></circle>
-        <text x="25" y="55">Dependent</text>
+        <text x="25" y="55" class="active">Dependent</text>
     </g>
     <g id="line"></g>
     <g id="text"></g>
@@ -195,7 +200,7 @@ layout: base
     }
 
     // Draw background circles for levels
-    const levelLength = maxLength / (maxLevel + 1); // The length of each level
+    const levelLength = maxLength / (maxLevel + 2); // The length of each level
     for (let i = 1; i <= maxLevel + 1; i++) {
         let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         circle.setAttribute("cx", 10);
@@ -226,11 +231,20 @@ layout: base
                 let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
                 line.setAttribute("x1", 10);
                 line.setAttribute("y1", 10);
-                line.setAttribute("x2", maxLength * Math.cos(curSubjectAngle) + 10);
-                line.setAttribute("y2", maxLength * Math.sin(curSubjectAngle) + 10);
+                // Make the line longer than the circle to make sure it covers the entire square
+                line.setAttribute("x2", (maxLength + 500) * Math.cos(curSubjectAngle) + 10);
+                line.setAttribute("y2", (maxLength + 500) * Math.sin(curSubjectAngle) + 10);
                 line.classList.add('background');
                 svgLine.appendChild(line);
             }
+
+            // Draw the subject name in the middle of the angle
+            let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute("x", (maxLength - levelLength + 50) * Math.cos((curSubjectAngle + nextSubjectAngle) / 2));
+            text.setAttribute("y", (maxLength - levelLength + 50) * Math.sin((curSubjectAngle + nextSubjectAngle) / 2));
+            text.classList.add('subject');
+            text.textContent = curSubject;
+            svgText.appendChild(text);
         }
 
         console.log(id, curSubjectIndex, curSubjectAngle, nextSubjectAngle);
@@ -238,7 +252,7 @@ layout: base
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = curSubjectAngle + Math.random() * (nextSubjectAngle - curSubjectAngle), // Randomize the angle a bit to avoid overlap
-            length = maxLength - (chapter.level + 1 - Math.random() * 0.8) * levelLength; // Randomize the position a bit to avoid overlap
+            length = maxLength - (chapter.level + 2 - Math.random() * 0.8) * levelLength; // Randomize the position a bit to avoid overlap
         let x = length * Math.cos(angle) + 10,
             y = length * Math.sin(angle) + 10;
 
