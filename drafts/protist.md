@@ -10,7 +10,7 @@ What are protists? They are usually defined by what they are _not_: protists are
 
 **Animal-like protist** are chemoheterotroph and they feed by eating other organisms. In fact, many protists here are **motile predator** which means that they can move to hunt their victims. In terms of structure, they do not have cell walls and are unicellular.
 
-**Fungus-like protist** here are also chemoheterotrph and they feed by releasing enzymes to "absorb" other organisms. That obviously makes them also decomposers. They can be unicellular or colonial, and they are similar to fungi with their chiton cell wall.
+**Fungus-like protist** here are also chemoheterotrph and they feed by releasing enzymes to "absorb" other organisms. That obviously makes them also decomposers. They can be unicellular or colonial, and they are similar to fungi with their chitin cell wall.
 
 In terms of production, most protists produce asexually, but some can also produce sexually. Some protists can move using flagella or cilia, others might just flow along with the flow of life passively. As you can probably tell from the way the Author writes this chapter, protists are very diverse and it is hard for scientists to generalize them. In fact, the interactions between some protists and other eukaryotes are still under investigate.
 
