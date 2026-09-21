@@ -128,10 +128,16 @@ layout: base
         svgLine.appendChild(line);
     }
 
+    // Draw text from ID
+    function highlightText(id) {
+        document.querySelector("text[for='" + id + "']").classList.add('active');
+    }
+
     // Show prerequisites
     function viewTree(dot) {
         const prerequisites = chapters[dot.id].prerequisites;
         dot.classList.add('prereq');
+        highlightText(dot.id);
 
         // Show only the dots that are prerequisites, recursively
         for (const prereq of prerequisites) {
@@ -159,8 +165,10 @@ layout: base
                 viewLeaves(dot.id, 0);
             } else {
                 // Call when user click on a chapter
-                if (call == 1)
+                if (call == 1) {
                     drawLine(dot, document.getElementById(chapterId), 'require');
+                    highlightText(dot.id);
+                }
                 dot.classList.add('require');
                 viewLeaves(dot.id, call + 1);
             }
