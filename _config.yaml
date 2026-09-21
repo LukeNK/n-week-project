@@ -4,6 +4,9 @@ permalink: /:collection/:name
 collections_dir: chapters
 
 collections:
+  b:
+    name: Biology
+    output: true
   c:
     name: Chemistry
     output: true
