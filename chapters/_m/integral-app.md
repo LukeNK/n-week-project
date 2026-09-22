@@ -29,14 +29,14 @@ If you come back to integral definition, you will also remember one thing: the i
     f(x)_{average} = \frac{\int^b_a f(x) \;dx}{b-a}
 </eq>
 
-You can actually derive this formula. Define &\Delta x = \frac{b-a}{n}&, we have the average of a function as:
-\[\begin{aligned}
-    A_n &= \frac{f(x_1) + f(x_2) + \text{THREE DOTS HERE} + f(x_n)}{n} \\\\\
+You can actually derive this formula. Define $\Delta x = \frac{b-a}{n}$, we have the average of a function as:
+\\[\begin{aligned}
+    A_n &= \frac{f(x_1) + f(x_2) + \ldots + f(x_n)}{n} \\\\\
     &=\frac{\sum_{i=1}^{n} f(x_i)}{n} \\\\\
     &=\frac{\sum_{i=1}^{n} f(x_i)}{\frac{\Delta x}{b-a}} \\\\\
     &=\frac{\sum_{i=1}^{n} f(x_i) \;\Delta x}{b-a} \\\\\
     &=\frac{\int^b_a f(x) \;dx}{b-a}
-\end{aligned}\]
+\end{aligned}\\]
 
 ### Displacement, velocity, and acceleration
 This section will help you to visualize the back and forth relationship of derivative and integral. Assume that we have a function velocity over time (which means we can plug in the time to get the value of velocity):
