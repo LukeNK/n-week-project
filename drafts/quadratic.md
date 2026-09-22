@@ -6,7 +6,7 @@ prerequisites:
 ---
 
 ### Other notable forms
-Yuu already have the **standard form**
+You already have the **standard form**
 
 ### Parabola
 
