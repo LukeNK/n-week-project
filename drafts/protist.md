@@ -26,3 +26,4 @@ You can also find land plants in this supergroup, showing how close algae can be
 #### Uniknta
 
 #### Unresolved
+Because protists are so diverse, scientists still have difficulties classifying them. When writing this chapter, the Author also encountered a problem between writing only the general points (which makes it way too short) or writing about each species of protist (which makes the chapter too long). That is why we have this special unresolved group.
