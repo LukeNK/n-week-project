@@ -7,8 +7,6 @@ title: Polynomial
 
 #### Different ways of expressing the same equation
 
-### Solving quadratic equation
-
 ### Polynomial
 
 #### Notable formula: x-intercept
