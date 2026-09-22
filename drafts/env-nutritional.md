@@ -14,4 +14,4 @@ There are four main modes (use table).
 Mutualistic relationships and parasitic
 
 ### Nutrition cycle
-THe food chain is simply a way for nutrition to cycle
+The food chain is simply a way for nutrition to cycle
