@@ -40,9 +40,9 @@ You can also create a hollow cylinder, too! That means there is a space between 
 
 So in general, the most difficult part of these types of exercises is finding the area function $A(x)$. Once you found it, it is mostly about finding the integral. There is also the case where the axis of rotation will not match the actual axis and in that case, you shift your function's value accordingly.
 
-However, it is not like your insturctors will give you something easy to find the area of the cross sections, so we have the **shell method**. Rather than making our slices perpendicular to the axis of rotation, we are now cutting our _area_ parallel with the board<note>This is a dangerous to do when cooking!</note>.Because are are cutting the area parallel, we are making a circular slice _around_ our object, hence making a shell! If you , you will see that its thickness is $\Delta x$, length is the circumference of the circle $c=2\pi r= 2\pi f(x)$<note>Despite the circumference of the inner and the outer face are different, we asume that they are similar with a sufficiently small $\Delta x$.</note>, and height is $f(x)$. Therefore, the volume becomes the accumulation of those shells:
+However, it is not like your insturctors will give you something easy to find the area of the cross sections, so we have the **shell method**. Rather than making our slices perpendicular to the axis of rotation, we are now cutting our _area_ parallel with the board<note>This is a dangerous to do when cooking!</note>. Because are are cutting the area parallel, we are making a circular slice _around_ our object, hence making a shell! You will see that its thickness is $\Delta x$, length is the circumference of the circle $c=2\pi r= 2\pi f(x)$<note>Despite the circumference of the inner and the outer face are different, we asume that they are similar with a sufficiently small $\Delta x$.</note>, and height is $f(x)$. Therefore, the volume becomes the accumulation of those shells:
 <eq>
-    \text{Volume} = 2\pi\int_a^b xf(x) \;\dx
+    \text{Volume} = 2\pi\int_a^b xf(x) \;dx
 </eq>
 
 Note that the section of $a$ and $b$ in the shell method is a bit different: they are now spanning the entire radius of the volume.
