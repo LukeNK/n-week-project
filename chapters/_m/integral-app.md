@@ -16,6 +16,34 @@ So that is the meaning of the phrase "the accumulation of the value of a functio
     <figcaption>Shading the area under the curve using lines</figcaption>
 </figure>
 
+### Volume with integral
+This idea can be extended to a higher level: if you have a 3D shape and a function $A(x)$ that can give you the area of the cross section, you can find the volume by using integration. After all, the cross sections are simply tiny slices of the actual volume, just like how the lines are tiny slices of the area.
+<eq>
+    \text{Volume} = \int_a^b A(x) \;dx
+</eq>
+
+That idea can be extended to find the **volume of a function when you rotate it about an axis**. So because we have the radius equal to $f(x)$, the area of the cross sections becomes:
+<eq>
+    A(x) = \pi\left(f(x)\right)^2
+</eq>
+We can now plug the formula into our integral to get the volume and throw the pi outside because it is a constant.
+<eq>
+    \text{Volume} = \pi\int_a^b \left(f(x)\right)^2 \;dx
+</eq>
+
+You can also create a hollow cylinder, too! That means there is a space between your actual "solid" and the axis, so we define $g(x)$ as the distance from the axis to where the solid start. This procedure is called **the washer method**
+<eq>\begin{aligned}
+    A(x) &= \pi\(\text{outer radius})^2 - \pi(\text{inner radius})^2 \\
+    &= \pi(f(x)^2-g(x)^2)
+    \Rightarrow \text{Volume} &= \pi\int_a^b f(x)^2 - g(x)^2 \;dx
+\end{aligned}</eq>
+
+So the general, the most difficult part of these types of exercises is finding the area function $A(x)$. Once you found it, it is mostly about finding the integral.
+
+<!--
+Talk about the shell method
+-->
+
 ### Net change and average
 We can rewrite the definition of definite integral in a way that give the spotlight to the resultant function:
 <eq>
