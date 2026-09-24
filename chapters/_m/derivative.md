@@ -3,6 +3,7 @@ layout: chapter
 title: Derivative
 prerequisites:
   - m-limit
+  - m-exp-log
 ---
 It is recommended that the reader understand about limits before proceeding.
 
