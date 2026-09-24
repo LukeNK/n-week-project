@@ -17,7 +17,7 @@ So that is the meaning of the phrase "the accumulation of the value of a functio
 </figure>
 
 ### Volume with integral
-This idea can be extended to a higher level: if you have a 3D shape and a function $A(x)$ that can give you the area of the cross section, you can find the volume by using integration. After all, the cross sections are simply tiny slices of the actual volume, just like how the lines are tiny slices of the area.
+This idea can be extended to a higher level: if you have a 3D shape and a function $A(x)$ that can give you the area of the cross section, you can find the volume by using integration. After all, the cross sections are simply tiny slices of the actual volume, just like how the lines are tiny slices of the area. As for the integral limits $a$ and $b$, they should be selected to reflect the length of the cylinder along the x-axis. Of course, you are not tied to the x-axis: $x=y^2$ is definitely a valid function and it is much easier for you to find the integration along the y-axis.
 <eq>
     \text{Volume} = \int_a^b A(x) \;dx
 </eq>
@@ -28,17 +28,17 @@ That idea can be extended to find the **volume of a function when you rotate it 
 </eq>
 We can now plug the formula into our integral to get the volume and throw the pi outside because it is a constant.
 <eq>
-    \text{Volume} = \pi\int_a^b \left(f(x)\right)^2 \;dx
+    \text{Volume} = \pi\int_a^b f(x)^2 \;dx
 </eq>
 
-You can also create a hollow cylinder, too! That means there is a space between your actual "solid" and the axis, so we define $g(x)$ as the distance from the axis to where the solid start. This procedure is called **the washer method**
+You can also create a hollow cylinder, too! That means there is a space between your actual "solid" and the axis, so we define $g(x)$ as the distance from the axis to where the solid start. This procedure is called **the washer method**.
 <eq>\begin{aligned}
-    A(x) &= \pi\(\text{outer radius})^2 - \pi(\text{inner radius})^2 \\
-    &= \pi(f(x)^2-g(x)^2)
+    A(x) &= \pi(\text{outer radius})^2 - \pi(\text{inner radius})^2 \\
+    &= \pi\left(f(x)^2-g(x)^2\right) \\
     \Rightarrow \text{Volume} &= \pi\int_a^b f(x)^2 - g(x)^2 \;dx
 \end{aligned}</eq>
 
-So the general, the most difficult part of these types of exercises is finding the area function $A(x)$. Once you found it, it is mostly about finding the integral.
+So in general, the most difficult part of these types of exercises is finding the area function $A(x)$. Once you found it, it is mostly about finding the integral.
 
 <!--
 Talk about the shell method
