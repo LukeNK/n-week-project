@@ -1,6 +1,8 @@
 ---
 layout: chapter
 title: Significant Figures, Rounding, and Scientific Notation
+prerequisites:
+    - m-exp
 ---
 **Significant figures (digits)**, usually denoted with "SF" in Canada, is considered to be the level of precision of a number. The amount of significant figures you have implies the uncertainty of your number. The rules are very easy to follow:
 

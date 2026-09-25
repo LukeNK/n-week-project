@@ -1,6 +1,8 @@
 ---
 layout: chapter
 title: Permutation and Combination
+prerequisites:
+    - m-exp
 ---
 The difference between **permutation** and **combination** is in the order. **Permutation is an ordered combination** or in other words, a combination does not concern the order.
 
