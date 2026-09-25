@@ -1,6 +1,6 @@
 ---
 layout: chapter
-title: Exponential and Logarithmic Functions
+title: Exponential Functions
 ---
 
 ### Exponential rules

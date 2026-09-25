@@ -2,7 +2,7 @@
 layout: chapter
 title: Imaginary Numbers
 prerequisites:
-    - m-exp-log
+    - m-exp
 ---
 ### Introduction
 The definition of a **complex number**:
