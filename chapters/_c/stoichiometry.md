@@ -1,8 +1,6 @@
 ---
 layout: chapter
 title: Stoichiometry
-prerequisites:
-    - m-sigfig
 ---
 Stoichiometry simply means that we are dealing with chemical reactions and the quantitative data from such reactions (like weight, volume, number of atoms, etc...).
 
