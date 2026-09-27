@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Cells
 ---
 
