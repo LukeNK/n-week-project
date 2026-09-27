@@ -1,6 +1,8 @@
 ---
 layout: draft
 title: Rotational Kinematics
+prerequisites:
+    - p-kinematics
 ---
 
 ### Angular kinematics
