@@ -32,9 +32,32 @@ If we want to describe the change in our velocity, we will use **acceleration**.
     \vec{a} = \frac{\delta v}{t_a} = \frac{\vec{v_f} - \vec{v_i}}{t_a}
 </eq>
 
-So your acceleration should be $1\text{m}\text{s}^{-2}$. Notice that we have been very careful to separate the time it takes to move $t_v$ with the time it takes to accelerate $t_a$. The time it takes for you to get to a destination is different from the time it takes you to get to that velocity. For example, a car can get from 0 to 100 km/h in less than 3 seconds, but that car still needs 10 hours to travel 1000 km from Vancouver to Calgary.
+So your acceleration should be $1\text{m}\text{s}^{-2}$. Notice that we have been very careful to separate the time it takes to move $t_v$ with the time it takes to accelerate $t_a$. The time it takes for you to get to a destination is different from the time it takes you to get to that velocity. For example, a car can get from 0 to 100 km/h in less than 3 seconds, but that car still needs 10 hours to travel 1000 km from Vancouver to Calgary. However, in most textbooks, you will need to make that distinction by yourselves; in the next section, you will also need to consider what is time actually refer to: the time between the positions of concern.
 
 ### Kinematics equations
+In all of these basic kinematics equation, we assume one important thing: the acceleration $\vec{a}$ never change. Because acceleration is the change in velocity, you can get the new velocity after a time $t$ has passed:
+<eq>
+    \vec{v} = \vec{v_i} + \vec{a}t
+</eq>
+
+Because the acceleration never change, we can safely assume that half of the time, the velocity is below the average velocity, and the other half of time, it is above the average. Therefore, we can get the displacement with:
+<eq>
+    \vec{d} = \vec{v_{average}}t = \frac{\vec{v_i} + \vec{v_f}}{2}t
+</eq>
+
+If we combine the two equation above by setting $\vec{v_f} = \vec{v_i} + \vec{a}t$, we will have another way to solve for the displacement:
+<eq>
+    \vec{d} = \vec{v_i}t + \frac{1}{2}\vec{a}t^2
+</eq>
+
+In case you do not have time (puns intended), you do have this particular equation of kinematics that does not require $t$:
+<eq>
+    2\vec{a}\vec{d} = \vec{v_f}^2 - \vec{v_i}^2
+</eq>
+
+In kinematics exercises, you will need to pick two points in the journey that you have the most information. They are usually the start and the end, but they could be two different points that the question give you.
+
+<!-- ### Graph of kinematics functions -->
 
 ### Velocity and acceleration direction
 "Speed up" and "slow down"
