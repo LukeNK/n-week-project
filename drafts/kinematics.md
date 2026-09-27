@@ -34,8 +34,7 @@ If we want to describe the change in our velocity, we will use **acceleration**.
 
 So your acceleration should be $1\text{m}\text{s}^{-2}$. Notice that we have been very careful to separate the time it takes to move $t_v$ with the time it takes to accelerate $t_a$. The time it takes for you to get to a destination is different from the time it takes you to get to that velocity. For example, a car can get from 0 to 100 km/h in less than 3 seconds, but that car still needs 10 hours to travel 1000 km from Vancouver to Calgary. However, in most textbooks, you will need to make that distinction by yourselves; in the next section, you will also need to consider what is time actually refer to: the time between the positions of concern.
 
-The direction of acceleration can be a bit of a concern. In simple words, the acceleration
-<!-- CONTINUTE THIS -->
+The direction of acceleration can be a bit of a concern, so rather than thinking about a direction, just pick a possible and a negative side. So if I have up is possitive,  my velocity is $10\text{m/s}$, and the gravitational acceleration is $-9.81\text{m}\text{s}^{-2}$, I know that the acceleration is _against_ my velocity, which will eventually turn my velocity to negative (therefore making velocity go _with_ my acceleration). Therefore, the main question you can ask yourselves is: is my acceleration with or against my velocity?
 
 ### Kinematics equations
 In all of these basic kinematics equation, we assume one important thing: the acceleration $\vec{a}$ never change. Because acceleration is the change in velocity, you can get the new velocity after a time $t$ has passed:
@@ -45,7 +44,7 @@ In all of these basic kinematics equation, we assume one important thing: the ac
 
 Because the acceleration never change, we can safely assume that half of the time, the velocity is below the average velocity, and the other half of time, it is above the average. Therefore, we can get the displacement with:
 <eq>
-    \vec{d} = \vec{v_{average}}t = \frac{\vec{v_i} + \vec{v_f}}{2}t
+    \vec{d} = \vec{v_{avg}}\cdot t = \frac{\vec{v_i} + \vec{v_f}}{2}t
 </eq>
 
 If we combine the two equation above by setting $\vec{v_f} = \vec{v_i} + \vec{a}t$, we will have another way to solve for the displacement:
