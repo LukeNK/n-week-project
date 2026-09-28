@@ -3,11 +3,15 @@ layout: draft
 title: Acid and base
 prerequisites:
     - c-equilibrium
+    - c-titration
     - m-log
 ---
-
-<!-- After complete, update to make titration depends on this -->
 
 ### Definition
 
 ### pH
+
+### Indicator
+
+### Titration
+Titration is mostly used when you have an acid and a base.

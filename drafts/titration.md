@@ -5,8 +5,6 @@ prerequisites:
     - c-chem-eq
 ---
 
-<!-- This will have acid-base as prerequisites -->
-
 ### Limiting reagents and excess reagents
 Sometimes it is hard to follow a recipe exactly, and a similar thing also happens with chemical reactions. Usually, it is hard to put the exact amount of the reactants in a chemical reaction. However, chemists came up with a solution: rather than having to control two or more reactant, we only need to control one and just have more than enough of the other reactants. After all, the reaction can only happen when there is enough of all reactants — a lot of reactions would not be able to process if you do not have even one reactant.
 
