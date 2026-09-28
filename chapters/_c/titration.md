@@ -61,7 +61,7 @@ The first step is to to find the number of mols of the titrant used, from which 
 We can then figure out the number of mols initially reacted by subtracting the excess from the total:
 <eq>\begin{aligned}
     n_\text{used} &= n_\text{total} - n_\text{excess} \\
-    &= V_\text{total} \times \M_s - n_\text{excess}
+    &= V_\text{total} \times M_s - n_\text{excess}
 \end{aligned}</eq>
 
 Because now we have the number of mols being used in the first reaction, we can now use the reaction factor to convert to the number of mols of the original compound:
