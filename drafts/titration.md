@@ -1,6 +1,6 @@
 ---
 layout: draft
-title: Titration and back titration
+title: Titration and Back Titration
 prerequisites:
     - c-chem-eq
 ---
