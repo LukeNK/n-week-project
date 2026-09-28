@@ -51,20 +51,53 @@ _Na₃PO₄ + 3KOH → _NaOH + 1K₃PO₄    Balances K, OH is imbalanced
 _Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄
 1Na₃PO₄ + 3KOH → 3NaOH + 1K₃PO₄    Checks each element
 ```
-<eq id='eq-chem-eq-2'>
+<eq>
     \text{Na}_3\text{PO}_4 + 3\text{KOH} \rightarrow 3\text{NaOH} + \text{K}_3\text{PO}_4
 </eq>
 
 So balancing chemical equations is basically just trials-and-errors. In certain cases, you will need to use fractions — which is certainly valid as long as the proportion is correct — but most instructors require that you use whole number if possible.
 
-### Limiting reagent
-The limiting reagent is the chemical that stops you from using the entirety of the other chemicals. Let's go back to our balanced example in <a href='#eq-chem-eq-2'></a>. If we only have 3 mol of KOH, we can only make 3 mol of NaOH even when we have a lot of Na₃PO₄.
+### Limiting reagents and excess reagents
+Sometimes it is hard to follow a recipe exactly, and a similar thing also happens with chemical reactions. Usually, it is hard to put the exact amount of the reactants in a chemical reaction. However, chemists came up with a solution: rather than having to control two or more reactant, we only need to control one and just have more than enough of the other reactants. After all, the reaction can only happen when there is enough of all reactants — a lot of reactions would not be able to process if you do not have even one reactant.
 
-To decide which one is the limiting reactant, simply pick one product (usually the one with a coefficient of 1) then ask yourself "how much product can this reactant make?" After calculating each reactant, the limiting reactant is the one that can make the least amount of the product.
+Therefore, the reactant that will run out before other reactants are called **limiting reactant**, because it limits the amount of product that can be made. The other reactants that we have plently of are called **excess reagents**. Let's say we have this reaction:
+\\[
+    \text{N}_2 + 3\text{H}_2 \rightarrow 2\text{NH}_3
+\\]
+Imagine you only have one mol of each reactant. You can realize that for each mol of nitrogen, we will need 3 mols of hydrogen. However, because we only have 1 mols of hydrogen, we will not have enough hydrogen to react with all the nitrogen. Therefore, we can conclude that hydrogen is the limiting reactant, and the nitrogen is the excess reactant.
 
-Let's say we got 1 mol of each reactant and we pick the product K₃PO₄. 1 mol of Na₃PO₄ can make 1 mol of the product, but 1 mol of KOH can only make 1/3. Therefore, we can conclude that KOH is the limiting reactant.
+We can further set up a table of amount to see what will happen to each reactant:
+<table id="tab-a3">
+    <caption>Table of amounts of the reaction</caption>
+    <tr>
+        <th></th>
+        <th>N₂</th>
+        <th>3H₂</th>
+        <th>2NH₃</th>
+    </tr>
+    <tr>
+        <th>Initial (mol)</th>
+        <td>1.00</td>
+        <td>1.00</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <th>Change (mol)</th>
+        <td>-0.33</td>
+        <td>-1.00</td>
+        <td>+0.66</td>
+    </tr>
+    <tr>
+        <th>Final (mol)</th>
+        <td>0.66</td>
+        <td>0</td>
+        <td>0.66</td>
+    </tr>
+</table>
 
-Usually, you will be asked to calculate the remaining excess reactant. You can use the limiting reactant as the main reference and calculate how much the excess reactant was consumed. Then you can subtract that from the amount of excess reactant given to get is remaining. Using those steps, we should have 2/3 mol of Na₃PO₄ remaining.
+In the table above, the "Change" row describe what will happen during the reaction, so it needs to follow the ration provided by the reaction equation.
+
+One of the quickest way for you to pick out the limiting reagent is simply start with picking out one specific product. Then you can ask yourselves for each reactant: "If this reactant reacts fully then how much product do I have?" After that, you can simply pick out the reactant that gives the least amount of product. Back to our example above: we know that 1 mol of nitrogen will yield 2 mols of ammonia but 1 mol of hydrogen can only give 0.66 mols of the products, so we know that hydrogen must be the limiting reactant.
 
 ### Percent yield
 Of course, all of the calculations are theoretical. In reality, there will be errors that make the amount of products being less than what is expected.
