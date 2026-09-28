@@ -5,51 +5,16 @@ prerequisites:
     - c-chem-eq
 ---
 
-### Limiting reagents and excess reagents
-Sometimes it is hard to follow a recipe exactly, and a similar thing also happens with chemical reactions. Usually, it is hard to put the exact amount of the reactants in a chemical reaction. However, chemists came up with a solution: rather than having to control two or more reactant, we only need to control one and just have more than enough of the other reactants. After all, the reaction can only happen when there is enough of all reactants — a lot of reactions would not be able to process if you do not have even one reactant.
+### Titration set up
+The tools you will use the most in titrations is the **burette**. This is a glass tube that with a valve at the bottom which allows you to slowly add a solution into a container. After you have added solution and closed the burette, you can calculate the amount that you have dispensed by subtracting the before and after amount that you have in the burette. The container that you will drop your solution into is usually an Erlenmeyer flask. Usually:
+- **titrant**: the solution that you put inside the burette; and
+- **analyte**: the solution that you put inside the Erlenmeyer flask.
 
-Therefore, the reactant that will run out before other reactants are called **limiting reactant**, because it limits the amount of product that can be made. The other reactants that we have plently of are called **excess reagents**. Let's say we have this reaction:
-\\[
-    \text{N}_2 + 3\text{H}_2 \rightarrow 2\text{NH}_3
-\\]
-Imagine you only have one mol of each reactant. You can realize that for each mol of nitrogen, we will need 3 mols of hydrogen. However, because we only have 1 mols of hydrogen, we will not have enough hydrogen to react with all the nitrogen. Therefore, we can conclude that hydrogen is the limiting reactant, and the nitrogen is the excess reactant.
+We call a solution the analyte is usually cause its information is unknown to us. In order to prepare titration, We will need an **indicator**, which is a special chemical that can tell you when the excess reagent has completely reacted. In any case, when we first open the valve (**stopcock**), a reaction will happen where the solution from the burette is the limiting reactant and the solution inside the flask is the excess reactant. This will continue until we reach an **endpoint**, where all of the solution inside the flask are consumed and the indicator will make the flask change colour. If you keep going, the role of the limiting reactant and excess reactant will change (because from a boarder scope, you have more titrants than the analyte).
 
-We can further set up a table of amount to see what will happen to each reactant:
-<table id="tab-a3">
-    <caption>Table of amount of the reaction $\text{N}_2 + 3\text{H}_2 \rightarrow 2\text{NH}_3$</caption>
-    <tr>
-        <th></th>
-        <th>N₂</th>
-        <th>3H₂</th>
-        <th>2NH₃</th>
-    </tr>
-    <tr>
-        <th>Initial (mol)</th>
-        <td>1.00</td>
-        <td>1.00</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <th>Change (mol)</th>
-        <td>-0.33</td>
-        <td>-1.00</td>
-        <td>+0.66</td>
-    </tr>
-    <tr>
-        <th>Final (mol)</th>
-        <td>0.66</td>
-        <td>0</td>
-        <td>0.66</td>
-    </tr>
-</table>
-
-In the table above, the "Change" row describe what will happen during the reaction, so it needs to follow the ration provided by the reaction equation.
-
-One of the quickest way for you to pick out the limiting reagent is simply start with picking out one specific product. Then you can ask yourselves for each reactant: "If this reactant reacts fully then how much product do I have?" After that, you can simply pick out the reactant that gives the least amount of product. Back to our example above: we know that 1 mol of nitrogen will yield 2 mols of ammonia but 1 mol of hydrogen can only give 0.66 mols of the products, so we know that hydrogen must be the limiting reactant.
+So in short, titration is simply a process that we carefully drop an amount of excess reagent until the limiting reagent has completely reacted. You will also need our chemicals to be in an aqueous form so that you can carefully control the flow and stop when you see that the reaction has completely occured. Titration is mostly useful for you to find the number of mols of an unknown sample, from which you can deduct other variables.
 
 ### Forward titration
-Titration is simply a process that we carefully drop an amount of limiting reagent until the **endpoint** is reached where the excess reagent has completely reacted. In order to prepare titration, you will need an **indicator**, which is a special chemical that can tell you when the excess reagent has completely reacted. You will also need our chemicals to be in an aqueous form so that you can carefully control the flow and stop when you see that the reaction has completely occured. Titration is mostly useful for you to find the concentration or even the number of mols of an unknown sample.
-
 One of the most difficult thing about titration is figuring out the mol of each substance. However, do not panic: most of the time, you are given concentration and the volume of each chemicals. Simply multiply them together to get the number of mols — it is just basic stoichiometry.
 
 Let's say we have a reaction:
@@ -60,6 +25,20 @@ And let's say the concentration of NaOH is 1M. We will need to find the concentr
 - multiply the volume with molarity to get the number of mols;
 - from that result, use the equation to get the number of mols of HCl; then
 - divide by the volume of HCl to get the concentration of HCl.
+
+So in general, the first step is to the the volume of titrant being used from the volume of the burette (note that the burete will usually have the volume being "inverted" where the top is zero and the bottom is the maximum volume):
+<eq>
+    V_\text{titrant} = V_\text{final} - V_\text{initial}
+</eq>
+We can then use stoichiometry to find the number of mols being used:
+<eq>
+    n_\text{titrant} = V_\text{titrant} \times M_\text{titrant}
+</eq>
+After that, we can just use the reaction factor from the balanced chemical equation to get the number of mols in the analyte:
+<eq>
+    n_\text{analyte} = n_\text{titrant} \times \frac{mol analyte}{\text{mol titrant}}
+</eq>
+From this step, you can use stoichiometry to find the necessary information of the analyte
 
 ### Back titration
 Titration is a strong tool because it allows us to infer certain information even when we do not have much information about the substance. This is especially true for back titration, when there are usually three main steps:
