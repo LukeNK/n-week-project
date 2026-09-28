@@ -36,7 +36,7 @@ We can then use stoichiometry to find the number of mols being used:
 </eq>
 After that, we can just use the reaction factor from the balanced chemical equation to get the number of mols in the analyte:
 <eq>
-    n_\text{analyte} = n_\text{titrant} \times \frac{mol analyte}{\text{mol titrant}}
+    n_\text{analyte} = n_\text{titrant} \times \frac{\text{mol analyte}}{\text{mol titrant}}
 </eq>
 From this step, you can use stoichiometry to find the necessary information of the analyte
 
