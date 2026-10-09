@@ -18,9 +18,15 @@ Note that in the part above, we slightly touched about the reproduction of plant
 - **Pollen**: it is a male reproductive structure that can be transported by the wind, allowing longer distance disperal.
 - **Seed**: a multicellular structure that houses the offspring; consist of the embryo, food supply, and seed coat.
 
-Structually, plants also become more rigid after coming to land. This is quite easy to deduct why: under water, the natural boyancy of the protists will allow it to flow and "stand" upwards, helping with light capture; on land, the plants have to rise up by themselves or risk living their entire life in the shadow.
+So the pollen allow plants to create a seed and that seed can detach to form a new plant. You might wonder: what comes _before_ seed? It is **spore**. In fact, some groups of plants still use spore as their mean of reproduction. Both have a protective coat to survire extreme environment, but only seeds can offer these two advantages:
+- jump start the development because they have multicellular embryo; and
+- initial resource for growing offspring from the food supply.
 
-Eventually, the ancestral green algae evolved into different species. Each row of the following table will have the traits of the spiecies above it, with its own unique trait being listed:
+Structually, plants also become more rigid after coming to land. This is quite easy to deduct why: under water, the natural boyancy of the protists will allow it to flow and "stand" upwards, helping with light capture; on land, the plants have to rise up by themselves or risk living their entire life in the shadow.
+- **Non-vascular plants:** no root, stem, or leaves system; rely on cell-to-cell transport; size being limited to absorbing the resources in close vicinity.
+- **Vascular plants:** have an efficient root-to-shoot transport system; the root have access to water while the leaves have access to sunlight; much larger in size because resources can be transported much further.
+
+Again, not all of these features are developed at the same time. Each row of the following table will have the traits of the spiecies above it, with its own unique trait being listed:
 <table>
     <caption>Table of amounts of the reaction</caption>
     <tr>
