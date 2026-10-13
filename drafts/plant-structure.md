@@ -37,8 +37,12 @@ This is the system that allows plants to transport resources across their body. 
 - **Sieve tube elements**: These cells are alive at maturity, but they have no nucleus, ribosomes, or vacuoles. Just like transport vessles, they are arrached end-to-end with sieve plates between the cells.
 - **Companion cells**: These cells are connected to the sieve tube elements through plasmodesmata to keep them alive. Their purpose is to maintain the highway for transporting sugar.
 
+#### Meristem
+Plants have regions of cells called **meristems**. These are areas where cells are divided at a much higher rate and the cells can become any cell type. So the **apical meristems** are located in the root or the shoot to help plants grow faster. You can imagine why expanding vertically is important for a plant: being higher will help the plant reaches more sunlight, while having a longer root will help the plant reaches more water and nutrients.
+
 ### Plant systems and growth
 So plants are splitted into two parts:
 - **Root**: This is the part underground that are responsible for the taking up water and nutrient. It also have the obvious function of anchoring the plant.
 - **Shoot**: This is the part above the ground which can capture light for photosynthesis. It is also where sexual reproduction happens.
 
+So now you can combine the concepts to describe the growth of a plant. The **primary growth** is the vertical growth of a plant, which is facilitated by the primary xylem and primary phloem. The xylem and phloem are arranged as little "columns" in a ring. Meanwhile, the **secondary growth** describes the growing in the radius of a plant. This is made by the growth of the secondary xylem and secondary phloem, which are arranged like a continuous ring. In any cases, the xylems are closer to the centre than the phloems and over time, the compressed layers of secondary xylem will become wood.
