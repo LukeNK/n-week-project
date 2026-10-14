@@ -29,5 +29,10 @@ How the mesoderm fill the space between the inner and the outside "wall" of an a
 
 Since we have been talking about digestive tract, let's consider the route of the food. So in general, if the food comes into the "tube" and then waste comes out from the other end, we call that **alimentary canal**. If the food and waste go through the same hole, that species have **gastrovascular cavity**.
 
-- **Development**
+- **Embryonic evelopment**
 
+During the development of the embryo of the species with alimentary canal, we can also consider if the mouth opening is developed first (**protostome**) or the anus (**deuterostome**, or mounth second).
+
+- **Skeleton**
+
+There are three different skeleton structure. The first one is simply using water pressure as a way to support the animal's body, which is called **hydrostatic skeleton**. For those that actually have a rigid external support structure, it is called **exoskeleton**. Lastly, we have endoskeleton, which means that the rigid structure are inside the animal.
