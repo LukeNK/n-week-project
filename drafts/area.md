@@ -9,12 +9,12 @@ title: Area of Shapes
 Imagine you get a pencil, can you fill a shape with it by only using dots? You definitely can! That is the basic concept of area: it is how many dots you can fit into a shape. So **the area** of a shape is just a way numerical way for people to express how big it is.
 <div class="figure">
     <figure>
-        <!-- Make sure the shape is irregular -->
-        <img src="">
+        <!-- This is an irregular shape -->
+        <img src="{{ site.url }}/figures/m/1.png">
         <figcaption>Area by using dots</figcaption>
     </figure>
     <figure>
-        <img src="">
+        <img src="{{ site.url }}/figures/m/2.png">
         <figcaption>From dots to area</figcaption>
     </figure>
 </div>
@@ -28,7 +28,7 @@ As you can probably observe, it is quite easy to find the the area when the shap
 </eq>
 
 <figure>
-    <img src="">
+    <img src="{{ site.url }}/figures/m/3.png">
     <figcaption>Area of the rectangle and the triangle</figcaption>
 </figure>
 Rectangles is the basic shape for us to later construct the formula for the area of other shapes. Let the length be $l$ and height be $h$ (they can be any sides as long as they are two different sides), we have the **the area of the rectangle**:

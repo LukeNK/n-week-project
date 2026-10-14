@@ -11,7 +11,6 @@ layout: draft
             {% if page.title %}
 <h2>{{ page.title }}</h2>
             {% endif %}
-            {{ text | split: "---" | first }}
             {{ text | split: "---" | last | markdownify }}
 <hr>
         {% endif %}
