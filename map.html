@@ -7,10 +7,11 @@ layout: base
         --color-bright: #A0B1BA;
         --color-dark: #536067;
         --color-darker: #313b41;
+        --color-background: #1f1f1f;
     }
 
     body {
-        background-color: #1f1f1f;
+        background-color: var(--color-background);
         padding: 0;
         margin: 0;
     }
@@ -46,6 +47,9 @@ layout: base
 
     text {
         fill: var(--color-dark);
+        stroke: var(--color-background);
+        stroke-width: 3;
+        paint-order: stroke;
         font-size: 0.75rem;
 
         &:hover, &.active {
@@ -55,6 +59,7 @@ layout: base
         &.subject {
             fill: var(--color-darker);
             font-size: 1rem;
+            stroke: none;
             font-weight: bold;
         }
     }
