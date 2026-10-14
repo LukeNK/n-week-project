@@ -121,7 +121,8 @@ layout: base
         svgLegend = document.getElementById("legend"),
         svgLine = document.getElementById("line"),
         svgText = document.getElementById("text"),
-        svgDot = document.getElementById("dot");
+        svgDot = document.getElementById("dot"),
+        centreOffset = 10; // Offset to make sure the circle is not cut off
 
     // Draw lines between two circle
     function drawLine(from, to, type) {
@@ -201,11 +202,11 @@ layout: base
     }
 
     // Draw background circles for levels
-    const levelLength = maxLength / (maxLevel + 2); // The length of each level
+    const levelLength = maxLength / (maxLevel + 1); // The length of each level
     for (let i = 1; i <= maxLevel + 1; i++) {
         let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("cx", 10);
-        circle.setAttribute("cy", 10);
+        circle.setAttribute("cx", centreOffset);
+        circle.setAttribute("cy", centreOffset);
         circle.setAttribute("r", i * levelLength);
         circle.classList.add('background');
         svgLine.appendChild(circle);
@@ -230,19 +231,19 @@ layout: base
             if (curSubjectAngle != 0) {
                 // Skip the first line, which is the top line, for artistic purposes
                 let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                line.setAttribute("x1", 10);
-                line.setAttribute("y1", 10);
+                line.setAttribute("x1", centreOffset);
+                line.setAttribute("y1", centreOffset);
                 // Make the line longer than the circle to make sure it covers the entire square
-                line.setAttribute("x2", (maxLength + 500) * Math.cos(curSubjectAngle) + 10);
-                line.setAttribute("y2", (maxLength + 500) * Math.sin(curSubjectAngle) + 10);
+                line.setAttribute("x2", (maxLength + 500) * Math.cos(curSubjectAngle) + centreOffset);
+                line.setAttribute("y2", (maxLength + 500) * Math.sin(curSubjectAngle) + centreOffset);
                 line.classList.add('background');
                 svgLine.appendChild(line);
             }
 
             // Draw the subject name in the middle of the angle
             let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            text.setAttribute("x", (maxLength - levelLength + 50) * Math.cos((curSubjectAngle + nextSubjectAngle) / 2));
-            text.setAttribute("y", (maxLength - levelLength + 50) * Math.sin((curSubjectAngle + nextSubjectAngle) / 2));
+            text.setAttribute("x", (maxLength - levelLength*0.5) * Math.cos((curSubjectAngle + nextSubjectAngle) / 2));
+            text.setAttribute("y", (maxLength - levelLength*0.5) * Math.sin((curSubjectAngle + nextSubjectAngle) / 2));
             text.setAttribute("text-anchor", "middle");
             text.classList.add('subject');
             text.textContent = curSubject;
@@ -254,9 +255,9 @@ layout: base
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = curSubjectAngle + Math.random() * (nextSubjectAngle - curSubjectAngle), // Randomize the angle a bit to avoid overlap
-            length = maxLength - (chapter.level + 2 - Math.random() * 0.8) * levelLength; // Randomize the position a bit to avoid overlap
-        let x = length * Math.cos(angle) + 10,
-            y = length * Math.sin(angle) + 10;
+            length = maxLength - (chapter.level + 1 - Math.random() * 0.8) * levelLength; // Randomize the position a bit to avoid overlap
+        let x = length * Math.cos(angle) + centreOffset,
+            y = length * Math.sin(angle) + centreOffset;
 
         dot.setAttribute("cx", x);
         dot.setAttribute("cy", y);
@@ -270,7 +271,7 @@ layout: base
         text.setAttribute("x", x + 15);
         text.setAttribute("y", y + 2.5);
         text.setAttribute("for", id);
-        text.textContent = id;
+        text.textContent = id.split('-').slice(1).join(' '); // Remove the subject from the text
         svgText.appendChild(text);
     }
 
