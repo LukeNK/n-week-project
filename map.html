@@ -65,23 +65,24 @@ layout: base
     }
 
     line {
-        stroke: var(--color-bright);
-
         &.connect {
             stroke: var(--color-dark);
             stroke-width: 1;
             stroke-dasharray: 5, 25;
         }
+        &.require {
+            stroke: var(--color-bright);
+            stroke-width: 2;
+            stroke-dasharray: 5, 5;
+        }
         &.prereq {
+            stroke: var(--color-bright);
             stroke-width: 3;
+            stroke-dasharray: none;
             /*
                 Consider adding shadow to increase visibility
                 filter: drop-shadow(3px 3px 2px black);
             */
-        }
-        &.require {
-            stroke-width: 2;
-            stroke-dasharray: 5, 5;
         }
 
         &.background {
@@ -135,11 +136,22 @@ layout: base
 
     // Draw lines between two circle
     function drawLine(from, to, type) {
+        // Check if the line already exists
+        const existingLine = svgLine.querySelector("line[from='" + from.id + "'][to='" + to.id + "']");
+        if (existingLine) {
+            if (!existingLine.classList.contains(type))
+                existingLine.classList.add(type);
+            return;
+        };
+
+        // Draw line
         let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
         line.setAttribute("x1", from.getAttribute("cx"));
         line.setAttribute("y1", from.getAttribute("cy"));
         line.setAttribute("x2", to.getAttribute("cx"));
         line.setAttribute("y2", to.getAttribute("cy"));
+        line.setAttribute("from", from.id);
+        line.setAttribute("to", to.id);
         line.classList.add(type);
         svgLine.appendChild(line);
     }
