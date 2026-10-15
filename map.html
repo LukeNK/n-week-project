@@ -8,6 +8,7 @@ layout: base
         --color-dark: #536067;
         --color-darker: #313b41;
         --color-background: #1f1f1f;
+        --filter-shadow: drop-shadow(4px 4px 1px black);
     }
 
     body {
@@ -30,12 +31,13 @@ layout: base
             cursor: pointer;
         }
 
+        &.require {
+            r: 10;
+        }
         &.prereq {
             fill: var(--color-bright);
             r: 10;
-        }
-        &.require {
-            r: 10;
+            filter: var(--filter-shadow);
         }
 
         &.background {
@@ -79,10 +81,7 @@ layout: base
             stroke: var(--color-bright);
             stroke-width: 3;
             stroke-dasharray: none;
-            /*
-                Consider adding shadow to increase visibility
-                filter: drop-shadow(3px 3px 2px black);
-            */
+            filter: var(--filter-shadow);
         }
 
         &.background {
