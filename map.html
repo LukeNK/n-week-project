@@ -3,6 +3,17 @@ layout: base
 ---
 
 <style>
+    @keyframes pulse {
+        0% {
+            /* stroke-width: 2; */
+            opacity: 1;
+        }
+        100% {
+            /* stroke-width: 5; */
+            opacity: 0.5;
+        }
+    }
+
     html {
         --color-bright: #A0B1BA;
         --color-dark: #536067;
@@ -77,11 +88,15 @@ layout: base
             stroke-width: 2;
             stroke-dasharray: 5, 5;
         }
+        /* &.require:not(.prereq) {
+            animation: pulse 1s infinite alternate;
+        } */
         &.prereq {
             stroke: var(--color-bright);
             stroke-width: 3;
             stroke-dasharray: none;
             filter: var(--filter-shadow);
+            transition: stroke-width 0.5s, stroke 0.5s;
         }
 
         &.background {
