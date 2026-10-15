@@ -271,8 +271,6 @@ layout: base
             svgText.appendChild(text);
         }
 
-        console.log(id, curSubjectIndex, curSubjectAngle, nextSubjectAngle);
-
         const chapter = chapters[id];
         let dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"),
             angle = curSubjectAngle + Math.random() * (nextSubjectAngle - curSubjectAngle), // Randomize the angle a bit to avoid overlap
