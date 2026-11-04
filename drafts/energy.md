@@ -22,7 +22,7 @@ When we consider of energy, we think of a **system**. A system is a "boundary" o
     W_{ext} + Q = \Delta E_{sys}
 </eq>
 
-In that equation, the external work done from the environment *to* the system $W_{ext} add with the introduced heart $Q$ will change the total energy of the system $\Delta E_{sys}$.
+In that equation, the external work done from the environment *to* the system $W_{ext} add with the introduced heart $Q$ will change the total energy of the system $\Delta E_{sys}$. When doing that equation, you can simply consider
 
 ### Work
 Energy is a "cheatcode" for us to skip considering all of the forces; however, we can still make a connection between force and energy. So if a constant force moves an object, we can then deduct the work it has done with:
@@ -34,6 +34,11 @@ Energy is a "cheatcode" for us to skip considering all of the forces; however, w
 If the force is non-constant, you can "chop" the path into tiny sections and add the work together with integration:
 <eq>
     W = \int_a^b F(x) \;dx
+</eq>
+
+In a basic level, the work from kinetic friction can be approximate as
+<eq>
+    W_{fk} = F_k l
 </eq>
 
 ### Kinetic energy
@@ -50,11 +55,12 @@ Rotational kinetic energy
 </eq>
 
 ### Potential energy
-The most common potential energy you will encounter
+The most common potential energy you will encounter is gravitational potential energy, which depends on the mass $m$ and how high is the mass from a reference point $h$.
 <eq>
     U_{grav} = mgh
 </eq>
 
+There is also potential energy from compressing a string, which is:
 <eq>
     U_{spring} = \frac{1}{2}Kx^2
 </eq>
@@ -64,6 +70,9 @@ As discussed above, it is a great shortcut,
 
 We should use this method if there is a change of height or speed over time.
 
-We first identify the system, then identify how the environment is adding energy to the system. Gravity is considered a part of the system already, though.
+We first identify the system, then identify how the environment is adding energy to the system. One important thing to realize is that the potential energy is not an external work, but rather a part of a system. You should try to get the biggest system possible.
 
-Note that one of the amazing part of this system is to do not consider the path, but only the start $t_i$ and the end $t_f$. We do not concern about what happen in-between of the motion.
+Note that one of the amazing part of this system is to do not consider the path, but only the start position and the end position. We do not concern about what happen in-between of the motion. If you have the time elapsed $\Delta T$ during the motion, you can also calculate the **power of the system**:
+<eq>
+    P = \frac{W}{\Delta t}
+</eq>
