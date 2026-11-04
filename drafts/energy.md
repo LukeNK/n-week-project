@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: draft
 title: Work and Energy
 prerequisites:
     - p-mechanical-fwpe
