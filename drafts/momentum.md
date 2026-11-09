@@ -34,4 +34,31 @@ So to calculate the average force, we can use the impulse and time:
     \vec{F_{ave}} = \frac{\vec{I}}{\Delta t}
 </eq>
 
+### Collision
+You might notice this thing: if you drop a glass, would you preffer dropping it to a soft carpet floor or to a hard concrete floor?
+
 ### Conservation of momentum
+So we have been mostly look at colision between something small and something large, but momentum is most powerful when there are two relatively equal objects collide with each other.
+
+The equation is:
+<eq>
+    m_1\vec{v_{1f}}
+</eq>
+
+There are two **types of collisions**:
+- Inelastic collision: happends when two objects stick into each other
+- Elastic collision: happens when two objects bounce against each other.
+
+In inelastic collisions, energy is not conserved. This is because the two objects must be deformed in order to make the two stick together.
+<eq>
+    m_1\vec{v_{1f}} + m_2\vec{v_{2f}} = (m_1 + m_2)\vec{v_f}
+</eq>
+
+Elastic collision is where energy is conserved.
+<eq>
+    v_{1f} - v{2f} =
+</eq>
+You mnust also use
+<eq>
+    m_1\vec{v_{1f}} + m_2\vec{v_{2f}} = m_1\vec{v_{1i}} + m_2\vec{v_{2i}}
+</eq>
