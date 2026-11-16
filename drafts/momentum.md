@@ -62,3 +62,8 @@ You mnust also use
 <eq>
     m_1\vec{v_{1f}} + m_2\vec{v_{2f}} = m_1\vec{v_{1i}} + m_2\vec{v_{2i}}
 </eq>
+
+### Angular momentum 
+
+Three cases of angular momentum:
+Ln= bmv = R^2m\omega = I \omwga
