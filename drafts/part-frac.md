@@ -21,4 +21,4 @@ Wait what? Why are we combining everything back again? Actually, it is because n
 So the trick here is to find what number adds together will correspond to each other. The rigorous steps are like this:
 
 
-However, we do not have much time inside the tests room, so we simply pick out all of the coefficients with the degree zero, degree one, and degree two, and so on from each side, and then equate them together. Now, we will have a system of equation to solve.
+However, we do not have much time inside the tests room, so we simply pick out all of the coefficients with the degree zero, degree one, and degree two, and so on from each side, and then equate them together. Now, we will have a system of equation to solve.  

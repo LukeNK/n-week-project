@@ -10,7 +10,7 @@ A series is simply adding the terms in a sequence together:
 
 \end{aligned}</eq>
 
-Usually, the context implies that a series is an **infinite series**, while if you end at one particular index, it is called a **partial sum**.
+Usually, the context implies that a series is an **infinite series** (so $n=/inf$), while if you end at one particular index, it is called a **partial sum**.
 
 There are a few possible manipulation you can do on a series, which are just extensions of the basic algebra addition rules:
 // taking constant outside
