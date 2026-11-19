@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: draft
 title: Integration with Partial Freaction
 prerequisites:
     - m-integral
