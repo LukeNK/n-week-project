@@ -2,25 +2,25 @@
 layout: draft
 title: Series
 prerequisites:
-				- m-integrals
+    - m-integrals
 ---
 
 ### Series
 A series is simply adding the terms in a sequence together:
 <eq>\begin{aligned}
-			 \sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n = S_n
+    \sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n = S_n
 \end{aligned}</eq>
 
 Usually, the context implies that a series is an **infinite series** (so $n=/infty$), while if you end at one particular index, it is called a **partial sum**.
 
 There are a few possible manipulation you can do on a series, which are just extensions of the basic algebra addition rules. For example, you can pull out the common factor:
 <eq>
-				\sum ka_i = k\sum a_i = kS
+    \sum ka_i = k\sum a_i = kS
 </eq>
 
 You can also combine two different series together:
 <eq>
-				\sum a_i + b_i = S_n + s_n
+    \sum a_i + b_i = S_n + s_n
 </eq>
 // taking constant outside
 // split two terms
@@ -35,23 +35,23 @@ Note that to quickly check if a series is a geometric series, you simply divide 
 A **telescopic series** is a series with one possible form of:
 // telescopic definition 1/(n(n+1))
 
-It is poetically called like that is because the series allows you to see the from the beginning to to the end, like a telescope bringing images from very far away close to your eyes. 
+It is poetically called like that is because the series allows you to see the from the beginning to to the end, like a telescope bringing images from very far away close to your eyes.
 
 The **harmonic series** is
 // sumation definition
 
 The **p-series** is a series with the numerator 1 and the numerator is the index raised by some exponent:
-				//definition
+                //definition
 
 #### Convergent and divergent
 In the study of infinite series, we (to be precise, mathematicians) wants to consider whether a series **converges** or **diverges**. A series diverges when, even if you add an infinite number of terms, it still approaches a number... hang on, isn't that very similar to the usage of limit?
 <eq>
-			 \sum_{i=1}^{\infty} a_i = S
+             \sum_{i=1}^{\infty} a_i = S
 </eq>
 
 The first test you can do is to check whether the sequence of the terms are monotonic and decreasing to zero or not. The intuition is pretty clear: if the terms are increasing to infinity, then their sum must also be increasing to infinity. That is general idea to **test for divergent**: if the limit of a general term approaches to infinity but the result do not exist or not equal to zero, then the series diverges.
 <eq>
-				\lim_{i\to\infty} a_i \text{DNE or } = 0 \Rightarrow \text{series diverges}
+                \lim_{i\to\infty} a_i \text{DNE or } = 0 \Rightarrow \text{series diverges}
 </eq>
 // if lim DNE or not equal to 0, series is diverge
 
@@ -61,9 +61,9 @@ The **integral test** uses the basic fact that an integral is just a sum of many
 // integral test
 
 In this test, just pick whatever lower limit that is an integer that is convenient for you. There is also a restriction on the function itself: it must be decreasing, or in terms of derivative:
-// dy/dx 
+// dy/dx
 
-Therefore, chose your lower bound of the integral wisely to ensure that you can satisfy the requirements 
+Therefore, chose your lower bound of the integral wisely to ensure that you can satisfy the requirements
 
 And going back to the rules of addition: if one of the series diverges, then if we add another series, it will still diverges.
 
@@ -80,4 +80,3 @@ This is one of the most beautiful aspect of the telescope series: its always con
 The harmonic series always diverges
 
 The p-series converges if p > 1
- 
