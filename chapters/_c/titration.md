@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: chapter
 title: Titration and Back Titration
 prerequisites:
     - c-chem-eq
