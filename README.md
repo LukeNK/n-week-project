@@ -35,10 +35,10 @@ There is a difference when adding newlines in the display math environment. If y
 
 Compared to the "strong" math display, when you only need to use two backward slashes:
 ```html
-<eq>\begin{aligned}
+<eq>
     x &= 1 + 1 \\
     &= 2
-\end{aligned}</eq>
+</eq>
 ```
 
 We got to do something about this...
