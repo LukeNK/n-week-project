@@ -46,12 +46,12 @@ The **p-series** is a series with the numerator 1 and the numerator is the index
 #### Convergent and divergent
 In the study of infinite series, we (to be precise, mathematicians) wants to consider whether a series **converges** or **diverges**. A series diverges when, even if you add an infinite number of terms, it still approaches a number... hang on, isn't that very similar to the usage of limit?
 <eq>
-             \sum_{i=1}^{\infty} a_i = S
+    \sum_{i=1}^{\infty} a_i = S
 </eq>
 
 The first test you can do is to check whether the sequence of the terms are monotonic and decreasing to zero or not. The intuition is pretty clear: if the terms are increasing to infinity, then their sum must also be increasing to infinity. That is general idea to **test for divergent**: if the limit of a general term approaches to infinity but the result do not exist or not equal to zero, then the series diverges.
 <eq>
-                \lim_{i\to\infty} a_i \text{DNE or } = 0 \Rightarrow \text{series diverges}
+    \lim_{i\to\infty} a_i \text{DNE or } = 0 \Rightarrow \text{series diverges}
 </eq>
 // if lim DNE or not equal to 0, series is diverge
 
