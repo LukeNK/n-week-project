@@ -2,7 +2,7 @@
 layout: draft
 title: Series
 prerequisites:
-    - m-integrals
+    - m-limit
 ---
 
 ### Series
