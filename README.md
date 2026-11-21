@@ -53,3 +53,4 @@ The system will automatically resolve the text content of the anchor. However, y
 ## Note of what to write here
 - `.GITIGNORE` to have header background unique to each publication at `/header.*`
 - Math newline when using `<eq>` is `//`
+- Level system: only add as a prerequisite if it is strictly necessary.
