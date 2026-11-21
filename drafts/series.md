@@ -7,9 +7,9 @@ prerequisites:
 
 ### Series
 A series is simply adding the terms in a sequence together:
-<eq>\begin{aligned}
+<eq>
     \sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n = S_n
-\end{aligned}</eq>
+</eq>
 
 Usually, the context implies that a series is an **infinite series** (so $n=\infty$), while if you end at one particular index, it is called a **partial sum**.
 
@@ -54,11 +54,19 @@ We then have **the alternating series**, which is when the terms alternate betwe
 </eq>
 
 ### Convergence and divergence
-In the study of infinite series, we (to be precise, mathematicians) wants to consider whether a series **converges** or **diverges**. A series diverges when, even if you add an infinite number of terms, it still approaches a number... hang on, isn't that very similar to the usage of limit?
+#### Definition
+In the study of infinite series, we (to be precise, mathematicians) wants to consider whether a series **converges** or **diverges**. A series converges when, even if you add an infinite number of terms, it still approaches a number.
 <eq>
     \lim_{n\to\infty}\sum_{i=1}^{n} a_i = \sum a_i = S
 </eq>
 
+In a similar sense, a series is **absolutely converges** when it converges even when we take the absolute value of each terms. On the contrary, a series is **conditionally converges** if the absolute value series diverges.
+<eq>
+	\sum a_i &\text{ absolutely converges when } \sum |a_i| = S \\
+	\sum a_i &\text{ conditonally converges when } \sum |a_i| \text{ diverges}
+</eq>
+
+#### Basic tests
 The first test you can do is to check whether the sequence of the terms are monotonic and decreasing to zero or not. The intuition is pretty clear: if the terms are increasing to infinity, then their sum must also be increasing to infinity. That is general idea to **test for divergent**: if the limit of a general term approaches to infinity but the result do not exist or not equal to zero, then the series diverges.
 <eq>
     \lim_{i\to\infty} a_i \text{ DNE or } \neq 0 \Rightarrow \text{series diverges}
@@ -88,13 +96,24 @@ Therefore, chose your lower bound of the integral wisely to ensure that you can 
 	\sum \frac{1}{i^p} \text{, if } p > 1 \Rightarrow \text{ series converges}
 </eq>
 
-**The alternating series test** will tell you a series converge if *both* of the following requirements are met in an alternating series:
+**The alternating series test** will tell you a series converge if *both* of the following requirements are met in an alternating series. Here the second requirement is just another way of saying that the terms must be decreasing:
 <eq>
 	\lim_{i\to\infty} |a_i| = 0 \text{ and } |a_{i+1}| < |a_{i}|
 </eq>
 
-The second requirement is just another way of saying that the terms must be decreasing
+**The ratio test** allows us to test for absolute convergence or divergence; however, when the result is equals to one, it is undefined and you must proceed with a different test. It is a bit intuitive so see why: if the next term grows faster than the previous term, the ratio will become less than one, making the series converge.
+<eq>
+	\lim_{i\to\infty} \left|\frac{a_{i+1}}{a_i}\right| < 1 &\Rightarrow \text{absolute convergent} \\
+	\lim_{i\to\infty} \left|\frac{a_{i+1}}{a_i}\right| > 1 &\Rightarrow \text{divergent}
+</eq>
 
+Similarly, **the root test** is very similar to the ratio test but here, you will only need to consider one term, so it might take less effort to actually test for convergence / divergence.
+<eq>
+	\lim_{i\to\infty} \sqrt[i]{|a_i|} < 1 &\Rightarrow \text{absolute convergent} \\
+	\lim_{i\to\infty} \sqrt[i]{|a_i|} > 1 &\Rightarrow \text{divergent}
+</eq>
+
+#### Tests with a known series
 The last two tests will require us to use another series that we already known its property. Let's say our $a_i$ series is our unknown, and we have $b_i$ is our known. We can deduct some properties between them before applying the convergence / divergence of our known into our unknown.
 
 The first test we can use is the **comparision test**, which allows two posibilities. It is also very similar to the sandwich theorem of limit. The first posibility state that if our unknown is smaller than our known, then our known can "sandwich" the series if itself converges:
