@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: draft
 title: System of Equation
 ---
 

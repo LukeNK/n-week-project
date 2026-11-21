@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: draft
 title: Useful Figures and Formulas in Chemistry
 ---
 **The periodic table of the elements** is arguably one, if not, the most important thing to have when learning chemistry. For the high school level, the most useful periodic table is the one that has ion charges of the elements.
