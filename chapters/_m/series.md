@@ -72,7 +72,12 @@ We can also deduct the reverse relationship: if you have a series that is absolu
 </eq>
 
 #### Basic tests
-The first test you can do is to check whether the sequence of the terms are monotonic and decreasing to zero or not. The intuition is pretty clear: if the terms are increasing to infinity, then their sum must also be increasing to infinity. That is general idea to **test for divergent**: if the limit of a general term approaches to infinity but the result do not exist or not equal to zero, then the series diverges.
+The first test you can do is to check whether **the sequence are decreasing or not**. If it is increasing, then clearly the sum is also going to infinity, so we can quickly say that it is divergent. You can also use derivative to prove this by showing that $f'(x) < 0$.
+<eq>
+    a_{n+1} > a_n > 0 \Rightarrow \sum a_n \text{ diverges} 
+</eq>
+
+A more general and powerful of that theorem can be used with **test for divergent**: if the limit of a general term approaches to infinity but the result do not exist or not equal to zero, then the series diverges.
 <eq>
     \lim_{i\to\infty} a_i \text{ DNE or } \neq 0 \Rightarrow \text{series diverges}
 </eq>
