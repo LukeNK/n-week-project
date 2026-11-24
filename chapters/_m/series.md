@@ -60,10 +60,15 @@ In the study of infinite series, we (to be precise, mathematicians) wants to con
     \lim_{n\to\infty}\sum_{i=1}^{n} a_i = \sum a_i = S
 </eq>
 
-In a similar sense, a series is **absolutely converges** when it converges even when we take the absolute value of each terms. On the contrary, a series is **conditionally converges** if the absolute value series diverges.
+In a similar sense, a series is **absolutely converges** when it converges even when we take the absolute value of each terms. On the contrary, a series is **conditionally converges** if the absolute value series diverges<note>If the series itself is convergent.</note>.
 <eq>
-	\sum a_i &\text{ absolutely converges when } \sum |a_i| = S \\
-	\sum a_i &\text{ conditonally converges when } \sum |a_i| \text{ diverges}
+	   \sum a_i &\text{ absolutely converges when } \sum |a_i| = S \\
+	   \sum a_i &\text{ conditonally converges when } \sum |a_i| \text{ diverges}
+</eq>
+
+We can also deduct the reverse relationship: if you have a series that is absolutely convergent, then the "original" series is convergent.
+<eq>
+	   \sum |a_i| < \infty \Rightarrow \sum a_i < \infty
 </eq>
 
 #### Basic tests
