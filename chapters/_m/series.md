@@ -50,7 +50,12 @@ The harmonic series is a special case of a much more general idea of **p-series*
 
 We then have **the alternating series**, which is when the terms alternate between positive and negative:
 <eq>
-	\sum (-1)^{i}a_i \text{ or } \sum (-1)^{i}a_i
+    \sum (-1)^{i}a_i \text{ or } \sum (-1)^{i}a_i
+</eq>
+
+A **power series** is another series that we happen to have a lot of information about it. Note that despite it looks like it, the variable $x$ would not be changing across each term in the series (which something that we are probably used to).
+<eq>
+    \sum c_n (x-a)^n
 </eq>
 
 ### Convergence and divergence
@@ -72,7 +77,7 @@ We can also deduct the reverse relationship: if you have a series that is absolu
 </eq>
 
 #### Basic tests
-The first test you can do is to check whether **the sequence are decreasing or not**. If it is increasing, then clearly the sum is also going to infinity, so we can quickly say that it is divergent. You can also use derivative to prove this by showing that $f'(x) < 0$.
+The first test you can do is to check whether **the sequence are decreasing or not**. If it is increasing, then clearly the sum is also going to infinity, so we can quickly say that it is divergent. You can also use derivative to prove this by showing that $f'(x) < 0$. Note that because this test is only showing the convergence series, you can use the limit test if you are feeling comfortable with fractions (will be shown later in this section).
 <eq>
     a_{n+1} > a_n > 0 \Rightarrow \sum a_n \text{ diverges} 
 </eq>
@@ -106,12 +111,12 @@ Therefore, chose your lower bound of the integral wisely to ensure that you can 
 	\sum \frac{1}{i^p} \text{, if } p > 1 \Rightarrow \text{ series converges}
 </eq>
 
-**The alternating series test** will tell you a series converge if *both* of the following requirements are met in an alternating series. Here the second requirement is just another way of saying that the terms must be decreasing:
+**The alternating series test** will tell you a series converge if *both* of the following requirements are met in an alternating series. Here the second requirement is just another way of saying that the terms must be decreasing, so feel free to pick any $k$ that is convenient.
 <eq>
-	\lim_{i\to\infty} |a_i| = 0 \text{ and } |a_{i+1}| < |a_{i}|
+	\lim_{i\to\infty} |a_i| = 0 \text{ and } a_{i+1} < a_{i} \text{ for all } n \leq k
 </eq>
 
-**The ratio test** allows us to test for absolute convergence or divergence; however, when the result is equals to one, it is undefined and you must proceed with a different test. It is a bit intuitive so see why: if the next term grows faster than the previous term, the ratio will become less than one, making the series converge.
+**The ratio test** allows us to test for absolute convergence or divergence; however, when the result is equals to one, it is undefined and you must proceed with a different test. It is a bit intuitive so see why: if the next term grows faster than the previous term, the ratio will become less than one, making the series converge. Note that this test is inconclusive 
 <eq>
 	\lim_{i\to\infty} \left|\frac{a_{i+1}}{a_i}\right| < 1 &\Rightarrow \text{absolute convergent} \\
 	\lim_{i\to\infty} \left|\frac{a_{i+1}}{a_i}\right| > 1 &\Rightarrow \text{divergent}
@@ -150,6 +155,9 @@ So when the limit grows to infinity, that means our unknown is growing faster, s
 <eq>
 	\text{If } \lim_{i\to\infty}\frac{a_i}{b_i} = \infty \text{ and } \sum b_i \text{ diverges } \Rightarrow \sum a_i \text{ diverges}
 </eq>
+
+#### Power series
+A power series has an interval of convergence where the series converges if $x$ is within it. So the half the length of that interval will be the **radius of convergence**. We also happen to know that $a$ is the **centre of convergence**.
 
 And going back to the rules of addition: if one of the series diverges, then if we add another series, it will still diverges. When solving exercises related to series, we are mostly trying to simplify the problems down to the known series form. After that, you can simply apply the necessary tests to draw a conclusion for the convergence / divergence of the series.
 
