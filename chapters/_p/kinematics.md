@@ -13,7 +13,7 @@ Let's start with defining the basic: an object with have a **position**. For exa
 
 If you move to a differenct place (change of position), it is called **displacement**. Note that the displacement does not concern about the _path_ you moved, but about the start and the end. So let's say you decide to move to the homework but then exit to your kitchen, and your new position is 11 meters to the South of the homework, then your displacement can be calculated with your initial position $p_i$ and final position $p_f$
 <eq>
-    \vec{d} = \delta p = \vec{p_f} - \vec{p_i}
+    \vec{d} = \Delta p = \vec{p_f} - \vec{p_i}
 </eq>
 
 You should get your displacement as 10 meters to the South. You should also notice that there is another layer of relativity here: regardless of where you are in your space, you can still follow the instruction "move 10 meters to the South". So displacement is simply describe the difference between your old and new position, and it does not concern about where is your start point. Moreover, what if you throw your pile of homework out of the window (10 meters to the North)? From your perspective, it is the homework that is moving; from the homework's perspective, it is you and the world that is moving.
